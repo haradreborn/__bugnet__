@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="horizontal" >
+
+    <!--Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Up Button"
+            android:id="@+id/buttonUp"
+            android:onClick="buttonUpClicked"/>
+
+    <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Down Button"
+            android:id="@+id/buttonDown"
+            android:onClick="buttonDownClicked"/-->
+
+    <ImageView
+            android:layout_width="300px"
+            android:layout_height="450px"
+            android:src="@drawable/ic_launcher"
+            android:id="@+id/imageView" android:layout_gravity="left"/>
+    <TextView
+            android:layout_width="200px"
+            android:layout_height="450px"
+            android:id="@+id/text" android:layout_gravity="left|top" android:autoText="false" android:text="test"/>
+    <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" android:layout_gravity="right">
+        <Button
+                android:layout_width="200px"
+                android:layout_height="200px"
+                android:text="Delete Button"
+                android:id="@+id/buttonDel"
+                android:onClick="buttonDelClicked" android:layout_gravity="right"/>
+        <Button
+                android:layout_width="200px"
+                android:layout_height="200px"
+                android:text="Switch Button"
+                android:id="@+id/buttonSwitch"
+                android:onClick="buttonSwitchClicked" android:layout_gravity="right"/>
+    </LinearLayout>
+    <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" android:layout_gravity="right">
+        <Button
+                android:layout_width="200px"
+                android:layout_height="200px"
+                android:text="Edit Button"
+                android:id="@+id/buttonEdit"
+                android:onClick="buttonEditClicked" android:layout_gravity="right"/>
+        <Button
+                android:layout_width="200px"
+                android:layout_height="200px"
+                android:text="Draw Button"
+                android:id="@+id/buttonDraw"
+                android:onClick="buttonDrawClicked" android:layout_gravity="bottom|right"/>
+    </LinearLayout>
+
+</LinearLayout>
