@@ -2,22 +2,46 @@
 
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
     <!--item
-            android:id="@+id/save"
-            android:orderInCategory="100"
-            android:showAsAction="never"
-            android:title="save"/-->
+        android:id="@+id/save"
+        android:orderInCategory="100"
+        android:showAsAction="never"
+        android:title="save"/-->
 
     <item
-            android:id="@+id/gallery"
-            android:orderInCategory="100"
-            android:showAsAction="never"
-            android:title="gallery"/>
-
+      	android:id="@+id/gallery"
+        android:orderInCategory="100"
+        android:showAsAction="never"
+        android:title="Add screenshot"/>
+		
+	<!--item
+		android:id="@+id/empty"
+		android:orderInCategory="100"
+		android:showAsAction="never"
+		android:title="empty"/>
+	
 	<item
-			android:id="@+id/report"
-			android:orderInCategory="100"
-			android:showAsAction="never"
-			android:title="report"/>
+		android:id="@+id/view"
+		android:orderInCategory="100"
+		android:showAsAction="never"
+		android:title="view"/-->
+	
+	<item
+		android:id="@+id/expected"
+		android:orderInCategory="100"
+		android:showAsAction="never"
+		android:title="Edit additional information"/>
+	
+	<!--item
+		android:id="@+id/actual"
+		android:orderInCategory="100"
+		android:showAsAction="never"
+		android:title="Edit actual result"/-->
+	
+	<item
+		android:id="@+id/report"
+		android:orderInCategory="100"
+		android:showAsAction="never"
+		android:title="Generate bug report"/>
 	
 
 </menu>

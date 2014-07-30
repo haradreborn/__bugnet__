@@ -15,7 +15,6 @@ import java.io.*;
 import java.util.*;
 import android.speech.tts.*;
 
-//git test
 
 public class ListEditor extends Activity {
 
@@ -198,10 +197,94 @@ public class ListEditor extends Activity {
 		} in.close(); 
 		out.close(); 
 	}
+	
+	private static boolean deleteDirPng(File dir) {
+        if (dir != null && dir.isDirectory()) {
+            String[] children = dir.list();
+            for (int i = 0; i < children.length; i++) {
+                boolean success = deleteDirPng(new File(dir, children[i]));
+                if (!success) {
+					return false;
+                }
+            }
+        }
+        return (dir.getName().contains(".png"))? dir.delete() : false;
+    }
+	
+	private static boolean deleteDirTxt(File dir) {
+		if (dir != null && dir.isDirectory()) {
+			String[] children = dir.list();
+			for (int i = 0; i < children.length; i++) {
+				boolean success = deleteDirTxt(new File(dir, children[i]));
+				if (!success) {
+					return false;
+				}
+			}
+		}
+		return (dir.getName().contains(".txt"))? dir.delete() : false;
+	}
+	
+	public void reload() {
+
+		Intent intent = getIntent();
+		overridePendingTransition(0, 0);
+		intent.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
+		finish();
+
+		overridePendingTransition(0, 0);
+		startActivity(intent);
+	}
 
 	@Override
 	public boolean onOptionsItemSelected(MenuItem item) {
 		switch (item.getItemId()) {
+			//case R.id.empty:
+				//Toast.makeText(this, "Delete old files", Toast.LENGTH_SHORT).show();
+				////stopService(globalService);
+				////todo
+				//File flow = new File(Environment.getExternalStorageDirectory() + "/MANUAL/workflow");
+				//deleteDirPng(flow);
+				//File sett = new File(Environment.getExternalStorageDirectory() + "/MANUAL/settings");
+				//deleteDirTxt(sett);
+				////String[] place = array.toArray(new String[array.size()]);
+				////Arrays.sort(place);
+				////listview.setAdapter(new yourAdapter(this, place));
+				//reload();
+				//break;
+				
+			//case R.id.view:
+				//Intent intentView = new Intent();
+				//intentView.setAction(android.content.Intent.ACTION_VIEW);
+				//File file = new File(Environment.getExternalStorageDirectory() + "/MANUAL/test.html");
+				//intentView.setDataAndType(Uri.fromFile(file), "text/html");
+				//startActivity(intentView);
+				//break;
+				
+			case R.id.expected:
+				String[] def = new String[2];
+				def[0] = "Expected result:";
+				def[1] = "Actual result:";
+				actions.Settings("expected.txt", def);
+				
+				Intent intentRes = new Intent();
+				intentRes.setAction(android.content.Intent.ACTION_VIEW);
+				File fileRes = new File(Environment.getExternalStorageDirectory() + "/MANUAL/settings/expected.txt");
+				intentRes.setDataAndType(Uri.fromFile(fileRes), "text/plain");
+				startActivity(intentRes);
+				break;
+				
+			//case R.id.actual:
+				//String[] deff = new String[1];
+				//deff[0] = "";
+				//actions.Settings("actual.txt", deff);
+
+				//Intent intentAct = new Intent();
+				//intentAct.setAction(android.content.Intent.ACTION_VIEW);
+				//File fileAct = new File(Environment.getExternalStorageDirectory() + "/MANUAL/settings/actual.txt");
+				//intentAct.setDataAndType(Uri.fromFile(fileAct), "text/plain");
+				//startActivity(intentAct);
+				//break;
+				
 			case R.id.gallery:
 				// in onCreate or any event where your want the user to
 				// select a file
@@ -214,6 +297,7 @@ public class ListEditor extends Activity {
 				} else {
 					Toast.makeText(this, "theee are " + Integer.toString(array.size()) + " images in the list, max 10", Toast.LENGTH_SHORT).show();
 				}
+				break;
 				
 			//save file
 			case R.id.report:
@@ -221,21 +305,22 @@ public class ListEditor extends Activity {
                 actions.CreateMainFolder();
                 Toast.makeText(this, "Generating report ", Toast.LENGTH_SHORT).show();
                 try {
-                    File file = new File(Environment.getExternalStorageDirectory() + "/MANUAL/test.html");
-                    file.createNewFile();
+                    File fileRep = new File(Environment.getExternalStorageDirectory() + "/MANUAL/test.html");
+                    fileRep.createNewFile();
                     //String data = "hello";
                     //write the bytes in file
-                    if(file.exists()) {
-                        OutputStream fo = new FileOutputStream(file);
+                    if(fileRep.exists()) {
+                        OutputStream fo = new FileOutputStream(fileRep);
                         PrintWriter pw = new PrintWriter(fo);
                         pw.println(genHtml());
                         pw.flush();
                         pw.close();
                         //fo.write(data);
                         fo.close();
-                        System.out.println("file created: "+file);
+                        System.out.println("file created: "+fileRep);
                     }
                 } catch (IOException io){io.printStackTrace();}
+				break;
 
         }
 		return true;
@@ -470,7 +555,7 @@ class yourAdapter extends BaseAdapter {
 
 
         StringBuilder desc = new StringBuilder();
-        desc.append("Step: " + Integer.toString(position + 1) + "\n");
+        desc.append("Step: " + Integer.toString(position + 1) + "\n\n");
         desc.append(actions.getDescription(Environment.getExternalStorageDirectory() + "/MANUAL/settings/" + data[position] + ".txt"));
 
         TextView text = (TextView) vi.findViewById(R.id.text);

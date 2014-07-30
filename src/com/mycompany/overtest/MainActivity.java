@@ -66,13 +66,28 @@ public class MainActivity extends Activity {
 	//btn empty
 	public void buttonEmptyClicked(View empty){
 
-        Toast.makeText(this, "Delete old files", Toast.LENGTH_SHORT).show();
-		stopService(globalService);
-        //todo
-		File flow = new File(Environment.getExternalStorageDirectory() + "/MANUAL/workflow");
-        deleteDirPng(flow);
-		File sett = new File(Environment.getExternalStorageDirectory() + "/MANUAL/settings");
-		deleteDirTxt(sett);
+		new AlertDialog.Builder(this)
+			.setTitle("Empty workflow")
+			.setMessage("All your files will be deleted!")
+			.setPositiveButton(android.R.string.yes, new DialogInterface.OnClickListener() {
+				public void onClick(DialogInterface dialog, int which) { 
+					stopService(globalService);
+					//todo
+					File flow = new File(Environment.getExternalStorageDirectory() + "/MANUAL/workflow");
+					deleteDirPng(flow);
+					File sett = new File(Environment.getExternalStorageDirectory() + "/MANUAL/settings");
+					deleteDirTxt(sett);
+				}
+			})
+			.setNegativeButton(android.R.string.no, new DialogInterface.OnClickListener() {
+				public void onClick(DialogInterface dialog, int which) { 
+					// do nothing
+				}
+			})
+			.setIcon(android.R.drawable.ic_dialog_alert)
+			.show();
+		
+        
 	}
 
 	//btn edit
@@ -128,6 +143,28 @@ public class MainActivity extends Activity {
 			}
 		}
 		return (dir.getName().contains(".txt"))? dir.delete() : false;
+	}
+	
+	@Override
+	public boolean onCreateOptionsMenu(Menu menu) {
+		//Inflate the menu; this adds items to the action bar if it is present.
+		getMenuInflater().inflate(R.menu.mainmenu, menu);
+		return true;
+	}
+	
+	@Override
+	public boolean onOptionsItemSelected(MenuItem item) {
+		switch (item.getItemId()) {
+			case R.id.help:
+				
+				break;
+				
+			case R.id.info:
+				
+				break;
+				
+		}
+		return true;
 	}
 
 }

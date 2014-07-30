@@ -18,48 +18,60 @@
             android:id="@+id/buttonDown"
             android:onClick="buttonDownClicked"/-->
 
-    <ImageView
-            android:layout_width="300px"
-            android:layout_height="450px"
-            android:src="@drawable/ic_launcher"
-            android:id="@+id/imageView" android:layout_gravity="left"/>
-    <TextView
-            android:layout_width="200px"
-            android:layout_height="450px"
-            android:id="@+id/text" android:layout_gravity="left|top" android:autoText="false" android:text="test"/>
+    
     <LinearLayout
             android:orientation="vertical"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content" android:layout_gravity="right">
+            android:layout_height="wrap_content" 
+			android:gravity="right">
         <Button
-                android:layout_width="200px"
-                android:layout_height="200px"
+                android:layout_width="wrap_content"
+                android:layout_height="150px"
                 android:text="Delete Button"
                 android:id="@+id/buttonDel"
-                android:onClick="buttonDelClicked" android:layout_gravity="right"/>
+                android:onClick="buttonDelClicked" 
+				android:gravity="right"/>
         <Button
-                android:layout_width="200px"
-                android:layout_height="200px"
+                android:layout_width="wrap_content"
+                android:layout_height="150px"
                 android:text="Switch Button"
                 android:id="@+id/buttonSwitch"
-                android:onClick="buttonSwitchClicked" android:layout_gravity="right"/>
+                android:onClick="buttonSwitchClicked" 
+				android:gravity="right"/>
     </LinearLayout>
     <LinearLayout
             android:orientation="vertical"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content" android:layout_gravity="right">
+            android:layout_height="wrap_content" 
+			android:gravity="right">
         <Button
-                android:layout_width="200px"
-                android:layout_height="200px"
+                android:layout_width="wrap_content"
+                android:layout_height="150px"
                 android:text="Edit Button"
                 android:id="@+id/buttonEdit"
-                android:onClick="buttonEditClicked" android:layout_gravity="right"/>
+                android:onClick="buttonEditClicked" 
+				android:gravity="right"/>
         <Button
-                android:layout_width="200px"
-                android:layout_height="200px"
+                android:layout_width="wrap_content"
+                android:layout_height="150px"
                 android:text="Draw Button"
                 android:id="@+id/buttonDraw"
-                android:onClick="buttonDrawClicked" android:layout_gravity="bottom|right"/>
+                android:onClick="buttonDrawClicked" 
+				android:gravity="right"/>
     </LinearLayout>
+	<TextView
+		android:layout_width="170px"
+		android:layout_height="450px"
+		android:id="@+id/text" 
+		android:layout_gravity="left" 
+		android:autoText="false" 
+		android:text="test"/>
+	<ImageView
+		android:layout_width="wrap_content"
+		android:layout_height="450px"
+		android:src="@drawable/ic_launcher"
+		android:id="@+id/imageView" 
+		android:layout_gravity="left"/>
+    
 
 </LinearLayout>

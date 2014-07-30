@@ -38,6 +38,29 @@ public class Actions {
         return text;
     }
 	
+	public StringBuilder getHtmlDescription(String file){
+
+        //Read text from file
+        StringBuilder text = new StringBuilder();
+        try {
+            BufferedReader br = new BufferedReader(new FileReader(file));
+            String line;
+
+            while ((line = br.readLine()) != null) {
+                text.append("<p>");
+				text.append(line);
+                text.append('\n');
+				text.append("<p>");
+				//text.append("<br>");
+            }
+        }
+        catch (IOException e) {
+            //You'll need to add proper error handling here
+        }
+
+        return text;
+    }
+	
 	public StringBuilder head(){
 		StringBuilder head = new StringBuilder();
 		head.append("<DOCTYPE html>" + "\n");
@@ -53,6 +76,8 @@ public class Actions {
 	
 	public StringBuilder foot() {
 		StringBuilder foot = new StringBuilder();
+		foot.append(getHtmlDescription(Environment.getExternalStorageDirectory() + "/MANUAL/settings/expected.txt") + "\n");
+		//foot.append("<p>Actual result: " + getDescription(Environment.getExternalStorageDirectory() + "/MANUAL/settings/actual.txt") + "</p>" + "\n");
 		foot.append("</body>" + "\n");
         foot.append("</html>" + "\n");
 		

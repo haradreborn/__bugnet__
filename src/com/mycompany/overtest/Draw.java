@@ -104,11 +104,11 @@ public class Draw extends Activity{
 		new AlertDialog.Builder(this) .setMessage("Do you want to save your drawings?") .setCancelable(true) .setPositiveButton("Yes", new DialogInterface.OnClickListener() { 
 			public void onClick(DialogInterface dialog, int id) { 
 				
-				File folder = new File(Environment.getExternalStorageDirectory().toString());
+				//File folder = new File(Environment.getExternalStorageDirectory().toString());
                 boolean success = false;
-                if (!folder.exists()){
-                        success = folder.mkdirs();
-                }
+                //if (!folder.exists()){
+                //        success = folder.mkdirs();
+                //}
 
                 System.out.println(success+"folder");
 
@@ -130,7 +130,7 @@ public class Draw extends Activity{
                     ostream = new FileOutputStream(file);
 
                     System.out.println(ostream);
-                    View targetView = dv;
+                    //View targetView = dv;
 
                     Bitmap well = dv.getBitmap();
 
@@ -150,14 +150,14 @@ public class Draw extends Activity{
                     
 					if(save == null) {
                         save.recycle();
-                        System.out.println("NULL bitmap save\n");
+                        Toast.makeText(getApplicationContext(), "Null error", Toast.LENGTH_SHORT).show();
                     }
                     save.compress(Bitmap.CompressFormat.PNG, 100, ostream);
                     save.recycle();
 
 //bitmap.compress(Bitmap.CompressFormat.PNG, 100, ostream);
-//ostream.flush();
-//ostream.close();
+					ostream.flush();
+					ostream.close();
 
                 }catch (NullPointerException e){
                         e.printStackTrace();
