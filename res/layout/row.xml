@@ -25,19 +25,21 @@
             android:layout_height="wrap_content" 
 			android:gravity="right">
         <Button
-                android:layout_width="wrap_content"
-                android:layout_height="150px"
+                android:layout_width="225px"
+                android:layout_height="225px"
                 android:text="Delete Button"
                 android:id="@+id/buttonDel"
                 android:onClick="buttonDelClicked" 
-				android:gravity="right"/>
+				android:gravity="right"
+                android:src="@drawable/power_shut_down_mirror"/>
         <Button
-                android:layout_width="wrap_content"
-                android:layout_height="150px"
+                android:layout_width="225px"
+                android:layout_height="225px"
                 android:text="Switch Button"
                 android:id="@+id/buttonSwitch"
                 android:onClick="buttonSwitchClicked" 
-				android:gravity="right"/>
+				android:gravity="right"
+                android:src="@drawable/update_mirror"/>
     </LinearLayout>
     <LinearLayout
             android:orientation="vertical"
@@ -45,19 +47,21 @@
             android:layout_height="wrap_content" 
 			android:gravity="right">
         <Button
-                android:layout_width="wrap_content"
-                android:layout_height="150px"
+                android:layout_width="225px"
+                android:layout_height="225px"
                 android:text="Edit Button"
                 android:id="@+id/buttonEdit"
                 android:onClick="buttonEditClicked" 
-				android:gravity="right"/>
+				android:gravity="right"
+                android:src="@drawable/journal_mirror"/>
         <Button
-                android:layout_width="wrap_content"
-                android:layout_height="150px"
+                android:layout_width="225px"
+                android:layout_height="225px"
                 android:text="Draw Button"
                 android:id="@+id/buttonDraw"
                 android:onClick="buttonDrawClicked" 
-				android:gravity="right"/>
+				android:gravity="right"
+                android:src="@drawable/paint_mirror"/>
     </LinearLayout>
 	<TextView
 		android:layout_width="170px"

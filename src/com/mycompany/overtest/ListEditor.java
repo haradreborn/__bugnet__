@@ -25,6 +25,8 @@ public class ListEditor extends Activity {
 	public static String str = "";
     //file name for switch
 	public String id = "";
+    //bid name
+    public String bid = "";
     //screen params
     public int width;
     public int height;
@@ -400,7 +402,7 @@ public class ListEditor extends Activity {
     }
 	
 	public void buttonDrawClicked(View drawview) {
-		
+
 		Button b = (Button)drawview;
         String bid = b.getContentDescription().toString();
 		
@@ -452,18 +454,121 @@ public class ListEditor extends Activity {
 	}
 
 	public void buttonEditClicked(View ed) {
+
         Button b = (Button)ed;
-        String bid = b.getContentDescription().toString();
+        bid = b.getContentDescription().toString();
 
-        String[] def = new String[1];
-        def[0] = "step";
-        actions.Settings(bid + ".txt", def);
+        //for long click
+        //ed.setOnCreateContextMenuListener(this);
 
-        Intent intent = new Intent();
-        intent.setAction(android.content.Intent.ACTION_VIEW);
-        File file = new File(Environment.getExternalStorageDirectory() + "/MANUAL/settings/" +  bid + ".txt");
-        intent.setDataAndType(Uri.fromFile(file), "text/plain");
-        startActivity(intent);
+        //for single click
+        registerForContextMenu(ed);
+        openContextMenu(ed);
+        unregisterForContextMenu(ed);
+    }
+
+    @Override
+    public void onCreateContextMenu(ContextMenu menu, View view,ContextMenuInfo menuInfo)
+    {
+        super.onCreateContextMenu(menu, view, menuInfo);
+        CreateMenu(menu);
+    }
+
+    @Override
+    public boolean onContextItemSelected(MenuItem item)
+    {
+        return MenuChoice(item);
+    }
+
+    private void CreateMenu(Menu menu)
+    {
+        //tap
+        //double tap
+        //press
+        //press long
+        //swipe
+        //drug
+        //pinch
+        //add desc
+        MenuItem mnu1 = menu.add(0, 0, 0, "Add \"Tap\"");
+        {
+            mnu1.setAlphabeticShortcut('a');
+        }
+        MenuItem mnu2 = menu.add(0, 1, 1, "Add \"Double tap\"");
+        {
+            mnu2.setAlphabeticShortcut('b');
+        }
+        MenuItem mnu3 = menu.add(0, 2, 2, "Add \"Press\"");
+        {
+            mnu3.setAlphabeticShortcut('c');
+        }
+        MenuItem mnu4 = menu.add(0, 3, 3, "Add \"Press long\"");
+        {
+            mnu4.setAlphabeticShortcut('d');
+        }
+        MenuItem mnu5 = menu.add(0, 4, 4, "Add \"Swipe\"");
+        {
+            mnu5.setAlphabeticShortcut('d');
+        }
+        MenuItem mnu6 = menu.add(0, 5, 5, "Add \"Drug\"");
+        {
+            mnu6.setAlphabeticShortcut('d');
+        }
+        MenuItem mnu7 = menu.add(0, 6, 6, "Add \"Pinch\"");
+        {
+            mnu7.setAlphabeticShortcut('d');
+        }
+        MenuItem mnu8 = menu.add(0, 7, 7, "Add description");
+        {
+            mnu8.setAlphabeticShortcut('d');
+        }
+    }
+    private boolean MenuChoice(MenuItem item)
+    {
+        switch (item.getItemId())
+        {
+            case 0:
+                //Toast.makeText(this, "You clicked on Item 1",Toast.LENGTH_LONG).show();
+                return true;
+            case 1:
+                //Toast.makeText(this, "You clicked on Item 2",Toast.LENGTH_LONG).show();
+                return true;
+            case 2:
+                //Toast.makeText(this, "You clicked on Item 3",Toast.LENGTH_LONG).show();
+                return true;
+            case 3:
+                //Toast.makeText(this, "You clicked on Item 4",Toast.LENGTH_LONG).show();
+                return true;
+            case 4:
+                //Toast.makeText(this, "You clicked on Item 5",Toast.LENGTH_LONG).show();
+                return true;
+            case 5:
+                //Toast.makeText(this, "You clicked on Item 6",Toast.LENGTH_LONG).show();
+                return true;
+            case 6:
+                //Toast.makeText(this, "You clicked on Item 7",Toast.LENGTH_LONG).show();
+                return true;
+            case 7:
+                //Toast.makeText(this, "You clicked on Item 7",Toast.LENGTH_LONG).show();
+
+                String[] def = new String[1];
+                def[0] = "step";
+                actions.Settings(bid + ".txt", def);
+
+                Intent intent = new Intent();
+                intent.setAction(android.content.Intent.ACTION_VIEW);
+                File file = new File(Environment.getExternalStorageDirectory() + "/MANUAL/settings/" +  bid + ".txt");
+                intent.setDataAndType(Uri.fromFile(file), "text/plain");
+                startActivity(intent);
+                return true;
+        }
+        return false;
+    }
+
+
+    public void showToast(String message) {
+        Toast toast = Toast.makeText(getApplicationContext(), message, Toast.LENGTH_SHORT);
+        toast.show();
     }
 	
     public String genHtml() {
@@ -570,19 +675,19 @@ class yourAdapter extends BaseAdapter {
         //btnDown.setContentDescription(data[position]);
 
         Button btnDraw = (Button) vi.findViewById(R.id.buttonDraw);
-        btnDraw.setText("dr");
+        btnDraw.setText("Draw");
         btnDraw.setContentDescription(data[position]);
 
         Button btnEdit = (Button) vi.findViewById(R.id.buttonEdit);
-        btnEdit.setText("ed");
+        btnEdit.setText("Edit");
         btnEdit.setContentDescription(data[position]);
 
         Button btnSwitch = (Button) vi.findViewById(R.id.buttonSwitch);
-        btnSwitch.setText("sw");
+        btnSwitch.setText("Switch");
         btnSwitch.setContentDescription(data[position]);
 
         Button btnDel = (Button) vi.findViewById(R.id.buttonDel);
-        btnDel.setText("de");
+        btnDel.setText("Delete");
         btnDel.setContentDescription(data[position]);
 
         //Log.d("Files", "DATA: " + data[position]);
