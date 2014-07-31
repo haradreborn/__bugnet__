@@ -19,7 +19,7 @@
             android:onClick="buttonDownClicked"/-->
 
     
-    <LinearLayout
+    <!--LinearLayout
             android:orientation="vertical"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content" 
@@ -40,41 +40,45 @@
                 android:onClick="buttonSwitchClicked" 
 				android:gravity="right"
                 android:src="@drawable/update_mirror"/>
-    </LinearLayout>
-    <LinearLayout
-            android:orientation="vertical"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content" 
-			android:gravity="right">
         <Button
                 android:layout_width="150px"
                 android:layout_height="150px"
                 android:text="Edit Button"
                 android:id="@+id/buttonEdit"
-                android:onClick="buttonEditClicked" 
-				android:gravity="right"
+                android:onClick="buttonEditClicked"
+                android:gravity="right"
                 android:src="@drawable/journal_mirror"/>
         <Button
                 android:layout_width="150px"
                 android:layout_height="150px"
                 android:text="Draw Button"
                 android:id="@+id/buttonDraw"
-                android:onClick="buttonDrawClicked" 
-				android:gravity="right"
+                android:onClick="buttonDrawClicked"
+                android:gravity="right"
                 android:src="@drawable/paint_mirror"/>
     </LinearLayout>
+    <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" 
+			android:gravity="right">
+
+    </LinearLayout-->
 	<TextView
-		android:layout_width="170px"
-		android:layout_height="300px"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
 		android:id="@+id/text" 
 		android:layout_gravity="left" 
-		android:autoText="false" 
+		android:autoText="false"
+        android:clickable="true"
+        android:onClick="TextClicked"
 		android:text="test"/>
 	<ImageView
 		android:layout_width="wrap_content"
-		android:layout_height="450px"
+		android:layout_height="wrap_content"
 		android:src="@drawable/ic_launcher"
-		android:id="@+id/imageView" 
+		android:id="@+id/imageView"
+        android:onClick="ImageClicked"
 		android:layout_gravity="left"/>
     
 

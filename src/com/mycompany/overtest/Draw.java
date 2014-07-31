@@ -147,11 +147,11 @@ public class Draw extends Activity{
 //Canvas now = new Canvas(save);
 //myDrawView.layout(0, 0, 100, 100);
 //myDrawView.draw(now);
-                    
-					if(save == null) {
-                        save.recycle();
-                        Toast.makeText(getApplicationContext(), "Null error", Toast.LENGTH_SHORT).show();
-                    }
+                    //TODO CHECK EXCEPTION
+					//if(save == null) {
+                    //    save.recycle();
+                    //    Toast.makeText(getApplicationContext(), "Null error", Toast.LENGTH_SHORT).show();
+                    //}
                     save.compress(Bitmap.CompressFormat.PNG, 100, ostream);
                     save.recycle();
 

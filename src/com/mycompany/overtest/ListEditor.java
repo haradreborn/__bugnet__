@@ -91,6 +91,7 @@ public class ListEditor extends Activity {
 
     }
 
+
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu) {
 	//Inflate the menu; this adds items to the action bar if it is present.
@@ -468,6 +469,32 @@ public class ListEditor extends Activity {
         unregisterForContextMenu(ed);
     }
 
+    public void TextClicked(View tc) {
+        TextView b = (TextView)tc;
+        bid = b.getContentDescription().toString();
+
+        //for long click
+        //ed.setOnCreateContextMenuListener(this);
+
+        //for single click
+        registerForContextMenu(tc);
+        openContextMenu(tc);
+        unregisterForContextMenu(tc);
+    }
+
+    public void ImageClicked(View ic) {
+        ImageView b = (ImageView)ic;
+        bid = b.getContentDescription().toString();
+
+        //for long click
+        //ed.setOnCreateContextMenuListener(this);
+
+        //for single click
+        registerForContextMenu(ic);
+        openContextMenu(ic);
+        unregisterForContextMenu(ic);
+    }
+
     @Override
     public void onCreateContextMenu(ContextMenu menu, View view,ContextMenuInfo menuInfo)
     {
@@ -690,6 +717,7 @@ public class ListEditor extends Activity {
 class yourAdapter extends BaseAdapter {
 
     Actions actions = new Actions();
+    ListEditor le = new ListEditor();
 
 	public Matrix matrix() {
         	Matrix matrix = new Matrix();
@@ -756,6 +784,8 @@ class yourAdapter extends BaseAdapter {
 
         TextView text = (TextView) vi.findViewById(R.id.text);
         text.setText(desc);
+        text.setContentDescription(data[position]);
+        text.setWidth(600);
 
         //Button btnUp = (Button) vi.findViewById(R.id.buttonUp);
         //btnUp.setText("up");
@@ -765,21 +795,21 @@ class yourAdapter extends BaseAdapter {
         //btnDown.setText("down");
         //btnDown.setContentDescription(data[position]);
 
-        Button btnDraw = (Button) vi.findViewById(R.id.buttonDraw);
-        btnDraw.setText("Dr");
-        btnDraw.setContentDescription(data[position]);
-
-        Button btnEdit = (Button) vi.findViewById(R.id.buttonEdit);
-        btnEdit.setText("Ed");
-        btnEdit.setContentDescription(data[position]);
-
-        Button btnSwitch = (Button) vi.findViewById(R.id.buttonSwitch);
-        btnSwitch.setText("Sw");
-        btnSwitch.setContentDescription(data[position]);
-
-        Button btnDel = (Button) vi.findViewById(R.id.buttonDel);
-        btnDel.setText("Dl");
-        btnDel.setContentDescription(data[position]);
+//        Button btnDraw = (Button) vi.findViewById(R.id.buttonDraw);
+//        btnDraw.setText("Dr");
+//        btnDraw.setContentDescription(data[position]);
+//
+//        Button btnEdit = (Button) vi.findViewById(R.id.buttonEdit);
+//        btnEdit.setText("Ed");
+//        btnEdit.setContentDescription(data[position]);
+//
+//        Button btnSwitch = (Button) vi.findViewById(R.id.buttonSwitch);
+//        btnSwitch.setText("Sw");
+//        btnSwitch.setContentDescription(data[position]);
+//
+//        Button btnDel = (Button) vi.findViewById(R.id.buttonDel);
+//        btnDel.setText("Dl");
+//        btnDel.setContentDescription(data[position]);
 
         //Log.d("Files", "DATA: " + data[position]);
 
@@ -788,6 +818,7 @@ class yourAdapter extends BaseAdapter {
             BitmapTask btmt = new BitmapTask();
             btmt.setImageView(mImg);
             btmt.execute(data[position]);
+            mImg.setContentDescription(data[position]);
         } catch (Exception e){
             e.printStackTrace();
         }
