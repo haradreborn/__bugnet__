@@ -263,9 +263,10 @@ public class ListEditor extends Activity {
 				//break;
 				
 			case R.id.expected:
-				String[] def = new String[2];
+				String[] def = new String[3];
 				def[0] = "Expected result:";
 				def[1] = "Actual result:";
+				def[2] = "Error log:";
 				actions.Settings("expected.txt", def);
 				
 				Intent intentRes = new Intent();
@@ -482,14 +483,6 @@ public class ListEditor extends Activity {
 
     private void CreateMenu(Menu menu)
     {
-        //tap
-        //double tap
-        //press
-        //press long
-        //swipe
-        //drug
-        //pinch
-        //add desc
         MenuItem mnu1 = menu.add(0, 0, 0, "Add \"Tap\"");
         {
             mnu1.setAlphabeticShortcut('a');
@@ -525,35 +518,133 @@ public class ListEditor extends Activity {
     }
     private boolean MenuChoice(MenuItem item)
     {
+		File fileTap = new File(Environment.getExternalStorageDirectory() + "/MANUAL/settings/" + bid + ".txt");
         switch (item.getItemId())
         {
             case 0:
                 //Toast.makeText(this, "You clicked on Item 1",Toast.LENGTH_LONG).show();
-                return true;
+                
+				if (fileTap.exists()){
+					fileTap.delete();
+					String[] deftap = new String[1];
+					deftap[0] = "Tap";
+					actions.Settings(bid + ".txt", deftap);
+					reload();
+				}
+				else {
+					String[] deftap = new String[1];
+					deftap[0] = "Tap";
+					actions.Settings(bid + ".txt", deftap);
+					reload();
+				}			
+				return true;
             case 1:
                 //Toast.makeText(this, "You clicked on Item 2",Toast.LENGTH_LONG).show();
-                return true;
+                
+				if (fileTap.exists()){
+					fileTap.delete();
+					String[] defdt = new String[1];
+					defdt[0] = "Double tap";
+					actions.Settings(bid + ".txt", defdt);
+					reload();
+				}
+				else {
+					String[] defdt = new String[1];
+					defdt[0] = "Double tap";
+					actions.Settings(bid + ".txt", defdt);
+					reload();
+				}			
+				return true;
             case 2:
                 //Toast.makeText(this, "You clicked on Item 3",Toast.LENGTH_LONG).show();
-                return true;
+                
+				if (fileTap.exists()){
+					fileTap.delete();
+					String[] defpres = new String[1];
+					defpres[0] = "Press";
+					actions.Settings(bid + ".txt", defpres);
+					reload();
+				}
+				else {
+					String[] defpres = new String[1];
+					defpres[0] = "Press";
+					actions.Settings(bid + ".txt", defpres);
+					reload();
+				}			
+				return true;
             case 3:
                 //Toast.makeText(this, "You clicked on Item 4",Toast.LENGTH_LONG).show();
-                return true;
+				
+				if (fileTap.exists()){
+					fileTap.delete();
+					String[] defpl = new String[1];
+					defpl[0] = "Press long";
+					actions.Settings(bid + ".txt", defpl);
+					reload();
+				}
+				else {
+					String[] defpl = new String[1];
+					defpl[0] = "Press long";
+					actions.Settings(bid + ".txt", defpl);
+					reload();
+				}			
+				return true;
             case 4:
                 //Toast.makeText(this, "You clicked on Item 5",Toast.LENGTH_LONG).show();
-                return true;
+                
+				if (fileTap.exists()){
+					fileTap.delete();
+					String[] defsw = new String[1];
+					defsw[0] = "Swipe";
+					actions.Settings(bid + ".txt", defsw);
+					reload();
+				}
+				else {
+					String[] defsw = new String[1];
+					defsw[0] = "Swipe";
+					actions.Settings(bid + ".txt", defsw);
+					reload();
+				}			
+				return true;
             case 5:
                 //Toast.makeText(this, "You clicked on Item 6",Toast.LENGTH_LONG).show();
-                return true;
+                
+				if (fileTap.exists()){
+					fileTap.delete();
+					String[] defdra = new String[1];
+					defdra[0] = "Drag";
+					actions.Settings(bid + ".txt", defdra);
+					reload();
+				}
+				else {
+					String[] defdra = new String[1];
+					defdra[0] = "Drag";
+					actions.Settings(bid + ".txt", defdra);
+					reload();
+				}			
+				return true;
             case 6:
                 //Toast.makeText(this, "You clicked on Item 7",Toast.LENGTH_LONG).show();
-                return true;
+                
+				if (fileTap.exists()){
+					fileTap.delete();
+					String[] defpi = new String[1];
+					defpi[0] = "Pinch";
+					actions.Settings(bid + ".txt", defpi);
+					reload();
+				}
+				else {
+					String[] defpi = new String[1];
+					defpi[0] = "Pinch";
+					actions.Settings(bid + ".txt", defpi);
+					reload();
+				}			
+				return true;
             case 7:
                 //Toast.makeText(this, "You clicked on Item 7",Toast.LENGTH_LONG).show();
-
-                String[] def = new String[1];
-                def[0] = "step";
-                actions.Settings(bid + ".txt", def);
+                String[] defdes = new String[1];
+                defdes[0] = "";
+                actions.Settings(bid + ".txt", defdes);
 
                 Intent intent = new Intent();
                 intent.setAction(android.content.Intent.ACTION_VIEW);
@@ -675,19 +766,19 @@ class yourAdapter extends BaseAdapter {
         //btnDown.setContentDescription(data[position]);
 
         Button btnDraw = (Button) vi.findViewById(R.id.buttonDraw);
-        btnDraw.setText("Draw");
+        btnDraw.setText("Dr");
         btnDraw.setContentDescription(data[position]);
 
         Button btnEdit = (Button) vi.findViewById(R.id.buttonEdit);
-        btnEdit.setText("Edit");
+        btnEdit.setText("Ed");
         btnEdit.setContentDescription(data[position]);
 
         Button btnSwitch = (Button) vi.findViewById(R.id.buttonSwitch);
-        btnSwitch.setText("Switch");
+        btnSwitch.setText("Sw");
         btnSwitch.setContentDescription(data[position]);
 
         Button btnDel = (Button) vi.findViewById(R.id.buttonDel);
-        btnDel.setText("Delete");
+        btnDel.setText("Dl");
         btnDel.setContentDescription(data[position]);
 
         //Log.d("Files", "DATA: " + data[position]);
