@@ -11,6 +11,7 @@ import android.graphics.drawable.BitmapDrawable;
 import android.net.Uri;
 import android.os.*;
 import android.provider.MediaStore;
+import android.text.Html;
 import android.text.InputType;
 import android.util.AttributeSet;
 import android.util.Log;
@@ -117,7 +118,7 @@ public class MainActivity extends Activity {
 
         Intent intent = new Intent();
         intent.setAction(android.content.Intent.ACTION_VIEW);
-        File file = new File(Environment.getExternalStorageDirectory() + "/MANUAL/test.html");
+        File file = new File(Environment.getExternalStorageDirectory() + "/MANUAL/workflow/test.html");
         intent.setDataAndType(Uri.fromFile(file), "text/html");
         startActivity(intent);
 
@@ -198,11 +199,22 @@ public class MainActivity extends Activity {
 				break;
 				
 			case R.id.email:
-				Intent email = new Intent(Intent.ACTION_SEND);
+				Intent email = new Intent(Intent.ACTION_SEND_MULTIPLE);
 	    		email.putExtra(Intent.EXTRA_EMAIL, new String[]{""});		  
 	    		email.putExtra(Intent.EXTRA_SUBJECT, actions.getDescription(Environment.getExternalStorageDirectory() + "/MANUAL/settings/description.txt").toString());
-	    		email.putExtra(Intent.EXTRA_TEXT, "");
-	    		email.setType("message/rfc822");
+	    		email.putExtra(Intent.EXTRA_TEXT, Html.fromHtml(actions.getDescription(Environment.getExternalStorageDirectory() + "/MANUAL/workflow/test.html").toString()));
+
+                File f = new File(Environment.getExternalStorageDirectory() + "/MANUAL/workflow");
+                File file[] = f.listFiles();
+                ArrayList<Uri> uris = new ArrayList<Uri>();
+                for (int i=0; i < file.length; i++) {
+                    uris.add(Uri.fromFile(new File(Environment.getExternalStorageDirectory() + "/MANUAL/workflow/" + file[i].getName())));
+                    //Toast.makeText(getApplicationContext(), Environment.getExternalStorageDirectory() + "/MANUAL/workflow/" + file[i].getName(), Toast.LENGTH_LONG).show();
+                }
+
+                email.putParcelableArrayListExtra(Intent.EXTRA_STREAM, uris);
+
+                email.setType("text/html");
 	    		startActivity(Intent.createChooser(email, "Choose an Email client :"));
 				break;
 				

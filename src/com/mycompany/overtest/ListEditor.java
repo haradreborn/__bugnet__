@@ -54,7 +54,9 @@ public class ListEditor extends Activity {
         Log.d("Files", "Size: "+ file.length);
 
         for (int i=0; i < file.length; i++) {
+            if (file[i].getName().endsWith(".png")) {
                 array.add(file[i].getName());
+            }
         }
 
         Log.d("Files", "###############################################");
@@ -317,7 +319,7 @@ public class ListEditor extends Activity {
                 actions.CreateMainFolder();
                 Toast.makeText(this, "Generating report ", Toast.LENGTH_SHORT).show();
                 try {
-                    File fileRep = new File(Environment.getExternalStorageDirectory() + "/MANUAL/test.html");
+                    File fileRep = new File(Environment.getExternalStorageDirectory() + "/MANUAL/workflow/test.html");
                     fileRep.createNewFile();
                     //String data = "hello";
                     //write the bytes in file
@@ -819,10 +821,10 @@ public class ListEditor extends Activity {
 			tHtml.append("<br><p>Step " + j + "</p>");
 			tHtml.append("<p>Description: " + actions.getDescription(Environment.getExternalStorageDirectory() + "/MANUAL/settings/" + place[i] + ".txt") + "</p>");
 			if (bmp.getWidth() > bmp.getHeight()){
-				tHtml.append("<img src='" + Environment.getExternalStorageDirectory() + "/MANUAL/workflow/" + place[i] + "' width='340px' height='200px' /><br>" + "\n");
+				tHtml.append("<img src='" + place[i] + "' width='340px' height='200px' /><br>" + "\n");
 			}
 			else {
-				tHtml.append("<img src='" + Environment.getExternalStorageDirectory() + "/MANUAL/workflow/" + place[i] + "' width='200px' height='340px' /><br>" + "\n");
+				tHtml.append("<img src='" + place[i] + "' width='340px' height='200px' /><br>" + "\n");
 			}
             //Toast.makeText(getApplicationContext(), getDescription(Environment.getExternalStorageDirectory() + "/MANUAL/settings" + "/" + array.get(i) + ".txt"), Toast.LENGTH_LONG).show();
         }
@@ -905,7 +907,7 @@ class yourAdapter extends BaseAdapter {
         TextView text = (TextView) vi.findViewById(R.id.text);
         text.setText(desc);
         text.setContentDescription(data[position]);
-        text.setWidth(400);
+        text.setWidth(200);
 
         //Button btnUp = (Button) vi.findViewById(R.id.buttonUp);
         //btnUp.setText("up");
