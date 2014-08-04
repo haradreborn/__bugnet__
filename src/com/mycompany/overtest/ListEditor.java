@@ -278,6 +278,13 @@ public class ListEditor extends Activity {
 				//break;
 				
 			case R.id.expected:
+
+                String[] def = new String[3];
+                def[0] = "Expected result:";
+                def[1] = "Actual result:";
+                def[2] = "Error log:";
+                actions.Settings("expected.txt", def);
+
 				Intent intentRes = new Intent();
 				intentRes.setAction(android.content.Intent.ACTION_VIEW);
 				File fileRes = new File(Environment.getExternalStorageDirectory() + "/MANUAL/settings/expected.txt");
@@ -286,9 +293,10 @@ public class ListEditor extends Activity {
 				break;
 				
 			case R.id.name:
-				//String[] deff = new String[1];
-				//deff[0] = "New bug report";
-				//actions.Settings("description.txt", deff);
+
+                String[] deff = new String[1];
+                deff[0] = "New bug report";
+                actions.Settings("description.txt", deff);
 
 				Intent intentAct = new Intent();
 				intentAct.setAction(android.content.Intent.ACTION_VIEW);
@@ -813,7 +821,7 @@ public class ListEditor extends Activity {
 			String path = Environment.getExternalStorageDirectory() + "/MANUAL/workflow/" + place[i];
 
             BitmapFactory.Options buffer = new BitmapFactory.Options();
-            buffer.inSampleSize = 1;
+            buffer.inSampleSize = 6;
             Bitmap bmp = BitmapFactory.decodeFile(path, buffer);
 			
 			tHtml.append("<p>Step " + j + "</p>" + "\n");
@@ -839,7 +847,10 @@ public class ListEditor extends Activity {
 class yourAdapter extends BaseAdapter {
 
     Actions actions = new Actions();
-    ListEditor le = new ListEditor();
+
+    //screen params
+    public int width;
+    public int height;
 
 	public Matrix matrix() {
         	Matrix matrix = new Matrix();
@@ -853,10 +864,16 @@ class yourAdapter extends BaseAdapter {
     private static LayoutInflater inflater = null;
 
     public yourAdapter(Context context, String[] data) {
+
         // TODO Auto-generated constructor stub
         this.context = context;
         this.data = data;
         inflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+
+        DisplayMetrics dm = context.getResources().getDisplayMetrics();
+        width = dm.widthPixels;
+        height = dm.heightPixels;
+
 
         Log.d("Files", "###############################################");
         Log.d("Files", "###############################################");
@@ -891,12 +908,12 @@ class yourAdapter extends BaseAdapter {
     public View getView(int position, View convertView, ViewGroup parent) {
 
         // TODO Auto-generated method stub
-        View vi = convertView;
+        View vi;
         //if (vi == null) {
         vi = inflater.inflate(R.layout.row, null);
 
         Log.d("Files", "###############################################");
-        Log.d("Files", "ARRAY DATA: "+ data[position]);
+        Log.d("Files", "ARRAY DATA: " + Integer.toString(width));
         Log.d("Files", "###############################################");
 
 
@@ -907,7 +924,7 @@ class yourAdapter extends BaseAdapter {
         TextView text = (TextView) vi.findViewById(R.id.text);
         text.setText(desc);
         text.setContentDescription(data[position]);
-        text.setWidth(200);
+        text.setWidth(width/3);
 
         //Button btnUp = (Button) vi.findViewById(R.id.buttonUp);
         //btnUp.setText("up");

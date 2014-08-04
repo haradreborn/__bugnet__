@@ -5,30 +5,18 @@
     tools:context=".MainActivity" >
 
 	<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-		android:orientation="vertical" android:layout_width="match_parent"
-		android:layout_height="match_parent"
-		android:weightSum="1">
+		android:orientation="vertical"
+        android:layout_width="fill_parent"
+		android:layout_height="fill_parent"
+		android:weightSum="4">
 
         <Button
-        android:id="@+id/button1"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Start Touch Detection"
-        android:onClick="buttonStartClicked" />
-	
-	    <Button
-		android:id="@+id/button2"
-		android:layout_width="match_parent"
-		android:layout_height="wrap_content"
-		android:text="Stop Touch Detection"
-		android:onClick="buttonStopClicked" />
-
-        <Button
-        android:id="@+id/button5"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Edit captured screenshots"
-        android:onClick="buttonEditClicked" />
+                android:id="@+id/button5"
+                android:layout_width="match_parent"
+                android:layout_height="fill_parent"
+                android:text="Edit captured screenshots"
+                android:onClick="buttonEditClicked"
+                android:layout_weight="1" />
 
         <!--Button
 		android:id="@+id/button4"
@@ -45,11 +33,28 @@
         android:onClick="buttonEmptyClicked" /-->
 
         <Button
-        android:id="@+id/button6"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="View HTML Report"
-        android:onClick="buttonViewClicked" />
+                android:id="@+id/button6"
+                android:layout_width="match_parent"
+                android:layout_height="fill_parent"
+                android:text="View HTML Report"
+                android:onClick="buttonViewClicked"
+                android:layout_weight="1" />
+
+        <Button
+                android:id="@+id/button1"
+                android:layout_width="match_parent"
+                android:layout_height="fill_parent"
+                android:text="Start Touch Detection"
+                android:onClick="buttonStartClicked"
+                android:layout_weight="1" />
+
+        <Button
+                android:id="@+id/button2"
+                android:layout_width="match_parent"
+                android:layout_height="fill_parent"
+                android:text="Stop Touch Detection"
+                android:onClick="buttonStopClicked"
+                android:layout_weight="1" />
 
         <!--Button
 		android:id="@+id/button7"

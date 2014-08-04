@@ -14,6 +14,7 @@ import android.provider.MediaStore;
 import android.text.Html;
 import android.text.InputType;
 import android.util.AttributeSet;
+import android.util.DisplayMetrics;
 import android.util.Log;
 import android.view.*;
 import android.webkit.MimeTypeMap;
@@ -31,7 +32,10 @@ public class MainActivity extends Activity {
     Actions actions = new Actions();
     Intent globalService;
 	Intent list;
-	Intent show;
+
+    //screen params
+    public int width;
+    public int height;
 
 
     @Override

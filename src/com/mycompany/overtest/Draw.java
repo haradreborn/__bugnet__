@@ -152,6 +152,7 @@ public class Draw extends Activity{
 //int tW  = result.getWidth() / 1;
 //int tH = result.getHeight() / 1;
 
+
                     Bitmap save = Bitmap.createBitmap(width, height, Bitmap.Config.ARGB_8888);
                     Paint paint = new Paint();
                     paint.setColor(Color.WHITE);
