@@ -12,6 +12,7 @@ import java.io.*;
 import java.util.*;
 
 import java.lang.Process;
+import android.view.*;
 
 /**
  * Created by harad on 15.03.14.
@@ -67,9 +68,11 @@ public class Actions {
         head.append("<html lang='en-US'>" + "\n");
         head.append("<head>" + "\n");
         head.append("<meta charset=utf-8>" + "\n");
-        head.append("<title>Hello</title>" + "\n");
+        head.append("<title>" + getDescription(Environment.getExternalStorageDirectory() + "/MANUAL/settings/description.txt") + "</title>" + "\n");
         head.append("</head>" + "\n");
         head.append("<body>" + "\n");
+		head.append("<h1>Report name: " + getDescription(Environment.getExternalStorageDirectory() + "/MANUAL/settings/description.txt") + "</h1>" + "\n");
+        
         
 		return head;
 	}
@@ -84,6 +87,14 @@ public class Actions {
 		return foot;
 	}
 	
+	//rotate
+	public Matrix matrixRotate(){
+        Matrix matrix = new Matrix();
+		matrix.postRotate(90);
+        matrix.postScale(1.0f, 1.0f);
+        return matrix;
+    }
+	
     /**
      * Take screenshot
      */  
@@ -97,8 +108,9 @@ public class Actions {
             os.flush();
             os.close();
             sh.waitFor();
+			
         } catch (Exception e) {
-//            Log.e(TAG, e.getMessage().toString());
+        	//Log.e(TAG, e.getMessage().toString());
         }
     }
     // generate file names

@@ -43,6 +43,17 @@ public class MainActivity extends Activity {
 
         //create WF folder
         actions.CreateMainFolder();
+		//create main files
+		String[] def = new String[3];
+		def[0] = "Expected result:";
+		def[1] = "Actual result:";
+		def[2] = "Error log:";
+		actions.Settings("expected.txt", def);
+		
+		String[] deff = new String[1];
+		deff[0] = "New bug report";
+		actions.Settings("description.txt", deff);
+		
 	}
 
 	//btn start
@@ -161,6 +172,38 @@ public class MainActivity extends Activity {
 				
 			case R.id.info:
 				
+				break;
+				
+			case R.id.empty:
+				new AlertDialog.Builder(this)
+					.setTitle("Empty workflow")
+					.setMessage("All your files will be deleted!")
+					.setPositiveButton(android.R.string.yes, new DialogInterface.OnClickListener() {
+						public void onClick(DialogInterface dialog, int which) { 
+							stopService(globalService);
+							//todo
+							File flow = new File(Environment.getExternalStorageDirectory() + "/MANUAL/workflow");
+							deleteDirPng(flow);
+							File sett = new File(Environment.getExternalStorageDirectory() + "/MANUAL/settings");
+							deleteDirTxt(sett);
+						}
+					})
+					.setNegativeButton(android.R.string.no, new DialogInterface.OnClickListener() {
+						public void onClick(DialogInterface dialog, int which) { 
+							// do nothing
+						}
+					})
+					.setIcon(android.R.drawable.ic_dialog_alert)
+					.show();
+				break;
+				
+			case R.id.email:
+				Intent email = new Intent(Intent.ACTION_SEND);
+	    		email.putExtra(Intent.EXTRA_EMAIL, new String[]{""});		  
+	    		email.putExtra(Intent.EXTRA_SUBJECT, actions.getDescription(Environment.getExternalStorageDirectory() + "/MANUAL/settings/description.txt").toString());
+	    		email.putExtra(Intent.EXTRA_TEXT, "");
+	    		email.setType("message/rfc822");
+	    		startActivity(Intent.createChooser(email, "Choose an Email client :"));
 				break;
 				
 		}

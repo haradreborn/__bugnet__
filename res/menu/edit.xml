@@ -13,6 +13,12 @@
         android:showAsAction="never"
         android:title="Add screenshot"/>
 		
+	<item
+		android:id="@+id/name"
+		android:orderInCategory="100"
+		android:showAsAction="never"
+		android:title="Edit report name"/>
+	
 	<!--item
 		android:id="@+id/empty"
 		android:orderInCategory="100"
@@ -30,12 +36,6 @@
 		android:orderInCategory="100"
 		android:showAsAction="never"
 		android:title="Edit additional information"/>
-	
-	<!--item
-		android:id="@+id/actual"
-		android:orderInCategory="100"
-		android:showAsAction="never"
-		android:title="Edit actual result"/-->
 	
 	<item
 		android:id="@+id/report"

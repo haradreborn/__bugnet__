@@ -91,6 +91,7 @@ public class ListEditor extends Activity {
 
     }
 
+
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu) {
 	//Inflate the menu; this adds items to the action bar if it is present.
@@ -158,14 +159,28 @@ public class ListEditor extends Activity {
             Bitmap bmp = BitmapFactory.decodeFile(path, buffer);
 			try {
             	if (bmp.getWidth() > width || bmp.getHeight() > height){
-                	Bitmap resized = Bitmap.createScaledBitmap(bmp,(int)(bmp.getWidth()*0.5), (int)(bmp.getHeight()*0.5), true);
-                	bmp.recycle();
-					FileOutputStream out = new FileOutputStream(path);
-                	resized.compress(Bitmap.CompressFormat.PNG, 70, out);
-					resized.recycle();		
-                	out.flush();
-                	out.close();
-            	}
+					if (bmp.getWidth() > bmp.getHeight()){
+						Bitmap resized = Bitmap.createScaledBitmap(bmp, height, width, true); //(int)(bmp.getHeight()*0.5)
+						bmp.recycle();
+						
+						FileOutputStream out = new FileOutputStream(path);
+						resized.compress(Bitmap.CompressFormat.PNG, 70, out);
+						resized.recycle();		
+						out.flush();
+						out.close();
+					}
+					else {
+						Bitmap resized = Bitmap.createScaledBitmap(bmp, width, height, true); //(int)(bmp.getHeight()*0.5)
+						bmp.recycle();
+
+						FileOutputStream out = new FileOutputStream(path);
+						resized.compress(Bitmap.CompressFormat.PNG, 70, out);
+						resized.recycle();		
+						out.flush();
+						out.close();
+					}
+				}
+				
 			} catch (OutOfMemoryError oum) {}
 
         } catch (Exception e) {
@@ -263,12 +278,6 @@ public class ListEditor extends Activity {
 				//break;
 				
 			case R.id.expected:
-				String[] def = new String[3];
-				def[0] = "Expected result:";
-				def[1] = "Actual result:";
-				def[2] = "Error log:";
-				actions.Settings("expected.txt", def);
-				
 				Intent intentRes = new Intent();
 				intentRes.setAction(android.content.Intent.ACTION_VIEW);
 				File fileRes = new File(Environment.getExternalStorageDirectory() + "/MANUAL/settings/expected.txt");
@@ -276,17 +285,17 @@ public class ListEditor extends Activity {
 				startActivity(intentRes);
 				break;
 				
-			//case R.id.actual:
+			case R.id.name:
 				//String[] deff = new String[1];
-				//deff[0] = "";
-				//actions.Settings("actual.txt", deff);
+				//deff[0] = "New bug report";
+				//actions.Settings("description.txt", deff);
 
-				//Intent intentAct = new Intent();
-				//intentAct.setAction(android.content.Intent.ACTION_VIEW);
-				//File fileAct = new File(Environment.getExternalStorageDirectory() + "/MANUAL/settings/actual.txt");
-				//intentAct.setDataAndType(Uri.fromFile(fileAct), "text/plain");
-				//startActivity(intentAct);
-				//break;
+				Intent intentAct = new Intent();
+				intentAct.setAction(android.content.Intent.ACTION_VIEW);
+				File fileAct = new File(Environment.getExternalStorageDirectory() + "/MANUAL/settings/description.txt");
+				intentAct.setDataAndType(Uri.fromFile(fileAct), "text/plain");
+				startActivity(intentAct);
+				break;
 				
 			case R.id.gallery:
 				// in onCreate or any event where your want the user to
@@ -421,19 +430,38 @@ public class ListEditor extends Activity {
 	public void buttonDelClicked(View start) {
 		
 		Button b = (Button)start;
-        String bid = b.getContentDescription().toString();
-		File file = new File(Environment.getExternalStorageDirectory() + "/MANUAL/workflow/" +  bid);
-		if (file.exists()){ 
-			file.delete();	
-		}
-        File text = new File(Environment.getExternalStorageDirectory() + "/MANUAL/settings/" +  bid + ".txt");
-        if (text.exists()){
-            text.delete();
-        }
-		array.remove(bid);
-		String[] place = array.toArray(new String[array.size()]);
-		Arrays.sort(place);
-		listview.setAdapter(new yourAdapter(this, place));	
+		String bid = b.getContentDescription().toString();
+		final String fb = bid;
+		
+		new AlertDialog.Builder(this)
+			.setTitle("Delete screenshot")
+			.setMessage("This screenshot will be deleted!")
+			.setPositiveButton(android.R.string.yes, new DialogInterface.OnClickListener() {
+				
+				public void onClick(DialogInterface dialog, int which) { 
+					File file = new File(Environment.getExternalStorageDirectory() + "/MANUAL/workflow/" +  fb);
+					if (file.exists()){ 
+						file.delete();	
+					}
+					File text = new File(Environment.getExternalStorageDirectory() + "/MANUAL/settings/" +  fb + ".txt");
+					if (text.exists()){
+						text.delete();
+					}
+					array.remove(fb);
+					String[] place = array.toArray(new String[array.size()]);
+					Arrays.sort(place);
+					reload();
+					
+						}
+			})
+			.setNegativeButton(android.R.string.no, new DialogInterface.OnClickListener() {
+				public void onClick(DialogInterface dialog, int which) { 
+					// do nothing
+				}
+			})
+			.setIcon(android.R.drawable.ic_dialog_alert)
+			.show();
+			
 	}
 	
 	public void buttonSwitchClicked(View swi) {
@@ -468,17 +496,68 @@ public class ListEditor extends Activity {
         unregisterForContextMenu(ed);
     }
 
+    public void TextClicked(View tc) {
+        TextView b = (TextView)tc;
+        bid = b.getContentDescription().toString();
+
+        //for long click
+        //ed.setOnCreateContextMenuListener(this);
+
+        //for single click
+        registerForContextMenu(tc);
+        openContextMenu(tc);
+        unregisterForContextMenu(tc);
+    }
+
+    public void ImageClicked(View ic) {
+        ImageView b = (ImageView)ic;
+        bid = b.getContentDescription().toString();
+
+        //for long click
+        //ed.setOnCreateContextMenuListener(this);
+
+        //for single click
+        registerForContextMenu(ic);
+        openContextMenu(ic);
+        unregisterForContextMenu(ic);
+    }
+
     @Override
     public void onCreateContextMenu(ContextMenu menu, View view,ContextMenuInfo menuInfo)
     {
         super.onCreateContextMenu(menu, view, menuInfo);
-        CreateMenu(menu);
+        switch(view.getId())
+		{
+			case R.id.text:
+				CreateMenu(menu);
+				break;
+			case R.id.imageView:
+				CreateMenuImage(menu);
+				break;
+				
+		}
     }
 
     @Override
     public boolean onContextItemSelected(MenuItem item)
     {
         return MenuChoice(item);
+    }
+	
+	private void CreateMenuImage(Menu menu)
+    {
+        MenuItem mnu1 = menu.add(0, 8, 8, "Draw");
+        {
+            mnu1.setAlphabeticShortcut('i');
+        }
+        MenuItem mnu3 = menu.add(0, 10, 10, "Switch");
+        {
+            mnu3.setAlphabeticShortcut('k');
+        }
+        MenuItem mnu4 = menu.add(0, 11, 11, "Delete");
+        {
+            mnu4.setAlphabeticShortcut('l');
+        }
     }
 
     private void CreateMenu(Menu menu)
@@ -501,21 +580,22 @@ public class ListEditor extends Activity {
         }
         MenuItem mnu5 = menu.add(0, 4, 4, "Add \"Swipe\"");
         {
-            mnu5.setAlphabeticShortcut('d');
+            mnu5.setAlphabeticShortcut('e');
         }
         MenuItem mnu6 = menu.add(0, 5, 5, "Add \"Drug\"");
         {
-            mnu6.setAlphabeticShortcut('d');
+            mnu6.setAlphabeticShortcut('f');
         }
         MenuItem mnu7 = menu.add(0, 6, 6, "Add \"Pinch\"");
         {
-            mnu7.setAlphabeticShortcut('d');
+            mnu7.setAlphabeticShortcut('g');
         }
         MenuItem mnu8 = menu.add(0, 7, 7, "Add description");
         {
-            mnu8.setAlphabeticShortcut('d');
+            mnu8.setAlphabeticShortcut('h');
         }
     }
+	
     private boolean MenuChoice(MenuItem item)
     {
 		File fileTap = new File(Environment.getExternalStorageDirectory() + "/MANUAL/settings/" + bid + ".txt");
@@ -652,6 +732,61 @@ public class ListEditor extends Activity {
                 intent.setDataAndType(Uri.fromFile(file), "text/plain");
                 startActivity(intent);
                 return true;
+			case 8:
+				Bundle bundle = new Bundle();
+				String k = "file name";
+				bundle.putString(k, bid);
+				Log.d("Files", "BUNDLE: " + bid);
+
+				str = bid;
+				draw = new Intent(this,Draw.class);
+				draw.putExtras(bundle);
+				startActivity(draw);
+				return true;
+			case 10:
+				id = bid;
+
+				Intent intentSwi = new Intent();
+				intentSwi.setType("image/*");
+				intentSwi.setAction(Intent.ACTION_GET_CONTENT);
+				startActivityForResult(Intent.createChooser(intentSwi, "Switch Picture"), SWITCH_PICTURE);
+				//Toast.makeText(getApplicationContext(), bid + " " + id, Toast.LENGTH_LONG).show();
+
+				String[] place = array.toArray(new String[array.size()]);
+				Arrays.sort(place);
+				listview.setAdapter(new yourAdapter(this, place));	
+				return true;
+			case 11:
+				final String fb = bid;
+
+				new AlertDialog.Builder(this)
+					.setTitle("Delete screenshot")
+					.setMessage("This screenshot will be deleted!")
+					.setPositiveButton(android.R.string.yes, new DialogInterface.OnClickListener() {
+
+						public void onClick(DialogInterface dialog, int which) { 
+							File file = new File(Environment.getExternalStorageDirectory() + "/MANUAL/workflow/" +  fb);
+							if (file.exists()){ 
+								file.delete();	
+							}
+							File text = new File(Environment.getExternalStorageDirectory() + "/MANUAL/settings/" +  fb + ".txt");
+							if (text.exists()){
+								text.delete();
+							}
+							array.remove(fb);
+							String[] place = array.toArray(new String[array.size()]);
+							Arrays.sort(place);
+							reload();
+
+						}
+					})
+					.setNegativeButton(android.R.string.no, new DialogInterface.OnClickListener() {
+						public void onClick(DialogInterface dialog, int which) { 
+							// do nothing
+						}
+					})
+					.setIcon(android.R.drawable.ic_dialog_alert)
+					.show();
         }
         return false;
     }
@@ -674,10 +809,22 @@ public class ListEditor extends Activity {
         for (int i=0; i<scrCount; i++) {
 			int j = i + 1;
             //todo
+			
+			String path = Environment.getExternalStorageDirectory() + "/MANUAL/workflow/" + place[i];
+
+            BitmapFactory.Options buffer = new BitmapFactory.Options();
+            buffer.inSampleSize = 1;
+            Bitmap bmp = BitmapFactory.decodeFile(path, buffer);
+			
 			tHtml.append("<br><p>Step " + j + "</p>");
 			tHtml.append("<p>Description: " + actions.getDescription(Environment.getExternalStorageDirectory() + "/MANUAL/settings/" + place[i] + ".txt") + "</p>");
-            tHtml.append("<img src='" + Environment.getExternalStorageDirectory() + "/MANUAL/workflow/" + place[i] + "' width='200px' height='340px' /><br>" + "\n");
-			//Toast.makeText(getApplicationContext(), getDescription(Environment.getExternalStorageDirectory() + "/MANUAL/settings" + "/" + array.get(i) + ".txt"), Toast.LENGTH_LONG).show();
+			if (bmp.getWidth() > bmp.getHeight()){
+				tHtml.append("<img src='" + Environment.getExternalStorageDirectory() + "/MANUAL/workflow/" + place[i] + "' width='340px' height='200px' /><br>" + "\n");
+			}
+			else {
+				tHtml.append("<img src='" + Environment.getExternalStorageDirectory() + "/MANUAL/workflow/" + place[i] + "' width='200px' height='340px' /><br>" + "\n");
+			}
+            //Toast.makeText(getApplicationContext(), getDescription(Environment.getExternalStorageDirectory() + "/MANUAL/settings" + "/" + array.get(i) + ".txt"), Toast.LENGTH_LONG).show();
         }
 
         //tHtml.append("<img src='/sdcard/MANUAL/" + glo.getListOfFiles().get(0) + "' width='200px' height='300px' />" + "\n");
@@ -690,6 +837,7 @@ public class ListEditor extends Activity {
 class yourAdapter extends BaseAdapter {
 
     Actions actions = new Actions();
+    ListEditor le = new ListEditor();
 
 	public Matrix matrix() {
         	Matrix matrix = new Matrix();
@@ -756,6 +904,8 @@ class yourAdapter extends BaseAdapter {
 
         TextView text = (TextView) vi.findViewById(R.id.text);
         text.setText(desc);
+        text.setContentDescription(data[position]);
+        text.setWidth(400);
 
         //Button btnUp = (Button) vi.findViewById(R.id.buttonUp);
         //btnUp.setText("up");
@@ -765,21 +915,21 @@ class yourAdapter extends BaseAdapter {
         //btnDown.setText("down");
         //btnDown.setContentDescription(data[position]);
 
-        Button btnDraw = (Button) vi.findViewById(R.id.buttonDraw);
-        btnDraw.setText("Dr");
-        btnDraw.setContentDescription(data[position]);
-
-        Button btnEdit = (Button) vi.findViewById(R.id.buttonEdit);
-        btnEdit.setText("Ed");
-        btnEdit.setContentDescription(data[position]);
-
-        Button btnSwitch = (Button) vi.findViewById(R.id.buttonSwitch);
-        btnSwitch.setText("Sw");
-        btnSwitch.setContentDescription(data[position]);
-
-        Button btnDel = (Button) vi.findViewById(R.id.buttonDel);
-        btnDel.setText("Dl");
-        btnDel.setContentDescription(data[position]);
+//        Button btnDraw = (Button) vi.findViewById(R.id.buttonDraw);
+//        btnDraw.setText("Dr");
+//        btnDraw.setContentDescription(data[position]);
+//
+//        Button btnEdit = (Button) vi.findViewById(R.id.buttonEdit);
+//        btnEdit.setText("Ed");
+//        btnEdit.setContentDescription(data[position]);
+//
+//        Button btnSwitch = (Button) vi.findViewById(R.id.buttonSwitch);
+//        btnSwitch.setText("Sw");
+//        btnSwitch.setContentDescription(data[position]);
+//
+//        Button btnDel = (Button) vi.findViewById(R.id.buttonDel);
+//        btnDel.setText("Dl");
+//        btnDel.setContentDescription(data[position]);
 
         //Log.d("Files", "DATA: " + data[position]);
 
@@ -788,6 +938,7 @@ class yourAdapter extends BaseAdapter {
             BitmapTask btmt = new BitmapTask();
             btmt.setImageView(mImg);
             btmt.execute(data[position]);
+            mImg.setContentDescription(data[position]);
         } catch (Exception e){
             e.printStackTrace();
         }

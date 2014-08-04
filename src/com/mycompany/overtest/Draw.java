@@ -2,13 +2,12 @@ package com.mycompany.overtest;
 
 import android.app.*;
 import android.content.*;
+import android.content.pm.*;
 import android.graphics.*;
 import android.os.*;
-import android.util.DisplayMetrics;
+import android.util.*;
 import android.view.*;
-import android.view.ContextMenu.*;
 import android.widget.*;
-import android.widget.AdapterView.*;
 import java.io.*;
 
 /**
@@ -23,8 +22,8 @@ public class Draw extends Activity{
     public int height;
 	
 	//new gallery intent privates
-	private static final int SELECT_PICTURE = 1;
-	private String selectedImagePath;
+	//private static final int SELECT_PICTURE = 1;
+	//private String selectedImagePath;
 
 	//TODO
 	String sttr = ListEditor.str;
@@ -39,16 +38,31 @@ public class Draw extends Activity{
         BitmapFactory.Options buffer = new BitmapFactory.Options();
         buffer.inSampleSize = 1;
 		Bitmap bm = BitmapFactory.decodeFile(Environment.getExternalStorageDirectory() + "/MANUAL/workflow/" + filename, buffer);
-
+	
 		int targetWidth  = bm.getWidth() / 1;
 		int targetHeight = bm.getHeight() / 1;
-		Bitmap size = Bitmap.createBitmap(bm, 0, 0, targetWidth, targetHeight, matrix(), true);
-		return size;
+		
+		if (targetWidth > targetHeight){
+			Bitmap size = Bitmap.createBitmap(bm, 0, 0, targetWidth, targetHeight, matrixRotate(), true);
+			return size;
+			}
+		else {
+			Bitmap size = Bitmap.createBitmap(bm, 0, 0, targetWidth, targetHeight, matrix(), true);
+			return size;
+		}
 	}
 
 	//rescale
 	public Matrix matrix(){
         Matrix matrix = new Matrix();
+        matrix.postScale(1.0f, 1.0f);
+        return matrix;
+    }
+	
+	//rotate
+	public Matrix matrixRotate(){
+        Matrix matrix = new Matrix();
+		matrix.postRotate(90);
         matrix.postScale(1.0f, 1.0f);
         return matrix;
     }
@@ -71,6 +85,7 @@ public class Draw extends Activity{
 		//set view		
         dv = new DrawingView(this);
         setContentView(dv);
+		setRequestedOrientation (ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);     //  Fixed Portrait orientation
         mPaint = new Paint();
         mPaint.setAntiAlias(true);
         mPaint.setDither(true);
@@ -147,11 +162,11 @@ public class Draw extends Activity{
 //Canvas now = new Canvas(save);
 //myDrawView.layout(0, 0, 100, 100);
 //myDrawView.draw(now);
-                    
-					if(save == null) {
-                        save.recycle();
-                        Toast.makeText(getApplicationContext(), "Null error", Toast.LENGTH_SHORT).show();
-                    }
+                    //TODO CHECK EXCEPTION
+					//if(save == null) {
+                    //    save.recycle();
+                    //    Toast.makeText(getApplicationContext(), "Null error", Toast.LENGTH_SHORT).show();
+                    //}
                     save.compress(Bitmap.CompressFormat.PNG, 100, ostream);
                     save.recycle();
 
