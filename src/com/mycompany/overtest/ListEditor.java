@@ -90,9 +90,7 @@ public class ListEditor extends Activity {
         Log.d("Files", "###############################################");
         Log.d("Files", "###############################################");
         Log.d("Files", "###############################################");
-
     }
-
 
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu) {
@@ -818,13 +816,15 @@ public class ListEditor extends Activity {
             buffer.inSampleSize = 1;
             Bitmap bmp = BitmapFactory.decodeFile(path, buffer);
 			
-			tHtml.append("<br><p>Step " + j + "</p>");
-			tHtml.append("<p>Description: " + actions.getDescription(Environment.getExternalStorageDirectory() + "/MANUAL/settings/" + place[i] + ".txt") + "</p>");
+			tHtml.append("<p>Step " + j + "</p>" + "\n");
+			tHtml.append("<p>Description: " + actions.getDescription(Environment.getExternalStorageDirectory() + "/MANUAL/settings/" + place[i] + ".txt") + "</p>" + "\n");
 			if (bmp.getWidth() > bmp.getHeight()){
-				tHtml.append("<img src='" + place[i] + "' width='340px' height='200px' /><br>" + "\n");
+				tHtml.append("<img src='" + place[i] + "' width='340px' height='200px' />" + "\n");
 			}
 			else {
-				tHtml.append("<img src='" + place[i] + "' width='340px' height='200px' /><br>" + "\n");
+				tHtml.append("<img src='" + place[i] + "' width='200px' height='340px' />" + "\n");
+				//base64 encoded example
+				//tHtml.append("<img src='data:image/jpeg;base64," + actions.decoder(place[i]) + "' width='200px' height='340px' /><br>" + "\n");
 			}
             //Toast.makeText(getApplicationContext(), getDescription(Environment.getExternalStorageDirectory() + "/MANUAL/settings" + "/" + array.get(i) + ".txt"), Toast.LENGTH_LONG).show();
         }

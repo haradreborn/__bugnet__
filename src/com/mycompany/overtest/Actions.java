@@ -18,6 +18,20 @@ import android.view.*;
  * Created by harad on 15.03.14.
  */
 public class Actions {
+	
+	public String decoder(String img){
+		
+		BitmapFactory.Options buffer = new BitmapFactory.Options();
+        buffer.inSampleSize = 1;
+		Bitmap bm = BitmapFactory.decodeFile(Environment.getExternalStorageDirectory() + "/MANUAL/workflow/" + img, buffer);
+		
+		ByteArrayOutputStream baos = new ByteArrayOutputStream();  
+		bm.compress(Bitmap.CompressFormat.PNG, 100, baos);
+		byte[] b = baos.toByteArray();
+		String base = Base64.encodeToString(b,Base64.DEFAULT);
+		
+		return base;
+	}
 
     public StringBuilder getDescription(String file){
 
@@ -68,7 +82,7 @@ public class Actions {
         head.append("<html lang='en-US'>" + "\n");
         head.append("<head>" + "\n");
         head.append("<meta charset=utf-8>" + "\n");
-        head.append("<title>" + getDescription(Environment.getExternalStorageDirectory() + "/MANUAL/settings/description.txt") + "</title>" + "\n");
+        head.append("<title>Bug report</title>" + "\n");
         head.append("</head>" + "\n");
         head.append("<body>" + "\n");
 		head.append("<h1>Report name: " + getDescription(Environment.getExternalStorageDirectory() + "/MANUAL/settings/description.txt") + "</h1>" + "\n");
