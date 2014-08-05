@@ -30,6 +30,7 @@ import java.util.List;
 public class MainActivity extends Activity {
 
     Actions actions = new Actions();
+	ListEditor le = new ListEditor();
     Intent globalService;
 	Intent list;
 
@@ -75,8 +76,10 @@ public class MainActivity extends Activity {
 		Intent email = new Intent(Intent.ACTION_SEND_MULTIPLE);
 		email.putExtra(Intent.EXTRA_EMAIL, new String[]{""});		  
 		email.putExtra(Intent.EXTRA_SUBJECT, actions.getDescription(Environment.getExternalStorageDirectory() + "/MANUAL/settings/description.txt").toString());
+		//email.putExtra(Intent.EXTRA_TEXT, Html.fromHtml(le.genEmail()).toString());
 		email.putExtra(Intent.EXTRA_TEXT, Html.fromHtml(actions.getDescription(Environment.getExternalStorageDirectory() + "/MANUAL/workflow/test.html").toString()));
-
+		
+		
 		File f = new File(Environment.getExternalStorageDirectory() + "/MANUAL/workflow");
 		File file[] = f.listFiles();
 		ArrayList<Uri> uris = new ArrayList<Uri>();

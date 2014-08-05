@@ -353,13 +353,6 @@ public class ListEditor extends Activity {
             Log.v("Example", "Force restart");
             Intent intent = new Intent(this, ListEditor.class);
             startActivity(intent);
-            Log.d("Files", "###############################################");
-            Log.d("Files", "###############################################");
-            Log.d("Files", "###############################################");
-            Log.d("Files", " ARRAY RESUME: "+ array);
-            Log.d("Files", "###############################################");
-            Log.d("Files", "###############################################");
-            Log.d("Files", "###############################################");
             finish();
 		}
 		else {
@@ -807,7 +800,19 @@ public class ListEditor extends Activity {
 	
 	public String genEmail(){
 		StringBuilder text = new StringBuilder();
-		text.append("Short description: " );
+		int scrCount = array.size();
+
+        String[] place = array.toArray(new String[array.size()]);
+        Arrays.sort(place);
+		text.append("Short description: " + actions.getDescription(Environment.getExternalStorageDirectory() + "/MANUAL/settings/description.txt") + "\n");
+		
+        for (int i=0; i<scrCount; i++) {
+			int j = i + 1;
+		text.append("Step " + j);
+		text.append("Description: " + actions.getDescription(Environment.getExternalStorageDirectory() + "/MANUAL/settings/" + place[i] + ".txt"));
+		}
+		text.append(actions.getHtmlDescription(Environment.getExternalStorageDirectory() + "/MANUAL/settings/expected.txt"));
+		
 		return text.toString();
 	}
 	
