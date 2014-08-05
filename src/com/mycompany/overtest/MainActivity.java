@@ -13,6 +13,7 @@ import android.os.*;
 import android.provider.MediaStore;
 import android.text.Html;
 import android.text.InputType;
+import android.text.SpannableStringBuilder;
 import android.util.AttributeSet;
 import android.util.DisplayMetrics;
 import android.util.Log;
@@ -77,9 +78,14 @@ public class MainActivity extends Activity {
 		email.putExtra(Intent.EXTRA_EMAIL, new String[]{""});		  
 		email.putExtra(Intent.EXTRA_SUBJECT, actions.getDescription(Environment.getExternalStorageDirectory() + "/MANUAL/settings/description.txt").toString());
 		//email.putExtra(Intent.EXTRA_TEXT, Html.fromHtml(le.genEmail()).toString());
-		email.putExtra(Intent.EXTRA_TEXT, Html.fromHtml(actions.getDescription(Environment.getExternalStorageDirectory() + "/MANUAL/workflow/test.html").toString()));
-		
-		
+
+
+		email.putExtra(Intent.EXTRA_TEXT, Html.fromHtml(actions.getDescription(Environment.getExternalStorageDirectory() + "/MANUAL/workflow/test.html")
+                .toString()
+                .replace("<img src=", "")
+                .replace("width='340px' height='200px' />", "")
+                .replace("width='200px' height='340px' />", "")));
+
 		File f = new File(Environment.getExternalStorageDirectory() + "/MANUAL/workflow");
 		File file[] = f.listFiles();
 		ArrayList<Uri> uris = new ArrayList<Uri>();
@@ -107,7 +113,7 @@ public class MainActivity extends Activity {
 					File flow = new File(Environment.getExternalStorageDirectory() + "/MANUAL/workflow");
 					deleteDirPng(flow);
 					File sett = new File(Environment.getExternalStorageDirectory() + "/MANUAL/settings");
-					deleteDirTxt(sett);
+					deleteDirPng(sett);
 				}
 			})
 			.setNegativeButton(android.R.string.no, new DialogInterface.OnClickListener() {
@@ -151,16 +157,18 @@ public class MainActivity extends Activity {
     }
 
     private static boolean deleteDirPng(File dir) {
+
         if (dir != null && dir.isDirectory()) {
             String[] children = dir.list();
             for (int i = 0; i < children.length; i++) {
                 boolean success = deleteDirPng(new File(dir, children[i]));
                 if (!success) {
-                        return false;
+                    Log.d("Files", "DELETE: FAIL");
+                    return false;
                 }
             }
         }
-        return (dir.getName().contains(".png"))? dir.delete() : false;
+        return (dir.getName().contains("."))? dir.delete() : false;
     }
 		
 	private static boolean deleteDirTxt(File dir) {

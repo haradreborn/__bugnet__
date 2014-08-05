@@ -129,29 +129,23 @@ public class Draw extends Activity{
 
                 File file = new File(Environment.getExternalStorageDirectory().toString() + "/MANUAL/workflow/" + sttr);
 
-                if ( !file.exists() ){
-                        try {
-                            success = file.createNewFile();
-                        } catch (IOException e) {
-                            e.printStackTrace();
-                        }
-                }
+//                if ( !file.exists() ){
+//                        try {
+//                            success = file.createNewFile();
+//                        } catch (IOException e) {
+//                            e.printStackTrace();
+//                        }
+//                }
 
-                System.out.println(success+"file");
+                FileOutputStream ostream;
 
-                FileOutputStream ostream = null;
                 try{
                     //create fos
                     ostream = new FileOutputStream(file);
 
                     System.out.println(ostream);
-                    //View targetView = dv;
 
                     Bitmap well = dv.getBitmap();
-
-//int tW  = result.getWidth() / 1;
-//int tH = result.getHeight() / 1;
-
 
                     Bitmap save = Bitmap.createBitmap(width, height, Bitmap.Config.ARGB_8888);
                     Paint paint = new Paint();
@@ -160,9 +154,6 @@ public class Draw extends Activity{
                     now.drawRect(new Rect(0,0,width, height), paint);
                     now.drawBitmap(well, new Rect(0,0,well.getWidth(),well.getHeight()), new Rect(0,0,width, height), null);
 
-//Canvas now = new Canvas(save);
-//myDrawView.layout(0, 0, 100, 100);
-//myDrawView.draw(now);
                     //TODO CHECK EXCEPTION
 					//if(save == null) {
                     //    save.recycle();
@@ -171,7 +162,6 @@ public class Draw extends Activity{
                     save.compress(Bitmap.CompressFormat.PNG, 100, ostream);
                     save.recycle();
 
-//bitmap.compress(Bitmap.CompressFormat.PNG, 100, ostream);
 					ostream.flush();
 					ostream.close();
 

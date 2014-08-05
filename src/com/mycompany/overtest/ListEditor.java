@@ -799,21 +799,23 @@ public class ListEditor extends Activity {
     }
 	
 	public String genEmail(){
-		StringBuilder text = new StringBuilder();
-		int scrCount = array.size();
+        StringBuilder tHtml = new StringBuilder();
+        tHtml.append(actions.head());
+        //tHtml.append("<p>Hello <a href='/sdcard/MANUAL/img1394709648.png'>Java</a></p>" + "\n");
+        int scrCount = array.size();
 
         String[] place = array.toArray(new String[array.size()]);
         Arrays.sort(place);
-		text.append("Short description: " + actions.getDescription(Environment.getExternalStorageDirectory() + "/MANUAL/settings/description.txt") + "\n");
-		
-        for (int i=0; i<scrCount; i++) {
-			int j = i + 1;
-		text.append("Step " + j);
-		text.append("Description: " + actions.getDescription(Environment.getExternalStorageDirectory() + "/MANUAL/settings/" + place[i] + ".txt"));
-		}
-		text.append(actions.getHtmlDescription(Environment.getExternalStorageDirectory() + "/MANUAL/settings/expected.txt"));
-		
-		return text.toString();
+
+        for (int i=0; i<scrCount; i++){
+            int j = i + 1;
+
+            tHtml.append("<p>Step " + j + "</p>" + "\n");
+            tHtml.append("<p>Description: " + actions.getDescription(Environment.getExternalStorageDirectory() + "/MANUAL/settings/" + place[i] + ".txt") + "</p>" + "\n");
+        }
+
+        tHtml.append(actions.foot());
+        return tHtml.toString();
 	}
 	
     public String genHtml() {
