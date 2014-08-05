@@ -106,7 +106,6 @@
 	<ImageView
 		android:layout_width="fill_parent"
 		android:layout_height="400px"
-		android:src="@drawable/ic_launcher"
         android:background="@drawable/image_border"
 		android:id="@+id/imageView"
         android:onClick="ImageClicked"

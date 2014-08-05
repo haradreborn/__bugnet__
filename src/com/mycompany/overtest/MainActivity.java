@@ -64,9 +64,9 @@ public class MainActivity extends Activity {
 	//btn start
     public void buttonGetClicked(View start){
         try {
-			startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("market://details?id=")));
+			startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("market://details?id=com.harad.prology")));
 		} catch (android.content.ActivityNotFoundException anfe) {
-			startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("http://play.google.com/store/apps/details?id=")));
+			startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("http://play.google.com/store/apps/details?id=com.harad.prology")));
 		}
  	}
 
