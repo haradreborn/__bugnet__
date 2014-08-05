@@ -327,6 +327,9 @@ public class ListEditor extends Activity {
                 try {
                     File fileRep = new File(Environment.getExternalStorageDirectory() + "/MANUAL/workflow/test.html");
                     fileRep.createNewFile();
+
+                    File fileTxt = new File(Environment.getExternalStorageDirectory() + "/MANUAL/workflow/test.txt");
+                    fileTxt.createNewFile();
                     //String data = "hello";
                     //write the bytes in file
                     if(fileRep.exists()) {
@@ -337,6 +340,16 @@ public class ListEditor extends Activity {
                         pw.close();
                         //fo.write(data);
                         fo.close();
+                        System.out.println("file created: "+fileRep);
+                    }
+                    if(fileTxt.exists()) {
+                        OutputStream fot = new FileOutputStream(fileTxt);
+                        PrintWriter pwt = new PrintWriter(fot);
+                        pwt.println(genEmail());
+                        pwt.flush();
+                        pwt.close();
+                        //fo.write(data);
+                        fot.close();
                         System.out.println("file created: "+fileRep);
                     }
                 } catch (IOException io){io.printStackTrace();}
@@ -786,47 +799,37 @@ public class ListEditor extends Activity {
 							// do nothing
 						}
 					})
-					.setIcon(android.R.drawable.ic_dialog_alert)
+					.setIcon(android.R.drawable.ic_menu_delete)
 					.show();
         }
         return false;
     }
-
-
-    public void showToast(String message) {
-        Toast toast = Toast.makeText(getApplicationContext(), message, Toast.LENGTH_SHORT);
-        toast.show();
-    }
 	
 	public String genEmail(){
         StringBuilder tHtml = new StringBuilder();
-        tHtml.append(actions.head());
-        //tHtml.append("<p>Hello <a href='/sdcard/MANUAL/img1394709648.png'>Java</a></p>" + "\n");
-        int scrCount = array.size();
 
+        int scrCount = array.size();
         String[] place = array.toArray(new String[array.size()]);
         Arrays.sort(place);
 
-        for (int i=0; i<scrCount; i++){
+        tHtml.append(actions.getDescription(Environment.getExternalStorageDirectory() + "/MANUAL/settings/description.txt") + "\n");
+        for (int i=0; i<scrCount; i++) {
             int j = i + 1;
-
-            tHtml.append("<p>Step " + j + "</p>" + "\n");
-            tHtml.append("<p>Description: " + actions.getDescription(Environment.getExternalStorageDirectory() + "/MANUAL/settings/" + place[i] + ".txt") + "</p>" + "\n");
+            tHtml.append(actions.content(j, place[i]));
         }
+        tHtml.append("\n" + actions.getDescription(Environment.getExternalStorageDirectory() + "/MANUAL/settings/expected.txt") + "\n");
 
-        tHtml.append(actions.foot());
         return tHtml.toString();
 	}
 	
     public String genHtml() {
         StringBuilder tHtml = new StringBuilder();
-        tHtml.append(actions.head());
-		//tHtml.append("<p>Hello <a href='/sdcard/MANUAL/img1394709648.png'>Java</a></p>" + "\n");
-        int scrCount = array.size();
 
+		int scrCount = array.size();
         String[] place = array.toArray(new String[array.size()]);
         Arrays.sort(place);
 
+        tHtml.append(actions.head());
         for (int i=0; i<scrCount; i++) {
 			int j = i + 1;
             //todo

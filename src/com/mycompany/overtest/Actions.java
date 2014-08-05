@@ -86,10 +86,18 @@ public class Actions {
         head.append("</head>" + "\n");
         head.append("<body>" + "\n");
 		head.append("<h1>" + getDescription(Environment.getExternalStorageDirectory() + "/MANUAL/settings/description.txt") + "</h1>" + "\n");
-        
-        
+
 		return head;
 	}
+
+    public StringBuilder content(int item, String name){
+        StringBuilder content = new StringBuilder();
+
+        content.append("Step " + item + "\n");
+        content.append("Description: " + getDescription(Environment.getExternalStorageDirectory() + "/MANUAL/settings/" + name + ".txt"));
+        content.append(name + "\n");
+        return content;
+    }
 	
 	public StringBuilder foot() {
 		StringBuilder foot = new StringBuilder();

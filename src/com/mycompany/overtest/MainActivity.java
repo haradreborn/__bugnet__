@@ -55,6 +55,7 @@ public class MainActivity extends Activity {
 		def[0] = "Expected result:";
 		def[1] = "Actual result:";
 		def[2] = "Error log:";
+
 		actions.Settings("expected.txt", def);
 		
 		String[] deff = new String[1];
@@ -77,15 +78,15 @@ public class MainActivity extends Activity {
 		Intent email = new Intent(Intent.ACTION_SEND_MULTIPLE);
 		email.putExtra(Intent.EXTRA_EMAIL, new String[]{""});		  
 		email.putExtra(Intent.EXTRA_SUBJECT, actions.getDescription(Environment.getExternalStorageDirectory() + "/MANUAL/settings/description.txt").toString());
-		//email.putExtra(Intent.EXTRA_TEXT, Html.fromHtml(le.genEmail()).toString());
+		email.putExtra(Intent.EXTRA_TEXT, actions.getDescription(Environment.getExternalStorageDirectory() + "/MANUAL/workflow/test.txt").toString());
+        //Toast.makeText(this, le.genEmail(), Toast.LENGTH_LONG).show();
 
-
-		email.putExtra(Intent.EXTRA_TEXT, Html.fromHtml(actions.getDescription(Environment.getExternalStorageDirectory() + "/MANUAL/workflow/test.html")
-                .toString()
-                .replace("<img src='", "")
-                .replace("' width='340px' height='200px' />", "")
-                .replace("' width='200px' height='340px' />", "")
-				));
+//		email.putExtra(Intent.EXTRA_TEXT, Html.fromHtml(actions.getDescription(Environment.getExternalStorageDirectory() + "/MANUAL/workflow/test.html")
+//                .toString()
+//                .replace("<img src='", "")
+//                .replace("' width='340px' height='200px' />", "")
+//                .replace("' width='200px' height='340px' />", "")
+//				));
 
 		File f = new File(Environment.getExternalStorageDirectory() + "/MANUAL/workflow");
 		File file[] = f.listFiles();
@@ -122,7 +123,7 @@ public class MainActivity extends Activity {
 					// do nothing
 				}
 			})
-			//.setIcon(android.R.drawable.alert_dark_frame)
+			.setIcon(android.R.drawable.ic_menu_delete)
 			.show();
 		
         

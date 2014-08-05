@@ -1,0 +1,29 @@
+com.mycompany.overtest.Actions:
+    24:33:public java.lang.String decoder(java.lang.String)
+    114:117:public android.graphics.Matrix matrixRotate()
+    152:173:public java.util.List getListOfFiles()
+com.mycompany.overtest.Actions$1
+com.mycompany.overtest.BuildConfig
+com.mycompany.overtest.Draw$DrawingView:
+    public int width
+    public int height
+    private static final float TOUCH_TOLERANCE
+    305:308:public void clear()
+com.mycompany.overtest.GlobalTouchService$3$TakePrintScreen:
+    private android.app.ProgressDialog progress
+com.mycompany.overtest.ListEditor:
+    private static final int SELECT_PICTURE
+    private static final int SWITCH_PICTURE
+    219:228:private static boolean deleteDirPng(java.io.File)
+    232:241:private static boolean deleteDirTxt(java.io.File)
+com.mycompany.overtest.MainActivity:
+    public int width
+    public int height
+com.mycompany.overtest.R
+com.mycompany.overtest.R$attr
+com.mycompany.overtest.R$drawable
+com.mycompany.overtest.R$id
+com.mycompany.overtest.R$layout
+com.mycompany.overtest.R$menu
+com.mycompany.overtest.R$string
+com.mycompany.overtest.sql

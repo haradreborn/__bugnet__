@@ -1,0 +1,195 @@
+com.mycompany.overtest.Actions -> com.mycompany.overtest.a:
+    java.lang.StringBuilder getDescription(java.lang.String) -> a
+    java.lang.StringBuilder getHtmlDescription(java.lang.String) -> b
+    java.lang.StringBuilder head() -> a
+    java.lang.StringBuilder content(int,java.lang.String) -> a
+    java.lang.StringBuilder foot() -> b
+    void TakeShot(java.lang.String) -> c
+    java.lang.String id() -> c
+    void CreateMainFolder() -> d
+    void Settings(java.lang.String,java.lang.String[]) -> a
+com.mycompany.overtest.Draw -> com.mycompany.overtest.Draw:
+    com.mycompany.overtest.Draw$DrawingView dv -> a
+    android.graphics.Paint mPaint -> g
+    int width -> b
+    int height -> c
+    java.lang.String sttr -> d
+    android.graphics.Bitmap result -> e
+    android.graphics.Paint paint -> f
+    android.graphics.Bitmap Decoder(java.lang.String) -> a
+    android.graphics.Matrix matrix() -> a
+    android.graphics.Matrix matrixRotate() -> b
+    void onCreate(android.os.Bundle) -> onCreate
+    boolean onKeyDown(int,android.view.KeyEvent) -> onKeyDown
+    void dialogOnBackPress() -> c
+    android.graphics.Paint access$000(com.mycompany.overtest.Draw) -> a
+com.mycompany.overtest.Draw$1 -> com.mycompany.overtest.b:
+    com.mycompany.overtest.Draw this$0 -> a
+    void onClick(android.content.DialogInterface,int) -> onClick
+com.mycompany.overtest.Draw$2 -> com.mycompany.overtest.c:
+    com.mycompany.overtest.Draw this$0 -> a
+    void onClick(android.content.DialogInterface,int) -> onClick
+com.mycompany.overtest.Draw$DrawingView -> com.mycompany.overtest.d:
+    android.graphics.Bitmap mBitmap -> c
+    android.graphics.Canvas mCanvas -> d
+    android.graphics.Path mPath -> e
+    android.graphics.Paint mBitmapPaint -> f
+    android.content.Context context -> a
+    android.graphics.Paint circlePaint -> g
+    android.graphics.Path circlePath -> h
+    float mX -> i
+    float mY -> j
+    com.mycompany.overtest.Draw this$0 -> b
+    void onSizeChanged(int,int,int,int) -> onSizeChanged
+    void onDraw(android.graphics.Canvas) -> onDraw
+    void touch_start(float,float) -> a
+    void touch_move(float,float) -> b
+    void touch_up() -> a
+    boolean onTouchEvent(android.view.MotionEvent) -> onTouchEvent
+    android.graphics.Bitmap getBitmap() -> getBitmap
+com.mycompany.overtest.GlobalTouchService -> com.mycompany.overtest.GlobalTouchService:
+    com.mycompany.overtest.Actions actions -> a
+    java.lang.String TAG -> g
+    android.view.WindowManager mWindowManager -> b
+    android.widget.LinearLayout switcher -> h
+    int gravitation -> c
+    android.view.WindowManager$LayoutParams mParams -> d
+    float startX -> e
+    float startY -> f
+    android.os.IBinder onBind(android.content.Intent) -> onBind
+    void onCreate() -> onCreate
+    void onDestroy() -> onDestroy
+    boolean onTouch(android.view.View,android.view.MotionEvent) -> onTouch
+    android.widget.LinearLayout access$000(com.mycompany.overtest.GlobalTouchService) -> a
+    java.lang.String access$100(com.mycompany.overtest.GlobalTouchService) -> b
+com.mycompany.overtest.GlobalTouchService$1 -> com.mycompany.overtest.e:
+    android.view.View val$viewHidden -> a
+    android.view.View val$view -> b
+    com.mycompany.overtest.GlobalTouchService this$0 -> c
+    boolean onTouch(android.view.View,android.view.MotionEvent) -> onTouch
+com.mycompany.overtest.GlobalTouchService$2 -> com.mycompany.overtest.f:
+    android.view.View val$view -> a
+    android.view.View val$viewFarm -> b
+    com.mycompany.overtest.GlobalTouchService this$0 -> c
+    boolean onTouch(android.view.View,android.view.MotionEvent) -> onTouch
+com.mycompany.overtest.GlobalTouchService$3 -> com.mycompany.overtest.g:
+    android.view.View val$view -> a
+    android.view.View val$viewHidden -> b
+    com.mycompany.overtest.GlobalTouchService this$0 -> c
+    void onClick(android.view.View) -> onClick
+com.mycompany.overtest.GlobalTouchService$3$TakePrintScreen -> com.mycompany.overtest.h:
+    com.mycompany.overtest.GlobalTouchService$3 this$1 -> a
+    void onPreExecute() -> onPreExecute
+    java.lang.String doInBackground(java.lang.Void[]) -> a
+    void onPostExecute(java.lang.String) -> a
+    void onPostExecute(java.lang.Object) -> onPostExecute
+    java.lang.Object doInBackground(java.lang.Object[]) -> doInBackground
+com.mycompany.overtest.GlobalTouchService$4 -> com.mycompany.overtest.i:
+    com.mycompany.overtest.GlobalTouchService this$0 -> a
+    void onClick(android.view.View) -> onClick
+com.mycompany.overtest.GlobalTouchService$5 -> com.mycompany.overtest.j:
+    android.view.View val$view -> a
+    android.view.View val$viewHidden -> b
+    com.mycompany.overtest.GlobalTouchService this$0 -> c
+    void onClick(android.view.View) -> onClick
+com.mycompany.overtest.ListEditor -> com.mycompany.overtest.ListEditor:
+    com.mycompany.overtest.Actions actions -> a
+    android.content.Intent draw -> b
+    java.lang.String str -> c
+    java.lang.String id -> d
+    java.lang.String bid -> e
+    int width -> f
+    int height -> g
+    java.lang.String selectedImagePath -> j
+    android.widget.ListView listview -> h
+    java.util.ArrayList array -> i
+    void onCreate(android.os.Bundle) -> onCreate
+    boolean onCreateOptionsMenu(android.view.Menu) -> onCreateOptionsMenu
+    void onActivityResult(int,int,android.content.Intent) -> onActivityResult
+    void compress(java.lang.String) -> a
+    java.lang.String getPath(android.net.Uri) -> a
+    void copy(java.io.File,java.io.File) -> a
+    void reload() -> a
+    boolean onOptionsItemSelected(android.view.MenuItem) -> onOptionsItemSelected
+    void onResume() -> onResume
+    int getIndex(java.lang.String) -> b
+    void buttonUpClicked(android.view.View) -> buttonUpClicked
+    void buttonDownClicked(android.view.View) -> buttonDownClicked
+    void buttonDrawClicked(android.view.View) -> buttonDrawClicked
+    void buttonDelClicked(android.view.View) -> buttonDelClicked
+    void buttonSwitchClicked(android.view.View) -> buttonSwitchClicked
+    void buttonEditClicked(android.view.View) -> buttonEditClicked
+    void TextClicked(android.view.View) -> TextClicked
+    void ImageClicked(android.view.View) -> ImageClicked
+    void onCreateContextMenu(android.view.ContextMenu,android.view.View,android.view.ContextMenu$ContextMenuInfo) -> onCreateContextMenu
+    boolean onContextItemSelected(android.view.MenuItem) -> onContextItemSelected
+    void CreateMenuImage(android.view.Menu) -> a
+    void CreateMenu(android.view.Menu) -> b
+    boolean MenuChoice(android.view.MenuItem) -> a
+    java.lang.String genEmail() -> b
+    java.lang.String genHtml() -> c
+com.mycompany.overtest.ListEditor$1 -> com.mycompany.overtest.k:
+    com.mycompany.overtest.ListEditor this$0 -> a
+    void onClick(android.content.DialogInterface,int) -> onClick
+com.mycompany.overtest.ListEditor$2 -> com.mycompany.overtest.l:
+    java.lang.String val$fb -> a
+    com.mycompany.overtest.ListEditor this$0 -> b
+    void onClick(android.content.DialogInterface,int) -> onClick
+com.mycompany.overtest.ListEditor$3 -> com.mycompany.overtest.m:
+    com.mycompany.overtest.ListEditor this$0 -> a
+    void onClick(android.content.DialogInterface,int) -> onClick
+com.mycompany.overtest.ListEditor$4 -> com.mycompany.overtest.n:
+    java.lang.String val$fb -> a
+    com.mycompany.overtest.ListEditor this$0 -> b
+    void onClick(android.content.DialogInterface,int) -> onClick
+com.mycompany.overtest.MainActivity -> com.mycompany.overtest.MainActivity:
+    com.mycompany.overtest.Actions actions -> a
+    com.mycompany.overtest.ListEditor le -> b
+    android.content.Intent globalService -> c
+    android.content.Intent list -> d
+    void onCreate(android.os.Bundle) -> onCreate
+    void buttonGetClicked(android.view.View) -> buttonGetClicked
+    void buttonShareClicked(android.view.View) -> buttonShareClicked
+    void buttonEmptyClicked(android.view.View) -> buttonEmptyClicked
+    void buttonEditClicked(android.view.View) -> buttonEditClicked
+    void buttonViewClicked(android.view.View) -> buttonViewClicked
+    boolean deleteDirPng(java.io.File) -> c
+    boolean deleteDirTxt(java.io.File) -> d
+    boolean onCreateOptionsMenu(android.view.Menu) -> onCreateOptionsMenu
+    boolean onOptionsItemSelected(android.view.MenuItem) -> onOptionsItemSelected
+    boolean access$000(java.io.File) -> a
+    boolean access$100(java.io.File) -> b
+com.mycompany.overtest.MainActivity$1 -> com.mycompany.overtest.o:
+    com.mycompany.overtest.MainActivity this$0 -> a
+    void onClick(android.content.DialogInterface,int) -> onClick
+com.mycompany.overtest.MainActivity$2 -> com.mycompany.overtest.p:
+    com.mycompany.overtest.MainActivity this$0 -> a
+    void onClick(android.content.DialogInterface,int) -> onClick
+com.mycompany.overtest.MainActivity$3 -> com.mycompany.overtest.q:
+    com.mycompany.overtest.MainActivity this$0 -> a
+    void onClick(android.content.DialogInterface,int) -> onClick
+com.mycompany.overtest.MainActivity$4 -> com.mycompany.overtest.r:
+    com.mycompany.overtest.MainActivity this$0 -> a
+    void onClick(android.content.DialogInterface,int) -> onClick
+com.mycompany.overtest.Show -> com.mycompany.overtest.Show:
+    void onCreate(android.os.Bundle) -> onCreate
+com.mycompany.overtest.yourAdapter -> com.mycompany.overtest.s:
+    com.mycompany.overtest.Actions actions -> a
+    int width -> b
+    int height -> c
+    android.content.Context context -> d
+    java.lang.String[] data -> e
+    android.view.LayoutInflater inflater -> f
+    android.graphics.Matrix matrix() -> a
+    int getCount() -> getCount
+    java.lang.Object getItem(int) -> getItem
+    long getItemId(int) -> getItemId
+    android.view.View getView(int,android.view.View,android.view.ViewGroup) -> getView
+com.mycompany.overtest.yourAdapter$BitmapTask -> com.mycompany.overtest.t:
+    android.widget.ImageView imageView -> b
+    com.mycompany.overtest.yourAdapter this$0 -> a
+    android.graphics.Bitmap doInBackground(java.lang.String[]) -> a
+    void onPostExecute(android.graphics.Bitmap) -> a
+    void setImageView(android.widget.ImageView) -> a
+    void onPostExecute(java.lang.Object) -> onPostExecute
+    java.lang.Object doInBackground(java.lang.Object[]) -> doInBackground
