@@ -805,6 +805,12 @@ public class ListEditor extends Activity {
         toast.show();
     }
 	
+	public String genEmail(){
+		StringBuilder text = new StringBuilder();
+		text.append("Short description: " );
+		return text.toString();
+	}
+	
     public String genHtml() {
         StringBuilder tHtml = new StringBuilder();
         tHtml.append(actions.head());

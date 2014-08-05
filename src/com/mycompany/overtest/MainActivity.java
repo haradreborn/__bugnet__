@@ -62,22 +62,34 @@ public class MainActivity extends Activity {
 	}
 
 	//btn start
-    public void buttonStartClicked(View start){
-        actions.CreateMainFolder();
-        File folder = new File(Environment.getExternalStorageDirectory() + "/MANUAL/workflow");
-        if (!folder.exists()) {
-            folder.mkdirs();
-        }
-        //start service
-        startService(globalService);
+    public void buttonGetClicked(View start){
+        try {
+			startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("market://details?id=")));
+		} catch (android.content.ActivityNotFoundException anfe) {
+			startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("http://play.google.com/store/apps/details?id=")));
+		}
  	}
 
 	//btn stop
-	public void buttonStopClicked(View stop){
+	public void buttonShareClicked(View stop){
+		Intent email = new Intent(Intent.ACTION_SEND_MULTIPLE);
+		email.putExtra(Intent.EXTRA_EMAIL, new String[]{""});		  
+		email.putExtra(Intent.EXTRA_SUBJECT, actions.getDescription(Environment.getExternalStorageDirectory() + "/MANUAL/settings/description.txt").toString());
+		email.putExtra(Intent.EXTRA_TEXT, Html.fromHtml(actions.getDescription(Environment.getExternalStorageDirectory() + "/MANUAL/workflow/test.html").toString()));
 
-        stopService(globalService);
-        Toast.makeText(this, "Stop Service", Toast.LENGTH_SHORT).show();
-	}
+		File f = new File(Environment.getExternalStorageDirectory() + "/MANUAL/workflow");
+		File file[] = f.listFiles();
+		ArrayList<Uri> uris = new ArrayList<Uri>();
+		for (int i=0; i < file.length; i++) {
+			uris.add(Uri.fromFile(new File(Environment.getExternalStorageDirectory() + "/MANUAL/workflow/" + file[i].getName())));
+			//Toast.makeText(getApplicationContext(), Environment.getExternalStorageDirectory() + "/MANUAL/workflow/" + file[i].getName(), Toast.LENGTH_LONG).show();
+		}
+
+		email.putParcelableArrayListExtra(Intent.EXTRA_STREAM, uris);
+
+		email.setType("text/html");
+		startActivity(Intent.createChooser(email, "Choose an Email client :"));
+   	}
 
 	//btn empty
 	public void buttonEmptyClicked(View empty){
@@ -100,7 +112,7 @@ public class MainActivity extends Activity {
 					// do nothing
 				}
 			})
-			.setIcon(android.R.drawable.ic_dialog_alert)
+			//.setIcon(android.R.drawable.alert_dark_frame)
 			.show();
 		
         
@@ -175,8 +187,19 @@ public class MainActivity extends Activity {
 				
 				break;
 				
-			case R.id.info:
+			case R.id.start:
+				actions.CreateMainFolder();
+				File folder = new File(Environment.getExternalStorageDirectory() + "/MANUAL/workflow");
+				if (!folder.exists()) {
+					folder.mkdirs();
+				}
+				//start service
+				startService(globalService);
+				break;
 				
+			case R.id.stop:
+				stopService(globalService);
+				Toast.makeText(this, "Stop Service", Toast.LENGTH_SHORT).show();
 				break;
 				
 			case R.id.empty:
@@ -200,26 +223,6 @@ public class MainActivity extends Activity {
 					})
 					.setIcon(android.R.drawable.ic_dialog_alert)
 					.show();
-				break;
-				
-			case R.id.email:
-				Intent email = new Intent(Intent.ACTION_SEND_MULTIPLE);
-	    		email.putExtra(Intent.EXTRA_EMAIL, new String[]{""});		  
-	    		email.putExtra(Intent.EXTRA_SUBJECT, actions.getDescription(Environment.getExternalStorageDirectory() + "/MANUAL/settings/description.txt").toString());
-	    		email.putExtra(Intent.EXTRA_TEXT, Html.fromHtml(actions.getDescription(Environment.getExternalStorageDirectory() + "/MANUAL/workflow/test.html").toString()));
-
-                File f = new File(Environment.getExternalStorageDirectory() + "/MANUAL/workflow");
-                File file[] = f.listFiles();
-                ArrayList<Uri> uris = new ArrayList<Uri>();
-                for (int i=0; i < file.length; i++) {
-                    uris.add(Uri.fromFile(new File(Environment.getExternalStorageDirectory() + "/MANUAL/workflow/" + file[i].getName())));
-                    //Toast.makeText(getApplicationContext(), Environment.getExternalStorageDirectory() + "/MANUAL/workflow/" + file[i].getName(), Toast.LENGTH_LONG).show();
-                }
-
-                email.putParcelableArrayListExtra(Intent.EXTRA_STREAM, uris);
-
-                email.setType("text/html");
-	    		startActivity(Intent.createChooser(email, "Choose an Email client :"));
 				break;
 				
 		}

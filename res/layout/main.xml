@@ -44,16 +44,16 @@
                 android:id="@+id/button1"
                 android:layout_width="match_parent"
                 android:layout_height="fill_parent"
-                android:text="Start Touch Detection"
-                android:onClick="buttonStartClicked"
+                android:text="Get system information"
+                android:onClick="buttonGetClicked"
                 android:layout_weight="1" />
 
         <Button
                 android:id="@+id/button2"
                 android:layout_width="match_parent"
                 android:layout_height="fill_parent"
-                android:text="Stop Touch Detection"
-                android:onClick="buttonStopClicked"
+                android:text="Share bug report"
+                android:onClick="buttonShareClicked"
                 android:layout_weight="1" />
 
         <!--Button

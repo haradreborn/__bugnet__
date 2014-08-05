@@ -1,11 +1,5 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
-    
-    <item
-      	android:id="@+id/email"
-        android:orderInCategory="100"
-        android:showAsAction="never"
-        android:title="Share bug report"/>
-	
+   
 	<item
       	android:id="@+id/empty"
         android:orderInCategory="100"
@@ -19,10 +13,16 @@
         android:title="View help page"/>
 	
 	<item
-      	android:id="@+id/info"
+      	android:id="@+id/start"
         android:orderInCategory="100"
         android:showAsAction="never"
-        android:title="Get device information"/>
+        android:title="Start touch detection"/>
+	
+	<item
+      	android:id="@+id/stop"
+        android:orderInCategory="100"
+        android:showAsAction="never"
+        android:title="Stop touch detection"/>
 	
     
 </menu>
