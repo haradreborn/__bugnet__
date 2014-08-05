@@ -64,8 +64,8 @@ public class Actions {
             while ((line = br.readLine()) != null) {
                 text.append("<p>");
 				text.append(line);
-                text.append('\n');
 				text.append("<p>");
+				text.append('\n');
 				//text.append("<br>");
             }
         }
@@ -85,7 +85,7 @@ public class Actions {
         head.append("<title>Bug report</title>" + "\n");
         head.append("</head>" + "\n");
         head.append("<body>" + "\n");
-		head.append("<h1>Report name: " + getDescription(Environment.getExternalStorageDirectory() + "/MANUAL/settings/description.txt") + "</h1>" + "\n");
+		head.append("<h1>" + getDescription(Environment.getExternalStorageDirectory() + "/MANUAL/settings/description.txt") + "</h1>" + "\n");
         
         
 		return head;

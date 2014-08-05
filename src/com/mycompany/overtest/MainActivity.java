@@ -82,9 +82,10 @@ public class MainActivity extends Activity {
 
 		email.putExtra(Intent.EXTRA_TEXT, Html.fromHtml(actions.getDescription(Environment.getExternalStorageDirectory() + "/MANUAL/workflow/test.html")
                 .toString()
-                .replace("<img src=", "")
-                .replace("width='340px' height='200px' />", "")
-                .replace("width='200px' height='340px' />", "")));
+                .replace("<img src='", "")
+                .replace("' width='340px' height='200px' />", "")
+                .replace("' width='200px' height='340px' />", "")
+				));
 
 		File f = new File(Environment.getExternalStorageDirectory() + "/MANUAL/workflow");
 		File file[] = f.listFiles();
