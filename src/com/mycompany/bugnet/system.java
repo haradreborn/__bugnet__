@@ -1,4 +1,4 @@
-package com.mycompany.overtest;
+package com.mycompany.bugnet;
 
 import android.app.*;
 import android.os.*;
