@@ -19,11 +19,11 @@ com.mycompany.overtest.ListEditor:
 com.mycompany.overtest.MainActivity:
     public int width
     public int height
-com.harad.bugnet.R
-com.harad.bugnet.R$attr
-com.harad.bugnet.R$drawable
-com.harad.bugnet.R$id
-com.harad.bugnet.R$layout
-com.harad.bugnet.R$menu
-com.harad.bugnet.R$string
+com.mycompany.overtest.R
+com.mycompany.overtest.R$attr
+com.mycompany.overtest.R$drawable
+com.mycompany.overtest.R$id
+com.mycompany.overtest.R$layout
+com.mycompany.overtest.R$menu
+com.mycompany.overtest.R$string
 com.mycompany.overtest.sql
