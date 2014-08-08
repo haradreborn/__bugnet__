@@ -171,9 +171,12 @@ com.mycompany.overtest.MainActivity$3 -> com.mycompany.overtest.q:
 com.mycompany.overtest.MainActivity$4 -> com.mycompany.overtest.r:
     com.mycompany.overtest.MainActivity this$0 -> a
     void onClick(android.content.DialogInterface,int) -> onClick
+com.mycompany.overtest.MainActivity$5 -> com.mycompany.overtest.s:
+    com.mycompany.overtest.MainActivity this$0 -> a
+    void onClick(android.content.DialogInterface,int) -> onClick
 com.mycompany.overtest.Show -> com.mycompany.overtest.Show:
     void onCreate(android.os.Bundle) -> onCreate
-com.mycompany.overtest.yourAdapter -> com.mycompany.overtest.s:
+com.mycompany.overtest.yourAdapter -> com.mycompany.overtest.t:
     com.mycompany.overtest.Actions actions -> a
     int width -> b
     int height -> c
@@ -185,7 +188,7 @@ com.mycompany.overtest.yourAdapter -> com.mycompany.overtest.s:
     java.lang.Object getItem(int) -> getItem
     long getItemId(int) -> getItemId
     android.view.View getView(int,android.view.View,android.view.ViewGroup) -> getView
-com.mycompany.overtest.yourAdapter$BitmapTask -> com.mycompany.overtest.t:
+com.mycompany.overtest.yourAdapter$BitmapTask -> com.mycompany.overtest.u:
     android.widget.ImageView imageView -> b
     com.mycompany.overtest.yourAdapter this$0 -> a
     android.graphics.Bitmap doInBackground(java.lang.String[]) -> a

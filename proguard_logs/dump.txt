@@ -4813,7 +4813,7 @@ Constant Pool (count = 720):
   + Class [com/mycompany/overtest/l]
   + Class [com/mycompany/overtest/m]
   + Class [com/mycompany/overtest/n]
-  + Class [com/mycompany/overtest/s]
+  + Class [com/mycompany/overtest/t]
   + Class [java/io/File]
   + Class [java/io/FileInputStream]
   + Class [java/io/FileOutputStream]
@@ -4928,7 +4928,7 @@ Constant Pool (count = 720):
   + Methodref [com/mycompany/overtest/l.<init> (Lcom/mycompany/overtest/ListEditor;Ljava/lang/String;)V]
   + Methodref [com/mycompany/overtest/m.<init> (Lcom/mycompany/overtest/ListEditor;)V]
   + Methodref [com/mycompany/overtest/n.<init> (Lcom/mycompany/overtest/ListEditor;Ljava/lang/String;)V]
-  + Methodref [com/mycompany/overtest/s.<init> (Landroid/content/Context;[Ljava/lang/String;)V]
+  + Methodref [com/mycompany/overtest/t.<init> (Landroid/content/Context;[Ljava/lang/String;)V]
   + Methodref [java/io/File.<init> (Ljava/io/File;Ljava/lang/String;)V]
   + Methodref [java/io/File.<init> (Ljava/lang/String;)V]
   + Methodref [java/io/File.createNewFile ()Z]
@@ -5305,7 +5305,7 @@ Constant Pool (count = 720):
   + Utf8 [com/mycompany/overtest/l]
   + Utf8 [com/mycompany/overtest/m]
   + Utf8 [com/mycompany/overtest/n]
-  + Utf8 [com/mycompany/overtest/s]
+  + Utf8 [com/mycompany/overtest/t]
   + Utf8 [compress]
   + Utf8 [createChooser]
   + Utf8 [createNewFile]
@@ -5696,12 +5696,12 @@ Methods (count = 27):
       [269] getfield #145
         + Fieldref [com/mycompany/overtest/ListEditor.h Landroid/widget/ListView;]
       [272] new #115
-        + Class [com/mycompany/overtest/s]
+        + Class [com/mycompany/overtest/t]
       [275] dup
       [276] aload_0 v0
       [277] aload v5
       [279] invokespecial #230
-        + Methodref [com/mycompany/overtest/s.<init> (Landroid/content/Context;[Ljava/lang/String;)V]
+        + Methodref [com/mycompany/overtest/t.<init> (Landroid/content/Context;[Ljava/lang/String;)V]
       [282] invokevirtual #191
         + Methodref [android/widget/ListView.setAdapter (Landroid/widget/ListAdapter;)V]
       [285] aload_0 v0
@@ -6974,12 +6974,12 @@ Methods (count = 27):
       [165] getfield #145
         + Fieldref [com/mycompany/overtest/ListEditor.h Landroid/widget/ListView;]
       [168] new #115
-        + Class [com/mycompany/overtest/s]
+        + Class [com/mycompany/overtest/t]
       [171] dup
       [172] aload_0 v0
       [173] aload v5
       [175] invokespecial #230
-        + Methodref [com/mycompany/overtest/s.<init> (Landroid/content/Context;[Ljava/lang/String;)V]
+        + Methodref [com/mycompany/overtest/t.<init> (Landroid/content/Context;[Ljava/lang/String;)V]
       [178] invokevirtual #191
         + Methodref [android/widget/ListView.setAdapter (Landroid/widget/ListAdapter;)V]
       [181] return
@@ -7123,12 +7123,12 @@ Methods (count = 27):
       [174] getfield #145
         + Fieldref [com/mycompany/overtest/ListEditor.h Landroid/widget/ListView;]
       [177] new #115
-        + Class [com/mycompany/overtest/s]
+        + Class [com/mycompany/overtest/t]
       [180] dup
       [181] aload_0 v0
       [182] aload v5
       [184] invokespecial #230
-        + Methodref [com/mycompany/overtest/s.<init> (Landroid/content/Context;[Ljava/lang/String;)V]
+        + Methodref [com/mycompany/overtest/t.<init> (Landroid/content/Context;[Ljava/lang/String;)V]
       [187] invokevirtual #191
         + Methodref [android/widget/ListView.setAdapter (Landroid/widget/ListAdapter;)V]
       [190] return
@@ -7345,12 +7345,12 @@ Methods (count = 27):
       [85] getfield #145
         + Fieldref [com/mycompany/overtest/ListEditor.h Landroid/widget/ListView;]
       [88] new #115
-        + Class [com/mycompany/overtest/s]
+        + Class [com/mycompany/overtest/t]
       [91] dup
       [92] aload_0 v0
       [93] aload v5
       [95] invokespecial #230
-        + Methodref [com/mycompany/overtest/s.<init> (Landroid/content/Context;[Ljava/lang/String;)V]
+        + Methodref [com/mycompany/overtest/t.<init> (Landroid/content/Context;[Ljava/lang/String;)V]
       [98] invokevirtual #191
         + Methodref [android/widget/ListView.setAdapter (Landroid/widget/ListAdapter;)V]
       [101] return
@@ -8484,12 +8484,12 @@ Methods (count = 27):
       [1129] getfield #145
         + Fieldref [com/mycompany/overtest/ListEditor.h Landroid/widget/ListView;]
       [1132] new #115
-        + Class [com/mycompany/overtest/s]
+        + Class [com/mycompany/overtest/t]
       [1135] dup
       [1136] aload_0 v0
       [1137] aload v9
       [1139] invokespecial #230
-        + Methodref [com/mycompany/overtest/s.<init> (Landroid/content/Context;[Ljava/lang/String;)V]
+        + Methodref [com/mycompany/overtest/t.<init> (Landroid/content/Context;[Ljava/lang/String;)V]
       [1142] invokevirtual #191
         + Methodref [android/widget/ListView.setAdapter (Landroid/widget/ListAdapter;)V]
       [1145] iconst_1
@@ -9646,11 +9646,11 @@ _____________________________________________________________________
 
 Interfaces (count = 0):
 
-Constant Pool (count = 329):
+Constant Pool (count = 336):
   + Integer [17039369]
   + Integer [17039379]
-  + Integer [17301543]
   + Integer [17301564]
+  + Integer [17301568]
   + Integer [2130903043]
   + Integer [2131034113]
   + String []
@@ -9669,8 +9669,10 @@ Constant Pool (count = 329):
   + String [Error log:]
   + String [Expected result:]
   + String [Files]
+  + String [Help page]
   + String [New bug report]
   + String [Stop Service]
+  + String [This application allows user to create visual bug reports and share them with developers.]
   + String [android.intent.action.SEND_MULTIPLE]
   + String [android.intent.action.VIEW]
   + String [android.intent.extra.EMAIL]
@@ -9679,8 +9681,8 @@ Constant Pool (count = 329):
   + String [android.intent.extra.TEXT]
   + String [description.txt]
   + String [expected.txt]
-  + String [http://play.google.com/store/apps/details?id=com.harad.prology]
-  + String [market://details?id=com.harad.prology]
+  + String [http://play.google.com/store/apps/details?id=com.harad.sysrep]
+  + String [market://details?id=com.harad.sysrep]
   + String [text/html]
   + Class [[Ljava/io/File;]
   + Class [[Ljava/lang/String;]
@@ -9703,6 +9705,7 @@ Constant Pool (count = 329):
   + Class [com/mycompany/overtest/p]
   + Class [com/mycompany/overtest/q]
   + Class [com/mycompany/overtest/r]
+  + Class [com/mycompany/overtest/s]
   + Class [java/io/File]
   + Class [java/lang/String]
   + Class [java/lang/StringBuilder]
@@ -9754,6 +9757,7 @@ Constant Pool (count = 329):
   + Methodref [com/mycompany/overtest/p.<init> (Lcom/mycompany/overtest/MainActivity;)V]
   + Methodref [com/mycompany/overtest/q.<init> (Lcom/mycompany/overtest/MainActivity;)V]
   + Methodref [com/mycompany/overtest/r.<init> (Lcom/mycompany/overtest/MainActivity;)V]
+  + Methodref [com/mycompany/overtest/s.<init> (Lcom/mycompany/overtest/MainActivity;)V]
   + Methodref [java/io/File.<init> (Ljava/io/File;Ljava/lang/String;)V]
   + Methodref [java/io/File.<init> (Ljava/lang/String;)V]
   + Methodref [java/io/File.delete ()Z]
@@ -9887,12 +9891,14 @@ Constant Pool (count = 329):
   + Utf8 [Error log:]
   + Utf8 [Expected result:]
   + Utf8 [Files]
+  + Utf8 [Help page]
   + Utf8 [Landroid/content/Intent;]
   + Utf8 [Lcom/mycompany/overtest/ListEditor;]
   + Utf8 [Lcom/mycompany/overtest/a;]
   + Utf8 [New bug report]
   + Utf8 [StackMapTable]
   + Utf8 [Stop Service]
+  + Utf8 [This application allows user to create visual bug reports and share them with developers.]
   + Utf8 [[Ljava/io/File;]
   + Utf8 [[Ljava/lang/String;]
   + Utf8 [a]
@@ -9930,6 +9936,7 @@ Constant Pool (count = 329):
   + Utf8 [com/mycompany/overtest/p]
   + Utf8 [com/mycompany/overtest/q]
   + Utf8 [com/mycompany/overtest/r]
+  + Utf8 [com/mycompany/overtest/s]
   + Utf8 [contains]
   + Utf8 [createChooser]
   + Utf8 [d]
@@ -9942,7 +9949,7 @@ Constant Pool (count = 329):
   + Utf8 [getItemId]
   + Utf8 [getMenuInflater]
   + Utf8 [getName]
-  + Utf8 [http://play.google.com/store/apps/details?id=com.harad.prology]
+  + Utf8 [http://play.google.com/store/apps/details?id=com.harad.sysrep]
   + Utf8 [inflate]
   + Utf8 [isDirectory]
   + Utf8 [java/io/File]
@@ -9952,7 +9959,7 @@ Constant Pool (count = 329):
   + Utf8 [list]
   + Utf8 [listFiles]
   + Utf8 [makeText]
-  + Utf8 [market://details?id=com.harad.prology]
+  + Utf8 [market://details?id=com.harad.sysrep]
   + Utf8 [mkdirs]
   + Utf8 [onCreate]
   + Utf8 [onCreateOptionsMenu]
@@ -9997,23 +10004,23 @@ Methods (count = 13):
     Class member attributes (count = 1):
     + Code attribute instructions (code length = 27, locals = 1, stack = 3):
       [0] aload_0 v0
-      [1] invokespecial #65
+      [1] invokespecial #68
         + Methodref [android/app/Activity.<init> ()V]
       [4] aload_0 v0
-      [5] new #52
+      [5] new #54
         + Class [com/mycompany/overtest/a]
       [8] dup
-      [9] invokespecial #100
+      [9] invokespecial #103
         + Methodref [com/mycompany/overtest/a.<init> ()V]
-      [12] putfield #61
+      [12] putfield #64
         + Fieldref [com/mycompany/overtest/MainActivity.a Lcom/mycompany/overtest/a;]
       [15] aload_0 v0
-      [16] new #50
+      [16] new #52
         + Class [com/mycompany/overtest/ListEditor]
       [19] dup
-      [20] invokespecial #92
+      [20] invokespecial #95
         + Methodref [com/mycompany/overtest/ListEditor.<init> ()V]
-      [23] putfield #62
+      [23] putfield #65
         + Fieldref [com/mycompany/overtest/MainActivity.b Lcom/mycompany/overtest/ListEditor;]
       [26] return
       Code attribute exceptions (count = 0):
@@ -10025,31 +10032,31 @@ Methods (count = 13):
     + Code attribute instructions (code length = 83, locals = 4, stack = 5):
       [0] aload_0 v0
       [1] aload_1 v1
-      [2] invokespecial #66
+      [2] invokespecial #69
         + Methodref [android/app/Activity.onCreate (Landroid/os/Bundle;)V]
       [5] aload_0 v0
       [6] ldc #5
         + Integer [2130903043]
-      [8] invokevirtual #96
+      [8] invokevirtual #99
         + Methodref [com/mycompany/overtest/MainActivity.setContentView (I)V]
       [11] aload_0 v0
-      [12] new #41
+      [12] new #43
         + Class [android/content/Intent]
       [15] dup
       [16] aload_0 v0
-      [17] ldc #49
+      [17] ldc #51
         + Class [com/mycompany/overtest/GlobalTouchService]
-      [19] invokespecial #75
+      [19] invokespecial #78
         + Methodref [android/content/Intent.<init> (Landroid/content/Context;Ljava/lang/Class;)V]
-      [22] putfield #63
+      [22] putfield #66
         + Fieldref [com/mycompany/overtest/MainActivity.c Landroid/content/Intent;]
       [25] aload_0 v0
-      [26] getfield #61
+      [26] getfield #64
         + Fieldref [com/mycompany/overtest/MainActivity.a Lcom/mycompany/overtest/a;]
-      [29] invokevirtual #103
+      [29] invokevirtual #106
         + Methodref [com/mycompany/overtest/a.d ()V]
       [32] iconst_3
-      [33] anewarray #58
+      [33] anewarray #61
         + Class [java/lang/String]
       [36] astore_2 v2
       [37] aload_2 v2
@@ -10068,29 +10075,29 @@ Methods (count = 13):
         + String [Error log:]
       [51] aastore
       [52] aload_0 v0
-      [53] getfield #61
+      [53] getfield #64
         + Fieldref [com/mycompany/overtest/MainActivity.a Lcom/mycompany/overtest/a;]
-      [56] ldc #32
+      [56] ldc #34
         + String [expected.txt]
       [58] aload_2 v2
-      [59] invokevirtual #102
+      [59] invokevirtual #105
         + Methodref [com/mycompany/overtest/a.a (Ljava/lang/String;[Ljava/lang/String;)V]
       [62] iconst_1
-      [63] anewarray #58
+      [63] anewarray #61
         + Class [java/lang/String]
       [66] astore_3 v3
       [67] aload_3 v3
       [68] iconst_0
-      [69] ldc #23
+      [69] ldc #24
         + String [New bug report]
       [71] aastore
       [72] aload_0 v0
-      [73] getfield #61
+      [73] getfield #64
         + Fieldref [com/mycompany/overtest/MainActivity.a Lcom/mycompany/overtest/a;]
-      [76] ldc #31
+      [76] ldc #33
         + String [description.txt]
       [78] aload_3 v3
-      [79] invokevirtual #102
+      [79] invokevirtual #105
         + Methodref [com/mycompany/overtest/a.a (Ljava/lang/String;[Ljava/lang/String;)V]
       [82] return
       Code attribute exceptions (count = 0):
@@ -10101,34 +10108,34 @@ Methods (count = 13):
     Class member attributes (count = 1):
     + Code attribute instructions (code length = 41, locals = 3, stack = 5):
       [0] aload_0 v0
-      [1] new #41
+      [1] new #43
         + Class [android/content/Intent]
       [4] dup
-      [5] ldc #26
+      [5] ldc #28
         + String [android.intent.action.VIEW]
-      [7] ldc #34
-        + String [market://details?id=com.harad.prology]
-      [9] invokestatic #86
+      [7] ldc #36
+        + String [market://details?id=com.harad.sysrep]
+      [9] invokestatic #89
         + Methodref [android/net/Uri.parse (Ljava/lang/String;)Landroid/net/Uri;]
-      [12] invokespecial #77
+      [12] invokespecial #80
         + Methodref [android/content/Intent.<init> (Ljava/lang/String;Landroid/net/Uri;)V]
-      [15] invokevirtual #97
+      [15] invokevirtual #100
         + Methodref [com/mycompany/overtest/MainActivity.startActivity (Landroid/content/Intent;)V]
       [18] goto +22 (target=40)
       [21] astore_2 v2
       [22] aload_0 v0
-      [23] new #41
+      [23] new #43
         + Class [android/content/Intent]
       [26] dup
-      [27] ldc #26
+      [27] ldc #28
         + String [android.intent.action.VIEW]
-      [29] ldc #33
-        + String [http://play.google.com/store/apps/details?id=com.harad.prology]
-      [31] invokestatic #86
+      [29] ldc #35
+        + String [http://play.google.com/store/apps/details?id=com.harad.sysrep]
+      [31] invokestatic #89
         + Methodref [android/net/Uri.parse (Ljava/lang/String;)Landroid/net/Uri;]
-      [34] invokespecial #77
+      [34] invokespecial #80
         + Methodref [android/content/Intent.<init> (Ljava/lang/String;Landroid/net/Uri;)V]
-      [37] invokevirtual #97
+      [37] invokevirtual #100
         + Methodref [com/mycompany/overtest/MainActivity.startActivity (Landroid/content/Intent;)V]
       [40] return
       Code attribute exceptions (count = 1):
@@ -10143,113 +10150,113 @@ Methods (count = 13):
       = public void buttonShareClicked(android.view.View)
     Class member attributes (count = 1):
     + Code attribute instructions (code length = 238, locals = 7, stack = 6):
-      [0] new #41
+      [0] new #43
         + Class [android/content/Intent]
       [3] dup
-      [4] ldc #25
+      [4] ldc #27
         + String [android.intent.action.SEND_MULTIPLE]
-      [6] invokespecial #76
+      [6] invokespecial #79
         + Methodref [android/content/Intent.<init> (Ljava/lang/String;)V]
       [9] astore_2 v2
       [10] aload_2 v2
-      [11] ldc #27
+      [11] ldc #29
         + String [android.intent.extra.EMAIL]
       [13] iconst_1
-      [14] anewarray #58
+      [14] anewarray #61
         + Class [java/lang/String]
       [17] dup
       [18] iconst_0
       [19] ldc #7
         + String []
       [21] aastore
-      [22] invokevirtual #80
+      [22] invokevirtual #83
         + Methodref [android/content/Intent.putExtra (Ljava/lang/String;[Ljava/lang/String;)Landroid/content/Intent;]
       [25] pop
       [26] aload_2 v2
-      [27] ldc #29
+      [27] ldc #31
         + String [android.intent.extra.SUBJECT]
       [29] aload_0 v0
-      [30] getfield #61
+      [30] getfield #64
         + Fieldref [com/mycompany/overtest/MainActivity.a Lcom/mycompany/overtest/a;]
-      [33] new #59
+      [33] new #62
         + Class [java/lang/StringBuilder]
       [36] dup
-      [37] invokespecial #118
+      [37] invokespecial #122
         + Methodref [java/lang/StringBuilder.<init> ()V]
-      [40] invokestatic #87
+      [40] invokestatic #90
         + Methodref [android/os/Environment.getExternalStorageDirectory ()Ljava/io/File;]
-      [43] invokevirtual #119
+      [43] invokevirtual #123
         + Methodref [java/lang/StringBuilder.append (Ljava/lang/Object;)Ljava/lang/StringBuilder;]
       [46] ldc #10
         + String [/MANUAL/settings/description.txt]
-      [48] invokevirtual #120
+      [48] invokevirtual #124
         + Methodref [java/lang/StringBuilder.append (Ljava/lang/String;)Ljava/lang/StringBuilder;]
-      [51] invokevirtual #121
+      [51] invokevirtual #125
         + Methodref [java/lang/StringBuilder.toString ()Ljava/lang/String;]
-      [54] invokevirtual #101
+      [54] invokevirtual #104
         + Methodref [com/mycompany/overtest/a.a (Ljava/lang/String;)Ljava/lang/StringBuilder;]
-      [57] invokevirtual #121
+      [57] invokevirtual #125
         + Methodref [java/lang/StringBuilder.toString ()Ljava/lang/String;]
-      [60] invokevirtual #79
+      [60] invokevirtual #82
         + Methodref [android/content/Intent.putExtra (Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;]
       [63] pop
       [64] aload_2 v2
-      [65] ldc #30
+      [65] ldc #32
         + String [android.intent.extra.TEXT]
       [67] aload_0 v0
-      [68] getfield #61
+      [68] getfield #64
         + Fieldref [com/mycompany/overtest/MainActivity.a Lcom/mycompany/overtest/a;]
-      [71] new #59
+      [71] new #62
         + Class [java/lang/StringBuilder]
       [74] dup
-      [75] invokespecial #118
+      [75] invokespecial #122
         + Methodref [java/lang/StringBuilder.<init> ()V]
-      [78] invokestatic #87
+      [78] invokestatic #90
         + Methodref [android/os/Environment.getExternalStorageDirectory ()Ljava/io/File;]
-      [81] invokevirtual #119
+      [81] invokevirtual #123
         + Methodref [java/lang/StringBuilder.append (Ljava/lang/Object;)Ljava/lang/StringBuilder;]
       [84] ldc #14
         + String [/MANUAL/workflow/test.txt]
-      [86] invokevirtual #120
+      [86] invokevirtual #124
         + Methodref [java/lang/StringBuilder.append (Ljava/lang/String;)Ljava/lang/StringBuilder;]
-      [89] invokevirtual #121
+      [89] invokevirtual #125
         + Methodref [java/lang/StringBuilder.toString ()Ljava/lang/String;]
-      [92] invokevirtual #101
+      [92] invokevirtual #104
         + Methodref [com/mycompany/overtest/a.a (Ljava/lang/String;)Ljava/lang/StringBuilder;]
-      [95] invokevirtual #121
+      [95] invokevirtual #125
         + Methodref [java/lang/StringBuilder.toString ()Ljava/lang/String;]
-      [98] invokevirtual #79
+      [98] invokevirtual #82
         + Methodref [android/content/Intent.putExtra (Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;]
       [101] pop
-      [102] new #57
+      [102] new #60
         + Class [java/io/File]
       [105] dup
-      [106] new #59
+      [106] new #62
         + Class [java/lang/StringBuilder]
       [109] dup
-      [110] invokespecial #118
+      [110] invokespecial #122
         + Methodref [java/lang/StringBuilder.<init> ()V]
-      [113] invokestatic #87
+      [113] invokestatic #90
         + Methodref [android/os/Environment.getExternalStorageDirectory ()Ljava/io/File;]
-      [116] invokevirtual #119
+      [116] invokevirtual #123
         + Methodref [java/lang/StringBuilder.append (Ljava/lang/Object;)Ljava/lang/StringBuilder;]
       [119] ldc #11
         + String [/MANUAL/workflow]
-      [121] invokevirtual #120
+      [121] invokevirtual #124
         + Methodref [java/lang/StringBuilder.append (Ljava/lang/String;)Ljava/lang/StringBuilder;]
-      [124] invokevirtual #121
+      [124] invokevirtual #125
         + Methodref [java/lang/StringBuilder.toString ()Ljava/lang/String;]
-      [127] invokespecial #109
+      [127] invokespecial #113
         + Methodref [java/io/File.<init> (Ljava/lang/String;)V]
       [130] astore_3 v3
       [131] aload_3 v3
-      [132] invokevirtual #115
+      [132] invokevirtual #119
         + Methodref [java/io/File.listFiles ()[Ljava/io/File;]
       [135] astore v4
-      [137] new #60
+      [137] new #63
         + Class [java/util/ArrayList]
       [140] dup
-      [141] invokespecial #122
+      [141] invokespecial #126
         + Methodref [java/util/ArrayList.<init> ()V]
       [144] astore v5
       [146] iconst_0
@@ -10259,60 +10266,60 @@ Methods (count = 13):
       [153] arraylength
       [154] ificmpge +57 (target=211)
       [157] aload v5
-      [159] new #57
+      [159] new #60
         + Class [java/io/File]
       [162] dup
-      [163] new #59
+      [163] new #62
         + Class [java/lang/StringBuilder]
       [166] dup
-      [167] invokespecial #118
+      [167] invokespecial #122
         + Methodref [java/lang/StringBuilder.<init> ()V]
-      [170] invokestatic #87
+      [170] invokestatic #90
         + Methodref [android/os/Environment.getExternalStorageDirectory ()Ljava/io/File;]
-      [173] invokevirtual #119
+      [173] invokevirtual #123
         + Methodref [java/lang/StringBuilder.append (Ljava/lang/Object;)Ljava/lang/StringBuilder;]
       [176] ldc #12
         + String [/MANUAL/workflow/]
-      [178] invokevirtual #120
+      [178] invokevirtual #124
         + Methodref [java/lang/StringBuilder.append (Ljava/lang/String;)Ljava/lang/StringBuilder;]
       [181] aload v4
       [183] iload v6
       [185] aaload
-      [186] invokevirtual #112
+      [186] invokevirtual #116
         + Methodref [java/io/File.getName ()Ljava/lang/String;]
-      [189] invokevirtual #120
+      [189] invokevirtual #124
         + Methodref [java/lang/StringBuilder.append (Ljava/lang/String;)Ljava/lang/StringBuilder;]
-      [192] invokevirtual #121
+      [192] invokevirtual #125
         + Methodref [java/lang/StringBuilder.toString ()Ljava/lang/String;]
-      [195] invokespecial #109
+      [195] invokespecial #113
         + Methodref [java/io/File.<init> (Ljava/lang/String;)V]
-      [198] invokestatic #85
+      [198] invokestatic #88
         + Methodref [android/net/Uri.fromFile (Ljava/io/File;)Landroid/net/Uri;]
-      [201] invokevirtual #123
+      [201] invokevirtual #127
         + Methodref [java/util/ArrayList.add (Ljava/lang/Object;)Z]
       [204] pop
       [205] iinc v6, 1
       [208] goto -59 (target=149)
       [211] aload_2 v2
-      [212] ldc #28
+      [212] ldc #30
         + String [android.intent.extra.STREAM]
       [214] aload v5
-      [216] invokevirtual #81
+      [216] invokevirtual #84
         + Methodref [android/content/Intent.putParcelableArrayListExtra (Ljava/lang/String;Ljava/util/ArrayList;)Landroid/content/Intent;]
       [219] pop
       [220] aload_2 v2
-      [221] ldc #35
+      [221] ldc #37
         + String [text/html]
-      [223] invokevirtual #84
+      [223] invokevirtual #87
         + Methodref [android/content/Intent.setType (Ljava/lang/String;)Landroid/content/Intent;]
       [226] pop
       [227] aload_0 v0
       [228] aload_2 v2
       [229] ldc #17
         + String [Choose an Email client :]
-      [231] invokestatic #78
+      [231] invokestatic #81
         + Methodref [android/content/Intent.createChooser (Landroid/content/Intent;Ljava/lang/CharSequence;)Landroid/content/Intent;]
-      [234] invokevirtual #97
+      [234] invokevirtual #100
         + Methodref [com/mycompany/overtest/MainActivity.startActivity (Landroid/content/Intent;)V]
       [237] return
       Code attribute exceptions (count = 0):
@@ -10324,49 +10331,45 @@ Methods (count = 13):
     Access flags: 0x1
       = public void buttonEmptyClicked(android.view.View)
     Class member attributes (count = 1):
-    + Code attribute instructions (code length = 54, locals = 2, stack = 5):
-      [0] new #39
+    + Code attribute instructions (code length = 49, locals = 2, stack = 5):
+      [0] new #41
         + Class [android/app/AlertDialog$Builder]
       [3] dup
       [4] aload_0 v0
-      [5] invokespecial #67
+      [5] invokespecial #70
         + Methodref [android/app/AlertDialog$Builder.<init> (Landroid/content/Context;)V]
       [8] ldc #19
         + String [Empty workflow]
-      [10] invokevirtual #72
+      [10] invokevirtual #75
         + Methodref [android/app/AlertDialog$Builder.setTitle (Ljava/lang/CharSequence;)Landroid/app/AlertDialog$Builder;]
       [13] ldc #16
         + String [All your files will be deleted!]
-      [15] invokevirtual #69
+      [15] invokevirtual #72
         + Methodref [android/app/AlertDialog$Builder.setMessage (Ljava/lang/CharSequence;)Landroid/app/AlertDialog$Builder;]
       [18] ldc #2
         + Integer [17039379]
-      [20] new #54
+      [20] new #56
         + Class [com/mycompany/overtest/p]
       [23] dup
       [24] aload_0 v0
-      [25] invokespecial #105
+      [25] invokespecial #108
         + Methodref [com/mycompany/overtest/p.<init> (Lcom/mycompany/overtest/MainActivity;)V]
-      [28] invokevirtual #71
+      [28] invokevirtual #74
         + Methodref [android/app/AlertDialog$Builder.setPositiveButton (ILandroid/content/DialogInterface$OnClickListener;)Landroid/app/AlertDialog$Builder;]
       [31] ldc #1
         + Integer [17039369]
-      [33] new #53
+      [33] new #55
         + Class [com/mycompany/overtest/o]
       [36] dup
       [37] aload_0 v0
-      [38] invokespecial #104
+      [38] invokespecial #107
         + Methodref [com/mycompany/overtest/o.<init> (Lcom/mycompany/overtest/MainActivity;)V]
-      [41] invokevirtual #70
+      [41] invokevirtual #73
         + Methodref [android/app/AlertDialog$Builder.setNegativeButton (ILandroid/content/DialogInterface$OnClickListener;)Landroid/app/AlertDialog$Builder;]
-      [44] ldc #4
-        + Integer [17301564]
-      [46] invokevirtual #68
-        + Methodref [android/app/AlertDialog$Builder.setIcon (I)Landroid/app/AlertDialog$Builder;]
-      [49] invokevirtual #73
+      [44] invokevirtual #76
         + Methodref [android/app/AlertDialog$Builder.show ()Landroid/app/AlertDialog;]
-      [52] pop
-      [53] return
+      [47] pop
+      [48] return
       Code attribute exceptions (count = 0):
       Code attribute attributes (attribute count = 0):
   + Method:       buttonEditClicked(Landroid/view/View;)V
@@ -10375,21 +10378,21 @@ Methods (count = 13):
     Class member attributes (count = 1):
     + Code attribute instructions (code length = 23, locals = 2, stack = 5):
       [0] aload_0 v0
-      [1] new #41
+      [1] new #43
         + Class [android/content/Intent]
       [4] dup
       [5] aload_0 v0
-      [6] ldc #50
+      [6] ldc #52
         + Class [com/mycompany/overtest/ListEditor]
-      [8] invokespecial #75
+      [8] invokespecial #78
         + Methodref [android/content/Intent.<init> (Landroid/content/Context;Ljava/lang/Class;)V]
-      [11] putfield #64
+      [11] putfield #67
         + Fieldref [com/mycompany/overtest/MainActivity.d Landroid/content/Intent;]
       [14] aload_0 v0
       [15] aload_0 v0
-      [16] getfield #64
+      [16] getfield #67
         + Fieldref [com/mycompany/overtest/MainActivity.d Landroid/content/Intent;]
-      [19] invokevirtual #97
+      [19] invokevirtual #100
         + Methodref [com/mycompany/overtest/MainActivity.startActivity (Landroid/content/Intent;)V]
       [22] return
       Code attribute exceptions (count = 0):
@@ -10399,51 +10402,51 @@ Methods (count = 13):
       = public void buttonViewClicked(android.view.View)
     Class member attributes (count = 1):
     + Code attribute instructions (code length = 61, locals = 4, stack = 4):
-      [0] new #41
+      [0] new #43
         + Class [android/content/Intent]
       [3] dup
-      [4] invokespecial #74
+      [4] invokespecial #77
         + Methodref [android/content/Intent.<init> ()V]
       [7] astore_2 v2
       [8] aload_2 v2
-      [9] ldc #26
+      [9] ldc #28
         + String [android.intent.action.VIEW]
-      [11] invokevirtual #82
+      [11] invokevirtual #85
         + Methodref [android/content/Intent.setAction (Ljava/lang/String;)Landroid/content/Intent;]
       [14] pop
-      [15] new #57
+      [15] new #60
         + Class [java/io/File]
       [18] dup
-      [19] new #59
+      [19] new #62
         + Class [java/lang/StringBuilder]
       [22] dup
-      [23] invokespecial #118
+      [23] invokespecial #122
         + Methodref [java/lang/StringBuilder.<init> ()V]
-      [26] invokestatic #87
+      [26] invokestatic #90
         + Methodref [android/os/Environment.getExternalStorageDirectory ()Ljava/io/File;]
-      [29] invokevirtual #119
+      [29] invokevirtual #123
         + Methodref [java/lang/StringBuilder.append (Ljava/lang/Object;)Ljava/lang/StringBuilder;]
       [32] ldc #13
         + String [/MANUAL/workflow/test.html]
-      [34] invokevirtual #120
+      [34] invokevirtual #124
         + Methodref [java/lang/StringBuilder.append (Ljava/lang/String;)Ljava/lang/StringBuilder;]
-      [37] invokevirtual #121
+      [37] invokevirtual #125
         + Methodref [java/lang/StringBuilder.toString ()Ljava/lang/String;]
-      [40] invokespecial #109
+      [40] invokespecial #113
         + Methodref [java/io/File.<init> (Ljava/lang/String;)V]
       [43] astore_3 v3
       [44] aload_2 v2
       [45] aload_3 v3
-      [46] invokestatic #85
+      [46] invokestatic #88
         + Methodref [android/net/Uri.fromFile (Ljava/io/File;)Landroid/net/Uri;]
-      [49] ldc #35
+      [49] ldc #37
         + String [text/html]
-      [51] invokevirtual #83
+      [51] invokevirtual #86
         + Methodref [android/content/Intent.setDataAndType (Landroid/net/Uri;Ljava/lang/String;)Landroid/content/Intent;]
       [54] pop
       [55] aload_0 v0
       [56] aload_2 v2
-      [57] invokevirtual #97
+      [57] invokevirtual #100
         + Methodref [com/mycompany/overtest/MainActivity.startActivity (Landroid/content/Intent;)V]
       [60] return
       Code attribute exceptions (count = 0):
@@ -10456,11 +10459,11 @@ Methods (count = 13):
       [0] aload_0 v0
       [1] ifnull +58 (target=59)
       [4] aload_0 v0
-      [5] invokevirtual #113
+      [5] invokevirtual #117
         + Methodref [java/io/File.isDirectory ()Z]
       [8] ifeq +51 (target=59)
       [11] aload_0 v0
-      [12] invokevirtual #114
+      [12] invokevirtual #118
         + Methodref [java/io/File.list ()[Ljava/lang/String;]
       [15] astore_1 v1
       [16] iconst_0
@@ -10469,16 +10472,16 @@ Methods (count = 13):
       [19] aload_1 v1
       [20] arraylength
       [21] ificmpge +38 (target=59)
-      [24] new #57
+      [24] new #60
         + Class [java/io/File]
       [27] dup
       [28] aload_0 v0
       [29] aload_1 v1
       [30] iload_2 v2
       [31] aaload
-      [32] invokespecial #108
+      [32] invokespecial #112
         + Methodref [java/io/File.<init> (Ljava/io/File;Ljava/lang/String;)V]
-      [35] invokestatic #93
+      [35] invokestatic #96
         + Methodref [com/mycompany/overtest/MainActivity.c (Ljava/io/File;)Z]
       [38] istore_3 v3
       [39] iload_3 v3
@@ -10487,7 +10490,7 @@ Methods (count = 13):
         + String [Files]
       [45] ldc #18
         + String [DELETE: FAIL]
-      [47] invokestatic #88
+      [47] invokestatic #91
         + Methodref [android/util/Log.d (Ljava/lang/String;Ljava/lang/String;)I]
       [50] pop
       [51] iconst_0
@@ -10495,15 +10498,15 @@ Methods (count = 13):
       [53] iinc v2, 1
       [56] goto -38 (target=18)
       [59] aload_0 v0
-      [60] invokevirtual #112
+      [60] invokevirtual #116
         + Methodref [java/io/File.getName ()Ljava/lang/String;]
       [63] ldc #8
         + String [.]
-      [65] invokevirtual #117
+      [65] invokevirtual #121
         + Methodref [java/lang/String.contains (Ljava/lang/CharSequence;)Z]
       [68] ifeq +10 (target=78)
       [71] aload_0 v0
-      [72] invokevirtual #110
+      [72] invokevirtual #114
         + Methodref [java/io/File.delete ()Z]
       [75] goto +4 (target=79)
       [78] iconst_0
@@ -10524,11 +10527,11 @@ Methods (count = 13):
       [0] aload_0 v0
       [1] ifnull +50 (target=51)
       [4] aload_0 v0
-      [5] invokevirtual #113
+      [5] invokevirtual #117
         + Methodref [java/io/File.isDirectory ()Z]
       [8] ifeq +43 (target=51)
       [11] aload_0 v0
-      [12] invokevirtual #114
+      [12] invokevirtual #118
         + Methodref [java/io/File.list ()[Ljava/lang/String;]
       [15] astore_1 v1
       [16] iconst_0
@@ -10537,16 +10540,16 @@ Methods (count = 13):
       [19] aload_1 v1
       [20] arraylength
       [21] ificmpge +30 (target=51)
-      [24] new #57
+      [24] new #60
         + Class [java/io/File]
       [27] dup
       [28] aload_0 v0
       [29] aload_1 v1
       [30] iload_2 v2
       [31] aaload
-      [32] invokespecial #108
+      [32] invokespecial #112
         + Methodref [java/io/File.<init> (Ljava/io/File;Ljava/lang/String;)V]
-      [35] invokestatic #94
+      [35] invokestatic #97
         + Methodref [com/mycompany/overtest/MainActivity.d (Ljava/io/File;)Z]
       [38] istore_3 v3
       [39] iload_3 v3
@@ -10556,15 +10559,15 @@ Methods (count = 13):
       [45] iinc v2, 1
       [48] goto -30 (target=18)
       [51] aload_0 v0
-      [52] invokevirtual #112
+      [52] invokevirtual #116
         + Methodref [java/io/File.getName ()Ljava/lang/String;]
       [55] ldc #9
         + String [.txt]
-      [57] invokevirtual #117
+      [57] invokevirtual #121
         + Methodref [java/lang/String.contains (Ljava/lang/CharSequence;)Z]
       [60] ifeq +10 (target=70)
       [63] aload_0 v0
-      [64] invokevirtual #110
+      [64] invokevirtual #114
         + Methodref [java/io/File.delete ()Z]
       [67] goto +4 (target=71)
       [70] iconst_0
@@ -10583,12 +10586,12 @@ Methods (count = 13):
     Class member attributes (count = 1):
     + Code attribute instructions (code length = 12, locals = 2, stack = 3):
       [0] aload_0 v0
-      [1] invokevirtual #95
+      [1] invokevirtual #98
         + Methodref [com/mycompany/overtest/MainActivity.getMenuInflater ()Landroid/view/MenuInflater;]
       [4] ldc #6
         + Integer [2131034113]
       [6] aload_1 v1
-      [7] invokevirtual #89
+      [7] invokevirtual #92
         + Methodref [android/view/MenuInflater.inflate (ILandroid/view/Menu;)V]
       [10] iconst_1
       [11] ireturn
@@ -10598,134 +10601,165 @@ Methods (count = 13):
     Access flags: 0x1
       = public boolean onOptionsItemSelected(android.view.MenuItem)
     Class member attributes (count = 1):
-    + Code attribute instructions (code length = 176, locals = 3, stack = 5):
+    + Code attribute instructions (code length = 216, locals = 3, stack = 5):
       [0] aload_1 v1
-      [1] invokeinterface #124
+      [1] invokeinterface #128
         + InterfaceMethodref [android/view/MenuItem.getItemId ()I]
-      [6] tableswitch (4 offsets, default=168) (target=174)
-        2131099662: offset = 115, target = 121
+      [6] tableswitch (4 offsets, default=208) (target=214)
+        2131099662: offset = 155, target = 161
         2131099663: offset = 30, target = 36
-        2131099664: offset = 33, target = 39
-        2131099665: offset = 93, target = 99
-        default: offset = 168, target = 174
-      [36] goto +138 (target=174)
-      [39] aload_0 v0
-      [40] getfield #61
-        + Fieldref [com/mycompany/overtest/MainActivity.a Lcom/mycompany/overtest/a;]
-      [43] invokevirtual #103
-        + Methodref [com/mycompany/overtest/a.d ()V]
-      [46] new #57
-        + Class [java/io/File]
-      [49] dup
-      [50] new #59
-        + Class [java/lang/StringBuilder]
-      [53] dup
-      [54] invokespecial #118
-        + Methodref [java/lang/StringBuilder.<init> ()V]
-      [57] invokestatic #87
-        + Methodref [android/os/Environment.getExternalStorageDirectory ()Ljava/io/File;]
-      [60] invokevirtual #119
-        + Methodref [java/lang/StringBuilder.append (Ljava/lang/Object;)Ljava/lang/StringBuilder;]
-      [63] ldc #11
-        + String [/MANUAL/workflow]
-      [65] invokevirtual #120
-        + Methodref [java/lang/StringBuilder.append (Ljava/lang/String;)Ljava/lang/StringBuilder;]
-      [68] invokevirtual #121
-        + Methodref [java/lang/StringBuilder.toString ()Ljava/lang/String;]
-      [71] invokespecial #109
-        + Methodref [java/io/File.<init> (Ljava/lang/String;)V]
-      [74] astore_2 v2
-      [75] aload_2 v2
-      [76] invokevirtual #111
-        + Methodref [java/io/File.exists ()Z]
-      [79] ifne +8 (target=87)
-      [82] aload_2 v2
-      [83] invokevirtual #116
-        + Methodref [java/io/File.mkdirs ()Z]
-      [86] pop
-      [87] aload_0 v0
-      [88] aload_0 v0
-      [89] getfield #63
-        + Fieldref [com/mycompany/overtest/MainActivity.c Landroid/content/Intent;]
-      [92] invokevirtual #98
-        + Methodref [com/mycompany/overtest/MainActivity.startService (Landroid/content/Intent;)Landroid/content/ComponentName;]
-      [95] pop
-      [96] goto +78 (target=174)
-      [99] aload_0 v0
-      [100] aload_0 v0
-      [101] getfield #63
-        + Fieldref [com/mycompany/overtest/MainActivity.c Landroid/content/Intent;]
-      [104] invokevirtual #99
-        + Methodref [com/mycompany/overtest/MainActivity.stopService (Landroid/content/Intent;)Z]
-      [107] pop
-      [108] aload_0 v0
-      [109] ldc #24
-        + String [Stop Service]
-      [111] iconst_0
-      [112] invokestatic #90
-        + Methodref [android/widget/Toast.makeText (Landroid/content/Context;Ljava/lang/CharSequence;I)Landroid/widget/Toast;]
-      [115] invokevirtual #91
-        + Methodref [android/widget/Toast.show ()V]
-      [118] goto +56 (target=174)
-      [121] new #39
+        2131099664: offset = 73, target = 79
+        2131099665: offset = 133, target = 139
+        default: offset = 208, target = 214
+      [36] new #41
         + Class [android/app/AlertDialog$Builder]
-      [124] dup
-      [125] aload_0 v0
-      [126] invokespecial #67
+      [39] dup
+      [40] aload_0 v0
+      [41] invokespecial #70
         + Methodref [android/app/AlertDialog$Builder.<init> (Landroid/content/Context;)V]
-      [129] ldc #19
-        + String [Empty workflow]
-      [131] invokevirtual #72
+      [44] ldc #23
+        + String [Help page]
+      [46] invokevirtual #75
         + Methodref [android/app/AlertDialog$Builder.setTitle (Ljava/lang/CharSequence;)Landroid/app/AlertDialog$Builder;]
-      [134] ldc #16
-        + String [All your files will be deleted!]
-      [136] invokevirtual #69
+      [49] ldc #26
+        + String [This application allows user to create visual bug reports and share them with developers.]
+      [51] invokevirtual #72
         + Methodref [android/app/AlertDialog$Builder.setMessage (Ljava/lang/CharSequence;)Landroid/app/AlertDialog$Builder;]
-      [139] ldc #2
+      [54] ldc #2
         + Integer [17039379]
-      [141] new #56
-        + Class [com/mycompany/overtest/r]
-      [144] dup
-      [145] aload_0 v0
-      [146] invokespecial #107
-        + Methodref [com/mycompany/overtest/r.<init> (Lcom/mycompany/overtest/MainActivity;)V]
-      [149] invokevirtual #71
-        + Methodref [android/app/AlertDialog$Builder.setPositiveButton (ILandroid/content/DialogInterface$OnClickListener;)Landroid/app/AlertDialog$Builder;]
-      [152] ldc #1
-        + Integer [17039369]
-      [154] new #55
+      [56] new #57
         + Class [com/mycompany/overtest/q]
-      [157] dup
-      [158] aload_0 v0
-      [159] invokespecial #106
+      [59] dup
+      [60] aload_0 v0
+      [61] invokespecial #109
         + Methodref [com/mycompany/overtest/q.<init> (Lcom/mycompany/overtest/MainActivity;)V]
-      [162] invokevirtual #70
-        + Methodref [android/app/AlertDialog$Builder.setNegativeButton (ILandroid/content/DialogInterface$OnClickListener;)Landroid/app/AlertDialog$Builder;]
-      [165] ldc #3
-        + Integer [17301543]
-      [167] invokevirtual #68
+      [64] invokevirtual #74
+        + Methodref [android/app/AlertDialog$Builder.setPositiveButton (ILandroid/content/DialogInterface$OnClickListener;)Landroid/app/AlertDialog$Builder;]
+      [67] ldc #4
+        + Integer [17301568]
+      [69] invokevirtual #71
         + Methodref [android/app/AlertDialog$Builder.setIcon (I)Landroid/app/AlertDialog$Builder;]
-      [170] invokevirtual #73
+      [72] invokevirtual #76
         + Methodref [android/app/AlertDialog$Builder.show ()Landroid/app/AlertDialog;]
-      [173] pop
-      [174] iconst_1
-      [175] ireturn
+      [75] pop
+      [76] goto +138 (target=214)
+      [79] aload_0 v0
+      [80] getfield #64
+        + Fieldref [com/mycompany/overtest/MainActivity.a Lcom/mycompany/overtest/a;]
+      [83] invokevirtual #106
+        + Methodref [com/mycompany/overtest/a.d ()V]
+      [86] new #60
+        + Class [java/io/File]
+      [89] dup
+      [90] new #62
+        + Class [java/lang/StringBuilder]
+      [93] dup
+      [94] invokespecial #122
+        + Methodref [java/lang/StringBuilder.<init> ()V]
+      [97] invokestatic #90
+        + Methodref [android/os/Environment.getExternalStorageDirectory ()Ljava/io/File;]
+      [100] invokevirtual #123
+        + Methodref [java/lang/StringBuilder.append (Ljava/lang/Object;)Ljava/lang/StringBuilder;]
+      [103] ldc #11
+        + String [/MANUAL/workflow]
+      [105] invokevirtual #124
+        + Methodref [java/lang/StringBuilder.append (Ljava/lang/String;)Ljava/lang/StringBuilder;]
+      [108] invokevirtual #125
+        + Methodref [java/lang/StringBuilder.toString ()Ljava/lang/String;]
+      [111] invokespecial #113
+        + Methodref [java/io/File.<init> (Ljava/lang/String;)V]
+      [114] astore_2 v2
+      [115] aload_2 v2
+      [116] invokevirtual #115
+        + Methodref [java/io/File.exists ()Z]
+      [119] ifne +8 (target=127)
+      [122] aload_2 v2
+      [123] invokevirtual #120
+        + Methodref [java/io/File.mkdirs ()Z]
+      [126] pop
+      [127] aload_0 v0
+      [128] aload_0 v0
+      [129] getfield #66
+        + Fieldref [com/mycompany/overtest/MainActivity.c Landroid/content/Intent;]
+      [132] invokevirtual #101
+        + Methodref [com/mycompany/overtest/MainActivity.startService (Landroid/content/Intent;)Landroid/content/ComponentName;]
+      [135] pop
+      [136] goto +78 (target=214)
+      [139] aload_0 v0
+      [140] aload_0 v0
+      [141] getfield #66
+        + Fieldref [com/mycompany/overtest/MainActivity.c Landroid/content/Intent;]
+      [144] invokevirtual #102
+        + Methodref [com/mycompany/overtest/MainActivity.stopService (Landroid/content/Intent;)Z]
+      [147] pop
+      [148] aload_0 v0
+      [149] ldc #25
+        + String [Stop Service]
+      [151] iconst_0
+      [152] invokestatic #93
+        + Methodref [android/widget/Toast.makeText (Landroid/content/Context;Ljava/lang/CharSequence;I)Landroid/widget/Toast;]
+      [155] invokevirtual #94
+        + Methodref [android/widget/Toast.show ()V]
+      [158] goto +56 (target=214)
+      [161] new #41
+        + Class [android/app/AlertDialog$Builder]
+      [164] dup
+      [165] aload_0 v0
+      [166] invokespecial #70
+        + Methodref [android/app/AlertDialog$Builder.<init> (Landroid/content/Context;)V]
+      [169] ldc #19
+        + String [Empty workflow]
+      [171] invokevirtual #75
+        + Methodref [android/app/AlertDialog$Builder.setTitle (Ljava/lang/CharSequence;)Landroid/app/AlertDialog$Builder;]
+      [174] ldc #16
+        + String [All your files will be deleted!]
+      [176] invokevirtual #72
+        + Methodref [android/app/AlertDialog$Builder.setMessage (Ljava/lang/CharSequence;)Landroid/app/AlertDialog$Builder;]
+      [179] ldc #2
+        + Integer [17039379]
+      [181] new #59
+        + Class [com/mycompany/overtest/s]
+      [184] dup
+      [185] aload_0 v0
+      [186] invokespecial #111
+        + Methodref [com/mycompany/overtest/s.<init> (Lcom/mycompany/overtest/MainActivity;)V]
+      [189] invokevirtual #74
+        + Methodref [android/app/AlertDialog$Builder.setPositiveButton (ILandroid/content/DialogInterface$OnClickListener;)Landroid/app/AlertDialog$Builder;]
+      [192] ldc #1
+        + Integer [17039369]
+      [194] new #58
+        + Class [com/mycompany/overtest/r]
+      [197] dup
+      [198] aload_0 v0
+      [199] invokespecial #110
+        + Methodref [com/mycompany/overtest/r.<init> (Lcom/mycompany/overtest/MainActivity;)V]
+      [202] invokevirtual #73
+        + Methodref [android/app/AlertDialog$Builder.setNegativeButton (ILandroid/content/DialogInterface$OnClickListener;)Landroid/app/AlertDialog$Builder;]
+      [205] ldc #3
+        + Integer [17301564]
+      [207] invokevirtual #71
+        + Methodref [android/app/AlertDialog$Builder.setIcon (I)Landroid/app/AlertDialog$Builder;]
+      [210] invokevirtual #76
+        + Methodref [android/app/AlertDialog$Builder.show ()Landroid/app/AlertDialog;]
+      [213] pop
+      [214] iconst_1
+      [215] ireturn
       Code attribute exceptions (count = 0):
       Code attribute attributes (attribute count = 1):
       + Stack map table attribute (count = 6):
         - [36] Var: ..., Stack: (empty)
-        - [39] Var: ..., Stack: (empty)
-        - [87] Var: ...[a:java/io/File], Stack: (empty)
-        - [99] Var: -1, Stack: (empty)
-        - [121] Var: ..., Stack: (empty)
-        - [174] Var: ..., Stack: (empty)
+        - [79] Var: ..., Stack: (empty)
+        - [127] Var: ...[a:java/io/File], Stack: (empty)
+        - [139] Var: -1, Stack: (empty)
+        - [161] Var: ..., Stack: (empty)
+        - [214] Var: ..., Stack: (empty)
   + Method:       a(Ljava/io/File;)Z
     Access flags: 0x1008
       = static synthetic boolean a(java.io.File)
     Class member attributes (count = 1):
     + Code attribute instructions (code length = 5, locals = 1, stack = 1):
       [0] aload_0 v0
-      [1] invokestatic #93
+      [1] invokestatic #96
         + Methodref [com/mycompany/overtest/MainActivity.c (Ljava/io/File;)Z]
       [4] ireturn
       Code attribute exceptions (count = 0):
@@ -10736,7 +10770,7 @@ Methods (count = 13):
     Class member attributes (count = 1):
     + Code attribute instructions (code length = 5, locals = 1, stack = 1):
       [0] aload_0 v0
-      [1] invokestatic #94
+      [1] invokestatic #97
         + Methodref [com/mycompany/overtest/MainActivity.d (Ljava/io/File;)Z]
       [4] ireturn
       Code attribute exceptions (count = 0):
@@ -11047,18 +11081,81 @@ _____________________________________________________________________
 Interfaces (count = 1):
   + Class [android/content/DialogInterface$OnClickListener]
 
+Constant Pool (count = 19):
+  + Class [android/content/DialogInterface$OnClickListener]
+  + Class [com/mycompany/overtest/r]
+  + Class [java/lang/Object]
+  + Fieldref [com/mycompany/overtest/r.a Lcom/mycompany/overtest/MainActivity;]
+  + Methodref [java/lang/Object.<init> ()V]
+  + NameAndType [<init> ()V]
+  + NameAndType [a Lcom/mycompany/overtest/MainActivity;]
+  + Utf8 [()V]
+  + Utf8 [(Landroid/content/DialogInterface;I)V]
+  + Utf8 [(Lcom/mycompany/overtest/MainActivity;)V]
+  + Utf8 [<init>]
+  + Utf8 [Code]
+  + Utf8 [Lcom/mycompany/overtest/MainActivity;]
+  + Utf8 [a]
+  + Utf8 [android/content/DialogInterface$OnClickListener]
+  + Utf8 [com/mycompany/overtest/r]
+  + Utf8 [java/lang/Object]
+  + Utf8 [onClick]
+
+Fields (count = 1):
+  + Field:        a Lcom/mycompany/overtest/MainActivity;
+    Access flags: 0x1010
+      = final synthetic com.mycompany.overtest.MainActivity a
+
+Methods (count = 2):
+  - Method:       <init>(Lcom/mycompany/overtest/MainActivity;)V
+    Access flags: 0x0
+      = r(com.mycompany.overtest.MainActivity)
+    Class member attributes (count = 1):
+    + Code attribute instructions (code length = 10, locals = 2, stack = 2):
+      [0] aload_0 v0
+      [1] aload_1 v1
+      [2] putfield #4
+        + Fieldref [com/mycompany/overtest/r.a Lcom/mycompany/overtest/MainActivity;]
+      [5] aload_0 v0
+      [6] invokespecial #5
+        + Methodref [java/lang/Object.<init> ()V]
+      [9] return
+      Code attribute exceptions (count = 0):
+      Code attribute attributes (attribute count = 0):
+  + Method:       onClick(Landroid/content/DialogInterface;I)V
+    Access flags: 0x1
+      = public void onClick(android.content.DialogInterface,int)
+    Class member attributes (count = 1):
+    + Code attribute instructions (code length = 1, locals = 3, stack = 0):
+      [0] return
+      Code attribute exceptions (count = 0):
+      Code attribute attributes (attribute count = 0):
+
+Class file attributes (count = 0):
+
+_____________________________________________________________________
++ Program class: com/mycompany/overtest/s
+  Superclass:    java/lang/Object
+  Major version: 0x33
+  Minor version: 0x0
+  Access flags:  0x20
+    = class com.mycompany.overtest.s extends java.lang.Object
+
+Interfaces (count = 1):
+  + Class [android/content/DialogInterface$OnClickListener]
+
 Constant Pool (count = 64):
   + String [/MANUAL/settings]
   + String [/MANUAL/workflow]
   + Class [android/content/DialogInterface$OnClickListener]
   + Class [android/os/Environment]
   + Class [com/mycompany/overtest/MainActivity]
-  + Class [com/mycompany/overtest/r]
+  + Class [com/mycompany/overtest/s]
   + Class [java/io/File]
   + Class [java/lang/Object]
   + Class [java/lang/StringBuilder]
   + Fieldref [com/mycompany/overtest/MainActivity.c Landroid/content/Intent;]
-  + Fieldref [com/mycompany/overtest/r.a Lcom/mycompany/overtest/MainActivity;]
+  + Fieldref [com/mycompany/overtest/s.a Lcom/mycompany/overtest/MainActivity;]
   + Methodref [android/os/Environment.getExternalStorageDirectory ()Ljava/io/File;]
   + Methodref [com/mycompany/overtest/MainActivity.a (Ljava/io/File;)Z]
   + Methodref [com/mycompany/overtest/MainActivity.b (Ljava/io/File;)Z]
@@ -11103,7 +11200,7 @@ Constant Pool (count = 64):
   + Utf8 [b]
   + Utf8 [c]
   + Utf8 [com/mycompany/overtest/MainActivity]
-  + Utf8 [com/mycompany/overtest/r]
+  + Utf8 [com/mycompany/overtest/s]
   + Utf8 [getExternalStorageDirectory]
   + Utf8 [java/io/File]
   + Utf8 [java/lang/Object]
@@ -11120,13 +11217,13 @@ Fields (count = 1):
 Methods (count = 2):
   - Method:       <init>(Lcom/mycompany/overtest/MainActivity;)V
     Access flags: 0x0
-      = r(com.mycompany.overtest.MainActivity)
+      = s(com.mycompany.overtest.MainActivity)
     Class member attributes (count = 1):
     + Code attribute instructions (code length = 10, locals = 2, stack = 2):
       [0] aload_0 v0
       [1] aload_1 v1
       [2] putfield #11
-        + Fieldref [com/mycompany/overtest/r.a Lcom/mycompany/overtest/MainActivity;]
+        + Fieldref [com/mycompany/overtest/s.a Lcom/mycompany/overtest/MainActivity;]
       [5] aload_0 v0
       [6] invokespecial #17
         + Methodref [java/lang/Object.<init> ()V]
@@ -11140,10 +11237,10 @@ Methods (count = 2):
     + Code attribute instructions (code length = 86, locals = 5, stack = 4):
       [0] aload_0 v0
       [1] getfield #11
-        + Fieldref [com/mycompany/overtest/r.a Lcom/mycompany/overtest/MainActivity;]
+        + Fieldref [com/mycompany/overtest/s.a Lcom/mycompany/overtest/MainActivity;]
       [4] aload_0 v0
       [5] getfield #11
-        + Fieldref [com/mycompany/overtest/r.a Lcom/mycompany/overtest/MainActivity;]
+        + Fieldref [com/mycompany/overtest/s.a Lcom/mycompany/overtest/MainActivity;]
       [8] getfield #10
         + Fieldref [com/mycompany/overtest/MainActivity.c Landroid/content/Intent;]
       [11] invokevirtual #15
@@ -11342,12 +11439,12 @@ Methods (count = 2):
 Class file attributes (count = 0):
 
 _____________________________________________________________________
-+ Program class: com/mycompany/overtest/s
++ Program class: com/mycompany/overtest/t
   Superclass:    android/widget/BaseAdapter
   Major version: 0x33
   Minor version: 0x0
   Access flags:  0x20
-    = class com.mycompany.overtest.s extends android.widget.BaseAdapter
+    = class com.mycompany.overtest.t extends android.widget.BaseAdapter
 
 Interfaces (count = 0):
 
@@ -11379,20 +11476,20 @@ Constant Pool (count = 183):
   + Class [android/widget/ImageView]
   + Class [android/widget/TextView]
   + Class [com/mycompany/overtest/a]
-  + Class [com/mycompany/overtest/s]
   + Class [com/mycompany/overtest/t]
+  + Class [com/mycompany/overtest/u]
   + Class [java/lang/Exception]
   + Class [java/lang/Integer]
   + Class [java/lang/String]
   + Class [java/lang/StringBuilder]
   + Fieldref [android/util/DisplayMetrics.heightPixels I]
   + Fieldref [android/util/DisplayMetrics.widthPixels I]
-  + Fieldref [com/mycompany/overtest/s.a Lcom/mycompany/overtest/a;]
-  + Fieldref [com/mycompany/overtest/s.b I]
-  + Fieldref [com/mycompany/overtest/s.c I]
-  + Fieldref [com/mycompany/overtest/s.d Landroid/content/Context;]
-  + Fieldref [com/mycompany/overtest/s.e [Ljava/lang/String;]
-  + Fieldref [com/mycompany/overtest/s.f Landroid/view/LayoutInflater;]
+  + Fieldref [com/mycompany/overtest/t.a Lcom/mycompany/overtest/a;]
+  + Fieldref [com/mycompany/overtest/t.b I]
+  + Fieldref [com/mycompany/overtest/t.c I]
+  + Fieldref [com/mycompany/overtest/t.d Landroid/content/Context;]
+  + Fieldref [com/mycompany/overtest/t.e [Ljava/lang/String;]
+  + Fieldref [com/mycompany/overtest/t.f Landroid/view/LayoutInflater;]
   + Methodref [android/content/Context.getResources ()Landroid/content/res/Resources;]
   + Methodref [android/content/Context.getSystemService (Ljava/lang/String;)Ljava/lang/Object;]
   + Methodref [android/content/res/Resources.getDisplayMetrics ()Landroid/util/DisplayMetrics;]
@@ -11409,9 +11506,9 @@ Constant Pool (count = 183):
   + Methodref [android/widget/TextView.setWidth (I)V]
   + Methodref [com/mycompany/overtest/a.<init> ()V]
   + Methodref [com/mycompany/overtest/a.a (Ljava/lang/String;)Ljava/lang/StringBuilder;]
-  + Methodref [com/mycompany/overtest/t.<init> (Lcom/mycompany/overtest/s;)V]
-  + Methodref [com/mycompany/overtest/t.a (Landroid/widget/ImageView;)V]
-  + Methodref [com/mycompany/overtest/t.execute ([Ljava/lang/Object;)Landroid/os/AsyncTask;]
+  + Methodref [com/mycompany/overtest/u.<init> (Lcom/mycompany/overtest/t;)V]
+  + Methodref [com/mycompany/overtest/u.a (Landroid/widget/ImageView;)V]
+  + Methodref [com/mycompany/overtest/u.execute ([Ljava/lang/Object;)Landroid/os/AsyncTask;]
   + Methodref [java/lang/Exception.printStackTrace ()V]
   + Methodref [java/lang/Integer.toString (I)Ljava/lang/String;]
   + Methodref [java/lang/StringBuilder.<init> ()V]
@@ -11420,7 +11517,7 @@ Constant Pool (count = 183):
   + Methodref [java/lang/StringBuilder.append (Ljava/lang/String;)Ljava/lang/StringBuilder;]
   + Methodref [java/lang/StringBuilder.toString ()Ljava/lang/String;]
   + NameAndType [<init> ()V]
-  + NameAndType [<init> (Lcom/mycompany/overtest/s;)V]
+  + NameAndType [<init> (Lcom/mycompany/overtest/t;)V]
   + NameAndType [a (Landroid/widget/ImageView;)V]
   + NameAndType [a (Ljava/lang/String;)Ljava/lang/StringBuilder;]
   + NameAndType [a Lcom/mycompany/overtest/a;]
@@ -11470,7 +11567,7 @@ Constant Pool (count = 183):
   + Utf8 [(ILandroid/view/ViewGroup;)Landroid/view/View;]
   + Utf8 [(Landroid/content/Context;[Ljava/lang/String;)V]
   + Utf8 [(Landroid/widget/ImageView;)V]
-  + Utf8 [(Lcom/mycompany/overtest/s;)V]
+  + Utf8 [(Lcom/mycompany/overtest/t;)V]
   + Utf8 [(Ljava/lang/CharSequence;)Ljava/lang/StringBuilder;]
   + Utf8 [(Ljava/lang/CharSequence;)V]
   + Utf8 [(Ljava/lang/Object;)Ljava/lang/StringBuilder;]
@@ -11509,8 +11606,8 @@ Constant Pool (count = 183):
   + Utf8 [b]
   + Utf8 [c]
   + Utf8 [com/mycompany/overtest/a]
-  + Utf8 [com/mycompany/overtest/s]
   + Utf8 [com/mycompany/overtest/t]
+  + Utf8 [com/mycompany/overtest/u]
   + Utf8 [d]
   + Utf8 [e]
   + Utf8 [execute]
@@ -11583,7 +11680,7 @@ Methods (count = 7):
       Code attribute attributes (attribute count = 0):
   - Method:       <init>(Landroid/content/Context;[Ljava/lang/String;)V
     Access flags: 0x1
-      = public s(android.content.Context,java.lang.String[])
+      = public t(android.content.Context,java.lang.String[])
     Class member attributes (count = 1):
     + Code attribute instructions (code length = 154, locals = 5, stack = 4):
       [0] aload_0 v0
@@ -11596,15 +11693,15 @@ Methods (count = 7):
       [9] invokespecial #54
         + Methodref [com/mycompany/overtest/a.<init> ()V]
       [12] putfield #34
-        + Fieldref [com/mycompany/overtest/s.a Lcom/mycompany/overtest/a;]
+        + Fieldref [com/mycompany/overtest/t.a Lcom/mycompany/overtest/a;]
       [15] aload_0 v0
       [16] aload_1 v1
       [17] putfield #37
-        + Fieldref [com/mycompany/overtest/s.d Landroid/content/Context;]
+        + Fieldref [com/mycompany/overtest/t.d Landroid/content/Context;]
       [20] aload_0 v0
       [21] aload_2 v2
       [22] putfield #38
-        + Fieldref [com/mycompany/overtest/s.e [Ljava/lang/String;]
+        + Fieldref [com/mycompany/overtest/t.e [Ljava/lang/String;]
       [25] aload_1 v1
       [26] ldc #11
         + String [layout_inflater]
@@ -11613,7 +11710,7 @@ Methods (count = 7):
       [31] checkcast #19
         + Class [android/view/LayoutInflater]
       [34] putstatic #39
-        + Fieldref [com/mycompany/overtest/s.f Landroid/view/LayoutInflater;]
+        + Fieldref [com/mycompany/overtest/t.f Landroid/view/LayoutInflater;]
       [37] aload_1 v1
       [38] invokevirtual #40
         + Methodref [android/content/Context.getResources ()Landroid/content/res/Resources;]
@@ -11625,13 +11722,13 @@ Methods (count = 7):
       [47] getfield #33
         + Fieldref [android/util/DisplayMetrics.widthPixels I]
       [50] putfield #35
-        + Fieldref [com/mycompany/overtest/s.b I]
+        + Fieldref [com/mycompany/overtest/t.b I]
       [53] aload_0 v0
       [54] aload_3 v3
       [55] getfield #32
         + Fieldref [android/util/DisplayMetrics.heightPixels I]
       [58] putfield #36
-        + Fieldref [com/mycompany/overtest/s.c I]
+        + Fieldref [com/mycompany/overtest/t.c I]
       [61] ldc #9
         + String [Files]
       [63] ldc #5
@@ -11707,7 +11804,7 @@ Methods (count = 7):
       Code attribute exceptions (count = 0):
       Code attribute attributes (attribute count = 1):
       + Stack map table attribute (count = 2):
-        - [88] Var: [a:com/mycompany/overtest/s][a:android/content/Context][a:[Ljava/lang/String;][a:android/util/DisplayMetrics][i], Stack: 
+        - [88] Var: [a:com/mycompany/overtest/t][a:android/content/Context][a:[Ljava/lang/String;][a:android/util/DisplayMetrics][i], Stack: 
         - [129] Var: -1, Stack: (empty)
   + Method:       getCount()I
     Access flags: 0x1
@@ -11716,7 +11813,7 @@ Methods (count = 7):
     + Code attribute instructions (code length = 6, locals = 1, stack = 1):
       [0] aload_0 v0
       [1] getfield #38
-        + Fieldref [com/mycompany/overtest/s.e [Ljava/lang/String;]
+        + Fieldref [com/mycompany/overtest/t.e [Ljava/lang/String;]
       [4] arraylength
       [5] ireturn
       Code attribute exceptions (count = 0):
@@ -11728,7 +11825,7 @@ Methods (count = 7):
     + Code attribute instructions (code length = 7, locals = 2, stack = 2):
       [0] aload_0 v0
       [1] getfield #38
-        + Fieldref [com/mycompany/overtest/s.e [Ljava/lang/String;]
+        + Fieldref [com/mycompany/overtest/t.e [Ljava/lang/String;]
       [4] iload_1 v1
       [5] aaload
       [6] areturn
@@ -11750,7 +11847,7 @@ Methods (count = 7):
     Class member attributes (count = 1):
     + Code attribute instructions (code length = 263, locals = 9, stack = 6):
       [0] getstatic #39
-        + Fieldref [com/mycompany/overtest/s.f Landroid/view/LayoutInflater;]
+        + Fieldref [com/mycompany/overtest/t.f Landroid/view/LayoutInflater;]
       [3] ldc #1
         + Integer [2130903044]
       [5] aconst_null
@@ -11777,7 +11874,7 @@ Methods (count = 7):
         + Methodref [java/lang/StringBuilder.append (Ljava/lang/String;)Ljava/lang/StringBuilder;]
       [33] aload_0 v0
       [34] getfield #35
-        + Fieldref [com/mycompany/overtest/s.b I]
+        + Fieldref [com/mycompany/overtest/t.b I]
       [37] invokestatic #60
         + Methodref [java/lang/Integer.toString (I)Ljava/lang/String;]
       [40] invokevirtual #64
@@ -11831,7 +11928,7 @@ Methods (count = 7):
       [102] aload v5
       [104] aload_0 v0
       [105] getfield #34
-        + Fieldref [com/mycompany/overtest/s.a Lcom/mycompany/overtest/a;]
+        + Fieldref [com/mycompany/overtest/t.a Lcom/mycompany/overtest/a;]
       [108] new #31
         + Class [java/lang/StringBuilder]
       [111] dup
@@ -11847,7 +11944,7 @@ Methods (count = 7):
         + Methodref [java/lang/StringBuilder.append (Ljava/lang/String;)Ljava/lang/StringBuilder;]
       [126] aload_0 v0
       [127] getfield #38
-        + Fieldref [com/mycompany/overtest/s.e [Ljava/lang/String;]
+        + Fieldref [com/mycompany/overtest/t.e [Ljava/lang/String;]
       [130] iload_1 v1
       [131] aaload
       [132] invokevirtual #64
@@ -11878,7 +11975,7 @@ Methods (count = 7):
       [169] aload v6
       [171] aload_0 v0
       [172] getfield #38
-        + Fieldref [com/mycompany/overtest/s.e [Ljava/lang/String;]
+        + Fieldref [com/mycompany/overtest/t.e [Ljava/lang/String;]
       [175] iload_1 v1
       [176] aaload
       [177] invokevirtual #51
@@ -11886,7 +11983,7 @@ Methods (count = 7):
       [180] aload v6
       [182] aload_0 v0
       [183] getfield #35
-        + Fieldref [com/mycompany/overtest/s.b I]
+        + Fieldref [com/mycompany/overtest/t.b I]
       [186] iconst_3
       [187] idiv
       [188] invokevirtual #53
@@ -11900,16 +11997,16 @@ Methods (count = 7):
         + Class [android/widget/ImageView]
       [201] astore v7
       [203] new #27
-        + Class [com/mycompany/overtest/t]
+        + Class [com/mycompany/overtest/u]
       [206] dup
       [207] aload_0 v0
       [208] invokespecial #56
-        + Methodref [com/mycompany/overtest/t.<init> (Lcom/mycompany/overtest/s;)V]
+        + Methodref [com/mycompany/overtest/u.<init> (Lcom/mycompany/overtest/t;)V]
       [211] astore v8
       [213] aload v8
       [215] aload v7
       [217] invokevirtual #57
-        + Methodref [com/mycompany/overtest/t.a (Landroid/widget/ImageView;)V]
+        + Methodref [com/mycompany/overtest/u.a (Landroid/widget/ImageView;)V]
       [220] aload v8
       [222] iconst_1
       [223] anewarray #30
@@ -11918,17 +12015,17 @@ Methods (count = 7):
       [227] iconst_0
       [228] aload_0 v0
       [229] getfield #38
-        + Fieldref [com/mycompany/overtest/s.e [Ljava/lang/String;]
+        + Fieldref [com/mycompany/overtest/t.e [Ljava/lang/String;]
       [232] iload_1 v1
       [233] aaload
       [234] aastore
       [235] invokevirtual #58
-        + Methodref [com/mycompany/overtest/t.execute ([Ljava/lang/Object;)Landroid/os/AsyncTask;]
+        + Methodref [com/mycompany/overtest/u.execute ([Ljava/lang/Object;)Landroid/os/AsyncTask;]
       [238] pop
       [239] aload v7
       [241] aload_0 v0
       [242] getfield #38
-        + Fieldref [com/mycompany/overtest/s.e [Ljava/lang/String;]
+        + Fieldref [com/mycompany/overtest/t.e [Ljava/lang/String;]
       [245] iload_1 v1
       [246] aaload
       [247] invokevirtual #50
@@ -11945,7 +12042,7 @@ Methods (count = 7):
       + Class [java/lang/Exception]
       Code attribute attributes (attribute count = 1):
       + Stack map table attribute (count = 2):
-        - [253] Var: [a:com/mycompany/overtest/s][i][a:android/view/View][a:android/view/ViewGroup][a:android/view/View][a:java/lang/StringBuilder][a:android/widget/TextView], Stack: [a:java/lang/Exception]
+        - [253] Var: [a:com/mycompany/overtest/t][i][a:android/view/View][a:android/view/ViewGroup][a:android/view/View][a:java/lang/StringBuilder][a:android/widget/TextView], Stack: [a:java/lang/Exception]
         - [260] Var: ..., Stack: (empty)
   - Method:       <clinit>()V
     Access flags: 0x8
@@ -11954,7 +12051,7 @@ Methods (count = 7):
     + Code attribute instructions (code length = 5, locals = 0, stack = 1):
       [0] aconst_null
       [1] putstatic #39
-        + Fieldref [com/mycompany/overtest/s.f Landroid/view/LayoutInflater;]
+        + Fieldref [com/mycompany/overtest/t.f Landroid/view/LayoutInflater;]
       [4] return
       Code attribute exceptions (count = 0):
       Code attribute attributes (attribute count = 0):
@@ -11962,12 +12059,12 @@ Methods (count = 7):
 Class file attributes (count = 0):
 
 _____________________________________________________________________
-+ Program class: com/mycompany/overtest/t
++ Program class: com/mycompany/overtest/u
   Superclass:    android/os/AsyncTask
   Major version: 0x33
   Minor version: 0x0
   Access flags:  0x21
-    = public class com.mycompany.overtest.t extends android.os.AsyncTask
+    = public class com.mycompany.overtest.u extends android.os.AsyncTask
 
 Interfaces (count = 0):
 
@@ -11980,12 +12077,12 @@ Constant Pool (count = 90):
   + Class [android/os/AsyncTask]
   + Class [android/os/Environment]
   + Class [android/widget/ImageView]
-  + Class [com/mycompany/overtest/s]
   + Class [com/mycompany/overtest/t]
+  + Class [com/mycompany/overtest/u]
   + Class [java/lang/StringBuilder]
   + Fieldref [android/graphics/BitmapFactory$Options.inSampleSize I]
-  + Fieldref [com/mycompany/overtest/t.a Lcom/mycompany/overtest/s;]
-  + Fieldref [com/mycompany/overtest/t.b Landroid/widget/ImageView;]
+  + Fieldref [com/mycompany/overtest/u.a Lcom/mycompany/overtest/t;]
+  + Fieldref [com/mycompany/overtest/u.b Landroid/widget/ImageView;]
   + Methodref [android/graphics/Bitmap.createBitmap (Landroid/graphics/Bitmap;IIIILandroid/graphics/Matrix;Z)Landroid/graphics/Bitmap;]
   + Methodref [android/graphics/Bitmap.getHeight ()I]
   + Methodref [android/graphics/Bitmap.getWidth ()I]
@@ -11994,9 +12091,9 @@ Constant Pool (count = 90):
   + Methodref [android/os/AsyncTask.<init> ()V]
   + Methodref [android/os/Environment.getExternalStorageDirectory ()Ljava/io/File;]
   + Methodref [android/widget/ImageView.setImageBitmap (Landroid/graphics/Bitmap;)V]
-  + Methodref [com/mycompany/overtest/s.a ()Landroid/graphics/Matrix;]
-  + Methodref [com/mycompany/overtest/t.a (Landroid/graphics/Bitmap;)V]
-  + Methodref [com/mycompany/overtest/t.a ([Ljava/lang/String;)Landroid/graphics/Bitmap;]
+  + Methodref [com/mycompany/overtest/t.a ()Landroid/graphics/Matrix;]
+  + Methodref [com/mycompany/overtest/u.a (Landroid/graphics/Bitmap;)V]
+  + Methodref [com/mycompany/overtest/u.a ([Ljava/lang/String;)Landroid/graphics/Bitmap;]
   + Methodref [java/lang/StringBuilder.<init> ()V]
   + Methodref [java/lang/StringBuilder.append (Ljava/lang/Object;)Ljava/lang/StringBuilder;]
   + Methodref [java/lang/StringBuilder.append (Ljava/lang/String;)Ljava/lang/StringBuilder;]
@@ -12005,7 +12102,7 @@ Constant Pool (count = 90):
   + NameAndType [a ()Landroid/graphics/Matrix;]
   + NameAndType [a (Landroid/graphics/Bitmap;)V]
   + NameAndType [a ([Ljava/lang/String;)Landroid/graphics/Bitmap;]
-  + NameAndType [a Lcom/mycompany/overtest/s;]
+  + NameAndType [a Lcom/mycompany/overtest/t;]
   + NameAndType [append (Ljava/lang/Object;)Ljava/lang/StringBuilder;]
   + NameAndType [append (Ljava/lang/String;)Ljava/lang/StringBuilder;]
   + NameAndType [b Landroid/widget/ImageView;]
@@ -12025,7 +12122,7 @@ Constant Pool (count = 90):
   + Utf8 [(Landroid/graphics/Bitmap;)V]
   + Utf8 [(Landroid/graphics/Bitmap;IIIILandroid/graphics/Matrix;Z)Landroid/graphics/Bitmap;]
   + Utf8 [(Landroid/widget/ImageView;)V]
-  + Utf8 [(Lcom/mycompany/overtest/s;)V]
+  + Utf8 [(Lcom/mycompany/overtest/t;)V]
   + Utf8 [(Ljava/lang/Object;)Ljava/lang/StringBuilder;]
   + Utf8 [(Ljava/lang/Object;)V]
   + Utf8 [(Ljava/lang/String;)Ljava/lang/StringBuilder;]
@@ -12037,7 +12134,7 @@ Constant Pool (count = 90):
   + Utf8 [Code]
   + Utf8 [I]
   + Utf8 [Landroid/widget/ImageView;]
-  + Utf8 [Lcom/mycompany/overtest/s;]
+  + Utf8 [Lcom/mycompany/overtest/t;]
   + Utf8 [[Ljava/lang/String;]
   + Utf8 [a]
   + Utf8 [android/graphics/Bitmap]
@@ -12048,8 +12145,8 @@ Constant Pool (count = 90):
   + Utf8 [android/widget/ImageView]
   + Utf8 [append]
   + Utf8 [b]
-  + Utf8 [com/mycompany/overtest/s]
   + Utf8 [com/mycompany/overtest/t]
+  + Utf8 [com/mycompany/overtest/u]
   + Utf8 [createBitmap]
   + Utf8 [decodeFile]
   + Utf8 [doInBackground]
@@ -12066,20 +12163,20 @@ Fields (count = 2):
   + Field:        b Landroid/widget/ImageView;
     Access flags: 0x2
       = private android.widget.ImageView b
-  + Field:        a Lcom/mycompany/overtest/s;
+  + Field:        a Lcom/mycompany/overtest/t;
     Access flags: 0x1010
-      = final synthetic com.mycompany.overtest.s a
+      = final synthetic com.mycompany.overtest.t a
 
 Methods (count = 6):
-  - Method:       <init>(Lcom/mycompany/overtest/s;)V
+  - Method:       <init>(Lcom/mycompany/overtest/t;)V
     Access flags: 0x1
-      = public t(com.mycompany.overtest.s)
+      = public u(com.mycompany.overtest.t)
     Class member attributes (count = 1):
     + Code attribute instructions (code length = 10, locals = 2, stack = 2):
       [0] aload_0 v0
       [1] aload_1 v1
       [2] putfield #13
-        + Fieldref [com/mycompany/overtest/t.a Lcom/mycompany/overtest/s;]
+        + Fieldref [com/mycompany/overtest/u.a Lcom/mycompany/overtest/t;]
       [5] aload_0 v0
       [6] invokespecial #20
         + Methodref [android/os/AsyncTask.<init> ()V]
@@ -12144,9 +12241,9 @@ Methods (count = 6):
       [66] iload v5
       [68] aload_0 v0
       [69] getfield #13
-        + Fieldref [com/mycompany/overtest/t.a Lcom/mycompany/overtest/s;]
+        + Fieldref [com/mycompany/overtest/u.a Lcom/mycompany/overtest/t;]
       [72] invokevirtual #23
-        + Methodref [com/mycompany/overtest/s.a ()Landroid/graphics/Matrix;]
+        + Methodref [com/mycompany/overtest/t.a ()Landroid/graphics/Matrix;]
       [75] iconst_1
       [76] invokestatic #15
         + Methodref [android/graphics/Bitmap.createBitmap (Landroid/graphics/Bitmap;IIIILandroid/graphics/Matrix;Z)Landroid/graphics/Bitmap;]
@@ -12162,7 +12259,7 @@ Methods (count = 6):
     + Code attribute instructions (code length = 9, locals = 2, stack = 2):
       [0] aload_0 v0
       [1] getfield #14
-        + Fieldref [com/mycompany/overtest/t.b Landroid/widget/ImageView;]
+        + Fieldref [com/mycompany/overtest/u.b Landroid/widget/ImageView;]
       [4] aload_1 v1
       [5] invokevirtual #22
         + Methodref [android/widget/ImageView.setImageBitmap (Landroid/graphics/Bitmap;)V]
@@ -12177,7 +12274,7 @@ Methods (count = 6):
       [0] aload_0 v0
       [1] aload_1 v1
       [2] putfield #14
-        + Fieldref [com/mycompany/overtest/t.b Landroid/widget/ImageView;]
+        + Fieldref [com/mycompany/overtest/u.b Landroid/widget/ImageView;]
       [5] return
       Code attribute exceptions (count = 0):
       Code attribute attributes (attribute count = 0):
@@ -12191,7 +12288,7 @@ Methods (count = 6):
       [2] checkcast #3
         + Class [android/graphics/Bitmap]
       [5] invokevirtual #24
-        + Methodref [com/mycompany/overtest/t.a (Landroid/graphics/Bitmap;)V]
+        + Methodref [com/mycompany/overtest/u.a (Landroid/graphics/Bitmap;)V]
       [8] return
       Code attribute exceptions (count = 0):
       Code attribute attributes (attribute count = 0):
@@ -12205,7 +12302,7 @@ Methods (count = 6):
       [2] checkcast #2
         + Class [[Ljava/lang/String;]
       [5] invokevirtual #25
-        + Methodref [com/mycompany/overtest/t.a ([Ljava/lang/String;)Landroid/graphics/Bitmap;]
+        + Methodref [com/mycompany/overtest/u.a ([Ljava/lang/String;)Landroid/graphics/Bitmap;]
       [8] areturn
       Code attribute exceptions (count = 0):
       Code attribute attributes (attribute count = 0):
