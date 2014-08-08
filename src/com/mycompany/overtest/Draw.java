@@ -1,4 +1,4 @@
-package com.harad.bugnet;
+package com.mycompany.overtest;
 
 import android.app.*;
 import android.content.*;

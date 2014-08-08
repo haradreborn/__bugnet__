@@ -1,4 +1,4 @@
-package com.harad.bugnet;
+package com.mycompany.overtest;
 
 import android.app.*;
 import android.content.*;
@@ -6,12 +6,13 @@ import android.graphics.*;
 import android.os.*;
 import android.util.*;
 import android.view.*;
+import android.view.View.*;
 import android.widget.*;
 import android.widget.LinearLayout.*;
 
 import android.view.View.OnTouchListener;
-import com.mycompany.overtest.R;
-//import com.harad.bugnet.R;
+
+
 
 
 /**
