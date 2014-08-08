@@ -13,7 +13,8 @@ import android.view.ContextMenu.*;
 import android.widget.*;
 import java.io.*;
 import java.util.*;
-import android.speech.tts.*;
+
+import com.harad.bugnet.R;
 
 
 public class ListEditor extends Activity {
