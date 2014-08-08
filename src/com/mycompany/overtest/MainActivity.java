@@ -1,16 +1,31 @@
-package com.mycompany.bugnet;
+package com.mycompany.overtest;
 
 import android.app.*;
 import android.content.*;
+import android.content.pm.ActivityInfo;
+import android.content.pm.PackageManager;
+import android.content.pm.ResolveInfo;
+import android.database.Cursor;
+import android.graphics.*;
+import android.graphics.drawable.BitmapDrawable;
 import android.net.Uri;
 import android.os.*;
+import android.provider.MediaStore;
+import android.text.Html;
+import android.text.InputType;
+import android.text.SpannableStringBuilder;
+import android.util.AttributeSet;
+import android.util.DisplayMetrics;
 import android.util.Log;
 import android.view.*;
+import android.webkit.MimeTypeMap;
+import android.webkit.WebChromeClient;
 import android.widget.*;
-import com.harad.bugnet.R;
-
 import java.io.*;
+import java.lang.Process;
 import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
 
 
 public class MainActivity extends Activity {
@@ -52,10 +67,12 @@ public class MainActivity extends Activity {
 	//btn start
     public void buttonGetClicked(View start){
         try {
-			startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("market://details?id=com.harad.sysrep")));
+			startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("market://details?id=com.harad.prology")));
 		} catch (android.content.ActivityNotFoundException anfe) {
-			startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("http://play.google.com/store/apps/details?id=com.harad.sysrep")));
+			startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("http://play.google.com/store/apps/details?id=com.harad.prology")));
 		}
+		
+		
  	}
 
 	//btn stop
@@ -108,7 +125,7 @@ public class MainActivity extends Activity {
 					// do nothing
 				}
 			})
-			.setIcon(android.R.drawable.ic_menu_delete)
+			//.setIcon(android.R.drawable.ic_menu_delete)
 			.show();
 		
         
@@ -182,6 +199,16 @@ public class MainActivity extends Activity {
 	public boolean onOptionsItemSelected(MenuItem item) {
 		switch (item.getItemId()) {
 			case R.id.help:
+				new AlertDialog.Builder(this)
+					.setTitle("Help page")
+					.setMessage("This application allows user to create visual bug reports and share them with developers.")
+					.setPositiveButton(android.R.string.yes, new DialogInterface.OnClickListener() {
+						public void onClick(DialogInterface dialog, int which) { 
+							
+						}
+					})
+					.setIcon(android.R.drawable.ic_menu_help)
+					.show();
 				
 				break;
 				
@@ -219,7 +246,7 @@ public class MainActivity extends Activity {
 							// do nothing
 						}
 					})
-					.setIcon(android.R.drawable.ic_dialog_alert)
+					.setIcon(android.R.drawable.ic_menu_delete)
 					.show();
 				break;
 				
