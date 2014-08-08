@@ -1,4 +1,4 @@
-package com.mycompany.overtest;
+package com.harad.bugnet;
 
 //TODO
 //	public String ConfigReader(){

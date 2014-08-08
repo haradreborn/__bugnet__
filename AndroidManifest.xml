@@ -19,7 +19,7 @@
         android:theme="@android:style/Theme.Holo.Light">
         <activity
             android:label="@string/app_name"
-            android:name=".MainActivity" >
+            android:name="com.harad.bugnet.MainActivity" >
             <intent-filter >
                 <action android:name="android.intent.action.MAIN" />
 
@@ -29,17 +29,17 @@
 
         <activity
 			android:label="@string/app_name"
-			android:name=".Draw" >
+			android:name="com.harad.bugnet.Draw" >
         </activity>
 
 		<activity
 			android:label="@string/app_name"
-			android:name=".ListEditor" >
+			android:name="com.harad.bugnet.ListEditor" >
         </activity>
 		
 		<activity
 			android:label="@string/app_name"
-			android:name=".Show" >
+			android:name="com.harad.bugnet.Show" >
         </activity>
 		
 		<activity
@@ -58,7 +58,7 @@
         </activity-->
 		
 		<service
-            android:name="GlobalTouchService" >
+            android:name="com.harad.bugnet.GlobalTouchService" >
         </service>
 	</application>
 

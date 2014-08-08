@@ -1,18 +1,13 @@
-package com.mycompany.overtest;
+package com.harad.bugnet;
 
-import android.annotation.*;
-import android.content.Context;
 import android.graphics.*;
 import android.os.*;
 import android.util.*;
-import android.view.Display;
-import android.view.WindowManager;
 
 import java.io.*;
 import java.util.*;
 
 import java.lang.Process;
-import android.view.*;
 
 /**
  * Created by harad on 15.03.14.

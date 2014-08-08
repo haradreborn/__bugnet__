@@ -1,10 +1,8 @@
-package com.mycompany.overtest;
+package com.harad.bugnet;
 
 import android.content.*;
-import android.database.*;
 import android.database.sqlite.*;
 import android.util.*;
-import java.util.*;
 
 public class sql extends SQLiteOpenHelper {
 	// Database Version

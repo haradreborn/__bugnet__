@@ -1,4 +1,4 @@
-package com.mycompany.overtest;
+package com.harad.bugnet;
 
 import android.app.*;
 import android.content.*;
@@ -11,9 +11,10 @@ import android.util.*;
 import android.view.*;
 import android.view.ContextMenu.*;
 import android.widget.*;
+import com.harad.bugnet.R;
+
 import java.io.*;
 import java.util.*;
-import android.speech.tts.*;
 
 
 public class ListEditor extends Activity {
