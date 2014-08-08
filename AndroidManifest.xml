@@ -41,16 +41,6 @@
 			android:label="@string/app_name"
 			android:name=".Show" >
         </activity>
-		
-		<activity
-			android:label="@string/app_name"
-			android:name=".System" >
-        </activity>
-		
-		<activity
-			android:label="@string/app_name"
-			android:name=".Settings" >
-        </activity>
     
         <!--activity
 			android:label="@string/app_name"

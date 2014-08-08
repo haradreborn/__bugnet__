@@ -56,8 +56,6 @@ public class MainActivity extends Activity {
 		} catch (android.content.ActivityNotFoundException anfe) {
 			startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("http://play.google.com/store/apps/details?id=com.harad.sysrep")));
 		}
-		
-		
  	}
 
 	//btn stop
@@ -110,7 +108,7 @@ public class MainActivity extends Activity {
 					// do nothing
 				}
 			})
-			//.setIcon(android.R.drawable.ic_menu_delete)
+			.setIcon(android.R.drawable.ic_menu_delete)
 			.show();
 		
         
@@ -184,16 +182,6 @@ public class MainActivity extends Activity {
 	public boolean onOptionsItemSelected(MenuItem item) {
 		switch (item.getItemId()) {
 			case R.id.help:
-				new AlertDialog.Builder(this)
-					.setTitle("Help page")
-					.setMessage("This application allows user to create visual bug reports and share them with developers.")
-					.setPositiveButton(android.R.string.yes, new DialogInterface.OnClickListener() {
-						public void onClick(DialogInterface dialog, int which) { 
-							
-						}
-					})
-					.setIcon(android.R.drawable.ic_menu_help)
-					.show();
 				
 				break;
 				
@@ -231,7 +219,7 @@ public class MainActivity extends Activity {
 							// do nothing
 						}
 					})
-					.setIcon(android.R.drawable.ic_menu_delete)
+					.setIcon(android.R.drawable.ic_dialog_alert)
 					.show();
 				break;
 				
