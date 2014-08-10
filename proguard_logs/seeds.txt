@@ -39,10 +39,12 @@ com.mycompany.overtest.R$id: int imageView
 com.mycompany.overtest.R$id: int listview
 com.mycompany.overtest.R$id: int name
 com.mycompany.overtest.R$id: int report
+com.mycompany.overtest.R$id: int scrollView
 com.mycompany.overtest.R$id: int start
 com.mycompany.overtest.R$id: int stop
 com.mycompany.overtest.R$id: int text
 com.mycompany.overtest.R$layout: int farm
+com.mycompany.overtest.R$layout: int help
 com.mycompany.overtest.R$layout: int hidden
 com.mycompany.overtest.R$layout: int list
 com.mycompany.overtest.R$layout: int main
@@ -52,5 +54,9 @@ com.mycompany.overtest.R$layout: int side
 com.mycompany.overtest.R$menu: int edit
 com.mycompany.overtest.R$menu: int mainmenu
 com.mycompany.overtest.R$string: int app_name
+com.mycompany.overtest.R$string: int help
+com.mycompany.overtest.R$string: int main_menu_start
 com.mycompany.overtest.Show
 com.mycompany.overtest.Show: Show()
+com.mycompany.overtest.settings
+com.mycompany.overtest.system

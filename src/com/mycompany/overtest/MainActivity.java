@@ -31,7 +31,7 @@ import java.util.List;
 public class MainActivity extends Activity {
 
     Actions actions = new Actions();
-	ListEditor le = new ListEditor();
+	//ListEditor le = new ListEditor();
     Intent globalService;
 	Intent list;
 
@@ -39,11 +39,14 @@ public class MainActivity extends Activity {
     public int width;
     public int height;
 
+    public int help;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.main);
+
+        help = 1;
 
         //init
         globalService = new Intent(this,GlobalTouchService.class);
@@ -61,7 +64,12 @@ public class MainActivity extends Activity {
 		String[] deff = new String[1];
 		deff[0] = "New bug report";
 		actions.Settings("description.txt", deff);
-		
+
+        if (help == 1){
+            Toast.makeText(this, "Press \"MENU\" - \"HELP\" button, to see the help page.", Toast.LENGTH_SHORT).show();
+            help = 0;
+        }
+		else{}
 	}
 
 	//btn start
@@ -199,21 +207,32 @@ public class MainActivity extends Activity {
 	public boolean onOptionsItemSelected(MenuItem item) {
 		switch (item.getItemId()) {
 			case R.id.help:
-				new AlertDialog.Builder(this)
-					.setTitle("Help page")
-					.setMessage("This application allows user to create visual bug reports and share them with developers.")
-					.setPositiveButton(android.R.string.yes, new DialogInterface.OnClickListener() {
-						public void onClick(DialogInterface dialog, int which) { 
-							
-						}
-					})
-					.setIcon(android.R.drawable.ic_menu_help)
-					.show();
+
+                LayoutInflater li = LayoutInflater.from(this);
+                View view = li.inflate(R.layout.help, null);
+
+                AlertDialog.Builder builder = new AlertDialog.Builder(this);
+                builder.setTitle("Help page");
+                builder.setView(view).create().show();
+
+//				new AlertDialog.Builder(this)
+//					.setTitle("Help page")
+//					.setMessage(R.string.help)
+//                    .setPositiveButton(android.R.string.yes, new DialogInterface.OnClickListener() {
+//						public void onClick(DialogInterface dialog, int which) {
+//
+//						}
+//					})
+//					.setIcon(android.R.drawable.ic_menu_help)
+//					.show();
 				
 				break;
 				
 			case R.id.start:
 				actions.CreateMainFolder();
+
+                Toast.makeText(this, "*ROOTED ONLY* " +
+                        "This function will work only on rooted devices", Toast.LENGTH_LONG).show();
 				File folder = new File(Environment.getExternalStorageDirectory() + "/MANUAL/workflow");
 				if (!folder.exists()) {
 					folder.mkdirs();

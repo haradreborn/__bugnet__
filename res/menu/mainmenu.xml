@@ -16,7 +16,7 @@
       	android:id="@+id/start"
         android:orderInCategory="100"
         android:showAsAction="never"
-        android:title="Start touch detection"/>
+        android:title="@string/main_menu_start"/>
 	
 	<item
       	android:id="@+id/stop"

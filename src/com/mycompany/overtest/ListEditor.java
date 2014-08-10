@@ -31,6 +31,8 @@ public class ListEditor extends Activity {
     public int width;
     public int height;
 
+    public int help;
+
 	//new gallery intent privates
 	private static final int SELECT_PICTURE = 1;
 	private String selectedImagePath;
@@ -46,6 +48,8 @@ public class ListEditor extends Activity {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.list);
+
+        help = 1;
 
         String path = Environment.getExternalStorageDirectory().toString()+"/MANUAL/workflow";
         Log.d("Files", "Path: " + path);
@@ -90,6 +94,14 @@ public class ListEditor extends Activity {
         Log.d("Files", "###############################################");
         Log.d("Files", "###############################################");
         Log.d("Files", "###############################################");
+
+        if (help == 1){
+            Toast.makeText(this, "Press \"MENU\" - \"Add screenshot\" button, to add images to the list.", Toast.LENGTH_SHORT).show();
+            help = 0;
+        }
+        else{
+            //help = 0;
+        }
     }
 
 	@Override
@@ -102,23 +114,32 @@ public class ListEditor extends Activity {
 	public void onActivityResult(int requestCode, int resultCode, Intent data) {
 		if (resultCode == RESULT_OK) {
 			if (requestCode == SELECT_PICTURE) {
+
 				Uri selectedImageUri = data.getData();
-		        selectedImagePath = getPath(selectedImageUri);
-        	    //Toast.makeText(this, selectedImagePath, Toast.LENGTH_SHORT).show();
-				File sdcard = Environment.getExternalStorageDirectory();
-				String path = "MANUAL/workflow/img" + actions.id() + ".png";
-                String pathCom = "/MANUAL/workflow/img" + actions.id() + ".png";
-				
-				File from = new File(selectedImagePath);
-				File to = new File(sdcard, path);
-				try {
-					
-					copy(from, to);
-					compress(pathCom);
-					
-				} catch (IOException io){}
-					
-				//from.renameTo(to); 
+                if (getPath(selectedImageUri) == null){
+                    Toast.makeText(this, "Unfortunately your gallery or image file is not supported" +
+                            ", try to use another app to choose your screenshots. Remember that this app" +
+                            "can work wrong with non screenshot images.", Toast.LENGTH_LONG).show();
+                }
+                else {
+                    selectedImagePath = getPath(selectedImageUri);
+                    //Toast.makeText(this, selectedImagePath, Toast.LENGTH_SHORT).show();
+                    File sdcard = Environment.getExternalStorageDirectory();
+                    String path = "MANUAL/workflow/img" + actions.id() + ".png";
+                    String pathCom = "/MANUAL/workflow/img" + actions.id() + ".png";
+
+                    File from = new File(selectedImagePath);
+                    File to = new File(sdcard, path);
+                    try {
+
+                        copy(from, to);
+                        compress(pathCom);
+
+                    } catch (IOException io){}
+
+                    //from.renameTo(to);
+                }
+
 			}
 			
 			if (requestCode == SWITCH_PICTURE){
@@ -130,20 +151,29 @@ public class ListEditor extends Activity {
 				array.remove(id);
 				
 				Uri selectedImageUri = data.getData();
-		        selectedImagePath = getPath(selectedImageUri);
-        	    //Toast.makeText(this, selectedImagePath, Toast.LENGTH_SHORT).show();
-				File sdcard = Environment.getExternalStorageDirectory();
-				String path = "MANUAL/workflow/" + id;
-                String pathCom = "/MANUAL/workflow/" + id;
-				
-				File from = new File(selectedImagePath);
-				File to = new File(sdcard, path);
-				try {
+                if (getPath(selectedImageUri) == null) {
+                    Toast.makeText(this, "Unfortunately your gallery or image file is not supported" +
+                            ", try to use another app to choose your screenshots. Remember that this app" +
+                            "can work wrong with non screenshot images.", Toast.LENGTH_LONG).show();
 
-					copy(from, to);
-					compress(pathCom);
+                }
+                else {
+                    selectedImagePath = getPath(selectedImageUri);
+                    //Toast.makeText(this, selectedImagePath, Toast.LENGTH_SHORT).show();
+                    File sdcard = Environment.getExternalStorageDirectory();
+                    String path = "MANUAL/workflow/" + id;
+                    String pathCom = "/MANUAL/workflow/" + id;
 
-				} catch (IOException io){}
+                    File from = new File(selectedImagePath);
+                    File to = new File(sdcard, path);
+                    try {
+
+                        copy(from, to);
+                        compress(pathCom);
+
+                    } catch (IOException io){}
+                }
+
 			}
 		}
 	}
@@ -194,7 +224,7 @@ public class ListEditor extends Activity {
 			return null;
 		}
 		String[] projection = { MediaStore.Images.Media.DATA };
-	        Cursor cursor = managedQuery(uri, projection, null, null, null);
+	    Cursor cursor = managedQuery(uri, projection, null, null, null);
 		if( cursor != null ){
 			int column_index = cursor.getColumnIndexOrThrow(MediaStore.Images.Media.DATA);
 			cursor.moveToFirst();
@@ -315,7 +345,7 @@ public class ListEditor extends Activity {
 					intent.setAction(Intent.ACTION_GET_CONTENT);
 					startActivityForResult(Intent.createChooser(intent, "Select Picture"), SELECT_PICTURE);
 				} else {
-					Toast.makeText(this, "theee are " + Integer.toString(array.size()) + " images in the list, max 10", Toast.LENGTH_SHORT).show();
+					Toast.makeText(this, "there are " + Integer.toString(array.size()) + " images in the list, max 10", Toast.LENGTH_SHORT).show();
 				}
 				break;
 				

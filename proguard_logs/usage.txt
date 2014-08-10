@@ -14,8 +14,8 @@ com.mycompany.overtest.GlobalTouchService$3$TakePrintScreen:
 com.mycompany.overtest.ListEditor:
     private static final int SELECT_PICTURE
     private static final int SWITCH_PICTURE
-    219:228:private static boolean deleteDirPng(java.io.File)
-    232:241:private static boolean deleteDirTxt(java.io.File)
+    249:258:private static boolean deleteDirPng(java.io.File)
+    262:271:private static boolean deleteDirTxt(java.io.File)
 com.mycompany.overtest.MainActivity:
     public int width
     public int height

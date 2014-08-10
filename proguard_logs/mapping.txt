@@ -100,9 +100,10 @@ com.mycompany.overtest.ListEditor -> com.mycompany.overtest.ListEditor:
     java.lang.String bid -> e
     int width -> f
     int height -> g
-    java.lang.String selectedImagePath -> j
-    android.widget.ListView listview -> h
-    java.util.ArrayList array -> i
+    int help -> h
+    java.lang.String selectedImagePath -> k
+    android.widget.ListView listview -> i
+    java.util.ArrayList array -> j
     void onCreate(android.os.Bundle) -> onCreate
     boolean onCreateOptionsMenu(android.view.Menu) -> onCreateOptionsMenu
     void onActivityResult(int,int,android.content.Intent) -> onActivityResult
@@ -144,9 +145,9 @@ com.mycompany.overtest.ListEditor$4 -> com.mycompany.overtest.n:
     void onClick(android.content.DialogInterface,int) -> onClick
 com.mycompany.overtest.MainActivity -> com.mycompany.overtest.MainActivity:
     com.mycompany.overtest.Actions actions -> a
-    com.mycompany.overtest.ListEditor le -> b
-    android.content.Intent globalService -> c
-    android.content.Intent list -> d
+    android.content.Intent globalService -> b
+    android.content.Intent list -> c
+    int help -> d
     void onCreate(android.os.Bundle) -> onCreate
     void buttonGetClicked(android.view.View) -> buttonGetClicked
     void buttonShareClicked(android.view.View) -> buttonShareClicked
@@ -172,6 +173,10 @@ com.mycompany.overtest.MainActivity$4 -> com.mycompany.overtest.r:
     com.mycompany.overtest.MainActivity this$0 -> a
     void onClick(android.content.DialogInterface,int) -> onClick
 com.mycompany.overtest.Show -> com.mycompany.overtest.Show:
+    void onCreate(android.os.Bundle) -> onCreate
+com.mycompany.overtest.settings -> com.mycompany.overtest.settings:
+    void onCreate(android.os.Bundle) -> onCreate
+com.mycompany.overtest.system -> com.mycompany.overtest.system:
     void onCreate(android.os.Bundle) -> onCreate
 com.mycompany.overtest.yourAdapter -> com.mycompany.overtest.s:
     com.mycompany.overtest.Actions actions -> a
