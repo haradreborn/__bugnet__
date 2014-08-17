@@ -160,7 +160,7 @@ public class ListEditor extends Activity {
                 if (getPath(selectedImageUri) == null) {
                     Toast.makeText(this, "Unfortunately your gallery or image file is not supported" +
                             ", try to use another app to choose your screenshots. Remember that this app" +
-                            "can work wrong with non screenshot images.", Toast.LENGTH_LONG).show();
+                            " can work wrong with non screenshot images.", Toast.LENGTH_LONG).show();
 
                 }
                 else {

@@ -56,6 +56,7 @@ com.mycompany.overtest.R$menu: int mainmenu
 com.mycompany.overtest.R$string: int app_name
 com.mycompany.overtest.R$string: int help
 com.mycompany.overtest.R$string: int main_menu_start
+com.mycompany.overtest.R$string: int main_menu_stop
 com.mycompany.overtest.Show
 com.mycompany.overtest.Show: Show()
 com.mycompany.overtest.settings

@@ -4697,7 +4697,7 @@ _____________________________________________________________________
 
 Interfaces (count = 0):
 
-Constant Pool (count = 727):
+Constant Pool (count = 735):
   + Integer [65536]
   + Integer [17039369]
   + Integer [17039379]
@@ -4713,6 +4713,7 @@ Constant Pool (count = 727):
   + String [###############################################]
   + String [' width='200px' height='340px' />]
   + String [' width='340px' height='200px' />]
+  + String [.jpg]
   + String [.png]
   + String [.txt]
   + String [/MANUAL/settings/]
@@ -4755,6 +4756,7 @@ Constant Pool (count = 727):
   + String [MANUAL/workflow/]
   + String [MANUAL/workflow/img]
   + String [New bug report]
+  + String [Only *.PNG and *.JPG formats are supported.]
   + String [Path: ]
   + String [Pinch]
   + String [Press]
@@ -4769,7 +4771,7 @@ Constant Pool (count = 727):
   + String [TEXT: ]
   + String [Tap]
   + String [This screenshot will be deleted!]
-  + String [Unfortunately your gallery or image file is not supported, try to use another app to choose your screenshots. Remember that this appcan work wrong with non screenshot images.]
+  + String [Unfortunately your gallery or image file is not supported, try to use another app to choose your screenshots. Remember that this app can work wrong with non screenshot images.]
   + String [_data]
   + String [android.intent.action.GET_CONTENT]
   + String [android.intent.action.VIEW]
@@ -4958,6 +4960,7 @@ Constant Pool (count = 727):
   + Methodref [java/lang/Exception.getMessage ()Ljava/lang/String;]
   + Methodref [java/lang/Exception.printStackTrace ()V]
   + Methodref [java/lang/Integer.toString (I)Ljava/lang/String;]
+  + Methodref [java/lang/String.contains (Ljava/lang/CharSequence;)Z]
   + Methodref [java/lang/String.endsWith (Ljava/lang/String;)Z]
   + Methodref [java/lang/String.equals (Ljava/lang/Object;)Z]
   + Methodref [java/lang/StringBuilder.<init> ()V]
@@ -5020,6 +5023,7 @@ Constant Pool (count = 727):
   + NameAndType [c Ljava/lang/String;]
   + NameAndType [close ()V]
   + NameAndType [compress (Landroid/graphics/Bitmap$CompressFormat;ILjava/io/OutputStream;)Z]
+  + NameAndType [contains (Ljava/lang/CharSequence;)Z]
   + NameAndType [createChooser (Landroid/content/Intent;Ljava/lang/CharSequence;)Landroid/content/Intent;]
   + NameAndType [createNewFile ()Z]
   + NameAndType [createScaledBitmap (Landroid/graphics/Bitmap;IIZ)Landroid/graphics/Bitmap;]
@@ -5172,6 +5176,7 @@ Constant Pool (count = 727):
   + Utf8 [(Ljava/io/OutputStream;)V]
   + Utf8 [(Ljava/lang/CharSequence;)Landroid/app/AlertDialog$Builder;]
   + Utf8 [(Ljava/lang/CharSequence;)Ljava/lang/StringBuilder;]
+  + Utf8 [(Ljava/lang/CharSequence;)Z]
   + Utf8 [(Ljava/lang/Object;)I]
   + Utf8 [(Ljava/lang/Object;)Ljava/lang/StringBuilder;]
   + Utf8 [(Ljava/lang/Object;)Z]
@@ -5189,6 +5194,7 @@ Constant Pool (count = 727):
   + Utf8 [([BII)V]
   + Utf8 [([Ljava/lang/Object;)V]
   + Utf8 [([Ljava/lang/Object;)[Ljava/lang/Object;]
+  + Utf8 [.jpg]
   + Utf8 [.png]
   + Utf8 [.txt]
   + Utf8 [/MANUAL/settings/]
@@ -5243,6 +5249,7 @@ Constant Pool (count = 727):
   + Utf8 [MANUAL/workflow/]
   + Utf8 [MANUAL/workflow/img]
   + Utf8 [New bug report]
+  + Utf8 [Only *.PNG and *.JPG formats are supported.]
   + Utf8 [PNG]
   + Utf8 [Path: ]
   + Utf8 [Pinch]
@@ -5260,7 +5267,7 @@ Constant Pool (count = 727):
   + Utf8 [Tap]
   + Utf8 [TextClicked]
   + Utf8 [This screenshot will be deleted!]
-  + Utf8 [Unfortunately your gallery or image file is not supported, try to use another app to choose your screenshots. Remember that this appcan work wrong with non screenshot images.]
+  + Utf8 [Unfortunately your gallery or image file is not supported, try to use another app to choose your screenshots. Remember that this app can work wrong with non screenshot images.]
   + Utf8 [[B]
   + Utf8 [[Ljava/io/File;]
   + Utf8 [[Ljava/lang/String;]
@@ -5313,6 +5320,7 @@ Constant Pool (count = 727):
   + Utf8 [com/mycompany/overtest/n]
   + Utf8 [com/mycompany/overtest/s]
   + Utf8 [compress]
+  + Utf8 [contains]
   + Utf8 [createChooser]
   + Utf8 [createNewFile]
   + Utf8 [createScaledBitmap]
@@ -5469,33 +5477,33 @@ Methods (count = 27):
     Class member attributes (count = 1):
     + Code attribute instructions (code length = 39, locals = 1, stack = 3):
       [0] aload_0 v0
-      [1] invokespecial #152
+      [1] invokespecial #154
         + Methodref [android/app/Activity.<init> ()V]
       [4] aload_0 v0
-      [5] new #112
+      [5] new #114
         + Class [com/mycompany/overtest/a]
       [8] dup
-      [9] invokespecial #221
+      [9] invokespecial #223
         + Methodref [com/mycompany/overtest/a.<init> ()V]
-      [12] putfield #140
+      [12] putfield #142
         + Fieldref [com/mycompany/overtest/ListEditor.a Lcom/mycompany/overtest/a;]
       [15] aload_0 v0
       [16] ldc #9
         + String []
-      [18] putfield #143
+      [18] putfield #145
         + Fieldref [com/mycompany/overtest/ListEditor.d Ljava/lang/String;]
       [21] aload_0 v0
       [22] ldc #9
         + String []
-      [24] putfield #144
+      [24] putfield #146
         + Fieldref [com/mycompany/overtest/ListEditor.e Ljava/lang/String;]
       [27] aload_0 v0
-      [28] new #133
+      [28] new #135
         + Class [java/util/ArrayList]
       [31] dup
-      [32] invokespecial #268
+      [32] invokespecial #271
         + Methodref [java/util/ArrayList.<init> ()V]
-      [35] putfield #149
+      [35] putfield #151
         + Fieldref [com/mycompany/overtest/ListEditor.j Ljava/util/ArrayList;]
       [38] return
       Code attribute exceptions (count = 0):
@@ -5507,83 +5515,83 @@ Methods (count = 27):
     + Code attribute instructions (code length = 459, locals = 8, stack = 5):
       [0] aload_0 v0
       [1] aload_1 v1
-      [2] invokespecial #153
+      [2] invokespecial #155
         + Methodref [android/app/Activity.onCreate (Landroid/os/Bundle;)V]
       [5] aload_0 v0
       [6] ldc #6
         + Integer [2130903043]
-      [8] invokevirtual #217
+      [8] invokevirtual #219
         + Methodref [com/mycompany/overtest/ListEditor.setContentView (I)V]
       [11] aload_0 v0
       [12] iconst_1
-      [13] putfield #147
+      [13] putfield #149
         + Fieldref [com/mycompany/overtest/ListEditor.h I]
-      [16] new #131
+      [16] new #133
         + Class [java/lang/StringBuilder]
       [19] dup
-      [20] invokespecial #262
+      [20] invokespecial #265
         + Methodref [java/lang/StringBuilder.<init> ()V]
-      [23] invokestatic #184
+      [23] invokestatic #186
         + Methodref [android/os/Environment.getExternalStorageDirectory ()Ljava/io/File;]
-      [26] invokevirtual #241
+      [26] invokevirtual #243
         + Methodref [java/io/File.toString ()Ljava/lang/String;]
-      [29] invokevirtual #266
+      [29] invokevirtual #269
         + Methodref [java/lang/StringBuilder.append (Ljava/lang/String;)Ljava/lang/StringBuilder;]
-      [32] ldc #20
+      [32] ldc #21
         + String [/MANUAL/workflow]
-      [34] invokevirtual #266
+      [34] invokevirtual #269
         + Methodref [java/lang/StringBuilder.append (Ljava/lang/String;)Ljava/lang/StringBuilder;]
-      [37] invokevirtual #267
+      [37] invokevirtual #270
         + Methodref [java/lang/StringBuilder.toString ()Ljava/lang/String;]
       [40] astore_2 v2
-      [41] ldc #50
+      [41] ldc #51
         + String [Files]
-      [43] new #131
+      [43] new #133
         + Class [java/lang/StringBuilder]
       [46] dup
-      [47] invokespecial #262
+      [47] invokespecial #265
         + Methodref [java/lang/StringBuilder.<init> ()V]
-      [50] ldc #57
+      [50] ldc #59
         + String [Path: ]
-      [52] invokevirtual #266
+      [52] invokevirtual #269
         + Methodref [java/lang/StringBuilder.append (Ljava/lang/String;)Ljava/lang/StringBuilder;]
       [55] aload_2 v2
-      [56] invokevirtual #266
+      [56] invokevirtual #269
         + Methodref [java/lang/StringBuilder.append (Ljava/lang/String;)Ljava/lang/StringBuilder;]
-      [59] invokevirtual #267
+      [59] invokevirtual #270
         + Methodref [java/lang/StringBuilder.toString ()Ljava/lang/String;]
-      [62] invokestatic #186
+      [62] invokestatic #188
         + Methodref [android/util/Log.d (Ljava/lang/String;Ljava/lang/String;)I]
       [65] pop
-      [66] new #118
+      [66] new #120
         + Class [java/io/File]
       [69] dup
       [70] aload_2 v2
-      [71] invokespecial #235
+      [71] invokespecial #237
         + Methodref [java/io/File.<init> (Ljava/lang/String;)V]
       [74] astore_3 v3
       [75] aload_3 v3
-      [76] invokevirtual #240
+      [76] invokevirtual #242
         + Methodref [java/io/File.listFiles ()[Ljava/io/File;]
       [79] astore v4
-      [81] ldc #50
+      [81] ldc #51
         + String [Files]
-      [83] new #131
+      [83] new #133
         + Class [java/lang/StringBuilder]
       [86] dup
-      [87] invokespecial #262
+      [87] invokespecial #265
         + Methodref [java/lang/StringBuilder.<init> ()V]
-      [90] ldc #64
+      [90] ldc #66
         + String [Size: ]
-      [92] invokevirtual #266
+      [92] invokevirtual #269
         + Methodref [java/lang/StringBuilder.append (Ljava/lang/String;)Ljava/lang/StringBuilder;]
       [95] aload v4
       [97] arraylength
-      [98] invokevirtual #263
+      [98] invokevirtual #266
         + Methodref [java/lang/StringBuilder.append (I)Ljava/lang/StringBuilder;]
-      [101] invokevirtual #267
+      [101] invokevirtual #270
         + Methodref [java/lang/StringBuilder.toString ()Ljava/lang/String;]
-      [104] invokestatic #186
+      [104] invokestatic #188
         + Methodref [android/util/Log.d (Ljava/lang/String;Ljava/lang/String;)I]
       [107] pop
       [108] iconst_0
@@ -5595,182 +5603,182 @@ Methods (count = 27):
       [119] aload v4
       [121] iload v5
       [123] aaload
-      [124] invokevirtual #239
+      [124] invokevirtual #241
         + Methodref [java/io/File.getName ()Ljava/lang/String;]
-      [127] ldc #15
+      [127] ldc #16
         + String [.png]
-      [129] invokevirtual #260
+      [129] invokevirtual #263
         + Methodref [java/lang/String.endsWith (Ljava/lang/String;)Z]
       [132] ifeq +19 (target=151)
       [135] aload_0 v0
-      [136] getfield #149
+      [136] getfield #151
         + Fieldref [com/mycompany/overtest/ListEditor.j Ljava/util/ArrayList;]
       [139] aload v4
       [141] iload v5
       [143] aaload
-      [144] invokevirtual #239
+      [144] invokevirtual #241
         + Methodref [java/io/File.getName ()Ljava/lang/String;]
-      [147] invokevirtual #269
+      [147] invokevirtual #272
         + Methodref [java/util/ArrayList.add (Ljava/lang/Object;)Z]
       [150] pop
       [151] iinc v5, 1
       [154] goto -43 (target=111)
-      [157] ldc #50
+      [157] ldc #51
         + String [Files]
       [159] ldc #12
         + String [###############################################]
-      [161] invokestatic #186
+      [161] invokestatic #188
         + Methodref [android/util/Log.d (Ljava/lang/String;Ljava/lang/String;)I]
       [164] pop
-      [165] ldc #50
+      [165] ldc #51
         + String [Files]
       [167] ldc #12
         + String [###############################################]
-      [169] invokestatic #186
+      [169] invokestatic #188
         + Methodref [android/util/Log.d (Ljava/lang/String;Ljava/lang/String;)I]
       [172] pop
-      [173] ldc #50
+      [173] ldc #51
         + String [Files]
       [175] ldc #12
         + String [###############################################]
-      [177] invokestatic #186
+      [177] invokestatic #188
         + Methodref [android/util/Log.d (Ljava/lang/String;Ljava/lang/String;)I]
       [180] pop
-      [181] ldc #50
+      [181] ldc #51
         + String [Files]
-      [183] new #131
+      [183] new #133
         + Class [java/lang/StringBuilder]
       [186] dup
-      [187] invokespecial #262
+      [187] invokespecial #265
         + Methodref [java/lang/StringBuilder.<init> ()V]
-      [190] ldc #29
+      [190] ldc #30
         + String [ARRAY ARRAY: ]
-      [192] invokevirtual #266
+      [192] invokevirtual #269
         + Methodref [java/lang/StringBuilder.append (Ljava/lang/String;)Ljava/lang/StringBuilder;]
       [195] aload_0 v0
-      [196] getfield #149
+      [196] getfield #151
         + Fieldref [com/mycompany/overtest/ListEditor.j Ljava/util/ArrayList;]
-      [199] invokevirtual #265
+      [199] invokevirtual #268
         + Methodref [java/lang/StringBuilder.append (Ljava/lang/Object;)Ljava/lang/StringBuilder;]
-      [202] invokevirtual #267
+      [202] invokevirtual #270
         + Methodref [java/lang/StringBuilder.toString ()Ljava/lang/String;]
-      [205] invokestatic #186
+      [205] invokestatic #188
         + Methodref [android/util/Log.d (Ljava/lang/String;Ljava/lang/String;)I]
       [208] pop
-      [209] ldc #50
+      [209] ldc #51
         + String [Files]
       [211] ldc #12
         + String [###############################################]
-      [213] invokestatic #186
+      [213] invokestatic #188
         + Methodref [android/util/Log.d (Ljava/lang/String;Ljava/lang/String;)I]
       [216] pop
-      [217] ldc #50
+      [217] ldc #51
         + String [Files]
       [219] ldc #12
         + String [###############################################]
-      [221] invokestatic #186
+      [221] invokestatic #188
         + Methodref [android/util/Log.d (Ljava/lang/String;Ljava/lang/String;)I]
       [224] pop
-      [225] ldc #50
+      [225] ldc #51
         + String [Files]
       [227] ldc #12
         + String [###############################################]
-      [229] invokestatic #186
+      [229] invokestatic #188
         + Methodref [android/util/Log.d (Ljava/lang/String;Ljava/lang/String;)I]
       [232] pop
       [233] aload_0 v0
-      [234] getfield #149
+      [234] getfield #151
         + Fieldref [com/mycompany/overtest/ListEditor.j Ljava/util/ArrayList;]
       [237] aload_0 v0
-      [238] getfield #149
+      [238] getfield #151
         + Fieldref [com/mycompany/overtest/ListEditor.j Ljava/util/ArrayList;]
-      [241] invokevirtual #272
+      [241] invokevirtual #275
         + Methodref [java/util/ArrayList.size ()I]
-      [244] anewarray #130
+      [244] anewarray #132
         + Class [java/lang/String]
-      [247] invokevirtual #273
+      [247] invokevirtual #276
         + Methodref [java/util/ArrayList.toArray ([Ljava/lang/Object;)[Ljava/lang/Object;]
-      [250] checkcast #85
+      [250] checkcast #87
         + Class [[Ljava/lang/String;]
       [253] astore v5
       [255] aload v5
-      [257] invokestatic #274
+      [257] invokestatic #277
         + Methodref [java/util/Arrays.sort ([Ljava/lang/Object;)V]
       [260] aload_0 v0
       [261] aload_0 v0
       [262] ldc #8
         + Integer [2131099651]
-      [264] invokevirtual #208
+      [264] invokevirtual #210
         + Methodref [com/mycompany/overtest/ListEditor.findViewById (I)Landroid/view/View;]
-      [267] checkcast #107
+      [267] checkcast #109
         + Class [android/widget/ListView]
-      [270] putfield #148
+      [270] putfield #150
         + Fieldref [com/mycompany/overtest/ListEditor.i Landroid/widget/ListView;]
       [273] aload_0 v0
-      [274] getfield #148
+      [274] getfield #150
         + Fieldref [com/mycompany/overtest/ListEditor.i Landroid/widget/ListView;]
-      [277] new #117
+      [277] new #119
         + Class [com/mycompany/overtest/s]
       [280] dup
       [281] aload_0 v0
       [282] aload v5
-      [284] invokespecial #233
+      [284] invokespecial #235
         + Methodref [com/mycompany/overtest/s.<init> (Landroid/content/Context;[Ljava/lang/String;)V]
-      [287] invokevirtual #194
+      [287] invokevirtual #196
         + Methodref [android/widget/ListView.setAdapter (Landroid/widget/ListAdapter;)V]
       [290] aload_0 v0
-      [291] invokevirtual #210
+      [291] invokevirtual #212
         + Methodref [com/mycompany/overtest/ListEditor.getIntent ()Landroid/content/Intent;]
-      [294] ldc #40
+      [294] ldc #41
         + String [Already created]
-      [296] invokevirtual #170
+      [296] invokevirtual #172
         + Methodref [android/content/Intent.setAction (Ljava/lang/String;)Landroid/content/Intent;]
       [299] pop
-      [300] new #97
+      [300] new #99
         + Class [android/util/DisplayMetrics]
       [303] dup
-      [304] invokespecial #185
+      [304] invokespecial #187
         + Methodref [android/util/DisplayMetrics.<init> ()V]
       [307] astore v6
       [309] aload_0 v0
-      [310] invokevirtual #212
+      [310] invokevirtual #214
         + Methodref [com/mycompany/overtest/ListEditor.getWindowManager ()Landroid/view/WindowManager;]
-      [313] invokeinterface #282
+      [313] invokeinterface #285
         + InterfaceMethodref [android/view/WindowManager.getDefaultDisplay ()Landroid/view/Display;]
       [318] aload v6
-      [320] invokevirtual #189
+      [320] invokevirtual #191
         + Methodref [android/view/Display.getMetrics (Landroid/util/DisplayMetrics;)V]
       [323] aload_0 v0
       [324] aload v6
-      [326] getfield #139
+      [326] getfield #141
         + Fieldref [android/util/DisplayMetrics.widthPixels I]
-      [329] putfield #145
+      [329] putfield #147
         + Fieldref [com/mycompany/overtest/ListEditor.f I]
       [332] aload_0 v0
       [333] aload v6
-      [335] getfield #138
+      [335] getfield #140
         + Fieldref [android/util/DisplayMetrics.heightPixels I]
-      [338] putfield #146
+      [338] putfield #148
         + Fieldref [com/mycompany/overtest/ListEditor.g I]
-      [341] ldc #50
+      [341] ldc #51
         + String [Files]
       [343] ldc #12
         + String [###############################################]
-      [345] invokestatic #186
+      [345] invokestatic #188
         + Methodref [android/util/Log.d (Ljava/lang/String;Ljava/lang/String;)I]
       [348] pop
-      [349] ldc #50
+      [349] ldc #51
         + String [Files]
       [351] ldc #12
         + String [###############################################]
-      [353] invokestatic #186
+      [353] invokestatic #188
         + Methodref [android/util/Log.d (Ljava/lang/String;Ljava/lang/String;)I]
       [356] pop
-      [357] ldc #50
+      [357] ldc #51
         + String [Files]
       [359] ldc #12
         + String [###############################################]
-      [361] invokestatic #186
+      [361] invokestatic #188
         + Methodref [android/util/Log.d (Ljava/lang/String;Ljava/lang/String;)I]
       [364] pop
       [365] iconst_0
@@ -5779,66 +5787,66 @@ Methods (count = 27):
       [370] aload v5
       [372] arraylength
       [373] ificmpge +38 (target=411)
-      [376] ldc #50
+      [376] ldc #51
         + String [Files]
-      [378] new #131
+      [378] new #133
         + Class [java/lang/StringBuilder]
       [381] dup
-      [382] invokespecial #262
+      [382] invokespecial #265
         + Methodref [java/lang/StringBuilder.<init> ()V]
-      [385] ldc #30
+      [385] ldc #31
         + String [ARRAY PLACE: ]
-      [387] invokevirtual #266
+      [387] invokevirtual #269
         + Methodref [java/lang/StringBuilder.append (Ljava/lang/String;)Ljava/lang/StringBuilder;]
       [390] aload v5
       [392] iload v7
       [394] aaload
-      [395] invokevirtual #266
+      [395] invokevirtual #269
         + Methodref [java/lang/StringBuilder.append (Ljava/lang/String;)Ljava/lang/StringBuilder;]
-      [398] invokevirtual #267
+      [398] invokevirtual #270
         + Methodref [java/lang/StringBuilder.toString ()Ljava/lang/String;]
-      [401] invokestatic #186
+      [401] invokestatic #188
         + Methodref [android/util/Log.d (Ljava/lang/String;Ljava/lang/String;)I]
       [404] pop
       [405] iinc v7, 1
       [408] goto -40 (target=368)
-      [411] ldc #50
+      [411] ldc #51
         + String [Files]
       [413] ldc #12
         + String [###############################################]
-      [415] invokestatic #186
+      [415] invokestatic #188
         + Methodref [android/util/Log.d (Ljava/lang/String;Ljava/lang/String;)I]
       [418] pop
-      [419] ldc #50
+      [419] ldc #51
         + String [Files]
       [421] ldc #12
         + String [###############################################]
-      [423] invokestatic #186
+      [423] invokestatic #188
         + Methodref [android/util/Log.d (Ljava/lang/String;Ljava/lang/String;)I]
       [426] pop
-      [427] ldc #50
+      [427] ldc #51
         + String [Files]
       [429] ldc #12
         + String [###############################################]
-      [431] invokestatic #186
+      [431] invokestatic #188
         + Methodref [android/util/Log.d (Ljava/lang/String;Ljava/lang/String;)I]
       [434] pop
       [435] aload_0 v0
-      [436] getfield #147
+      [436] getfield #149
         + Fieldref [com/mycompany/overtest/ListEditor.h I]
       [439] iconst_1
       [440] ificmpne +18 (target=458)
       [443] aload_0 v0
-      [444] ldc #60
+      [444] ldc #62
         + String [Press "MENU" - "Add screenshot" button, to add images to the list.]
       [446] iconst_0
-      [447] invokestatic #196
+      [447] invokestatic #198
         + Methodref [android/widget/Toast.makeText (Landroid/content/Context;Ljava/lang/CharSequence;I)Landroid/widget/Toast;]
-      [450] invokevirtual #197
+      [450] invokevirtual #199
         + Methodref [android/widget/Toast.show ()V]
       [453] aload_0 v0
       [454] iconst_0
-      [455] putfield #147
+      [455] putfield #149
         + Fieldref [com/mycompany/overtest/ListEditor.h I]
       [458] return
       Code attribute exceptions (count = 0):
@@ -5856,12 +5864,12 @@ Methods (count = 27):
     Class member attributes (count = 1):
     + Code attribute instructions (code length = 12, locals = 2, stack = 3):
       [0] aload_0 v0
-      [1] invokevirtual #211
+      [1] invokevirtual #213
         + Methodref [com/mycompany/overtest/ListEditor.getMenuInflater ()Landroid/view/MenuInflater;]
       [4] ldc #7
         + Integer [2131034112]
       [6] aload_1 v1
-      [7] invokevirtual #190
+      [7] invokevirtual #192
         + Methodref [android/view/MenuInflater.inflate (ILandroid/view/Menu;)V]
       [10] iconst_1
       [11] ireturn
@@ -5871,412 +5879,466 @@ Methods (count = 27):
     Access flags: 0x1
       = public void onActivityResult(int,int,android.content.Intent)
     Class member attributes (count = 1):
-    + Code attribute instructions (code length = 367, locals = 12, stack = 4):
+    + Code attribute instructions (code length = 445, locals = 12, stack = 4):
       [0] iload_2 v2
       [1] iconst_m1
-      [2] ificmpne +364 (target=366)
+      [2] ificmpne +442 (target=444)
       [5] iload_1 v1
       [6] iconst_1
-      [7] ificmpne +155 (target=162)
+      [7] ificmpne +194 (target=201)
       [10] aload_3 v3
-      [11] invokevirtual #168
+      [11] invokevirtual #170
         + Methodref [android/content/Intent.getData ()Landroid/net/Uri;]
       [14] astore v4
       [16] aload_0 v0
       [17] aload v4
-      [19] invokevirtual #199
+      [19] invokevirtual #201
         + Methodref [com/mycompany/overtest/ListEditor.a (Landroid/net/Uri;)Ljava/lang/String;]
       [22] ifnonnull +16 (target=38)
       [25] aload_0 v0
-      [26] ldc #71
-        + String [Unfortunately your gallery or image file is not supported, try to use another app to choose your screenshots. Remember that this appcan work wrong with non screenshot images.]
+      [26] ldc #73
+        + String [Unfortunately your gallery or image file is not supported, try to use another app to choose your screenshots. Remember that this app can work wrong with non screenshot images.]
       [28] iconst_1
-      [29] invokestatic #196
+      [29] invokestatic #198
         + Methodref [android/widget/Toast.makeText (Landroid/content/Context;Ljava/lang/CharSequence;I)Landroid/widget/Toast;]
-      [32] invokevirtual #197
+      [32] invokevirtual #199
         + Methodref [android/widget/Toast.show ()V]
-      [35] goto +127 (target=162)
+      [35] goto +166 (target=201)
       [38] aload_0 v0
       [39] aload_0 v0
       [40] aload v4
-      [42] invokevirtual #199
+      [42] invokevirtual #201
         + Methodref [com/mycompany/overtest/ListEditor.a (Landroid/net/Uri;)Ljava/lang/String;]
-      [45] putfield #150
+      [45] putfield #152
         + Fieldref [com/mycompany/overtest/ListEditor.k Ljava/lang/String;]
-      [48] invokestatic #184
+      [48] invokestatic #186
         + Methodref [android/os/Environment.getExternalStorageDirectory ()Ljava/io/File;]
       [51] astore v5
-      [53] new #131
+      [53] new #133
         + Class [java/lang/StringBuilder]
       [56] dup
-      [57] invokespecial #262
+      [57] invokespecial #265
         + Methodref [java/lang/StringBuilder.<init> ()V]
-      [60] ldc #55
+      [60] ldc #56
         + String [MANUAL/workflow/img]
-      [62] invokevirtual #266
+      [62] invokevirtual #269
         + Methodref [java/lang/StringBuilder.append (Ljava/lang/String;)Ljava/lang/StringBuilder;]
       [65] aload_0 v0
-      [66] getfield #140
+      [66] getfield #142
         + Fieldref [com/mycompany/overtest/ListEditor.a Lcom/mycompany/overtest/a;]
-      [69] invokevirtual #227
+      [69] invokevirtual #229
         + Methodref [com/mycompany/overtest/a.c ()Ljava/lang/String;]
-      [72] invokevirtual #266
+      [72] invokevirtual #269
         + Methodref [java/lang/StringBuilder.append (Ljava/lang/String;)Ljava/lang/StringBuilder;]
-      [75] ldc #15
+      [75] ldc #16
         + String [.png]
-      [77] invokevirtual #266
+      [77] invokevirtual #269
         + Methodref [java/lang/StringBuilder.append (Ljava/lang/String;)Ljava/lang/StringBuilder;]
-      [80] invokevirtual #267
+      [80] invokevirtual #270
         + Methodref [java/lang/StringBuilder.toString ()Ljava/lang/String;]
       [83] astore v6
-      [85] new #131
+      [85] new #133
         + Class [java/lang/StringBuilder]
       [88] dup
-      [89] invokespecial #262
+      [89] invokespecial #265
         + Methodref [java/lang/StringBuilder.<init> ()V]
-      [92] ldc #22
+      [92] ldc #23
         + String [/MANUAL/workflow/img]
-      [94] invokevirtual #266
+      [94] invokevirtual #269
         + Methodref [java/lang/StringBuilder.append (Ljava/lang/String;)Ljava/lang/StringBuilder;]
       [97] aload_0 v0
-      [98] getfield #140
+      [98] getfield #142
         + Fieldref [com/mycompany/overtest/ListEditor.a Lcom/mycompany/overtest/a;]
-      [101] invokevirtual #227
+      [101] invokevirtual #229
         + Methodref [com/mycompany/overtest/a.c ()Ljava/lang/String;]
-      [104] invokevirtual #266
+      [104] invokevirtual #269
         + Methodref [java/lang/StringBuilder.append (Ljava/lang/String;)Ljava/lang/StringBuilder;]
-      [107] ldc #15
+      [107] ldc #16
         + String [.png]
-      [109] invokevirtual #266
+      [109] invokevirtual #269
         + Methodref [java/lang/StringBuilder.append (Ljava/lang/String;)Ljava/lang/StringBuilder;]
-      [112] invokevirtual #267
+      [112] invokevirtual #270
         + Methodref [java/lang/StringBuilder.toString ()Ljava/lang/String;]
       [115] astore v7
-      [117] new #118
+      [117] new #120
         + Class [java/io/File]
       [120] dup
       [121] aload_0 v0
-      [122] getfield #150
+      [122] getfield #152
         + Fieldref [com/mycompany/overtest/ListEditor.k Ljava/lang/String;]
-      [125] invokespecial #235
+      [125] invokespecial #237
         + Methodref [java/io/File.<init> (Ljava/lang/String;)V]
       [128] astore v8
-      [130] new #118
+      [130] new #120
         + Class [java/io/File]
       [133] dup
       [134] aload v5
       [136] aload v6
-      [138] invokespecial #234
+      [138] invokespecial #236
         + Methodref [java/io/File.<init> (Ljava/io/File;Ljava/lang/String;)V]
       [141] astore v9
-      [143] aload_0 v0
-      [144] aload v8
-      [146] aload v9
-      [148] invokevirtual #202
+      [143] aload v8
+      [145] invokevirtual #241
+        + Methodref [java/io/File.getName ()Ljava/lang/String;]
+      [148] ldc #16
+        + String [.png]
+      [150] invokevirtual #262
+        + Methodref [java/lang/String.contains (Ljava/lang/CharSequence;)Z]
+      [153] ifne +16 (target=169)
+      [156] aload v8
+      [158] invokevirtual #241
+        + Methodref [java/io/File.getName ()Ljava/lang/String;]
+      [161] ldc #15
+        + String [.jpg]
+      [163] invokevirtual #262
+        + Methodref [java/lang/String.contains (Ljava/lang/CharSequence;)Z]
+      [166] ifeq +25 (target=191)
+      [169] aload_0 v0
+      [170] aload v8
+      [172] aload v9
+      [174] invokevirtual #204
         + Methodref [com/mycompany/overtest/ListEditor.a (Ljava/io/File;Ljava/io/File;)V]
-      [151] aload_0 v0
-      [152] aload v7
-      [154] invokevirtual #203
+      [177] aload_0 v0
+      [178] aload v7
+      [180] invokevirtual #205
         + Methodref [com/mycompany/overtest/ListEditor.a (Ljava/lang/String;)V]
-      [157] goto +5 (target=162)
-      [160] astore v10
-      [162] iload_1 v1
-      [163] iconst_2
-      [164] ificmpne +202 (target=366)
-      [167] new #118
-        + Class [java/io/File]
-      [170] dup
-      [171] new #131
-        + Class [java/lang/StringBuilder]
-      [174] dup
-      [175] invokespecial #262
-        + Methodref [java/lang/StringBuilder.<init> ()V]
-      [178] invokestatic #184
-        + Methodref [android/os/Environment.getExternalStorageDirectory ()Ljava/io/File;]
-      [181] invokevirtual #265
-        + Methodref [java/lang/StringBuilder.append (Ljava/lang/Object;)Ljava/lang/StringBuilder;]
-      [184] ldc #21
-        + String [/MANUAL/workflow/]
-      [186] invokevirtual #266
-        + Methodref [java/lang/StringBuilder.append (Ljava/lang/String;)Ljava/lang/StringBuilder;]
-      [189] aload_0 v0
-      [190] getfield #143
-        + Fieldref [com/mycompany/overtest/ListEditor.d Ljava/lang/String;]
-      [193] invokevirtual #266
-        + Methodref [java/lang/StringBuilder.append (Ljava/lang/String;)Ljava/lang/StringBuilder;]
-      [196] invokevirtual #267
-        + Methodref [java/lang/StringBuilder.toString ()Ljava/lang/String;]
-      [199] invokespecial #235
-        + Methodref [java/io/File.<init> (Ljava/lang/String;)V]
-      [202] astore v4
-      [204] aload v4
-      [206] invokevirtual #238
-        + Methodref [java/io/File.exists ()Z]
-      [209] ifeq +9 (target=218)
-      [212] aload v4
-      [214] invokevirtual #237
-        + Methodref [java/io/File.delete ()Z]
-      [217] pop
-      [218] aload_0 v0
-      [219] getfield #149
-        + Fieldref [com/mycompany/overtest/ListEditor.j Ljava/util/ArrayList;]
-      [222] aload_0 v0
-      [223] getfield #143
-        + Fieldref [com/mycompany/overtest/ListEditor.d Ljava/lang/String;]
-      [226] invokevirtual #271
-        + Methodref [java/util/ArrayList.remove (Ljava/lang/Object;)Z]
-      [229] pop
-      [230] aload_3 v3
-      [231] invokevirtual #168
-        + Methodref [android/content/Intent.getData ()Landroid/net/Uri;]
-      [234] astore v5
-      [236] aload_0 v0
-      [237] aload v5
-      [239] invokevirtual #199
-        + Methodref [com/mycompany/overtest/ListEditor.a (Landroid/net/Uri;)Ljava/lang/String;]
-      [242] ifnonnull +16 (target=258)
-      [245] aload_0 v0
-      [246] ldc #71
-        + String [Unfortunately your gallery or image file is not supported, try to use another app to choose your screenshots. Remember that this appcan work wrong with non screenshot images.]
-      [248] iconst_1
-      [249] invokestatic #196
+      [183] goto +18 (target=201)
+      [186] astore v10
+      [188] goto +13 (target=201)
+      [191] aload_0 v0
+      [192] ldc #58
+        + String [Only *.PNG and *.JPG formats are supported.]
+      [194] iconst_0
+      [195] invokestatic #198
         + Methodref [android/widget/Toast.makeText (Landroid/content/Context;Ljava/lang/CharSequence;I)Landroid/widget/Toast;]
-      [252] invokevirtual #197
+      [198] invokevirtual #199
         + Methodref [android/widget/Toast.show ()V]
-      [255] goto +111 (target=366)
-      [258] aload_0 v0
-      [259] aload_0 v0
-      [260] aload v5
-      [262] invokevirtual #199
-        + Methodref [com/mycompany/overtest/ListEditor.a (Landroid/net/Uri;)Ljava/lang/String;]
-      [265] putfield #150
-        + Fieldref [com/mycompany/overtest/ListEditor.k Ljava/lang/String;]
-      [268] invokestatic #184
+      [201] iload_1 v1
+      [202] iconst_2
+      [203] ificmpne +241 (target=444)
+      [206] new #120
+        + Class [java/io/File]
+      [209] dup
+      [210] new #133
+        + Class [java/lang/StringBuilder]
+      [213] dup
+      [214] invokespecial #265
+        + Methodref [java/lang/StringBuilder.<init> ()V]
+      [217] invokestatic #186
         + Methodref [android/os/Environment.getExternalStorageDirectory ()Ljava/io/File;]
-      [271] astore v6
-      [273] new #131
-        + Class [java/lang/StringBuilder]
-      [276] dup
-      [277] invokespecial #262
-        + Methodref [java/lang/StringBuilder.<init> ()V]
-      [280] ldc #54
-        + String [MANUAL/workflow/]
-      [282] invokevirtual #266
-        + Methodref [java/lang/StringBuilder.append (Ljava/lang/String;)Ljava/lang/StringBuilder;]
-      [285] aload_0 v0
-      [286] getfield #143
-        + Fieldref [com/mycompany/overtest/ListEditor.d Ljava/lang/String;]
-      [289] invokevirtual #266
-        + Methodref [java/lang/StringBuilder.append (Ljava/lang/String;)Ljava/lang/StringBuilder;]
-      [292] invokevirtual #267
-        + Methodref [java/lang/StringBuilder.toString ()Ljava/lang/String;]
-      [295] astore v7
-      [297] new #131
-        + Class [java/lang/StringBuilder]
-      [300] dup
-      [301] invokespecial #262
-        + Methodref [java/lang/StringBuilder.<init> ()V]
-      [304] ldc #21
+      [220] invokevirtual #268
+        + Methodref [java/lang/StringBuilder.append (Ljava/lang/Object;)Ljava/lang/StringBuilder;]
+      [223] ldc #22
         + String [/MANUAL/workflow/]
-      [306] invokevirtual #266
+      [225] invokevirtual #269
         + Methodref [java/lang/StringBuilder.append (Ljava/lang/String;)Ljava/lang/StringBuilder;]
-      [309] aload_0 v0
-      [310] getfield #143
+      [228] aload_0 v0
+      [229] getfield #145
         + Fieldref [com/mycompany/overtest/ListEditor.d Ljava/lang/String;]
-      [313] invokevirtual #266
+      [232] invokevirtual #269
         + Methodref [java/lang/StringBuilder.append (Ljava/lang/String;)Ljava/lang/StringBuilder;]
-      [316] invokevirtual #267
+      [235] invokevirtual #270
         + Methodref [java/lang/StringBuilder.toString ()Ljava/lang/String;]
-      [319] astore v8
-      [321] new #118
-        + Class [java/io/File]
-      [324] dup
-      [325] aload_0 v0
-      [326] getfield #150
-        + Fieldref [com/mycompany/overtest/ListEditor.k Ljava/lang/String;]
-      [329] invokespecial #235
+      [238] invokespecial #237
         + Methodref [java/io/File.<init> (Ljava/lang/String;)V]
-      [332] astore v9
-      [334] new #118
+      [241] astore v4
+      [243] aload v4
+      [245] invokevirtual #240
+        + Methodref [java/io/File.exists ()Z]
+      [248] ifeq +9 (target=257)
+      [251] aload v4
+      [253] invokevirtual #239
+        + Methodref [java/io/File.delete ()Z]
+      [256] pop
+      [257] aload_0 v0
+      [258] getfield #151
+        + Fieldref [com/mycompany/overtest/ListEditor.j Ljava/util/ArrayList;]
+      [261] aload_0 v0
+      [262] getfield #145
+        + Fieldref [com/mycompany/overtest/ListEditor.d Ljava/lang/String;]
+      [265] invokevirtual #274
+        + Methodref [java/util/ArrayList.remove (Ljava/lang/Object;)Z]
+      [268] pop
+      [269] aload_3 v3
+      [270] invokevirtual #170
+        + Methodref [android/content/Intent.getData ()Landroid/net/Uri;]
+      [273] astore v5
+      [275] aload_0 v0
+      [276] aload v5
+      [278] invokevirtual #201
+        + Methodref [com/mycompany/overtest/ListEditor.a (Landroid/net/Uri;)Ljava/lang/String;]
+      [281] ifnonnull +16 (target=297)
+      [284] aload_0 v0
+      [285] ldc #73
+        + String [Unfortunately your gallery or image file is not supported, try to use another app to choose your screenshots. Remember that this app can work wrong with non screenshot images.]
+      [287] iconst_1
+      [288] invokestatic #198
+        + Methodref [android/widget/Toast.makeText (Landroid/content/Context;Ljava/lang/CharSequence;I)Landroid/widget/Toast;]
+      [291] invokevirtual #199
+        + Methodref [android/widget/Toast.show ()V]
+      [294] goto +150 (target=444)
+      [297] aload_0 v0
+      [298] aload_0 v0
+      [299] aload v5
+      [301] invokevirtual #201
+        + Methodref [com/mycompany/overtest/ListEditor.a (Landroid/net/Uri;)Ljava/lang/String;]
+      [304] putfield #152
+        + Fieldref [com/mycompany/overtest/ListEditor.k Ljava/lang/String;]
+      [307] invokestatic #186
+        + Methodref [android/os/Environment.getExternalStorageDirectory ()Ljava/io/File;]
+      [310] astore v6
+      [312] new #133
+        + Class [java/lang/StringBuilder]
+      [315] dup
+      [316] invokespecial #265
+        + Methodref [java/lang/StringBuilder.<init> ()V]
+      [319] ldc #55
+        + String [MANUAL/workflow/]
+      [321] invokevirtual #269
+        + Methodref [java/lang/StringBuilder.append (Ljava/lang/String;)Ljava/lang/StringBuilder;]
+      [324] aload_0 v0
+      [325] getfield #145
+        + Fieldref [com/mycompany/overtest/ListEditor.d Ljava/lang/String;]
+      [328] invokevirtual #269
+        + Methodref [java/lang/StringBuilder.append (Ljava/lang/String;)Ljava/lang/StringBuilder;]
+      [331] invokevirtual #270
+        + Methodref [java/lang/StringBuilder.toString ()Ljava/lang/String;]
+      [334] astore v7
+      [336] new #133
+        + Class [java/lang/StringBuilder]
+      [339] dup
+      [340] invokespecial #265
+        + Methodref [java/lang/StringBuilder.<init> ()V]
+      [343] ldc #22
+        + String [/MANUAL/workflow/]
+      [345] invokevirtual #269
+        + Methodref [java/lang/StringBuilder.append (Ljava/lang/String;)Ljava/lang/StringBuilder;]
+      [348] aload_0 v0
+      [349] getfield #145
+        + Fieldref [com/mycompany/overtest/ListEditor.d Ljava/lang/String;]
+      [352] invokevirtual #269
+        + Methodref [java/lang/StringBuilder.append (Ljava/lang/String;)Ljava/lang/StringBuilder;]
+      [355] invokevirtual #270
+        + Methodref [java/lang/StringBuilder.toString ()Ljava/lang/String;]
+      [358] astore v8
+      [360] new #120
         + Class [java/io/File]
-      [337] dup
-      [338] aload v6
-      [340] aload v7
-      [342] invokespecial #234
+      [363] dup
+      [364] aload_0 v0
+      [365] getfield #152
+        + Fieldref [com/mycompany/overtest/ListEditor.k Ljava/lang/String;]
+      [368] invokespecial #237
+        + Methodref [java/io/File.<init> (Ljava/lang/String;)V]
+      [371] astore v9
+      [373] new #120
+        + Class [java/io/File]
+      [376] dup
+      [377] aload v6
+      [379] aload v7
+      [381] invokespecial #236
         + Methodref [java/io/File.<init> (Ljava/io/File;Ljava/lang/String;)V]
-      [345] astore v10
-      [347] aload_0 v0
-      [348] aload v9
-      [350] aload v10
-      [352] invokevirtual #202
+      [384] astore v10
+      [386] aload v9
+      [388] invokevirtual #241
+        + Methodref [java/io/File.getName ()Ljava/lang/String;]
+      [391] ldc #16
+        + String [.png]
+      [393] invokevirtual #262
+        + Methodref [java/lang/String.contains (Ljava/lang/CharSequence;)Z]
+      [396] ifne +16 (target=412)
+      [399] aload v9
+      [401] invokevirtual #241
+        + Methodref [java/io/File.getName ()Ljava/lang/String;]
+      [404] ldc #15
+        + String [.jpg]
+      [406] invokevirtual #262
+        + Methodref [java/lang/String.contains (Ljava/lang/CharSequence;)Z]
+      [409] ifeq +25 (target=434)
+      [412] aload_0 v0
+      [413] aload v9
+      [415] aload v10
+      [417] invokevirtual #204
         + Methodref [com/mycompany/overtest/ListEditor.a (Ljava/io/File;Ljava/io/File;)V]
-      [355] aload_0 v0
-      [356] aload v8
-      [358] invokevirtual #203
+      [420] aload_0 v0
+      [421] aload v8
+      [423] invokevirtual #205
         + Methodref [com/mycompany/overtest/ListEditor.a (Ljava/lang/String;)V]
-      [361] goto +5 (target=366)
-      [364] astore v11
-      [366] return
+      [426] goto +18 (target=444)
+      [429] astore v11
+      [431] goto +13 (target=444)
+      [434] aload_0 v0
+      [435] ldc #58
+        + String [Only *.PNG and *.JPG formats are supported.]
+      [437] iconst_0
+      [438] invokestatic #198
+        + Methodref [android/widget/Toast.makeText (Landroid/content/Context;Ljava/lang/CharSequence;I)Landroid/widget/Toast;]
+      [441] invokevirtual #199
+        + Methodref [android/widget/Toast.show ()V]
+      [444] return
       Code attribute exceptions (count = 2):
-      - ExceptionInfo (143 -> 157: 160):
+      - ExceptionInfo (169 -> 183: 186):
       + Class [java/io/IOException]
-      - ExceptionInfo (347 -> 361: 364):
+      - ExceptionInfo (412 -> 426: 429):
       + Class [java/io/IOException]
       Code attribute attributes (attribute count = 1):
-      + Stack map table attribute (count = 7):
+      + Stack map table attribute (count = 11):
         - [38] Var: ...[a:android/net/Uri], Stack: (empty)
-        - [160] Var: [a:com/mycompany/overtest/ListEditor][i][i][a:android/content/Intent][a:android/net/Uri][a:java/io/File][a:java/lang/String][a:java/lang/String][a:java/io/File][a:java/io/File], Stack: [a:java/io/IOException]
-        - [162] Var: [a:com/mycompany/overtest/ListEditor][i][i][a:android/content/Intent], Stack: 
-        - [218] Var: ...[a:java/io/File], Stack: (empty)
-        - [258] Var: ...[a:android/net/Uri], Stack: (empty)
-        - [364] Var: [a:com/mycompany/overtest/ListEditor][i][i][a:android/content/Intent][a:java/io/File][a:android/net/Uri][a:java/io/File][a:java/lang/String][a:java/lang/String][a:java/io/File][a:java/io/File], Stack: [a:java/io/IOException]
-        - [366] Var: [a:com/mycompany/overtest/ListEditor][i][i][a:android/content/Intent], Stack: 
+        - [169] Var: [a:com/mycompany/overtest/ListEditor][i][i][a:android/content/Intent][a:android/net/Uri][a:java/io/File][a:java/lang/String][a:java/lang/String][a:java/io/File][a:java/io/File], Stack: 
+        - [186] Var: ..., Stack: [a:java/io/IOException]
+        - [191] Var: ..., Stack: (empty)
+        - [201] Var: [a:com/mycompany/overtest/ListEditor][i][i][a:android/content/Intent], Stack: 
+        - [257] Var: ...[a:java/io/File], Stack: (empty)
+        - [297] Var: ...[a:android/net/Uri], Stack: (empty)
+        - [412] Var: [a:com/mycompany/overtest/ListEditor][i][i][a:android/content/Intent][a:java/io/File][a:android/net/Uri][a:java/io/File][a:java/lang/String][a:java/lang/String][a:java/io/File][a:java/io/File], Stack: 
+        - [429] Var: ..., Stack: [a:java/io/IOException]
+        - [434] Var: ..., Stack: (empty)
+        - [444] Var: [a:com/mycompany/overtest/ListEditor][i][i][a:android/content/Intent], Stack: 
   + Method:       a(Ljava/lang/String;)V
     Access flags: 0x1
       = public void a(java.lang.String)
     Class member attributes (count = 1):
     + Code attribute instructions (code length = 223, locals = 7, stack = 4):
-      [0] new #131
+      [0] new #133
         + Class [java/lang/StringBuilder]
       [3] dup
-      [4] invokespecial #262
+      [4] invokespecial #265
         + Methodref [java/lang/StringBuilder.<init> ()V]
-      [7] invokestatic #184
+      [7] invokestatic #186
         + Methodref [android/os/Environment.getExternalStorageDirectory ()Ljava/io/File;]
-      [10] invokevirtual #265
+      [10] invokevirtual #268
         + Methodref [java/lang/StringBuilder.append (Ljava/lang/Object;)Ljava/lang/StringBuilder;]
       [13] aload_1 v1
-      [14] invokevirtual #266
+      [14] invokevirtual #269
         + Methodref [java/lang/StringBuilder.append (Ljava/lang/String;)Ljava/lang/StringBuilder;]
-      [17] invokevirtual #267
+      [17] invokevirtual #270
         + Methodref [java/lang/StringBuilder.toString ()Ljava/lang/String;]
       [20] astore_2 v2
-      [21] new #93
+      [21] new #95
         + Class [android/graphics/BitmapFactory$Options]
       [24] dup
-      [25] invokespecial #179
+      [25] invokespecial #181
         + Methodref [android/graphics/BitmapFactory$Options.<init> ()V]
       [28] astore_3 v3
       [29] aload_3 v3
       [30] iconst_2
-      [31] putfield #137
+      [31] putfield #139
         + Fieldref [android/graphics/BitmapFactory$Options.inSampleSize I]
       [34] aload_2 v2
       [35] aload_3 v3
-      [36] invokestatic #178
+      [36] invokestatic #180
         + Methodref [android/graphics/BitmapFactory.decodeFile (Ljava/lang/String;Landroid/graphics/BitmapFactory$Options;)Landroid/graphics/Bitmap;]
       [39] astore v4
       [41] aload v4
-      [43] invokevirtual #176
+      [43] invokevirtual #178
         + Methodref [android/graphics/Bitmap.getWidth ()I]
       [46] aload_0 v0
-      [47] getfield #145
+      [47] getfield #147
         + Fieldref [com/mycompany/overtest/ListEditor.f I]
       [50] ificmpgt +15 (target=65)
       [53] aload v4
-      [55] invokevirtual #175
+      [55] invokevirtual #177
         + Methodref [android/graphics/Bitmap.getHeight ()I]
       [58] aload_0 v0
-      [59] getfield #146
+      [59] getfield #148
         + Fieldref [com/mycompany/overtest/ListEditor.g I]
       [62] ificmple +137 (target=199)
       [65] aload v4
-      [67] invokevirtual #176
+      [67] invokevirtual #178
         + Methodref [android/graphics/Bitmap.getWidth ()I]
       [70] aload v4
-      [72] invokevirtual #175
+      [72] invokevirtual #177
         + Methodref [android/graphics/Bitmap.getHeight ()I]
       [75] ificmple +65 (target=140)
       [78] aload v4
       [80] aload_0 v0
-      [81] getfield #146
+      [81] getfield #148
         + Fieldref [com/mycompany/overtest/ListEditor.g I]
       [84] aload_0 v0
-      [85] getfield #145
+      [85] getfield #147
         + Fieldref [com/mycompany/overtest/ListEditor.f I]
       [88] iconst_1
-      [89] invokestatic #174
+      [89] invokestatic #176
         + Methodref [android/graphics/Bitmap.createScaledBitmap (Landroid/graphics/Bitmap;IIZ)Landroid/graphics/Bitmap;]
       [92] astore v5
       [94] aload v4
-      [96] invokevirtual #177
+      [96] invokevirtual #179
         + Methodref [android/graphics/Bitmap.recycle ()V]
-      [99] new #120
+      [99] new #122
         + Class [java/io/FileOutputStream]
       [102] dup
       [103] aload_2 v2
-      [104] invokespecial #244
+      [104] invokespecial #246
         + Methodref [java/io/FileOutputStream.<init> (Ljava/lang/String;)V]
       [107] astore v6
       [109] aload v5
-      [111] getstatic #136
+      [111] getstatic #138
         + Fieldref [android/graphics/Bitmap$CompressFormat.PNG Landroid/graphics/Bitmap$CompressFormat;]
       [114] bipush 70
       [116] aload v6
-      [118] invokevirtual #173
+      [118] invokevirtual #175
         + Methodref [android/graphics/Bitmap.compress (Landroid/graphics/Bitmap$CompressFormat;ILjava/io/OutputStream;)Z]
       [121] pop
       [122] aload v5
-      [124] invokevirtual #177
+      [124] invokevirtual #179
         + Methodref [android/graphics/Bitmap.recycle ()V]
       [127] aload v6
-      [129] invokevirtual #246
+      [129] invokevirtual #248
         + Methodref [java/io/FileOutputStream.flush ()V]
       [132] aload v6
-      [134] invokevirtual #245
+      [134] invokevirtual #247
         + Methodref [java/io/FileOutputStream.close ()V]
       [137] goto +62 (target=199)
       [140] aload v4
       [142] aload_0 v0
-      [143] getfield #145
+      [143] getfield #147
         + Fieldref [com/mycompany/overtest/ListEditor.f I]
       [146] aload_0 v0
-      [147] getfield #146
+      [147] getfield #148
         + Fieldref [com/mycompany/overtest/ListEditor.g I]
       [150] iconst_1
-      [151] invokestatic #174
+      [151] invokestatic #176
         + Methodref [android/graphics/Bitmap.createScaledBitmap (Landroid/graphics/Bitmap;IIZ)Landroid/graphics/Bitmap;]
       [154] astore v5
       [156] aload v4
-      [158] invokevirtual #177
+      [158] invokevirtual #179
         + Methodref [android/graphics/Bitmap.recycle ()V]
-      [161] new #120
+      [161] new #122
         + Class [java/io/FileOutputStream]
       [164] dup
       [165] aload_2 v2
-      [166] invokespecial #244
+      [166] invokespecial #246
         + Methodref [java/io/FileOutputStream.<init> (Ljava/lang/String;)V]
       [169] astore v6
       [171] aload v5
-      [173] getstatic #136
+      [173] getstatic #138
         + Fieldref [android/graphics/Bitmap$CompressFormat.PNG Landroid/graphics/Bitmap$CompressFormat;]
       [176] bipush 70
       [178] aload v6
-      [180] invokevirtual #173
+      [180] invokevirtual #175
         + Methodref [android/graphics/Bitmap.compress (Landroid/graphics/Bitmap$CompressFormat;ILjava/io/OutputStream;)Z]
       [183] pop
       [184] aload v5
-      [186] invokevirtual #177
+      [186] invokevirtual #179
         + Methodref [android/graphics/Bitmap.recycle ()V]
       [189] aload v6
-      [191] invokevirtual #246
+      [191] invokevirtual #248
         + Methodref [java/io/FileOutputStream.flush ()V]
       [194] aload v6
-      [196] invokevirtual #245
+      [196] invokevirtual #247
         + Methodref [java/io/FileOutputStream.close ()V]
       [199] goto +5 (target=204)
       [202] astore v5
       [204] goto +18 (target=222)
       [207] astore_2 v2
       [208] aload_2 v2
-      [209] invokevirtual #258
+      [209] invokevirtual #260
         + Methodref [java/lang/Exception.printStackTrace ()V]
-      [212] ldc #80
+      [212] ldc #82
         + String [saveBitmap]
       [214] aload_2 v2
-      [215] invokevirtual #257
+      [215] invokevirtual #259
         + Methodref [java/lang/Exception.getMessage ()Ljava/lang/String;]
-      [218] invokestatic #187
+      [218] invokestatic #189
         + Methodref [android/util/Log.e (Ljava/lang/String;Ljava/lang/String;)I]
       [221] pop
       [222] return
@@ -6304,11 +6366,11 @@ Methods (count = 27):
       [4] aconst_null
       [5] areturn
       [6] iconst_1
-      [7] anewarray #130
+      [7] anewarray #132
         + Class [java/lang/String]
       [10] dup
       [11] iconst_0
-      [12] ldc #72
+      [12] ldc #74
         + String [_data]
       [14] aastore
       [15] astore_2 v2
@@ -6318,28 +6380,28 @@ Methods (count = 27):
       [19] aconst_null
       [20] aconst_null
       [21] aconst_null
-      [22] invokevirtual #213
+      [22] invokevirtual #215
         + Methodref [com/mycompany/overtest/ListEditor.managedQuery (Landroid/net/Uri;[Ljava/lang/String;Ljava/lang/String;[Ljava/lang/String;Ljava/lang/String;)Landroid/database/Cursor;]
       [25] astore_3 v3
       [26] aload_3 v3
       [27] ifnull +29 (target=56)
       [30] aload_3 v3
-      [31] ldc #72
+      [31] ldc #74
         + String [_data]
-      [33] invokeinterface #276
+      [33] invokeinterface #279
         + InterfaceMethodref [android/database/Cursor.getColumnIndexOrThrow (Ljava/lang/String;)I]
       [38] istore v4
       [40] aload_3 v3
-      [41] invokeinterface #278
+      [41] invokeinterface #281
         + InterfaceMethodref [android/database/Cursor.moveToFirst ()Z]
       [46] pop
       [47] aload_3 v3
       [48] iload v4
-      [50] invokeinterface #277
+      [50] invokeinterface #280
         + InterfaceMethodref [android/database/Cursor.getString (I)Ljava/lang/String;]
       [55] areturn
       [56] aload_1 v1
-      [57] invokevirtual #181
+      [57] invokevirtual #183
         + Methodref [android/net/Uri.getPath ()Ljava/lang/String;]
       [60] areturn
       Code attribute exceptions (count = 0):
@@ -6352,18 +6414,18 @@ Methods (count = 27):
       = public void a(java.io.File,java.io.File)
     Class member attributes (count = 1):
     + Code attribute instructions (code length = 61, locals = 7, stack = 4):
-      [0] new #119
+      [0] new #121
         + Class [java/io/FileInputStream]
       [3] dup
       [4] aload_1 v1
-      [5] invokespecial #242
+      [5] invokespecial #244
         + Methodref [java/io/FileInputStream.<init> (Ljava/io/File;)V]
       [8] astore_3 v3
-      [9] new #120
+      [9] new #122
         + Class [java/io/FileOutputStream]
       [12] dup
       [13] aload_2 v2
-      [14] invokespecial #243
+      [14] invokespecial #245
         + Methodref [java/io/FileOutputStream.<init> (Ljava/io/File;)V]
       [17] astore v4
       [19] sipush 1024
@@ -6371,7 +6433,7 @@ Methods (count = 27):
       [24] astore v5
       [26] aload_3 v3
       [27] aload v5
-      [29] invokevirtual #249
+      [29] invokevirtual #251
         + Methodref [java/io/InputStream.read ([B)I]
       [32] dup
       [33] istore v6
@@ -6380,14 +6442,14 @@ Methods (count = 27):
       [40] aload v5
       [42] iconst_0
       [43] iload v6
-      [45] invokevirtual #251
+      [45] invokevirtual #253
         + Methodref [java/io/OutputStream.write ([BII)V]
       [48] goto -22 (target=26)
       [51] aload_3 v3
-      [52] invokevirtual #248
+      [52] invokevirtual #250
         + Methodref [java/io/InputStream.close ()V]
       [55] aload v4
-      [57] invokevirtual #250
+      [57] invokevirtual #252
         + Methodref [java/io/OutputStream.close ()V]
       [60] return
       Code attribute exceptions (count = 0):
@@ -6401,31 +6463,31 @@ Methods (count = 27):
     Class member attributes (count = 1):
     + Code attribute instructions (code length = 34, locals = 2, stack = 3):
       [0] aload_0 v0
-      [1] invokevirtual #210
+      [1] invokevirtual #212
         + Methodref [com/mycompany/overtest/ListEditor.getIntent ()Landroid/content/Intent;]
       [4] astore_1 v1
       [5] aload_0 v0
       [6] iconst_0
       [7] iconst_0
-      [8] invokevirtual #215
+      [8] invokevirtual #217
         + Methodref [com/mycompany/overtest/ListEditor.overridePendingTransition (II)V]
       [11] aload_1 v1
       [12] ldc #1
         + Integer [65536]
-      [14] invokevirtual #165
+      [14] invokevirtual #167
         + Methodref [android/content/Intent.addFlags (I)Landroid/content/Intent;]
       [17] pop
       [18] aload_0 v0
-      [19] invokevirtual #209
+      [19] invokevirtual #211
         + Methodref [com/mycompany/overtest/ListEditor.finish ()V]
       [22] aload_0 v0
       [23] iconst_0
       [24] iconst_0
-      [25] invokevirtual #215
+      [25] invokevirtual #217
         + Methodref [com/mycompany/overtest/ListEditor.overridePendingTransition (II)V]
       [28] aload_0 v0
       [29] aload_1 v1
-      [30] invokevirtual #218
+      [30] invokevirtual #220
         + Methodref [com/mycompany/overtest/ListEditor.startActivity (Landroid/content/Intent;)V]
       [33] return
       Code attribute exceptions (count = 0):
@@ -6436,7 +6498,7 @@ Methods (count = 27):
     Class member attributes (count = 1):
     + Code attribute instructions (code length = 580, locals = 12, stack = 4):
       [0] aload_1 v1
-      [1] invokeinterface #280
+      [1] invokeinterface #283
         + InterfaceMethodref [android/view/MenuItem.getItemId ()I]
       [6] tableswitch (4 offsets, default=572) (target=578)
         2131099659: offset = 217, target = 223
@@ -6445,378 +6507,378 @@ Methods (count = 27):
         2131099662: offset = 313, target = 319
         default: offset = 572, target = 578
       [36] iconst_3
-      [37] anewarray #130
+      [37] anewarray #132
         + Class [java/lang/String]
       [40] astore_2 v2
       [41] aload_2 v2
       [42] iconst_0
-      [43] ldc #49
+      [43] ldc #50
         + String [Expected result:]
       [45] aastore
       [46] aload_2 v2
       [47] iconst_1
-      [48] ldc #31
+      [48] ldc #32
         + String [Actual result:]
       [50] aastore
       [51] aload_2 v2
       [52] iconst_2
-      [53] ldc #47
+      [53] ldc #48
         + String [Error log:]
       [55] aastore
       [56] aload_0 v0
-      [57] getfield #140
+      [57] getfield #142
         + Fieldref [com/mycompany/overtest/ListEditor.a Lcom/mycompany/overtest/a;]
-      [60] ldc #76
+      [60] ldc #78
         + String [expected.txt]
       [62] aload_2 v2
-      [63] invokevirtual #225
+      [63] invokevirtual #227
         + Methodref [com/mycompany/overtest/a.a (Ljava/lang/String;[Ljava/lang/String;)V]
-      [66] new #88
+      [66] new #90
         + Class [android/content/Intent]
       [69] dup
-      [70] invokespecial #163
+      [70] invokespecial #165
         + Methodref [android/content/Intent.<init> ()V]
       [73] astore_3 v3
       [74] aload_3 v3
-      [75] ldc #74
+      [75] ldc #76
         + String [android.intent.action.VIEW]
-      [77] invokevirtual #170
+      [77] invokevirtual #172
         + Methodref [android/content/Intent.setAction (Ljava/lang/String;)Landroid/content/Intent;]
       [80] pop
-      [81] new #118
+      [81] new #120
         + Class [java/io/File]
       [84] dup
-      [85] new #131
+      [85] new #133
         + Class [java/lang/StringBuilder]
       [88] dup
-      [89] invokespecial #262
+      [89] invokespecial #265
         + Methodref [java/lang/StringBuilder.<init> ()V]
-      [92] invokestatic #184
+      [92] invokestatic #186
         + Methodref [android/os/Environment.getExternalStorageDirectory ()Ljava/io/File;]
-      [95] invokevirtual #265
+      [95] invokevirtual #268
         + Methodref [java/lang/StringBuilder.append (Ljava/lang/Object;)Ljava/lang/StringBuilder;]
-      [98] ldc #19
+      [98] ldc #20
         + String [/MANUAL/settings/expected.txt]
-      [100] invokevirtual #266
+      [100] invokevirtual #269
         + Methodref [java/lang/StringBuilder.append (Ljava/lang/String;)Ljava/lang/StringBuilder;]
-      [103] invokevirtual #267
+      [103] invokevirtual #270
         + Methodref [java/lang/StringBuilder.toString ()Ljava/lang/String;]
-      [106] invokespecial #235
+      [106] invokespecial #237
         + Methodref [java/io/File.<init> (Ljava/lang/String;)V]
       [109] astore v4
       [111] aload_3 v3
       [112] aload v4
-      [114] invokestatic #180
+      [114] invokestatic #182
         + Methodref [android/net/Uri.fromFile (Ljava/io/File;)Landroid/net/Uri;]
-      [117] ldc #81
+      [117] ldc #83
         + String [text/plain]
-      [119] invokevirtual #171
+      [119] invokevirtual #173
         + Methodref [android/content/Intent.setDataAndType (Landroid/net/Uri;Ljava/lang/String;)Landroid/content/Intent;]
       [122] pop
       [123] aload_0 v0
       [124] aload_3 v3
-      [125] invokevirtual #218
+      [125] invokevirtual #220
         + Methodref [com/mycompany/overtest/ListEditor.startActivity (Landroid/content/Intent;)V]
       [128] goto +450 (target=578)
       [131] iconst_1
-      [132] anewarray #130
+      [132] anewarray #132
         + Class [java/lang/String]
       [135] astore v5
       [137] aload v5
       [139] iconst_0
-      [140] ldc #56
+      [140] ldc #57
         + String [New bug report]
       [142] aastore
       [143] aload_0 v0
-      [144] getfield #140
+      [144] getfield #142
         + Fieldref [com/mycompany/overtest/ListEditor.a Lcom/mycompany/overtest/a;]
-      [147] ldc #75
+      [147] ldc #77
         + String [description.txt]
       [149] aload v5
-      [151] invokevirtual #225
+      [151] invokevirtual #227
         + Methodref [com/mycompany/overtest/a.a (Ljava/lang/String;[Ljava/lang/String;)V]
-      [154] new #88
+      [154] new #90
         + Class [android/content/Intent]
       [157] dup
-      [158] invokespecial #163
+      [158] invokespecial #165
         + Methodref [android/content/Intent.<init> ()V]
       [161] astore v6
       [163] aload v6
-      [165] ldc #74
+      [165] ldc #76
         + String [android.intent.action.VIEW]
-      [167] invokevirtual #170
+      [167] invokevirtual #172
         + Methodref [android/content/Intent.setAction (Ljava/lang/String;)Landroid/content/Intent;]
       [170] pop
-      [171] new #118
+      [171] new #120
         + Class [java/io/File]
       [174] dup
-      [175] new #131
+      [175] new #133
         + Class [java/lang/StringBuilder]
       [178] dup
-      [179] invokespecial #262
+      [179] invokespecial #265
         + Methodref [java/lang/StringBuilder.<init> ()V]
-      [182] invokestatic #184
+      [182] invokestatic #186
         + Methodref [android/os/Environment.getExternalStorageDirectory ()Ljava/io/File;]
-      [185] invokevirtual #265
+      [185] invokevirtual #268
         + Methodref [java/lang/StringBuilder.append (Ljava/lang/Object;)Ljava/lang/StringBuilder;]
-      [188] ldc #18
+      [188] ldc #19
         + String [/MANUAL/settings/description.txt]
-      [190] invokevirtual #266
+      [190] invokevirtual #269
         + Methodref [java/lang/StringBuilder.append (Ljava/lang/String;)Ljava/lang/StringBuilder;]
-      [193] invokevirtual #267
+      [193] invokevirtual #270
         + Methodref [java/lang/StringBuilder.toString ()Ljava/lang/String;]
-      [196] invokespecial #235
+      [196] invokespecial #237
         + Methodref [java/io/File.<init> (Ljava/lang/String;)V]
       [199] astore v7
       [201] aload v6
       [203] aload v7
-      [205] invokestatic #180
+      [205] invokestatic #182
         + Methodref [android/net/Uri.fromFile (Ljava/io/File;)Landroid/net/Uri;]
-      [208] ldc #81
+      [208] ldc #83
         + String [text/plain]
-      [210] invokevirtual #171
+      [210] invokevirtual #173
         + Methodref [android/content/Intent.setDataAndType (Landroid/net/Uri;Ljava/lang/String;)Landroid/content/Intent;]
       [213] pop
       [214] aload_0 v0
       [215] aload v6
-      [217] invokevirtual #218
+      [217] invokevirtual #220
         + Methodref [com/mycompany/overtest/ListEditor.startActivity (Landroid/content/Intent;)V]
       [220] goto +358 (target=578)
       [223] aload_0 v0
-      [224] getfield #149
+      [224] getfield #151
         + Fieldref [com/mycompany/overtest/ListEditor.j Ljava/util/ArrayList;]
-      [227] invokevirtual #272
+      [227] invokevirtual #275
         + Methodref [java/util/ArrayList.size ()I]
       [230] bipush 10
       [232] ificmpge +43 (target=275)
-      [235] new #88
+      [235] new #90
         + Class [android/content/Intent]
       [238] dup
-      [239] invokespecial #163
+      [239] invokespecial #165
         + Methodref [android/content/Intent.<init> ()V]
       [242] astore v8
       [244] aload v8
-      [246] ldc #79
+      [246] ldc #81
         + String [image/*]
-      [248] invokevirtual #172
+      [248] invokevirtual #174
         + Methodref [android/content/Intent.setType (Ljava/lang/String;)Landroid/content/Intent;]
       [251] pop
       [252] aload v8
-      [254] ldc #73
+      [254] ldc #75
         + String [android.intent.action.GET_CONTENT]
-      [256] invokevirtual #170
+      [256] invokevirtual #172
         + Methodref [android/content/Intent.setAction (Ljava/lang/String;)Landroid/content/Intent;]
       [259] pop
       [260] aload_0 v0
       [261] aload v8
-      [263] ldc #63
+      [263] ldc #65
         + String [Select Picture]
-      [265] invokestatic #166
+      [265] invokestatic #168
         + Methodref [android/content/Intent.createChooser (Landroid/content/Intent;Ljava/lang/CharSequence;)Landroid/content/Intent;]
       [268] iconst_1
-      [269] invokevirtual #219
+      [269] invokevirtual #221
         + Methodref [com/mycompany/overtest/ListEditor.startActivityForResult (Landroid/content/Intent;I)V]
       [272] goto +306 (target=578)
       [275] aload_0 v0
-      [276] new #131
+      [276] new #133
         + Class [java/lang/StringBuilder]
       [279] dup
-      [280] invokespecial #262
+      [280] invokespecial #265
         + Methodref [java/lang/StringBuilder.<init> ()V]
-      [283] ldc #82
+      [283] ldc #84
         + String [there are ]
-      [285] invokevirtual #266
+      [285] invokevirtual #269
         + Methodref [java/lang/StringBuilder.append (Ljava/lang/String;)Ljava/lang/StringBuilder;]
       [288] aload_0 v0
-      [289] getfield #149
+      [289] getfield #151
         + Fieldref [com/mycompany/overtest/ListEditor.j Ljava/util/ArrayList;]
-      [292] invokevirtual #272
+      [292] invokevirtual #275
         + Methodref [java/util/ArrayList.size ()I]
-      [295] invokestatic #259
+      [295] invokestatic #261
         + Methodref [java/lang/Integer.toString (I)Ljava/lang/String;]
-      [298] invokevirtual #266
+      [298] invokevirtual #269
         + Methodref [java/lang/StringBuilder.append (Ljava/lang/String;)Ljava/lang/StringBuilder;]
       [301] ldc #11
         + String [ images in the list, max 10]
-      [303] invokevirtual #266
+      [303] invokevirtual #269
         + Methodref [java/lang/StringBuilder.append (Ljava/lang/String;)Ljava/lang/StringBuilder;]
-      [306] invokevirtual #267
+      [306] invokevirtual #270
         + Methodref [java/lang/StringBuilder.toString ()Ljava/lang/String;]
       [309] iconst_0
-      [310] invokestatic #196
+      [310] invokestatic #198
         + Methodref [android/widget/Toast.makeText (Landroid/content/Context;Ljava/lang/CharSequence;I)Landroid/widget/Toast;]
-      [313] invokevirtual #197
+      [313] invokevirtual #199
         + Methodref [android/widget/Toast.show ()V]
       [316] goto +262 (target=578)
       [319] aload_0 v0
-      [320] getfield #140
+      [320] getfield #142
         + Fieldref [com/mycompany/overtest/ListEditor.a Lcom/mycompany/overtest/a;]
-      [323] invokevirtual #228
+      [323] invokevirtual #230
         + Methodref [com/mycompany/overtest/a.d ()V]
       [326] aload_0 v0
-      [327] ldc #52
+      [327] ldc #53
         + String [Generating report ]
       [329] iconst_0
-      [330] invokestatic #196
+      [330] invokestatic #198
         + Methodref [android/widget/Toast.makeText (Landroid/content/Context;Ljava/lang/CharSequence;I)Landroid/widget/Toast;]
-      [333] invokevirtual #197
+      [333] invokevirtual #199
         + Methodref [android/widget/Toast.show ()V]
-      [336] new #118
+      [336] new #120
         + Class [java/io/File]
       [339] dup
-      [340] new #131
+      [340] new #133
         + Class [java/lang/StringBuilder]
       [343] dup
-      [344] invokespecial #262
+      [344] invokespecial #265
         + Methodref [java/lang/StringBuilder.<init> ()V]
-      [347] invokestatic #184
+      [347] invokestatic #186
         + Methodref [android/os/Environment.getExternalStorageDirectory ()Ljava/io/File;]
-      [350] invokevirtual #265
+      [350] invokevirtual #268
         + Methodref [java/lang/StringBuilder.append (Ljava/lang/Object;)Ljava/lang/StringBuilder;]
-      [353] ldc #23
+      [353] ldc #24
         + String [/MANUAL/workflow/test.html]
-      [355] invokevirtual #266
+      [355] invokevirtual #269
         + Methodref [java/lang/StringBuilder.append (Ljava/lang/String;)Ljava/lang/StringBuilder;]
-      [358] invokevirtual #267
+      [358] invokevirtual #270
         + Methodref [java/lang/StringBuilder.toString ()Ljava/lang/String;]
-      [361] invokespecial #235
+      [361] invokespecial #237
         + Methodref [java/io/File.<init> (Ljava/lang/String;)V]
       [364] astore v8
       [366] aload v8
-      [368] invokevirtual #236
+      [368] invokevirtual #238
         + Methodref [java/io/File.createNewFile ()Z]
       [371] pop
-      [372] new #118
+      [372] new #120
         + Class [java/io/File]
       [375] dup
-      [376] new #131
+      [376] new #133
         + Class [java/lang/StringBuilder]
       [379] dup
-      [380] invokespecial #262
+      [380] invokespecial #265
         + Methodref [java/lang/StringBuilder.<init> ()V]
-      [383] invokestatic #184
+      [383] invokestatic #186
         + Methodref [android/os/Environment.getExternalStorageDirectory ()Ljava/io/File;]
-      [386] invokevirtual #265
+      [386] invokevirtual #268
         + Methodref [java/lang/StringBuilder.append (Ljava/lang/Object;)Ljava/lang/StringBuilder;]
-      [389] ldc #24
+      [389] ldc #25
         + String [/MANUAL/workflow/test.txt]
-      [391] invokevirtual #266
+      [391] invokevirtual #269
         + Methodref [java/lang/StringBuilder.append (Ljava/lang/String;)Ljava/lang/StringBuilder;]
-      [394] invokevirtual #267
+      [394] invokevirtual #270
         + Methodref [java/lang/StringBuilder.toString ()Ljava/lang/String;]
-      [397] invokespecial #235
+      [397] invokespecial #237
         + Methodref [java/io/File.<init> (Ljava/lang/String;)V]
       [400] astore v9
       [402] aload v9
-      [404] invokevirtual #236
+      [404] invokevirtual #238
         + Methodref [java/io/File.createNewFile ()Z]
       [407] pop
       [408] aload v8
-      [410] invokevirtual #238
+      [410] invokevirtual #240
         + Methodref [java/io/File.exists ()Z]
       [413] ifeq +75 (target=488)
-      [416] new #120
+      [416] new #122
         + Class [java/io/FileOutputStream]
       [419] dup
       [420] aload v8
-      [422] invokespecial #243
+      [422] invokespecial #245
         + Methodref [java/io/FileOutputStream.<init> (Ljava/io/File;)V]
       [425] astore v10
-      [427] new #125
+      [427] new #127
         + Class [java/io/PrintWriter]
       [430] dup
       [431] aload v10
-      [433] invokespecial #253
+      [433] invokespecial #255
         + Methodref [java/io/PrintWriter.<init> (Ljava/io/OutputStream;)V]
       [436] astore v11
       [438] aload v11
       [440] aload_0 v0
-      [441] invokevirtual #207
+      [441] invokevirtual #209
         + Methodref [com/mycompany/overtest/ListEditor.c ()Ljava/lang/String;]
-      [444] invokevirtual #256
+      [444] invokevirtual #258
         + Methodref [java/io/PrintWriter.println (Ljava/lang/String;)V]
       [447] aload v11
-      [449] invokevirtual #255
+      [449] invokevirtual #257
         + Methodref [java/io/PrintWriter.flush ()V]
       [452] aload v11
-      [454] invokevirtual #254
+      [454] invokevirtual #256
         + Methodref [java/io/PrintWriter.close ()V]
       [457] aload v10
-      [459] invokevirtual #250
+      [459] invokevirtual #252
         + Methodref [java/io/OutputStream.close ()V]
-      [462] getstatic #151
+      [462] getstatic #153
         + Fieldref [java/lang/System.out Ljava/io/PrintStream;]
-      [465] new #131
+      [465] new #133
         + Class [java/lang/StringBuilder]
       [468] dup
-      [469] invokespecial #262
+      [469] invokespecial #265
         + Methodref [java/lang/StringBuilder.<init> ()V]
-      [472] ldc #77
+      [472] ldc #79
         + String [file created: ]
-      [474] invokevirtual #266
+      [474] invokevirtual #269
         + Methodref [java/lang/StringBuilder.append (Ljava/lang/String;)Ljava/lang/StringBuilder;]
       [477] aload v8
-      [479] invokevirtual #265
+      [479] invokevirtual #268
         + Methodref [java/lang/StringBuilder.append (Ljava/lang/Object;)Ljava/lang/StringBuilder;]
-      [482] invokevirtual #267
+      [482] invokevirtual #270
         + Methodref [java/lang/StringBuilder.toString ()Ljava/lang/String;]
-      [485] invokevirtual #252
+      [485] invokevirtual #254
         + Methodref [java/io/PrintStream.println (Ljava/lang/String;)V]
       [488] aload v9
-      [490] invokevirtual #238
+      [490] invokevirtual #240
         + Methodref [java/io/File.exists ()Z]
       [493] ifeq +75 (target=568)
-      [496] new #120
+      [496] new #122
         + Class [java/io/FileOutputStream]
       [499] dup
       [500] aload v9
-      [502] invokespecial #243
+      [502] invokespecial #245
         + Methodref [java/io/FileOutputStream.<init> (Ljava/io/File;)V]
       [505] astore v10
-      [507] new #125
+      [507] new #127
         + Class [java/io/PrintWriter]
       [510] dup
       [511] aload v10
-      [513] invokespecial #253
+      [513] invokespecial #255
         + Methodref [java/io/PrintWriter.<init> (Ljava/io/OutputStream;)V]
       [516] astore v11
       [518] aload v11
       [520] aload_0 v0
-      [521] invokevirtual #204
+      [521] invokevirtual #206
         + Methodref [com/mycompany/overtest/ListEditor.b ()Ljava/lang/String;]
-      [524] invokevirtual #256
+      [524] invokevirtual #258
         + Methodref [java/io/PrintWriter.println (Ljava/lang/String;)V]
       [527] aload v11
-      [529] invokevirtual #255
+      [529] invokevirtual #257
         + Methodref [java/io/PrintWriter.flush ()V]
       [532] aload v11
-      [534] invokevirtual #254
+      [534] invokevirtual #256
         + Methodref [java/io/PrintWriter.close ()V]
       [537] aload v10
-      [539] invokevirtual #250
+      [539] invokevirtual #252
         + Methodref [java/io/OutputStream.close ()V]
-      [542] getstatic #151
+      [542] getstatic #153
         + Fieldref [java/lang/System.out Ljava/io/PrintStream;]
-      [545] new #131
+      [545] new #133
         + Class [java/lang/StringBuilder]
       [548] dup
-      [549] invokespecial #262
+      [549] invokespecial #265
         + Methodref [java/lang/StringBuilder.<init> ()V]
-      [552] ldc #77
+      [552] ldc #79
         + String [file created: ]
-      [554] invokevirtual #266
+      [554] invokevirtual #269
         + Methodref [java/lang/StringBuilder.append (Ljava/lang/String;)Ljava/lang/StringBuilder;]
       [557] aload v8
-      [559] invokevirtual #265
+      [559] invokevirtual #268
         + Methodref [java/lang/StringBuilder.append (Ljava/lang/Object;)Ljava/lang/StringBuilder;]
-      [562] invokevirtual #267
+      [562] invokevirtual #270
         + Methodref [java/lang/StringBuilder.toString ()Ljava/lang/String;]
-      [565] invokevirtual #252
+      [565] invokevirtual #254
         + Methodref [java/io/PrintStream.println (Ljava/lang/String;)V]
       [568] goto +10 (target=578)
       [571] astore v8
       [573] aload v8
-      [575] invokevirtual #247
+      [575] invokevirtual #249
         + Methodref [java/io/IOException.printStackTrace ()V]
       [578] iconst_1
       [579] ireturn
@@ -6840,52 +6902,52 @@ Methods (count = 27):
     Class member attributes (count = 1):
     + Code attribute instructions (code length = 66, locals = 3, stack = 4):
       [0] aload_0 v0
-      [1] invokevirtual #210
+      [1] invokevirtual #212
         + Methodref [com/mycompany/overtest/ListEditor.getIntent ()Landroid/content/Intent;]
-      [4] invokevirtual #167
+      [4] invokevirtual #169
         + Methodref [android/content/Intent.getAction ()Ljava/lang/String;]
       [7] astore_1 v1
       [8] aload_1 v1
       [9] ifnull +12 (target=21)
       [12] aload_1 v1
-      [13] ldc #40
+      [13] ldc #41
         + String [Already created]
-      [15] invokevirtual #261
+      [15] invokevirtual #264
         + Methodref [java/lang/String.equals (Ljava/lang/Object;)Z]
       [18] ifne +34 (target=52)
-      [21] ldc #48
+      [21] ldc #49
         + String [Example]
-      [23] ldc #51
+      [23] ldc #52
         + String [Force restart]
-      [25] invokestatic #188
+      [25] invokestatic #190
         + Methodref [android/util/Log.v (Ljava/lang/String;Ljava/lang/String;)I]
       [28] pop
-      [29] new #88
+      [29] new #90
         + Class [android/content/Intent]
       [32] dup
       [33] aload_0 v0
-      [34] ldc #111
+      [34] ldc #113
         + Class [com/mycompany/overtest/ListEditor]
-      [36] invokespecial #164
+      [36] invokespecial #166
         + Methodref [android/content/Intent.<init> (Landroid/content/Context;Ljava/lang/Class;)V]
       [39] astore_2 v2
       [40] aload_0 v0
       [41] aload_2 v2
-      [42] invokevirtual #218
+      [42] invokevirtual #220
         + Methodref [com/mycompany/overtest/ListEditor.startActivity (Landroid/content/Intent;)V]
       [45] aload_0 v0
-      [46] invokevirtual #209
+      [46] invokevirtual #211
         + Methodref [com/mycompany/overtest/ListEditor.finish ()V]
       [49] goto +12 (target=61)
       [52] aload_0 v0
-      [53] invokevirtual #210
+      [53] invokevirtual #212
         + Methodref [com/mycompany/overtest/ListEditor.getIntent ()Landroid/content/Intent;]
       [56] aconst_null
-      [57] invokevirtual #170
+      [57] invokevirtual #172
         + Methodref [android/content/Intent.setAction (Ljava/lang/String;)Landroid/content/Intent;]
       [60] pop
       [61] aload_0 v0
-      [62] invokespecial #155
+      [62] invokespecial #157
         + Methodref [android/app/Activity.onResume ()V]
       [65] return
       Code attribute exceptions (count = 0):
@@ -6900,10 +6962,10 @@ Methods (count = 27):
     Class member attributes (count = 1):
     + Code attribute instructions (code length = 9, locals = 2, stack = 2):
       [0] aload_0 v0
-      [1] getfield #149
+      [1] getfield #151
         + Fieldref [com/mycompany/overtest/ListEditor.j Ljava/util/ArrayList;]
       [4] aload_1 v1
-      [5] invokevirtual #270
+      [5] invokevirtual #273
         + Methodref [java/util/ArrayList.indexOf (Ljava/lang/Object;)I]
       [8] ireturn
       Code attribute exceptions (count = 0):
@@ -6914,135 +6976,135 @@ Methods (count = 27):
     Class member attributes (count = 1):
     + Code attribute instructions (code length = 182, locals = 6, stack = 5):
       [0] aload_1 v1
-      [1] checkcast #105
+      [1] checkcast #107
         + Class [android/widget/Button]
       [4] astore_2 v2
       [5] aload_2 v2
-      [6] invokevirtual #192
+      [6] invokevirtual #194
         + Methodref [android/widget/Button.getContentDescription ()Ljava/lang/CharSequence;]
-      [9] invokeinterface #283
+      [9] invokeinterface #286
         + InterfaceMethodref [java/lang/CharSequence.toString ()Ljava/lang/String;]
       [14] astore_3 v3
-      [15] ldc #50
+      [15] ldc #51
         + String [Files]
-      [17] new #131
+      [17] new #133
         + Class [java/lang/StringBuilder]
       [20] dup
-      [21] invokespecial #262
+      [21] invokespecial #265
         + Methodref [java/lang/StringBuilder.<init> ()V]
-      [24] ldc #68
+      [24] ldc #70
         + String [TEXT: ]
-      [26] invokevirtual #266
+      [26] invokevirtual #269
         + Methodref [java/lang/StringBuilder.append (Ljava/lang/String;)Ljava/lang/StringBuilder;]
       [29] aload_3 v3
-      [30] invokevirtual #266
+      [30] invokevirtual #269
         + Methodref [java/lang/StringBuilder.append (Ljava/lang/String;)Ljava/lang/StringBuilder;]
-      [33] invokevirtual #267
+      [33] invokevirtual #270
         + Methodref [java/lang/StringBuilder.toString ()Ljava/lang/String;]
-      [36] invokestatic #186
+      [36] invokestatic #188
         + Methodref [android/util/Log.d (Ljava/lang/String;Ljava/lang/String;)I]
       [39] pop
-      [40] ldc #50
+      [40] ldc #51
         + String [Files]
-      [42] new #131
+      [42] new #133
         + Class [java/lang/StringBuilder]
       [45] dup
-      [46] invokespecial #262
+      [46] invokespecial #265
         + Methodref [java/lang/StringBuilder.<init> ()V]
-      [49] ldc #68
+      [49] ldc #70
         + String [TEXT: ]
-      [51] invokevirtual #266
+      [51] invokevirtual #269
         + Methodref [java/lang/StringBuilder.append (Ljava/lang/String;)Ljava/lang/StringBuilder;]
       [54] aload_0 v0
       [55] aload_3 v3
-      [56] invokevirtual #206
+      [56] invokevirtual #208
         + Methodref [com/mycompany/overtest/ListEditor.b (Ljava/lang/String;)I]
-      [59] invokevirtual #263
+      [59] invokevirtual #266
         + Methodref [java/lang/StringBuilder.append (I)Ljava/lang/StringBuilder;]
-      [62] invokevirtual #267
+      [62] invokevirtual #270
         + Methodref [java/lang/StringBuilder.toString ()Ljava/lang/String;]
-      [65] invokestatic #186
+      [65] invokestatic #188
         + Methodref [android/util/Log.d (Ljava/lang/String;Ljava/lang/String;)I]
       [68] pop
       [69] aload_0 v0
       [70] aload_3 v3
-      [71] invokevirtual #206
+      [71] invokevirtual #208
         + Methodref [com/mycompany/overtest/ListEditor.b (Ljava/lang/String;)I]
       [74] istore v4
       [76] iload v4
       [78] ifne +14 (target=92)
-      [81] ldc #50
+      [81] ldc #51
         + String [Files]
-      [83] ldc #53
+      [83] ldc #54
         + String [ITEM IS LAST]
-      [85] invokestatic #186
+      [85] invokestatic #188
         + Methodref [android/util/Log.d (Ljava/lang/String;Ljava/lang/String;)I]
       [88] pop
       [89] goto +53 (target=142)
-      [92] ldc #50
+      [92] ldc #51
         + String [Files]
-      [94] new #131
+      [94] new #133
         + Class [java/lang/StringBuilder]
       [97] dup
-      [98] invokespecial #262
+      [98] invokespecial #265
         + Methodref [java/lang/StringBuilder.<init> ()V]
-      [101] ldc #62
+      [101] ldc #64
         + String [SIZE: ]
-      [103] invokevirtual #266
+      [103] invokevirtual #269
         + Methodref [java/lang/StringBuilder.append (Ljava/lang/String;)Ljava/lang/StringBuilder;]
       [106] aload_0 v0
-      [107] getfield #149
+      [107] getfield #151
         + Fieldref [com/mycompany/overtest/ListEditor.j Ljava/util/ArrayList;]
-      [110] invokevirtual #272
+      [110] invokevirtual #275
         + Methodref [java/util/ArrayList.size ()I]
-      [113] invokevirtual #263
+      [113] invokevirtual #266
         + Methodref [java/lang/StringBuilder.append (I)Ljava/lang/StringBuilder;]
-      [116] invokevirtual #267
+      [116] invokevirtual #270
         + Methodref [java/lang/StringBuilder.toString ()Ljava/lang/String;]
-      [119] invokestatic #186
+      [119] invokestatic #188
         + Methodref [android/util/Log.d (Ljava/lang/String;Ljava/lang/String;)I]
       [122] pop
       [123] aload_0 v0
-      [124] getfield #149
+      [124] getfield #151
         + Fieldref [com/mycompany/overtest/ListEditor.j Ljava/util/ArrayList;]
       [127] aload_0 v0
       [128] aload_3 v3
-      [129] invokevirtual #206
+      [129] invokevirtual #208
         + Methodref [com/mycompany/overtest/ListEditor.b (Ljava/lang/String;)I]
       [132] aload_0 v0
       [133] aload_3 v3
-      [134] invokevirtual #206
+      [134] invokevirtual #208
         + Methodref [com/mycompany/overtest/ListEditor.b (Ljava/lang/String;)I]
       [137] iconst_1
       [138] isub
-      [139] invokestatic #275
+      [139] invokestatic #278
         + Methodref [java/util/Collections.swap (Ljava/util/List;II)V]
       [142] aload_0 v0
-      [143] getfield #149
+      [143] getfield #151
         + Fieldref [com/mycompany/overtest/ListEditor.j Ljava/util/ArrayList;]
       [146] aload_0 v0
-      [147] getfield #149
+      [147] getfield #151
         + Fieldref [com/mycompany/overtest/ListEditor.j Ljava/util/ArrayList;]
-      [150] invokevirtual #272
+      [150] invokevirtual #275
         + Methodref [java/util/ArrayList.size ()I]
-      [153] anewarray #130
+      [153] anewarray #132
         + Class [java/lang/String]
-      [156] invokevirtual #273
+      [156] invokevirtual #276
         + Methodref [java/util/ArrayList.toArray ([Ljava/lang/Object;)[Ljava/lang/Object;]
-      [159] checkcast #85
+      [159] checkcast #87
         + Class [[Ljava/lang/String;]
       [162] astore v5
       [164] aload_0 v0
-      [165] getfield #148
+      [165] getfield #150
         + Fieldref [com/mycompany/overtest/ListEditor.i Landroid/widget/ListView;]
-      [168] new #117
+      [168] new #119
         + Class [com/mycompany/overtest/s]
       [171] dup
       [172] aload_0 v0
       [173] aload v5
-      [175] invokespecial #233
+      [175] invokespecial #235
         + Methodref [com/mycompany/overtest/s.<init> (Landroid/content/Context;[Ljava/lang/String;)V]
-      [178] invokevirtual #194
+      [178] invokevirtual #196
         + Methodref [android/widget/ListView.setAdapter (Landroid/widget/ListAdapter;)V]
       [181] return
       Code attribute exceptions (count = 0):
@@ -7056,142 +7118,142 @@ Methods (count = 27):
     Class member attributes (count = 1):
     + Code attribute instructions (code length = 191, locals = 6, stack = 5):
       [0] aload_1 v1
-      [1] checkcast #105
+      [1] checkcast #107
         + Class [android/widget/Button]
       [4] astore_2 v2
       [5] aload_2 v2
-      [6] invokevirtual #192
+      [6] invokevirtual #194
         + Methodref [android/widget/Button.getContentDescription ()Ljava/lang/CharSequence;]
-      [9] invokeinterface #283
+      [9] invokeinterface #286
         + InterfaceMethodref [java/lang/CharSequence.toString ()Ljava/lang/String;]
       [14] astore_3 v3
-      [15] ldc #50
+      [15] ldc #51
         + String [Files]
-      [17] new #131
+      [17] new #133
         + Class [java/lang/StringBuilder]
       [20] dup
-      [21] invokespecial #262
+      [21] invokespecial #265
         + Methodref [java/lang/StringBuilder.<init> ()V]
-      [24] ldc #68
+      [24] ldc #70
         + String [TEXT: ]
-      [26] invokevirtual #266
+      [26] invokevirtual #269
         + Methodref [java/lang/StringBuilder.append (Ljava/lang/String;)Ljava/lang/StringBuilder;]
       [29] aload_3 v3
-      [30] invokevirtual #266
+      [30] invokevirtual #269
         + Methodref [java/lang/StringBuilder.append (Ljava/lang/String;)Ljava/lang/StringBuilder;]
-      [33] invokevirtual #267
+      [33] invokevirtual #270
         + Methodref [java/lang/StringBuilder.toString ()Ljava/lang/String;]
-      [36] invokestatic #186
+      [36] invokestatic #188
         + Methodref [android/util/Log.d (Ljava/lang/String;Ljava/lang/String;)I]
       [39] pop
-      [40] ldc #50
+      [40] ldc #51
         + String [Files]
-      [42] new #131
+      [42] new #133
         + Class [java/lang/StringBuilder]
       [45] dup
-      [46] invokespecial #262
+      [46] invokespecial #265
         + Methodref [java/lang/StringBuilder.<init> ()V]
-      [49] ldc #68
+      [49] ldc #70
         + String [TEXT: ]
-      [51] invokevirtual #266
+      [51] invokevirtual #269
         + Methodref [java/lang/StringBuilder.append (Ljava/lang/String;)Ljava/lang/StringBuilder;]
       [54] aload_0 v0
       [55] aload_3 v3
-      [56] invokevirtual #206
+      [56] invokevirtual #208
         + Methodref [com/mycompany/overtest/ListEditor.b (Ljava/lang/String;)I]
-      [59] invokevirtual #263
+      [59] invokevirtual #266
         + Methodref [java/lang/StringBuilder.append (I)Ljava/lang/StringBuilder;]
-      [62] invokevirtual #267
+      [62] invokevirtual #270
         + Methodref [java/lang/StringBuilder.toString ()Ljava/lang/String;]
-      [65] invokestatic #186
+      [65] invokestatic #188
         + Methodref [android/util/Log.d (Ljava/lang/String;Ljava/lang/String;)I]
       [68] pop
       [69] aload_0 v0
       [70] aload_3 v3
-      [71] invokevirtual #206
+      [71] invokevirtual #208
         + Methodref [com/mycompany/overtest/ListEditor.b (Ljava/lang/String;)I]
       [74] istore v4
       [76] iload v4
       [78] aload_0 v0
-      [79] getfield #149
+      [79] getfield #151
         + Fieldref [com/mycompany/overtest/ListEditor.j Ljava/util/ArrayList;]
-      [82] invokevirtual #272
+      [82] invokevirtual #275
         + Methodref [java/util/ArrayList.size ()I]
       [85] iconst_1
       [86] isub
       [87] ificmpne +14 (target=101)
-      [90] ldc #50
+      [90] ldc #51
         + String [Files]
-      [92] ldc #53
+      [92] ldc #54
         + String [ITEM IS LAST]
-      [94] invokestatic #186
+      [94] invokestatic #188
         + Methodref [android/util/Log.d (Ljava/lang/String;Ljava/lang/String;)I]
       [97] pop
       [98] goto +53 (target=151)
-      [101] ldc #50
+      [101] ldc #51
         + String [Files]
-      [103] new #131
+      [103] new #133
         + Class [java/lang/StringBuilder]
       [106] dup
-      [107] invokespecial #262
+      [107] invokespecial #265
         + Methodref [java/lang/StringBuilder.<init> ()V]
-      [110] ldc #62
+      [110] ldc #64
         + String [SIZE: ]
-      [112] invokevirtual #266
+      [112] invokevirtual #269
         + Methodref [java/lang/StringBuilder.append (Ljava/lang/String;)Ljava/lang/StringBuilder;]
       [115] aload_0 v0
-      [116] getfield #149
+      [116] getfield #151
         + Fieldref [com/mycompany/overtest/ListEditor.j Ljava/util/ArrayList;]
-      [119] invokevirtual #272
+      [119] invokevirtual #275
         + Methodref [java/util/ArrayList.size ()I]
-      [122] invokevirtual #263
+      [122] invokevirtual #266
         + Methodref [java/lang/StringBuilder.append (I)Ljava/lang/StringBuilder;]
-      [125] invokevirtual #267
+      [125] invokevirtual #270
         + Methodref [java/lang/StringBuilder.toString ()Ljava/lang/String;]
-      [128] invokestatic #186
+      [128] invokestatic #188
         + Methodref [android/util/Log.d (Ljava/lang/String;Ljava/lang/String;)I]
       [131] pop
       [132] aload_0 v0
-      [133] getfield #149
+      [133] getfield #151
         + Fieldref [com/mycompany/overtest/ListEditor.j Ljava/util/ArrayList;]
       [136] aload_0 v0
       [137] aload_3 v3
-      [138] invokevirtual #206
+      [138] invokevirtual #208
         + Methodref [com/mycompany/overtest/ListEditor.b (Ljava/lang/String;)I]
       [141] aload_0 v0
       [142] aload_3 v3
-      [143] invokevirtual #206
+      [143] invokevirtual #208
         + Methodref [com/mycompany/overtest/ListEditor.b (Ljava/lang/String;)I]
       [146] iconst_1
       [147] iadd
-      [148] invokestatic #275
+      [148] invokestatic #278
         + Methodref [java/util/Collections.swap (Ljava/util/List;II)V]
       [151] aload_0 v0
-      [152] getfield #149
+      [152] getfield #151
         + Fieldref [com/mycompany/overtest/ListEditor.j Ljava/util/ArrayList;]
       [155] aload_0 v0
-      [156] getfield #149
+      [156] getfield #151
         + Fieldref [com/mycompany/overtest/ListEditor.j Ljava/util/ArrayList;]
-      [159] invokevirtual #272
+      [159] invokevirtual #275
         + Methodref [java/util/ArrayList.size ()I]
-      [162] anewarray #130
+      [162] anewarray #132
         + Class [java/lang/String]
-      [165] invokevirtual #273
+      [165] invokevirtual #276
         + Methodref [java/util/ArrayList.toArray ([Ljava/lang/Object;)[Ljava/lang/Object;]
-      [168] checkcast #85
+      [168] checkcast #87
         + Class [[Ljava/lang/String;]
       [171] astore v5
       [173] aload_0 v0
-      [174] getfield #148
+      [174] getfield #150
         + Fieldref [com/mycompany/overtest/ListEditor.i Landroid/widget/ListView;]
-      [177] new #117
+      [177] new #119
         + Class [com/mycompany/overtest/s]
       [180] dup
       [181] aload_0 v0
       [182] aload v5
-      [184] invokespecial #233
+      [184] invokespecial #235
         + Methodref [com/mycompany/overtest/s.<init> (Landroid/content/Context;[Ljava/lang/String;)V]
-      [187] invokevirtual #194
+      [187] invokevirtual #196
         + Methodref [android/widget/ListView.setAdapter (Landroid/widget/ListAdapter;)V]
       [190] return
       Code attribute exceptions (count = 0):
@@ -7205,74 +7267,74 @@ Methods (count = 27):
     Class member attributes (count = 1):
     + Code attribute instructions (code length = 98, locals = 6, stack = 5):
       [0] aload_1 v1
-      [1] checkcast #105
+      [1] checkcast #107
         + Class [android/widget/Button]
       [4] astore_2 v2
       [5] aload_2 v2
-      [6] invokevirtual #192
+      [6] invokevirtual #194
         + Methodref [android/widget/Button.getContentDescription ()Ljava/lang/CharSequence;]
-      [9] invokeinterface #283
+      [9] invokeinterface #286
         + InterfaceMethodref [java/lang/CharSequence.toString ()Ljava/lang/String;]
       [14] astore_3 v3
-      [15] new #95
+      [15] new #97
         + Class [android/os/Bundle]
       [18] dup
-      [19] invokespecial #182
+      [19] invokespecial #184
         + Methodref [android/os/Bundle.<init> ()V]
       [22] astore v4
-      [24] ldc #78
+      [24] ldc #80
         + String [file name]
       [26] astore v5
       [28] aload v4
       [30] aload v5
       [32] aload_3 v3
-      [33] invokevirtual #183
+      [33] invokevirtual #185
         + Methodref [android/os/Bundle.putString (Ljava/lang/String;Ljava/lang/String;)V]
-      [36] ldc #50
+      [36] ldc #51
         + String [Files]
-      [38] new #131
+      [38] new #133
         + Class [java/lang/StringBuilder]
       [41] dup
-      [42] invokespecial #262
+      [42] invokespecial #265
         + Methodref [java/lang/StringBuilder.<init> ()V]
-      [45] ldc #41
+      [45] ldc #42
         + String [BUNDLE: ]
-      [47] invokevirtual #266
+      [47] invokevirtual #269
         + Methodref [java/lang/StringBuilder.append (Ljava/lang/String;)Ljava/lang/StringBuilder;]
       [50] aload_3 v3
-      [51] invokevirtual #266
+      [51] invokevirtual #269
         + Methodref [java/lang/StringBuilder.append (Ljava/lang/String;)Ljava/lang/StringBuilder;]
-      [54] invokevirtual #267
+      [54] invokevirtual #270
         + Methodref [java/lang/StringBuilder.toString ()Ljava/lang/String;]
-      [57] invokestatic #186
+      [57] invokestatic #188
         + Methodref [android/util/Log.d (Ljava/lang/String;Ljava/lang/String;)I]
       [60] pop
       [61] aload_3 v3
-      [62] putstatic #142
+      [62] putstatic #144
         + Fieldref [com/mycompany/overtest/ListEditor.c Ljava/lang/String;]
       [65] aload_0 v0
-      [66] new #88
+      [66] new #90
         + Class [android/content/Intent]
       [69] dup
       [70] aload_0 v0
-      [71] ldc #110
+      [71] ldc #112
         + Class [com/mycompany/overtest/Draw]
-      [73] invokespecial #164
+      [73] invokespecial #166
         + Methodref [android/content/Intent.<init> (Landroid/content/Context;Ljava/lang/Class;)V]
-      [76] putfield #141
+      [76] putfield #143
         + Fieldref [com/mycompany/overtest/ListEditor.b Landroid/content/Intent;]
       [79] aload_0 v0
-      [80] getfield #141
+      [80] getfield #143
         + Fieldref [com/mycompany/overtest/ListEditor.b Landroid/content/Intent;]
       [83] aload v4
-      [85] invokevirtual #169
+      [85] invokevirtual #171
         + Methodref [android/content/Intent.putExtras (Landroid/os/Bundle;)Landroid/content/Intent;]
       [88] pop
       [89] aload_0 v0
       [90] aload_0 v0
-      [91] getfield #141
+      [91] getfield #143
         + Fieldref [com/mycompany/overtest/ListEditor.b Landroid/content/Intent;]
-      [94] invokevirtual #218
+      [94] invokevirtual #220
         + Methodref [com/mycompany/overtest/ListEditor.startActivity (Landroid/content/Intent;)V]
       [97] return
       Code attribute exceptions (count = 0):
@@ -7283,57 +7345,57 @@ Methods (count = 27):
     Class member attributes (count = 1):
     + Code attribute instructions (code length = 74, locals = 5, stack = 6):
       [0] aload_1 v1
-      [1] checkcast #105
+      [1] checkcast #107
         + Class [android/widget/Button]
       [4] astore_2 v2
       [5] aload_2 v2
-      [6] invokevirtual #192
+      [6] invokevirtual #194
         + Methodref [android/widget/Button.getContentDescription ()Ljava/lang/CharSequence;]
-      [9] invokeinterface #283
+      [9] invokeinterface #286
         + InterfaceMethodref [java/lang/CharSequence.toString ()Ljava/lang/String;]
       [14] astore_3 v3
       [15] aload_3 v3
       [16] astore v4
-      [18] new #87
+      [18] new #89
         + Class [android/app/AlertDialog$Builder]
       [21] dup
       [22] aload_0 v0
-      [23] invokespecial #156
+      [23] invokespecial #158
         + Methodref [android/app/AlertDialog$Builder.<init> (Landroid/content/Context;)V]
-      [26] ldc #43
+      [26] ldc #44
         + String [Delete screenshot]
-      [28] invokevirtual #161
+      [28] invokevirtual #163
         + Methodref [android/app/AlertDialog$Builder.setTitle (Ljava/lang/CharSequence;)Landroid/app/AlertDialog$Builder;]
-      [31] ldc #70
+      [31] ldc #72
         + String [This screenshot will be deleted!]
-      [33] invokevirtual #158
+      [33] invokevirtual #160
         + Methodref [android/app/AlertDialog$Builder.setMessage (Ljava/lang/CharSequence;)Landroid/app/AlertDialog$Builder;]
       [36] ldc #3
         + Integer [17039379]
-      [38] new #114
+      [38] new #116
         + Class [com/mycompany/overtest/l]
       [41] dup
       [42] aload_0 v0
       [43] aload v4
-      [45] invokespecial #230
+      [45] invokespecial #232
         + Methodref [com/mycompany/overtest/l.<init> (Lcom/mycompany/overtest/ListEditor;Ljava/lang/String;)V]
-      [48] invokevirtual #160
+      [48] invokevirtual #162
         + Methodref [android/app/AlertDialog$Builder.setPositiveButton (ILandroid/content/DialogInterface$OnClickListener;)Landroid/app/AlertDialog$Builder;]
       [51] ldc #2
         + Integer [17039369]
-      [53] new #113
+      [53] new #115
         + Class [com/mycompany/overtest/k]
       [56] dup
       [57] aload_0 v0
-      [58] invokespecial #229
+      [58] invokespecial #231
         + Methodref [com/mycompany/overtest/k.<init> (Lcom/mycompany/overtest/ListEditor;)V]
-      [61] invokevirtual #159
+      [61] invokevirtual #161
         + Methodref [android/app/AlertDialog$Builder.setNegativeButton (ILandroid/content/DialogInterface$OnClickListener;)Landroid/app/AlertDialog$Builder;]
       [64] ldc #4
         + Integer [17301543]
-      [66] invokevirtual #157
+      [66] invokevirtual #159
         + Methodref [android/app/AlertDialog$Builder.setIcon (I)Landroid/app/AlertDialog$Builder;]
-      [69] invokevirtual #162
+      [69] invokevirtual #164
         + Methodref [android/app/AlertDialog$Builder.show ()Landroid/app/AlertDialog;]
       [72] pop
       [73] return
@@ -7345,75 +7407,75 @@ Methods (count = 27):
     Class member attributes (count = 1):
     + Code attribute instructions (code length = 102, locals = 6, stack = 5):
       [0] aload_1 v1
-      [1] checkcast #105
+      [1] checkcast #107
         + Class [android/widget/Button]
       [4] astore_2 v2
       [5] aload_2 v2
-      [6] invokevirtual #192
+      [6] invokevirtual #194
         + Methodref [android/widget/Button.getContentDescription ()Ljava/lang/CharSequence;]
-      [9] invokeinterface #283
+      [9] invokeinterface #286
         + InterfaceMethodref [java/lang/CharSequence.toString ()Ljava/lang/String;]
       [14] astore_3 v3
       [15] aload_0 v0
       [16] aload_3 v3
-      [17] putfield #143
+      [17] putfield #145
         + Fieldref [com/mycompany/overtest/ListEditor.d Ljava/lang/String;]
-      [20] new #88
+      [20] new #90
         + Class [android/content/Intent]
       [23] dup
-      [24] invokespecial #163
+      [24] invokespecial #165
         + Methodref [android/content/Intent.<init> ()V]
       [27] astore v4
       [29] aload v4
-      [31] ldc #79
+      [31] ldc #81
         + String [image/*]
-      [33] invokevirtual #172
+      [33] invokevirtual #174
         + Methodref [android/content/Intent.setType (Ljava/lang/String;)Landroid/content/Intent;]
       [36] pop
       [37] aload v4
-      [39] ldc #73
+      [39] ldc #75
         + String [android.intent.action.GET_CONTENT]
-      [41] invokevirtual #170
+      [41] invokevirtual #172
         + Methodref [android/content/Intent.setAction (Ljava/lang/String;)Landroid/content/Intent;]
       [44] pop
       [45] aload_0 v0
       [46] aload v4
-      [48] ldc #67
+      [48] ldc #69
         + String [Switch Picture]
-      [50] invokestatic #166
+      [50] invokestatic #168
         + Methodref [android/content/Intent.createChooser (Landroid/content/Intent;Ljava/lang/CharSequence;)Landroid/content/Intent;]
       [53] iconst_2
-      [54] invokevirtual #219
+      [54] invokevirtual #221
         + Methodref [com/mycompany/overtest/ListEditor.startActivityForResult (Landroid/content/Intent;I)V]
       [57] aload_0 v0
-      [58] getfield #149
+      [58] getfield #151
         + Fieldref [com/mycompany/overtest/ListEditor.j Ljava/util/ArrayList;]
       [61] aload_0 v0
-      [62] getfield #149
+      [62] getfield #151
         + Fieldref [com/mycompany/overtest/ListEditor.j Ljava/util/ArrayList;]
-      [65] invokevirtual #272
+      [65] invokevirtual #275
         + Methodref [java/util/ArrayList.size ()I]
-      [68] anewarray #130
+      [68] anewarray #132
         + Class [java/lang/String]
-      [71] invokevirtual #273
+      [71] invokevirtual #276
         + Methodref [java/util/ArrayList.toArray ([Ljava/lang/Object;)[Ljava/lang/Object;]
-      [74] checkcast #85
+      [74] checkcast #87
         + Class [[Ljava/lang/String;]
       [77] astore v5
       [79] aload v5
-      [81] invokestatic #274
+      [81] invokestatic #277
         + Methodref [java/util/Arrays.sort ([Ljava/lang/Object;)V]
       [84] aload_0 v0
-      [85] getfield #148
+      [85] getfield #150
         + Fieldref [com/mycompany/overtest/ListEditor.i Landroid/widget/ListView;]
-      [88] new #117
+      [88] new #119
         + Class [com/mycompany/overtest/s]
       [91] dup
       [92] aload_0 v0
       [93] aload v5
-      [95] invokespecial #233
+      [95] invokespecial #235
         + Methodref [com/mycompany/overtest/s.<init> (Landroid/content/Context;[Ljava/lang/String;)V]
-      [98] invokevirtual #194
+      [98] invokevirtual #196
         + Methodref [android/widget/ListView.setAdapter (Landroid/widget/ListAdapter;)V]
       [101] return
       Code attribute exceptions (count = 0):
@@ -7424,28 +7486,28 @@ Methods (count = 27):
     Class member attributes (count = 1):
     + Code attribute instructions (code length = 34, locals = 3, stack = 2):
       [0] aload_1 v1
-      [1] checkcast #105
+      [1] checkcast #107
         + Class [android/widget/Button]
       [4] astore_2 v2
       [5] aload_0 v0
       [6] aload_2 v2
-      [7] invokevirtual #192
+      [7] invokevirtual #194
         + Methodref [android/widget/Button.getContentDescription ()Ljava/lang/CharSequence;]
-      [10] invokeinterface #283
+      [10] invokeinterface #286
         + InterfaceMethodref [java/lang/CharSequence.toString ()Ljava/lang/String;]
-      [15] putfield #144
+      [15] putfield #146
         + Fieldref [com/mycompany/overtest/ListEditor.e Ljava/lang/String;]
       [18] aload_0 v0
       [19] aload_1 v1
-      [20] invokevirtual #216
+      [20] invokevirtual #218
         + Methodref [com/mycompany/overtest/ListEditor.registerForContextMenu (Landroid/view/View;)V]
       [23] aload_0 v0
       [24] aload_1 v1
-      [25] invokevirtual #214
+      [25] invokevirtual #216
         + Methodref [com/mycompany/overtest/ListEditor.openContextMenu (Landroid/view/View;)V]
       [28] aload_0 v0
       [29] aload_1 v1
-      [30] invokevirtual #220
+      [30] invokevirtual #222
         + Methodref [com/mycompany/overtest/ListEditor.unregisterForContextMenu (Landroid/view/View;)V]
       [33] return
       Code attribute exceptions (count = 0):
@@ -7456,28 +7518,28 @@ Methods (count = 27):
     Class member attributes (count = 1):
     + Code attribute instructions (code length = 34, locals = 3, stack = 2):
       [0] aload_1 v1
-      [1] checkcast #108
+      [1] checkcast #110
         + Class [android/widget/TextView]
       [4] astore_2 v2
       [5] aload_0 v0
       [6] aload_2 v2
-      [7] invokevirtual #195
+      [7] invokevirtual #197
         + Methodref [android/widget/TextView.getContentDescription ()Ljava/lang/CharSequence;]
-      [10] invokeinterface #283
+      [10] invokeinterface #286
         + InterfaceMethodref [java/lang/CharSequence.toString ()Ljava/lang/String;]
-      [15] putfield #144
+      [15] putfield #146
         + Fieldref [com/mycompany/overtest/ListEditor.e Ljava/lang/String;]
       [18] aload_0 v0
       [19] aload_1 v1
-      [20] invokevirtual #216
+      [20] invokevirtual #218
         + Methodref [com/mycompany/overtest/ListEditor.registerForContextMenu (Landroid/view/View;)V]
       [23] aload_0 v0
       [24] aload_1 v1
-      [25] invokevirtual #214
+      [25] invokevirtual #216
         + Methodref [com/mycompany/overtest/ListEditor.openContextMenu (Landroid/view/View;)V]
       [28] aload_0 v0
       [29] aload_1 v1
-      [30] invokevirtual #220
+      [30] invokevirtual #222
         + Methodref [com/mycompany/overtest/ListEditor.unregisterForContextMenu (Landroid/view/View;)V]
       [33] return
       Code attribute exceptions (count = 0):
@@ -7488,28 +7550,28 @@ Methods (count = 27):
     Class member attributes (count = 1):
     + Code attribute instructions (code length = 34, locals = 3, stack = 2):
       [0] aload_1 v1
-      [1] checkcast #106
+      [1] checkcast #108
         + Class [android/widget/ImageView]
       [4] astore_2 v2
       [5] aload_0 v0
       [6] aload_2 v2
-      [7] invokevirtual #193
+      [7] invokevirtual #195
         + Methodref [android/widget/ImageView.getContentDescription ()Ljava/lang/CharSequence;]
-      [10] invokeinterface #283
+      [10] invokeinterface #286
         + InterfaceMethodref [java/lang/CharSequence.toString ()Ljava/lang/String;]
-      [15] putfield #144
+      [15] putfield #146
         + Fieldref [com/mycompany/overtest/ListEditor.e Ljava/lang/String;]
       [18] aload_0 v0
       [19] aload_1 v1
-      [20] invokevirtual #216
+      [20] invokevirtual #218
         + Methodref [com/mycompany/overtest/ListEditor.registerForContextMenu (Landroid/view/View;)V]
       [23] aload_0 v0
       [24] aload_1 v1
-      [25] invokevirtual #214
+      [25] invokevirtual #216
         + Methodref [com/mycompany/overtest/ListEditor.openContextMenu (Landroid/view/View;)V]
       [28] aload_0 v0
       [29] aload_1 v1
-      [30] invokevirtual #220
+      [30] invokevirtual #222
         + Methodref [com/mycompany/overtest/ListEditor.unregisterForContextMenu (Landroid/view/View;)V]
       [33] return
       Code attribute exceptions (count = 0):
@@ -7523,10 +7585,10 @@ Methods (count = 27):
       [1] aload_1 v1
       [2] aload_2 v2
       [3] aload_3 v3
-      [4] invokespecial #154
+      [4] invokespecial #156
         + Methodref [android/app/Activity.onCreateContextMenu (Landroid/view/ContextMenu;Landroid/view/View;Landroid/view/ContextMenu$ContextMenuInfo;)V]
       [7] aload_2 v2
-      [8] invokevirtual #191
+      [8] invokevirtual #193
         + Methodref [android/view/View.getId ()I]
       [11] lookupswitch (2 offsets, default=38) (target=49)
         2131099648: offset = 33, target = 44
@@ -7534,12 +7596,12 @@ Methods (count = 27):
         default: offset = 38, target = 49
       [36] aload_0 v0
       [37] aload_1 v1
-      [38] invokespecial #205
+      [38] invokespecial #207
         + Methodref [com/mycompany/overtest/ListEditor.b (Landroid/view/Menu;)V]
       [41] goto +8 (target=49)
       [44] aload_0 v0
       [45] aload_1 v1
-      [46] invokespecial #200
+      [46] invokespecial #202
         + Methodref [com/mycompany/overtest/ListEditor.a (Landroid/view/Menu;)V]
       [49] return
       Code attribute exceptions (count = 0):
@@ -7555,7 +7617,7 @@ Methods (count = 27):
     + Code attribute instructions (code length = 6, locals = 2, stack = 2):
       [0] aload_0 v0
       [1] aload_1 v1
-      [2] invokespecial #201
+      [2] invokespecial #203
         + Methodref [com/mycompany/overtest/ListEditor.a (Landroid/view/MenuItem;)Z]
       [5] ireturn
       Code attribute exceptions (count = 0):
@@ -7569,42 +7631,42 @@ Methods (count = 27):
       [1] iconst_0
       [2] bipush 8
       [4] bipush 8
-      [6] ldc #46
+      [6] ldc #47
         + String [Draw]
-      [8] invokeinterface #279
+      [8] invokeinterface #282
         + InterfaceMethodref [android/view/Menu.add (IIILjava/lang/CharSequence;)Landroid/view/MenuItem;]
       [13] astore_2 v2
       [14] aload_2 v2
       [15] bipush 105
-      [17] invokeinterface #281
+      [17] invokeinterface #284
         + InterfaceMethodref [android/view/MenuItem.setAlphabeticShortcut (C)Landroid/view/MenuItem;]
       [22] pop
       [23] aload_1 v1
       [24] iconst_0
       [25] bipush 10
       [27] bipush 10
-      [29] ldc #66
+      [29] ldc #68
         + String [Switch]
-      [31] invokeinterface #279
+      [31] invokeinterface #282
         + InterfaceMethodref [android/view/Menu.add (IIILjava/lang/CharSequence;)Landroid/view/MenuItem;]
       [36] astore_3 v3
       [37] aload_3 v3
       [38] bipush 107
-      [40] invokeinterface #281
+      [40] invokeinterface #284
         + InterfaceMethodref [android/view/MenuItem.setAlphabeticShortcut (C)Landroid/view/MenuItem;]
       [45] pop
       [46] aload_1 v1
       [47] iconst_0
       [48] bipush 11
       [50] bipush 11
-      [52] ldc #42
+      [52] ldc #43
         + String [Delete]
-      [54] invokeinterface #279
+      [54] invokeinterface #282
         + InterfaceMethodref [android/view/Menu.add (IIILjava/lang/CharSequence;)Landroid/view/MenuItem;]
       [59] astore v4
       [61] aload v4
       [63] bipush 108
-      [65] invokeinterface #281
+      [65] invokeinterface #284
         + InterfaceMethodref [android/view/MenuItem.setAlphabeticShortcut (C)Landroid/view/MenuItem;]
       [70] pop
       [71] return
@@ -7619,112 +7681,112 @@ Methods (count = 27):
       [1] iconst_0
       [2] iconst_0
       [3] iconst_0
-      [4] ldc #38
+      [4] ldc #39
         + String [Add "Tap"]
-      [6] invokeinterface #279
+      [6] invokeinterface #282
         + InterfaceMethodref [android/view/Menu.add (IIILjava/lang/CharSequence;)Landroid/view/MenuItem;]
       [11] astore_2 v2
       [12] aload_2 v2
       [13] bipush 97
-      [15] invokeinterface #281
+      [15] invokeinterface #284
         + InterfaceMethodref [android/view/MenuItem.setAlphabeticShortcut (C)Landroid/view/MenuItem;]
       [20] pop
       [21] aload_1 v1
       [22] iconst_0
       [23] iconst_1
       [24] iconst_1
-      [25] ldc #32
+      [25] ldc #33
         + String [Add "Double tap"]
-      [27] invokeinterface #279
+      [27] invokeinterface #282
         + InterfaceMethodref [android/view/Menu.add (IIILjava/lang/CharSequence;)Landroid/view/MenuItem;]
       [32] astore_3 v3
       [33] aload_3 v3
       [34] bipush 98
-      [36] invokeinterface #281
+      [36] invokeinterface #284
         + InterfaceMethodref [android/view/MenuItem.setAlphabeticShortcut (C)Landroid/view/MenuItem;]
       [41] pop
       [42] aload_1 v1
       [43] iconst_0
       [44] iconst_2
       [45] iconst_2
-      [46] ldc #36
+      [46] ldc #37
         + String [Add "Press"]
-      [48] invokeinterface #279
+      [48] invokeinterface #282
         + InterfaceMethodref [android/view/Menu.add (IIILjava/lang/CharSequence;)Landroid/view/MenuItem;]
       [53] astore v4
       [55] aload v4
       [57] bipush 99
-      [59] invokeinterface #281
+      [59] invokeinterface #284
         + InterfaceMethodref [android/view/MenuItem.setAlphabeticShortcut (C)Landroid/view/MenuItem;]
       [64] pop
       [65] aload_1 v1
       [66] iconst_0
       [67] iconst_3
       [68] iconst_3
-      [69] ldc #35
+      [69] ldc #36
         + String [Add "Press long"]
-      [71] invokeinterface #279
+      [71] invokeinterface #282
         + InterfaceMethodref [android/view/Menu.add (IIILjava/lang/CharSequence;)Landroid/view/MenuItem;]
       [76] astore v5
       [78] aload v5
       [80] bipush 100
-      [82] invokeinterface #281
+      [82] invokeinterface #284
         + InterfaceMethodref [android/view/MenuItem.setAlphabeticShortcut (C)Landroid/view/MenuItem;]
       [87] pop
       [88] aload_1 v1
       [89] iconst_0
       [90] iconst_4
       [91] iconst_4
-      [92] ldc #37
+      [92] ldc #38
         + String [Add "Swipe"]
-      [94] invokeinterface #279
+      [94] invokeinterface #282
         + InterfaceMethodref [android/view/Menu.add (IIILjava/lang/CharSequence;)Landroid/view/MenuItem;]
       [99] astore v6
       [101] aload v6
       [103] bipush 101
-      [105] invokeinterface #281
+      [105] invokeinterface #284
         + InterfaceMethodref [android/view/MenuItem.setAlphabeticShortcut (C)Landroid/view/MenuItem;]
       [110] pop
       [111] aload_1 v1
       [112] iconst_0
       [113] iconst_5
       [114] iconst_5
-      [115] ldc #33
+      [115] ldc #34
         + String [Add "Drug"]
-      [117] invokeinterface #279
+      [117] invokeinterface #282
         + InterfaceMethodref [android/view/Menu.add (IIILjava/lang/CharSequence;)Landroid/view/MenuItem;]
       [122] astore v7
       [124] aload v7
       [126] bipush 102
-      [128] invokeinterface #281
+      [128] invokeinterface #284
         + InterfaceMethodref [android/view/MenuItem.setAlphabeticShortcut (C)Landroid/view/MenuItem;]
       [133] pop
       [134] aload_1 v1
       [135] iconst_0
       [136] bipush 6
       [138] bipush 6
-      [140] ldc #34
+      [140] ldc #35
         + String [Add "Pinch"]
-      [142] invokeinterface #279
+      [142] invokeinterface #282
         + InterfaceMethodref [android/view/Menu.add (IIILjava/lang/CharSequence;)Landroid/view/MenuItem;]
       [147] astore v8
       [149] aload v8
       [151] bipush 103
-      [153] invokeinterface #281
+      [153] invokeinterface #284
         + InterfaceMethodref [android/view/MenuItem.setAlphabeticShortcut (C)Landroid/view/MenuItem;]
       [158] pop
       [159] aload_1 v1
       [160] iconst_0
       [161] bipush 7
       [163] bipush 7
-      [165] ldc #39
+      [165] ldc #40
         + String [Add description]
-      [167] invokeinterface #279
+      [167] invokeinterface #282
         + InterfaceMethodref [android/view/Menu.add (IIILjava/lang/CharSequence;)Landroid/view/MenuItem;]
       [172] astore v9
       [174] aload v9
       [176] bipush 104
-      [178] invokeinterface #281
+      [178] invokeinterface #284
         + InterfaceMethodref [android/view/MenuItem.setAlphabeticShortcut (C)Landroid/view/MenuItem;]
       [183] pop
       [184] return
@@ -7735,38 +7797,38 @@ Methods (count = 27):
       = private boolean a(android.view.MenuItem)
     Class member attributes (count = 1):
     + Code attribute instructions (code length = 1210, locals = 11, stack = 6):
-      [0] new #118
+      [0] new #120
         + Class [java/io/File]
       [3] dup
-      [4] new #131
+      [4] new #133
         + Class [java/lang/StringBuilder]
       [7] dup
-      [8] invokespecial #262
+      [8] invokespecial #265
         + Methodref [java/lang/StringBuilder.<init> ()V]
-      [11] invokestatic #184
+      [11] invokestatic #186
         + Methodref [android/os/Environment.getExternalStorageDirectory ()Ljava/io/File;]
-      [14] invokevirtual #265
+      [14] invokevirtual #268
         + Methodref [java/lang/StringBuilder.append (Ljava/lang/Object;)Ljava/lang/StringBuilder;]
-      [17] ldc #17
+      [17] ldc #18
         + String [/MANUAL/settings/]
-      [19] invokevirtual #266
+      [19] invokevirtual #269
         + Methodref [java/lang/StringBuilder.append (Ljava/lang/String;)Ljava/lang/StringBuilder;]
       [22] aload_0 v0
-      [23] getfield #144
+      [23] getfield #146
         + Fieldref [com/mycompany/overtest/ListEditor.e Ljava/lang/String;]
-      [26] invokevirtual #266
+      [26] invokevirtual #269
         + Methodref [java/lang/StringBuilder.append (Ljava/lang/String;)Ljava/lang/StringBuilder;]
-      [29] ldc #16
+      [29] ldc #17
         + String [.txt]
-      [31] invokevirtual #266
+      [31] invokevirtual #269
         + Methodref [java/lang/StringBuilder.append (Ljava/lang/String;)Ljava/lang/StringBuilder;]
-      [34] invokevirtual #267
+      [34] invokevirtual #270
         + Methodref [java/lang/StringBuilder.toString ()Ljava/lang/String;]
-      [37] invokespecial #235
+      [37] invokespecial #237
         + Methodref [java/io/File.<init> (Ljava/lang/String;)V]
       [40] astore_2 v2
       [41] aload_1 v1
-      [42] invokeinterface #280
+      [42] invokeinterface #283
         + InterfaceMethodref [android/view/MenuItem.getItemId ()I]
       [47] tableswitch (12 offsets, default=1161) (target=1208)
         0: offset = 61, target = 108
@@ -7783,560 +7845,560 @@ Methods (count = 27):
         11: offset = 1100, target = 1147
         default: offset = 1161, target = 1208
       [108] aload_2 v2
-      [109] invokevirtual #238
+      [109] invokevirtual #240
         + Methodref [java/io/File.exists ()Z]
       [112] ifeq +55 (target=167)
       [115] aload_2 v2
-      [116] invokevirtual #237
+      [116] invokevirtual #239
         + Methodref [java/io/File.delete ()Z]
       [119] pop
       [120] iconst_1
-      [121] anewarray #130
+      [121] anewarray #132
         + Class [java/lang/String]
       [124] astore_3 v3
       [125] aload_3 v3
       [126] iconst_0
-      [127] ldc #69
+      [127] ldc #71
         + String [Tap]
       [129] aastore
       [130] aload_0 v0
-      [131] getfield #140
+      [131] getfield #142
         + Fieldref [com/mycompany/overtest/ListEditor.a Lcom/mycompany/overtest/a;]
-      [134] new #131
+      [134] new #133
         + Class [java/lang/StringBuilder]
       [137] dup
-      [138] invokespecial #262
+      [138] invokespecial #265
         + Methodref [java/lang/StringBuilder.<init> ()V]
       [141] aload_0 v0
-      [142] getfield #144
+      [142] getfield #146
         + Fieldref [com/mycompany/overtest/ListEditor.e Ljava/lang/String;]
-      [145] invokevirtual #266
+      [145] invokevirtual #269
         + Methodref [java/lang/StringBuilder.append (Ljava/lang/String;)Ljava/lang/StringBuilder;]
-      [148] ldc #16
+      [148] ldc #17
         + String [.txt]
-      [150] invokevirtual #266
+      [150] invokevirtual #269
         + Methodref [java/lang/StringBuilder.append (Ljava/lang/String;)Ljava/lang/StringBuilder;]
-      [153] invokevirtual #267
+      [153] invokevirtual #270
         + Methodref [java/lang/StringBuilder.toString ()Ljava/lang/String;]
       [156] aload_3 v3
-      [157] invokevirtual #225
+      [157] invokevirtual #227
         + Methodref [com/mycompany/overtest/a.a (Ljava/lang/String;[Ljava/lang/String;)V]
       [160] aload_0 v0
-      [161] invokevirtual #198
+      [161] invokevirtual #200
         + Methodref [com/mycompany/overtest/ListEditor.a ()V]
       [164] goto +47 (target=211)
       [167] iconst_1
-      [168] anewarray #130
+      [168] anewarray #132
         + Class [java/lang/String]
       [171] astore_3 v3
       [172] aload_3 v3
       [173] iconst_0
-      [174] ldc #69
+      [174] ldc #71
         + String [Tap]
       [176] aastore
       [177] aload_0 v0
-      [178] getfield #140
+      [178] getfield #142
         + Fieldref [com/mycompany/overtest/ListEditor.a Lcom/mycompany/overtest/a;]
-      [181] new #131
+      [181] new #133
         + Class [java/lang/StringBuilder]
       [184] dup
-      [185] invokespecial #262
+      [185] invokespecial #265
         + Methodref [java/lang/StringBuilder.<init> ()V]
       [188] aload_0 v0
-      [189] getfield #144
+      [189] getfield #146
         + Fieldref [com/mycompany/overtest/ListEditor.e Ljava/lang/String;]
-      [192] invokevirtual #266
+      [192] invokevirtual #269
         + Methodref [java/lang/StringBuilder.append (Ljava/lang/String;)Ljava/lang/StringBuilder;]
-      [195] ldc #16
+      [195] ldc #17
         + String [.txt]
-      [197] invokevirtual #266
+      [197] invokevirtual #269
         + Methodref [java/lang/StringBuilder.append (Ljava/lang/String;)Ljava/lang/StringBuilder;]
-      [200] invokevirtual #267
+      [200] invokevirtual #270
         + Methodref [java/lang/StringBuilder.toString ()Ljava/lang/String;]
       [203] aload_3 v3
-      [204] invokevirtual #225
+      [204] invokevirtual #227
         + Methodref [com/mycompany/overtest/a.a (Ljava/lang/String;[Ljava/lang/String;)V]
       [207] aload_0 v0
-      [208] invokevirtual #198
+      [208] invokevirtual #200
         + Methodref [com/mycompany/overtest/ListEditor.a ()V]
       [211] iconst_1
       [212] ireturn
       [213] aload_2 v2
-      [214] invokevirtual #238
+      [214] invokevirtual #240
         + Methodref [java/io/File.exists ()Z]
       [217] ifeq +55 (target=272)
       [220] aload_2 v2
-      [221] invokevirtual #237
+      [221] invokevirtual #239
         + Methodref [java/io/File.delete ()Z]
       [224] pop
       [225] iconst_1
-      [226] anewarray #130
+      [226] anewarray #132
         + Class [java/lang/String]
       [229] astore_3 v3
       [230] aload_3 v3
       [231] iconst_0
-      [232] ldc #44
+      [232] ldc #45
         + String [Double tap]
       [234] aastore
       [235] aload_0 v0
-      [236] getfield #140
+      [236] getfield #142
         + Fieldref [com/mycompany/overtest/ListEditor.a Lcom/mycompany/overtest/a;]
-      [239] new #131
+      [239] new #133
         + Class [java/lang/StringBuilder]
       [242] dup
-      [243] invokespecial #262
+      [243] invokespecial #265
         + Methodref [java/lang/StringBuilder.<init> ()V]
       [246] aload_0 v0
-      [247] getfield #144
+      [247] getfield #146
         + Fieldref [com/mycompany/overtest/ListEditor.e Ljava/lang/String;]
-      [250] invokevirtual #266
+      [250] invokevirtual #269
         + Methodref [java/lang/StringBuilder.append (Ljava/lang/String;)Ljava/lang/StringBuilder;]
-      [253] ldc #16
+      [253] ldc #17
         + String [.txt]
-      [255] invokevirtual #266
+      [255] invokevirtual #269
         + Methodref [java/lang/StringBuilder.append (Ljava/lang/String;)Ljava/lang/StringBuilder;]
-      [258] invokevirtual #267
+      [258] invokevirtual #270
         + Methodref [java/lang/StringBuilder.toString ()Ljava/lang/String;]
       [261] aload_3 v3
-      [262] invokevirtual #225
+      [262] invokevirtual #227
         + Methodref [com/mycompany/overtest/a.a (Ljava/lang/String;[Ljava/lang/String;)V]
       [265] aload_0 v0
-      [266] invokevirtual #198
+      [266] invokevirtual #200
         + Methodref [com/mycompany/overtest/ListEditor.a ()V]
       [269] goto +47 (target=316)
       [272] iconst_1
-      [273] anewarray #130
+      [273] anewarray #132
         + Class [java/lang/String]
       [276] astore_3 v3
       [277] aload_3 v3
       [278] iconst_0
-      [279] ldc #44
+      [279] ldc #45
         + String [Double tap]
       [281] aastore
       [282] aload_0 v0
-      [283] getfield #140
+      [283] getfield #142
         + Fieldref [com/mycompany/overtest/ListEditor.a Lcom/mycompany/overtest/a;]
-      [286] new #131
+      [286] new #133
         + Class [java/lang/StringBuilder]
       [289] dup
-      [290] invokespecial #262
+      [290] invokespecial #265
         + Methodref [java/lang/StringBuilder.<init> ()V]
       [293] aload_0 v0
-      [294] getfield #144
+      [294] getfield #146
         + Fieldref [com/mycompany/overtest/ListEditor.e Ljava/lang/String;]
-      [297] invokevirtual #266
+      [297] invokevirtual #269
         + Methodref [java/lang/StringBuilder.append (Ljava/lang/String;)Ljava/lang/StringBuilder;]
-      [300] ldc #16
+      [300] ldc #17
         + String [.txt]
-      [302] invokevirtual #266
+      [302] invokevirtual #269
         + Methodref [java/lang/StringBuilder.append (Ljava/lang/String;)Ljava/lang/StringBuilder;]
-      [305] invokevirtual #267
+      [305] invokevirtual #270
         + Methodref [java/lang/StringBuilder.toString ()Ljava/lang/String;]
       [308] aload_3 v3
-      [309] invokevirtual #225
+      [309] invokevirtual #227
         + Methodref [com/mycompany/overtest/a.a (Ljava/lang/String;[Ljava/lang/String;)V]
       [312] aload_0 v0
-      [313] invokevirtual #198
+      [313] invokevirtual #200
         + Methodref [com/mycompany/overtest/ListEditor.a ()V]
       [316] iconst_1
       [317] ireturn
       [318] aload_2 v2
-      [319] invokevirtual #238
+      [319] invokevirtual #240
         + Methodref [java/io/File.exists ()Z]
       [322] ifeq +55 (target=377)
       [325] aload_2 v2
-      [326] invokevirtual #237
+      [326] invokevirtual #239
         + Methodref [java/io/File.delete ()Z]
       [329] pop
       [330] iconst_1
-      [331] anewarray #130
+      [331] anewarray #132
         + Class [java/lang/String]
       [334] astore_3 v3
       [335] aload_3 v3
       [336] iconst_0
-      [337] ldc #59
+      [337] ldc #61
         + String [Press]
       [339] aastore
       [340] aload_0 v0
-      [341] getfield #140
+      [341] getfield #142
         + Fieldref [com/mycompany/overtest/ListEditor.a Lcom/mycompany/overtest/a;]
-      [344] new #131
+      [344] new #133
         + Class [java/lang/StringBuilder]
       [347] dup
-      [348] invokespecial #262
+      [348] invokespecial #265
         + Methodref [java/lang/StringBuilder.<init> ()V]
       [351] aload_0 v0
-      [352] getfield #144
+      [352] getfield #146
         + Fieldref [com/mycompany/overtest/ListEditor.e Ljava/lang/String;]
-      [355] invokevirtual #266
+      [355] invokevirtual #269
         + Methodref [java/lang/StringBuilder.append (Ljava/lang/String;)Ljava/lang/StringBuilder;]
-      [358] ldc #16
+      [358] ldc #17
         + String [.txt]
-      [360] invokevirtual #266
+      [360] invokevirtual #269
         + Methodref [java/lang/StringBuilder.append (Ljava/lang/String;)Ljava/lang/StringBuilder;]
-      [363] invokevirtual #267
+      [363] invokevirtual #270
         + Methodref [java/lang/StringBuilder.toString ()Ljava/lang/String;]
       [366] aload_3 v3
-      [367] invokevirtual #225
+      [367] invokevirtual #227
         + Methodref [com/mycompany/overtest/a.a (Ljava/lang/String;[Ljava/lang/String;)V]
       [370] aload_0 v0
-      [371] invokevirtual #198
+      [371] invokevirtual #200
         + Methodref [com/mycompany/overtest/ListEditor.a ()V]
       [374] goto +47 (target=421)
       [377] iconst_1
-      [378] anewarray #130
+      [378] anewarray #132
         + Class [java/lang/String]
       [381] astore_3 v3
       [382] aload_3 v3
       [383] iconst_0
-      [384] ldc #59
+      [384] ldc #61
         + String [Press]
       [386] aastore
       [387] aload_0 v0
-      [388] getfield #140
+      [388] getfield #142
         + Fieldref [com/mycompany/overtest/ListEditor.a Lcom/mycompany/overtest/a;]
-      [391] new #131
+      [391] new #133
         + Class [java/lang/StringBuilder]
       [394] dup
-      [395] invokespecial #262
+      [395] invokespecial #265
         + Methodref [java/lang/StringBuilder.<init> ()V]
       [398] aload_0 v0
-      [399] getfield #144
+      [399] getfield #146
         + Fieldref [com/mycompany/overtest/ListEditor.e Ljava/lang/String;]
-      [402] invokevirtual #266
+      [402] invokevirtual #269
         + Methodref [java/lang/StringBuilder.append (Ljava/lang/String;)Ljava/lang/StringBuilder;]
-      [405] ldc #16
+      [405] ldc #17
         + String [.txt]
-      [407] invokevirtual #266
+      [407] invokevirtual #269
         + Methodref [java/lang/StringBuilder.append (Ljava/lang/String;)Ljava/lang/StringBuilder;]
-      [410] invokevirtual #267
+      [410] invokevirtual #270
         + Methodref [java/lang/StringBuilder.toString ()Ljava/lang/String;]
       [413] aload_3 v3
-      [414] invokevirtual #225
+      [414] invokevirtual #227
         + Methodref [com/mycompany/overtest/a.a (Ljava/lang/String;[Ljava/lang/String;)V]
       [417] aload_0 v0
-      [418] invokevirtual #198
+      [418] invokevirtual #200
         + Methodref [com/mycompany/overtest/ListEditor.a ()V]
       [421] iconst_1
       [422] ireturn
       [423] aload_2 v2
-      [424] invokevirtual #238
+      [424] invokevirtual #240
         + Methodref [java/io/File.exists ()Z]
       [427] ifeq +55 (target=482)
       [430] aload_2 v2
-      [431] invokevirtual #237
+      [431] invokevirtual #239
         + Methodref [java/io/File.delete ()Z]
       [434] pop
       [435] iconst_1
-      [436] anewarray #130
+      [436] anewarray #132
         + Class [java/lang/String]
       [439] astore_3 v3
       [440] aload_3 v3
       [441] iconst_0
-      [442] ldc #61
+      [442] ldc #63
         + String [Press long]
       [444] aastore
       [445] aload_0 v0
-      [446] getfield #140
+      [446] getfield #142
         + Fieldref [com/mycompany/overtest/ListEditor.a Lcom/mycompany/overtest/a;]
-      [449] new #131
+      [449] new #133
         + Class [java/lang/StringBuilder]
       [452] dup
-      [453] invokespecial #262
+      [453] invokespecial #265
         + Methodref [java/lang/StringBuilder.<init> ()V]
       [456] aload_0 v0
-      [457] getfield #144
+      [457] getfield #146
         + Fieldref [com/mycompany/overtest/ListEditor.e Ljava/lang/String;]
-      [460] invokevirtual #266
+      [460] invokevirtual #269
         + Methodref [java/lang/StringBuilder.append (Ljava/lang/String;)Ljava/lang/StringBuilder;]
-      [463] ldc #16
+      [463] ldc #17
         + String [.txt]
-      [465] invokevirtual #266
+      [465] invokevirtual #269
         + Methodref [java/lang/StringBuilder.append (Ljava/lang/String;)Ljava/lang/StringBuilder;]
-      [468] invokevirtual #267
+      [468] invokevirtual #270
         + Methodref [java/lang/StringBuilder.toString ()Ljava/lang/String;]
       [471] aload_3 v3
-      [472] invokevirtual #225
+      [472] invokevirtual #227
         + Methodref [com/mycompany/overtest/a.a (Ljava/lang/String;[Ljava/lang/String;)V]
       [475] aload_0 v0
-      [476] invokevirtual #198
+      [476] invokevirtual #200
         + Methodref [com/mycompany/overtest/ListEditor.a ()V]
       [479] goto +47 (target=526)
       [482] iconst_1
-      [483] anewarray #130
+      [483] anewarray #132
         + Class [java/lang/String]
       [486] astore_3 v3
       [487] aload_3 v3
       [488] iconst_0
-      [489] ldc #61
+      [489] ldc #63
         + String [Press long]
       [491] aastore
       [492] aload_0 v0
-      [493] getfield #140
+      [493] getfield #142
         + Fieldref [com/mycompany/overtest/ListEditor.a Lcom/mycompany/overtest/a;]
-      [496] new #131
+      [496] new #133
         + Class [java/lang/StringBuilder]
       [499] dup
-      [500] invokespecial #262
+      [500] invokespecial #265
         + Methodref [java/lang/StringBuilder.<init> ()V]
       [503] aload_0 v0
-      [504] getfield #144
+      [504] getfield #146
         + Fieldref [com/mycompany/overtest/ListEditor.e Ljava/lang/String;]
-      [507] invokevirtual #266
+      [507] invokevirtual #269
         + Methodref [java/lang/StringBuilder.append (Ljava/lang/String;)Ljava/lang/StringBuilder;]
-      [510] ldc #16
+      [510] ldc #17
         + String [.txt]
-      [512] invokevirtual #266
+      [512] invokevirtual #269
         + Methodref [java/lang/StringBuilder.append (Ljava/lang/String;)Ljava/lang/StringBuilder;]
-      [515] invokevirtual #267
+      [515] invokevirtual #270
         + Methodref [java/lang/StringBuilder.toString ()Ljava/lang/String;]
       [518] aload_3 v3
-      [519] invokevirtual #225
+      [519] invokevirtual #227
         + Methodref [com/mycompany/overtest/a.a (Ljava/lang/String;[Ljava/lang/String;)V]
       [522] aload_0 v0
-      [523] invokevirtual #198
+      [523] invokevirtual #200
         + Methodref [com/mycompany/overtest/ListEditor.a ()V]
       [526] iconst_1
       [527] ireturn
       [528] aload_2 v2
-      [529] invokevirtual #238
+      [529] invokevirtual #240
         + Methodref [java/io/File.exists ()Z]
       [532] ifeq +55 (target=587)
       [535] aload_2 v2
-      [536] invokevirtual #237
+      [536] invokevirtual #239
         + Methodref [java/io/File.delete ()Z]
       [539] pop
       [540] iconst_1
-      [541] anewarray #130
+      [541] anewarray #132
         + Class [java/lang/String]
       [544] astore_3 v3
       [545] aload_3 v3
       [546] iconst_0
-      [547] ldc #65
+      [547] ldc #67
         + String [Swipe]
       [549] aastore
       [550] aload_0 v0
-      [551] getfield #140
+      [551] getfield #142
         + Fieldref [com/mycompany/overtest/ListEditor.a Lcom/mycompany/overtest/a;]
-      [554] new #131
+      [554] new #133
         + Class [java/lang/StringBuilder]
       [557] dup
-      [558] invokespecial #262
+      [558] invokespecial #265
         + Methodref [java/lang/StringBuilder.<init> ()V]
       [561] aload_0 v0
-      [562] getfield #144
+      [562] getfield #146
         + Fieldref [com/mycompany/overtest/ListEditor.e Ljava/lang/String;]
-      [565] invokevirtual #266
+      [565] invokevirtual #269
         + Methodref [java/lang/StringBuilder.append (Ljava/lang/String;)Ljava/lang/StringBuilder;]
-      [568] ldc #16
+      [568] ldc #17
         + String [.txt]
-      [570] invokevirtual #266
+      [570] invokevirtual #269
         + Methodref [java/lang/StringBuilder.append (Ljava/lang/String;)Ljava/lang/StringBuilder;]
-      [573] invokevirtual #267
+      [573] invokevirtual #270
         + Methodref [java/lang/StringBuilder.toString ()Ljava/lang/String;]
       [576] aload_3 v3
-      [577] invokevirtual #225
+      [577] invokevirtual #227
         + Methodref [com/mycompany/overtest/a.a (Ljava/lang/String;[Ljava/lang/String;)V]
       [580] aload_0 v0
-      [581] invokevirtual #198
+      [581] invokevirtual #200
         + Methodref [com/mycompany/overtest/ListEditor.a ()V]
       [584] goto +47 (target=631)
       [587] iconst_1
-      [588] anewarray #130
+      [588] anewarray #132
         + Class [java/lang/String]
       [591] astore_3 v3
       [592] aload_3 v3
       [593] iconst_0
-      [594] ldc #65
+      [594] ldc #67
         + String [Swipe]
       [596] aastore
       [597] aload_0 v0
-      [598] getfield #140
+      [598] getfield #142
         + Fieldref [com/mycompany/overtest/ListEditor.a Lcom/mycompany/overtest/a;]
-      [601] new #131
+      [601] new #133
         + Class [java/lang/StringBuilder]
       [604] dup
-      [605] invokespecial #262
+      [605] invokespecial #265
         + Methodref [java/lang/StringBuilder.<init> ()V]
       [608] aload_0 v0
-      [609] getfield #144
+      [609] getfield #146
         + Fieldref [com/mycompany/overtest/ListEditor.e Ljava/lang/String;]
-      [612] invokevirtual #266
+      [612] invokevirtual #269
         + Methodref [java/lang/StringBuilder.append (Ljava/lang/String;)Ljava/lang/StringBuilder;]
-      [615] ldc #16
+      [615] ldc #17
         + String [.txt]
-      [617] invokevirtual #266
+      [617] invokevirtual #269
         + Methodref [java/lang/StringBuilder.append (Ljava/lang/String;)Ljava/lang/StringBuilder;]
-      [620] invokevirtual #267
+      [620] invokevirtual #270
         + Methodref [java/lang/StringBuilder.toString ()Ljava/lang/String;]
       [623] aload_3 v3
-      [624] invokevirtual #225
+      [624] invokevirtual #227
         + Methodref [com/mycompany/overtest/a.a (Ljava/lang/String;[Ljava/lang/String;)V]
       [627] aload_0 v0
-      [628] invokevirtual #198
+      [628] invokevirtual #200
         + Methodref [com/mycompany/overtest/ListEditor.a ()V]
       [631] iconst_1
       [632] ireturn
       [633] aload_2 v2
-      [634] invokevirtual #238
+      [634] invokevirtual #240
         + Methodref [java/io/File.exists ()Z]
       [637] ifeq +55 (target=692)
       [640] aload_2 v2
-      [641] invokevirtual #237
+      [641] invokevirtual #239
         + Methodref [java/io/File.delete ()Z]
       [644] pop
       [645] iconst_1
-      [646] anewarray #130
+      [646] anewarray #132
         + Class [java/lang/String]
       [649] astore_3 v3
       [650] aload_3 v3
       [651] iconst_0
-      [652] ldc #45
+      [652] ldc #46
         + String [Drag]
       [654] aastore
       [655] aload_0 v0
-      [656] getfield #140
+      [656] getfield #142
         + Fieldref [com/mycompany/overtest/ListEditor.a Lcom/mycompany/overtest/a;]
-      [659] new #131
+      [659] new #133
         + Class [java/lang/StringBuilder]
       [662] dup
-      [663] invokespecial #262
+      [663] invokespecial #265
         + Methodref [java/lang/StringBuilder.<init> ()V]
       [666] aload_0 v0
-      [667] getfield #144
+      [667] getfield #146
         + Fieldref [com/mycompany/overtest/ListEditor.e Ljava/lang/String;]
-      [670] invokevirtual #266
+      [670] invokevirtual #269
         + Methodref [java/lang/StringBuilder.append (Ljava/lang/String;)Ljava/lang/StringBuilder;]
-      [673] ldc #16
+      [673] ldc #17
         + String [.txt]
-      [675] invokevirtual #266
+      [675] invokevirtual #269
         + Methodref [java/lang/StringBuilder.append (Ljava/lang/String;)Ljava/lang/StringBuilder;]
-      [678] invokevirtual #267
+      [678] invokevirtual #270
         + Methodref [java/lang/StringBuilder.toString ()Ljava/lang/String;]
       [681] aload_3 v3
-      [682] invokevirtual #225
+      [682] invokevirtual #227
         + Methodref [com/mycompany/overtest/a.a (Ljava/lang/String;[Ljava/lang/String;)V]
       [685] aload_0 v0
-      [686] invokevirtual #198
+      [686] invokevirtual #200
         + Methodref [com/mycompany/overtest/ListEditor.a ()V]
       [689] goto +47 (target=736)
       [692] iconst_1
-      [693] anewarray #130
+      [693] anewarray #132
         + Class [java/lang/String]
       [696] astore_3 v3
       [697] aload_3 v3
       [698] iconst_0
-      [699] ldc #45
+      [699] ldc #46
         + String [Drag]
       [701] aastore
       [702] aload_0 v0
-      [703] getfield #140
+      [703] getfield #142
         + Fieldref [com/mycompany/overtest/ListEditor.a Lcom/mycompany/overtest/a;]
-      [706] new #131
+      [706] new #133
         + Class [java/lang/StringBuilder]
       [709] dup
-      [710] invokespecial #262
+      [710] invokespecial #265
         + Methodref [java/lang/StringBuilder.<init> ()V]
       [713] aload_0 v0
-      [714] getfield #144
+      [714] getfield #146
         + Fieldref [com/mycompany/overtest/ListEditor.e Ljava/lang/String;]
-      [717] invokevirtual #266
+      [717] invokevirtual #269
         + Methodref [java/lang/StringBuilder.append (Ljava/lang/String;)Ljava/lang/StringBuilder;]
-      [720] ldc #16
+      [720] ldc #17
         + String [.txt]
-      [722] invokevirtual #266
+      [722] invokevirtual #269
         + Methodref [java/lang/StringBuilder.append (Ljava/lang/String;)Ljava/lang/StringBuilder;]
-      [725] invokevirtual #267
+      [725] invokevirtual #270
         + Methodref [java/lang/StringBuilder.toString ()Ljava/lang/String;]
       [728] aload_3 v3
-      [729] invokevirtual #225
+      [729] invokevirtual #227
         + Methodref [com/mycompany/overtest/a.a (Ljava/lang/String;[Ljava/lang/String;)V]
       [732] aload_0 v0
-      [733] invokevirtual #198
+      [733] invokevirtual #200
         + Methodref [com/mycompany/overtest/ListEditor.a ()V]
       [736] iconst_1
       [737] ireturn
       [738] aload_2 v2
-      [739] invokevirtual #238
+      [739] invokevirtual #240
         + Methodref [java/io/File.exists ()Z]
       [742] ifeq +55 (target=797)
       [745] aload_2 v2
-      [746] invokevirtual #237
+      [746] invokevirtual #239
         + Methodref [java/io/File.delete ()Z]
       [749] pop
       [750] iconst_1
-      [751] anewarray #130
+      [751] anewarray #132
         + Class [java/lang/String]
       [754] astore_3 v3
       [755] aload_3 v3
       [756] iconst_0
-      [757] ldc #58
+      [757] ldc #60
         + String [Pinch]
       [759] aastore
       [760] aload_0 v0
-      [761] getfield #140
+      [761] getfield #142
         + Fieldref [com/mycompany/overtest/ListEditor.a Lcom/mycompany/overtest/a;]
-      [764] new #131
+      [764] new #133
         + Class [java/lang/StringBuilder]
       [767] dup
-      [768] invokespecial #262
+      [768] invokespecial #265
         + Methodref [java/lang/StringBuilder.<init> ()V]
       [771] aload_0 v0
-      [772] getfield #144
+      [772] getfield #146
         + Fieldref [com/mycompany/overtest/ListEditor.e Ljava/lang/String;]
-      [775] invokevirtual #266
+      [775] invokevirtual #269
         + Methodref [java/lang/StringBuilder.append (Ljava/lang/String;)Ljava/lang/StringBuilder;]
-      [778] ldc #16
+      [778] ldc #17
         + String [.txt]
-      [780] invokevirtual #266
+      [780] invokevirtual #269
         + Methodref [java/lang/StringBuilder.append (Ljava/lang/String;)Ljava/lang/StringBuilder;]
-      [783] invokevirtual #267
+      [783] invokevirtual #270
         + Methodref [java/lang/StringBuilder.toString ()Ljava/lang/String;]
       [786] aload_3 v3
-      [787] invokevirtual #225
+      [787] invokevirtual #227
         + Methodref [com/mycompany/overtest/a.a (Ljava/lang/String;[Ljava/lang/String;)V]
       [790] aload_0 v0
-      [791] invokevirtual #198
+      [791] invokevirtual #200
         + Methodref [com/mycompany/overtest/ListEditor.a ()V]
       [794] goto +47 (target=841)
       [797] iconst_1
-      [798] anewarray #130
+      [798] anewarray #132
         + Class [java/lang/String]
       [801] astore_3 v3
       [802] aload_3 v3
       [803] iconst_0
-      [804] ldc #58
+      [804] ldc #60
         + String [Pinch]
       [806] aastore
       [807] aload_0 v0
-      [808] getfield #140
+      [808] getfield #142
         + Fieldref [com/mycompany/overtest/ListEditor.a Lcom/mycompany/overtest/a;]
-      [811] new #131
+      [811] new #133
         + Class [java/lang/StringBuilder]
       [814] dup
-      [815] invokespecial #262
+      [815] invokespecial #265
         + Methodref [java/lang/StringBuilder.<init> ()V]
       [818] aload_0 v0
-      [819] getfield #144
+      [819] getfield #146
         + Fieldref [com/mycompany/overtest/ListEditor.e Ljava/lang/String;]
-      [822] invokevirtual #266
+      [822] invokevirtual #269
         + Methodref [java/lang/StringBuilder.append (Ljava/lang/String;)Ljava/lang/StringBuilder;]
-      [825] ldc #16
+      [825] ldc #17
         + String [.txt]
-      [827] invokevirtual #266
+      [827] invokevirtual #269
         + Methodref [java/lang/StringBuilder.append (Ljava/lang/String;)Ljava/lang/StringBuilder;]
-      [830] invokevirtual #267
+      [830] invokevirtual #270
         + Methodref [java/lang/StringBuilder.toString ()Ljava/lang/String;]
       [833] aload_3 v3
-      [834] invokevirtual #225
+      [834] invokevirtual #227
         + Methodref [com/mycompany/overtest/a.a (Ljava/lang/String;[Ljava/lang/String;)V]
       [837] aload_0 v0
-      [838] invokevirtual #198
+      [838] invokevirtual #200
         + Methodref [com/mycompany/overtest/ListEditor.a ()V]
       [841] iconst_1
       [842] ireturn
       [843] iconst_1
-      [844] anewarray #130
+      [844] anewarray #132
         + Class [java/lang/String]
       [847] astore_3 v3
       [848] aload_3 v3
@@ -8345,261 +8407,261 @@ Methods (count = 27):
         + String []
       [852] aastore
       [853] aload_0 v0
-      [854] getfield #140
+      [854] getfield #142
         + Fieldref [com/mycompany/overtest/ListEditor.a Lcom/mycompany/overtest/a;]
-      [857] new #131
+      [857] new #133
         + Class [java/lang/StringBuilder]
       [860] dup
-      [861] invokespecial #262
+      [861] invokespecial #265
         + Methodref [java/lang/StringBuilder.<init> ()V]
       [864] aload_0 v0
-      [865] getfield #144
+      [865] getfield #146
         + Fieldref [com/mycompany/overtest/ListEditor.e Ljava/lang/String;]
-      [868] invokevirtual #266
+      [868] invokevirtual #269
         + Methodref [java/lang/StringBuilder.append (Ljava/lang/String;)Ljava/lang/StringBuilder;]
-      [871] ldc #16
+      [871] ldc #17
         + String [.txt]
-      [873] invokevirtual #266
+      [873] invokevirtual #269
         + Methodref [java/lang/StringBuilder.append (Ljava/lang/String;)Ljava/lang/StringBuilder;]
-      [876] invokevirtual #267
+      [876] invokevirtual #270
         + Methodref [java/lang/StringBuilder.toString ()Ljava/lang/String;]
       [879] aload_3 v3
-      [880] invokevirtual #225
+      [880] invokevirtual #227
         + Methodref [com/mycompany/overtest/a.a (Ljava/lang/String;[Ljava/lang/String;)V]
-      [883] new #88
+      [883] new #90
         + Class [android/content/Intent]
       [886] dup
-      [887] invokespecial #163
+      [887] invokespecial #165
         + Methodref [android/content/Intent.<init> ()V]
       [890] astore v4
       [892] aload v4
-      [894] ldc #74
+      [894] ldc #76
         + String [android.intent.action.VIEW]
-      [896] invokevirtual #170
+      [896] invokevirtual #172
         + Methodref [android/content/Intent.setAction (Ljava/lang/String;)Landroid/content/Intent;]
       [899] pop
-      [900] new #118
+      [900] new #120
         + Class [java/io/File]
       [903] dup
-      [904] new #131
+      [904] new #133
         + Class [java/lang/StringBuilder]
       [907] dup
-      [908] invokespecial #262
+      [908] invokespecial #265
         + Methodref [java/lang/StringBuilder.<init> ()V]
-      [911] invokestatic #184
+      [911] invokestatic #186
         + Methodref [android/os/Environment.getExternalStorageDirectory ()Ljava/io/File;]
-      [914] invokevirtual #265
+      [914] invokevirtual #268
         + Methodref [java/lang/StringBuilder.append (Ljava/lang/Object;)Ljava/lang/StringBuilder;]
-      [917] ldc #17
+      [917] ldc #18
         + String [/MANUAL/settings/]
-      [919] invokevirtual #266
+      [919] invokevirtual #269
         + Methodref [java/lang/StringBuilder.append (Ljava/lang/String;)Ljava/lang/StringBuilder;]
       [922] aload_0 v0
-      [923] getfield #144
+      [923] getfield #146
         + Fieldref [com/mycompany/overtest/ListEditor.e Ljava/lang/String;]
-      [926] invokevirtual #266
+      [926] invokevirtual #269
         + Methodref [java/lang/StringBuilder.append (Ljava/lang/String;)Ljava/lang/StringBuilder;]
-      [929] ldc #16
+      [929] ldc #17
         + String [.txt]
-      [931] invokevirtual #266
+      [931] invokevirtual #269
         + Methodref [java/lang/StringBuilder.append (Ljava/lang/String;)Ljava/lang/StringBuilder;]
-      [934] invokevirtual #267
+      [934] invokevirtual #270
         + Methodref [java/lang/StringBuilder.toString ()Ljava/lang/String;]
-      [937] invokespecial #235
+      [937] invokespecial #237
         + Methodref [java/io/File.<init> (Ljava/lang/String;)V]
       [940] astore v5
       [942] aload v4
       [944] aload v5
-      [946] invokestatic #180
+      [946] invokestatic #182
         + Methodref [android/net/Uri.fromFile (Ljava/io/File;)Landroid/net/Uri;]
-      [949] ldc #81
+      [949] ldc #83
         + String [text/plain]
-      [951] invokevirtual #171
+      [951] invokevirtual #173
         + Methodref [android/content/Intent.setDataAndType (Landroid/net/Uri;Ljava/lang/String;)Landroid/content/Intent;]
       [954] pop
       [955] aload_0 v0
       [956] aload v4
-      [958] invokevirtual #218
+      [958] invokevirtual #220
         + Methodref [com/mycompany/overtest/ListEditor.startActivity (Landroid/content/Intent;)V]
       [961] iconst_1
       [962] ireturn
-      [963] new #95
+      [963] new #97
         + Class [android/os/Bundle]
       [966] dup
-      [967] invokespecial #182
+      [967] invokespecial #184
         + Methodref [android/os/Bundle.<init> ()V]
       [970] astore v6
-      [972] ldc #78
+      [972] ldc #80
         + String [file name]
       [974] astore v7
       [976] aload v6
       [978] aload v7
       [980] aload_0 v0
-      [981] getfield #144
+      [981] getfield #146
         + Fieldref [com/mycompany/overtest/ListEditor.e Ljava/lang/String;]
-      [984] invokevirtual #183
+      [984] invokevirtual #185
         + Methodref [android/os/Bundle.putString (Ljava/lang/String;Ljava/lang/String;)V]
-      [987] ldc #50
+      [987] ldc #51
         + String [Files]
-      [989] new #131
+      [989] new #133
         + Class [java/lang/StringBuilder]
       [992] dup
-      [993] invokespecial #262
+      [993] invokespecial #265
         + Methodref [java/lang/StringBuilder.<init> ()V]
-      [996] ldc #41
+      [996] ldc #42
         + String [BUNDLE: ]
-      [998] invokevirtual #266
+      [998] invokevirtual #269
         + Methodref [java/lang/StringBuilder.append (Ljava/lang/String;)Ljava/lang/StringBuilder;]
       [1001] aload_0 v0
-      [1002] getfield #144
+      [1002] getfield #146
         + Fieldref [com/mycompany/overtest/ListEditor.e Ljava/lang/String;]
-      [1005] invokevirtual #266
+      [1005] invokevirtual #269
         + Methodref [java/lang/StringBuilder.append (Ljava/lang/String;)Ljava/lang/StringBuilder;]
-      [1008] invokevirtual #267
+      [1008] invokevirtual #270
         + Methodref [java/lang/StringBuilder.toString ()Ljava/lang/String;]
-      [1011] invokestatic #186
+      [1011] invokestatic #188
         + Methodref [android/util/Log.d (Ljava/lang/String;Ljava/lang/String;)I]
       [1014] pop
       [1015] aload_0 v0
-      [1016] getfield #144
+      [1016] getfield #146
         + Fieldref [com/mycompany/overtest/ListEditor.e Ljava/lang/String;]
-      [1019] putstatic #142
+      [1019] putstatic #144
         + Fieldref [com/mycompany/overtest/ListEditor.c Ljava/lang/String;]
       [1022] aload_0 v0
-      [1023] new #88
+      [1023] new #90
         + Class [android/content/Intent]
       [1026] dup
       [1027] aload_0 v0
-      [1028] ldc #110
+      [1028] ldc #112
         + Class [com/mycompany/overtest/Draw]
-      [1030] invokespecial #164
+      [1030] invokespecial #166
         + Methodref [android/content/Intent.<init> (Landroid/content/Context;Ljava/lang/Class;)V]
-      [1033] putfield #141
+      [1033] putfield #143
         + Fieldref [com/mycompany/overtest/ListEditor.b Landroid/content/Intent;]
       [1036] aload_0 v0
-      [1037] getfield #141
+      [1037] getfield #143
         + Fieldref [com/mycompany/overtest/ListEditor.b Landroid/content/Intent;]
       [1040] aload v6
-      [1042] invokevirtual #169
+      [1042] invokevirtual #171
         + Methodref [android/content/Intent.putExtras (Landroid/os/Bundle;)Landroid/content/Intent;]
       [1045] pop
       [1046] aload_0 v0
       [1047] aload_0 v0
-      [1048] getfield #141
+      [1048] getfield #143
         + Fieldref [com/mycompany/overtest/ListEditor.b Landroid/content/Intent;]
-      [1051] invokevirtual #218
+      [1051] invokevirtual #220
         + Methodref [com/mycompany/overtest/ListEditor.startActivity (Landroid/content/Intent;)V]
       [1054] iconst_1
       [1055] ireturn
       [1056] aload_0 v0
       [1057] aload_0 v0
-      [1058] getfield #144
+      [1058] getfield #146
         + Fieldref [com/mycompany/overtest/ListEditor.e Ljava/lang/String;]
-      [1061] putfield #143
+      [1061] putfield #145
         + Fieldref [com/mycompany/overtest/ListEditor.d Ljava/lang/String;]
-      [1064] new #88
+      [1064] new #90
         + Class [android/content/Intent]
       [1067] dup
-      [1068] invokespecial #163
+      [1068] invokespecial #165
         + Methodref [android/content/Intent.<init> ()V]
       [1071] astore v8
       [1073] aload v8
-      [1075] ldc #79
+      [1075] ldc #81
         + String [image/*]
-      [1077] invokevirtual #172
+      [1077] invokevirtual #174
         + Methodref [android/content/Intent.setType (Ljava/lang/String;)Landroid/content/Intent;]
       [1080] pop
       [1081] aload v8
-      [1083] ldc #73
+      [1083] ldc #75
         + String [android.intent.action.GET_CONTENT]
-      [1085] invokevirtual #170
+      [1085] invokevirtual #172
         + Methodref [android/content/Intent.setAction (Ljava/lang/String;)Landroid/content/Intent;]
       [1088] pop
       [1089] aload_0 v0
       [1090] aload v8
-      [1092] ldc #67
+      [1092] ldc #69
         + String [Switch Picture]
-      [1094] invokestatic #166
+      [1094] invokestatic #168
         + Methodref [android/content/Intent.createChooser (Landroid/content/Intent;Ljava/lang/CharSequence;)Landroid/content/Intent;]
       [1097] iconst_2
-      [1098] invokevirtual #219
+      [1098] invokevirtual #221
         + Methodref [com/mycompany/overtest/ListEditor.startActivityForResult (Landroid/content/Intent;I)V]
       [1101] aload_0 v0
-      [1102] getfield #149
+      [1102] getfield #151
         + Fieldref [com/mycompany/overtest/ListEditor.j Ljava/util/ArrayList;]
       [1105] aload_0 v0
-      [1106] getfield #149
+      [1106] getfield #151
         + Fieldref [com/mycompany/overtest/ListEditor.j Ljava/util/ArrayList;]
-      [1109] invokevirtual #272
+      [1109] invokevirtual #275
         + Methodref [java/util/ArrayList.size ()I]
-      [1112] anewarray #130
+      [1112] anewarray #132
         + Class [java/lang/String]
-      [1115] invokevirtual #273
+      [1115] invokevirtual #276
         + Methodref [java/util/ArrayList.toArray ([Ljava/lang/Object;)[Ljava/lang/Object;]
-      [1118] checkcast #85
+      [1118] checkcast #87
         + Class [[Ljava/lang/String;]
       [1121] astore v9
       [1123] aload v9
-      [1125] invokestatic #274
+      [1125] invokestatic #277
         + Methodref [java/util/Arrays.sort ([Ljava/lang/Object;)V]
       [1128] aload_0 v0
-      [1129] getfield #148
+      [1129] getfield #150
         + Fieldref [com/mycompany/overtest/ListEditor.i Landroid/widget/ListView;]
-      [1132] new #117
+      [1132] new #119
         + Class [com/mycompany/overtest/s]
       [1135] dup
       [1136] aload_0 v0
       [1137] aload v9
-      [1139] invokespecial #233
+      [1139] invokespecial #235
         + Methodref [com/mycompany/overtest/s.<init> (Landroid/content/Context;[Ljava/lang/String;)V]
-      [1142] invokevirtual #194
+      [1142] invokevirtual #196
         + Methodref [android/widget/ListView.setAdapter (Landroid/widget/ListAdapter;)V]
       [1145] iconst_1
       [1146] ireturn
       [1147] aload_0 v0
-      [1148] getfield #144
+      [1148] getfield #146
         + Fieldref [com/mycompany/overtest/ListEditor.e Ljava/lang/String;]
       [1151] astore v10
-      [1153] new #87
+      [1153] new #89
         + Class [android/app/AlertDialog$Builder]
       [1156] dup
       [1157] aload_0 v0
-      [1158] invokespecial #156
+      [1158] invokespecial #158
         + Methodref [android/app/AlertDialog$Builder.<init> (Landroid/content/Context;)V]
-      [1161] ldc #43
+      [1161] ldc #44
         + String [Delete screenshot]
-      [1163] invokevirtual #161
+      [1163] invokevirtual #163
         + Methodref [android/app/AlertDialog$Builder.setTitle (Ljava/lang/CharSequence;)Landroid/app/AlertDialog$Builder;]
-      [1166] ldc #70
+      [1166] ldc #72
         + String [This screenshot will be deleted!]
-      [1168] invokevirtual #158
+      [1168] invokevirtual #160
         + Methodref [android/app/AlertDialog$Builder.setMessage (Ljava/lang/CharSequence;)Landroid/app/AlertDialog$Builder;]
       [1171] ldc #3
         + Integer [17039379]
-      [1173] new #116
+      [1173] new #118
         + Class [com/mycompany/overtest/n]
       [1176] dup
       [1177] aload_0 v0
       [1178] aload v10
-      [1180] invokespecial #232
+      [1180] invokespecial #234
         + Methodref [com/mycompany/overtest/n.<init> (Lcom/mycompany/overtest/ListEditor;Ljava/lang/String;)V]
-      [1183] invokevirtual #160
+      [1183] invokevirtual #162
         + Methodref [android/app/AlertDialog$Builder.setPositiveButton (ILandroid/content/DialogInterface$OnClickListener;)Landroid/app/AlertDialog$Builder;]
       [1186] ldc #2
         + Integer [17039369]
-      [1188] new #115
+      [1188] new #117
         + Class [com/mycompany/overtest/m]
       [1191] dup
       [1192] aload_0 v0
-      [1193] invokespecial #231
+      [1193] invokespecial #233
         + Methodref [com/mycompany/overtest/m.<init> (Lcom/mycompany/overtest/ListEditor;)V]
-      [1196] invokevirtual #159
+      [1196] invokevirtual #161
         + Methodref [android/app/AlertDialog$Builder.setNegativeButton (ILandroid/content/DialogInterface$OnClickListener;)Landroid/app/AlertDialog$Builder;]
       [1199] ldc #5
         + Integer [17301564]
-      [1201] invokevirtual #157
+      [1201] invokevirtual #159
         + Methodref [android/app/AlertDialog$Builder.setIcon (I)Landroid/app/AlertDialog$Builder;]
-      [1204] invokevirtual #162
+      [1204] invokevirtual #164
         + Methodref [android/app/AlertDialog$Builder.show ()Landroid/app/AlertDialog;]
       [1207] pop
       [1208] iconst_0
@@ -8638,72 +8700,72 @@ Methods (count = 27):
       = public java.lang.String b()
     Class member attributes (count = 1):
     + Code attribute instructions (code length = 192, locals = 6, stack = 5):
-      [0] new #131
+      [0] new #133
         + Class [java/lang/StringBuilder]
       [3] dup
-      [4] invokespecial #262
+      [4] invokespecial #265
         + Methodref [java/lang/StringBuilder.<init> ()V]
       [7] astore_1 v1
       [8] aload_0 v0
-      [9] getfield #149
+      [9] getfield #151
         + Fieldref [com/mycompany/overtest/ListEditor.j Ljava/util/ArrayList;]
-      [12] invokevirtual #272
+      [12] invokevirtual #275
         + Methodref [java/util/ArrayList.size ()I]
       [15] istore_2 v2
       [16] aload_0 v0
-      [17] getfield #149
+      [17] getfield #151
         + Fieldref [com/mycompany/overtest/ListEditor.j Ljava/util/ArrayList;]
       [20] aload_0 v0
-      [21] getfield #149
+      [21] getfield #151
         + Fieldref [com/mycompany/overtest/ListEditor.j Ljava/util/ArrayList;]
-      [24] invokevirtual #272
+      [24] invokevirtual #275
         + Methodref [java/util/ArrayList.size ()I]
-      [27] anewarray #130
+      [27] anewarray #132
         + Class [java/lang/String]
-      [30] invokevirtual #273
+      [30] invokevirtual #276
         + Methodref [java/util/ArrayList.toArray ([Ljava/lang/Object;)[Ljava/lang/Object;]
-      [33] checkcast #85
+      [33] checkcast #87
         + Class [[Ljava/lang/String;]
       [36] astore_3 v3
       [37] aload_3 v3
-      [38] invokestatic #274
+      [38] invokestatic #277
         + Methodref [java/util/Arrays.sort ([Ljava/lang/Object;)V]
       [41] aload_1 v1
-      [42] new #131
+      [42] new #133
         + Class [java/lang/StringBuilder]
       [45] dup
-      [46] invokespecial #262
+      [46] invokespecial #265
         + Methodref [java/lang/StringBuilder.<init> ()V]
       [49] aload_0 v0
-      [50] getfield #140
+      [50] getfield #142
         + Fieldref [com/mycompany/overtest/ListEditor.a Lcom/mycompany/overtest/a;]
-      [53] new #131
+      [53] new #133
         + Class [java/lang/StringBuilder]
       [56] dup
-      [57] invokespecial #262
+      [57] invokespecial #265
         + Methodref [java/lang/StringBuilder.<init> ()V]
-      [60] invokestatic #184
+      [60] invokestatic #186
         + Methodref [android/os/Environment.getExternalStorageDirectory ()Ljava/io/File;]
-      [63] invokevirtual #265
+      [63] invokevirtual #268
         + Methodref [java/lang/StringBuilder.append (Ljava/lang/Object;)Ljava/lang/StringBuilder;]
-      [66] ldc #18
+      [66] ldc #19
         + String [/MANUAL/settings/description.txt]
-      [68] invokevirtual #266
+      [68] invokevirtual #269
         + Methodref [java/lang/StringBuilder.append (Ljava/lang/String;)Ljava/lang/StringBuilder;]
-      [71] invokevirtual #267
+      [71] invokevirtual #270
         + Methodref [java/lang/StringBuilder.toString ()Ljava/lang/String;]
-      [74] invokevirtual #224
+      [74] invokevirtual #226
         + Methodref [com/mycompany/overtest/a.a (Ljava/lang/String;)Ljava/lang/StringBuilder;]
-      [77] invokevirtual #265
+      [77] invokevirtual #268
         + Methodref [java/lang/StringBuilder.append (Ljava/lang/Object;)Ljava/lang/StringBuilder;]
       [80] ldc #10
         + String [
 ]
-      [82] invokevirtual #266
+      [82] invokevirtual #269
         + Methodref [java/lang/StringBuilder.append (Ljava/lang/String;)Ljava/lang/StringBuilder;]
-      [85] invokevirtual #267
+      [85] invokevirtual #270
         + Methodref [java/lang/StringBuilder.toString ()Ljava/lang/String;]
-      [88] invokevirtual #266
+      [88] invokevirtual #269
         + Methodref [java/lang/StringBuilder.append (Ljava/lang/String;)Ljava/lang/StringBuilder;]
       [91] pop
       [92] iconst_0
@@ -8717,64 +8779,64 @@ Methods (count = 27):
       [105] istore v5
       [107] aload_1 v1
       [108] aload_0 v0
-      [109] getfield #140
+      [109] getfield #142
         + Fieldref [com/mycompany/overtest/ListEditor.a Lcom/mycompany/overtest/a;]
       [112] iload v5
       [114] aload_3 v3
       [115] iload v4
       [117] aaload
-      [118] invokevirtual #223
+      [118] invokevirtual #225
         + Methodref [com/mycompany/overtest/a.a (ILjava/lang/String;)Ljava/lang/StringBuilder;]
-      [121] invokevirtual #264
+      [121] invokevirtual #267
         + Methodref [java/lang/StringBuilder.append (Ljava/lang/CharSequence;)Ljava/lang/StringBuilder;]
       [124] pop
       [125] iinc v4, 1
       [128] goto -33 (target=95)
       [131] aload_1 v1
-      [132] new #131
+      [132] new #133
         + Class [java/lang/StringBuilder]
       [135] dup
-      [136] invokespecial #262
+      [136] invokespecial #265
         + Methodref [java/lang/StringBuilder.<init> ()V]
       [139] ldc #10
         + String [
 ]
-      [141] invokevirtual #266
+      [141] invokevirtual #269
         + Methodref [java/lang/StringBuilder.append (Ljava/lang/String;)Ljava/lang/StringBuilder;]
       [144] aload_0 v0
-      [145] getfield #140
+      [145] getfield #142
         + Fieldref [com/mycompany/overtest/ListEditor.a Lcom/mycompany/overtest/a;]
-      [148] new #131
+      [148] new #133
         + Class [java/lang/StringBuilder]
       [151] dup
-      [152] invokespecial #262
+      [152] invokespecial #265
         + Methodref [java/lang/StringBuilder.<init> ()V]
-      [155] invokestatic #184
+      [155] invokestatic #186
         + Methodref [android/os/Environment.getExternalStorageDirectory ()Ljava/io/File;]
-      [158] invokevirtual #265
+      [158] invokevirtual #268
         + Methodref [java/lang/StringBuilder.append (Ljava/lang/Object;)Ljava/lang/StringBuilder;]
-      [161] ldc #19
+      [161] ldc #20
         + String [/MANUAL/settings/expected.txt]
-      [163] invokevirtual #266
+      [163] invokevirtual #269
         + Methodref [java/lang/StringBuilder.append (Ljava/lang/String;)Ljava/lang/StringBuilder;]
-      [166] invokevirtual #267
+      [166] invokevirtual #270
         + Methodref [java/lang/StringBuilder.toString ()Ljava/lang/String;]
-      [169] invokevirtual #224
+      [169] invokevirtual #226
         + Methodref [com/mycompany/overtest/a.a (Ljava/lang/String;)Ljava/lang/StringBuilder;]
-      [172] invokevirtual #265
+      [172] invokevirtual #268
         + Methodref [java/lang/StringBuilder.append (Ljava/lang/Object;)Ljava/lang/StringBuilder;]
       [175] ldc #10
         + String [
 ]
-      [177] invokevirtual #266
+      [177] invokevirtual #269
         + Methodref [java/lang/StringBuilder.append (Ljava/lang/String;)Ljava/lang/StringBuilder;]
-      [180] invokevirtual #267
+      [180] invokevirtual #270
         + Methodref [java/lang/StringBuilder.toString ()Ljava/lang/String;]
-      [183] invokevirtual #266
+      [183] invokevirtual #269
         + Methodref [java/lang/StringBuilder.append (Ljava/lang/String;)Ljava/lang/StringBuilder;]
       [186] pop
       [187] aload_1 v1
-      [188] invokevirtual #267
+      [188] invokevirtual #270
         + Methodref [java/lang/StringBuilder.toString ()Ljava/lang/String;]
       [191] areturn
       Code attribute exceptions (count = 0):
@@ -8787,43 +8849,43 @@ Methods (count = 27):
       = public java.lang.String c()
     Class member attributes (count = 1):
     + Code attribute instructions (code length = 344, locals = 9, stack = 6):
-      [0] new #131
+      [0] new #133
         + Class [java/lang/StringBuilder]
       [3] dup
-      [4] invokespecial #262
+      [4] invokespecial #265
         + Methodref [java/lang/StringBuilder.<init> ()V]
       [7] astore_1 v1
       [8] aload_0 v0
-      [9] getfield #149
+      [9] getfield #151
         + Fieldref [com/mycompany/overtest/ListEditor.j Ljava/util/ArrayList;]
-      [12] invokevirtual #272
+      [12] invokevirtual #275
         + Methodref [java/util/ArrayList.size ()I]
       [15] istore_2 v2
       [16] aload_0 v0
-      [17] getfield #149
+      [17] getfield #151
         + Fieldref [com/mycompany/overtest/ListEditor.j Ljava/util/ArrayList;]
       [20] aload_0 v0
-      [21] getfield #149
+      [21] getfield #151
         + Fieldref [com/mycompany/overtest/ListEditor.j Ljava/util/ArrayList;]
-      [24] invokevirtual #272
+      [24] invokevirtual #275
         + Methodref [java/util/ArrayList.size ()I]
-      [27] anewarray #130
+      [27] anewarray #132
         + Class [java/lang/String]
-      [30] invokevirtual #273
+      [30] invokevirtual #276
         + Methodref [java/util/ArrayList.toArray ([Ljava/lang/Object;)[Ljava/lang/Object;]
-      [33] checkcast #85
+      [33] checkcast #87
         + Class [[Ljava/lang/String;]
       [36] astore_3 v3
       [37] aload_3 v3
-      [38] invokestatic #274
+      [38] invokestatic #277
         + Methodref [java/util/Arrays.sort ([Ljava/lang/Object;)V]
       [41] aload_1 v1
       [42] aload_0 v0
-      [43] getfield #140
+      [43] getfield #142
         + Fieldref [com/mycompany/overtest/ListEditor.a Lcom/mycompany/overtest/a;]
-      [46] invokevirtual #222
+      [46] invokevirtual #224
         + Methodref [com/mycompany/overtest/a.a ()Ljava/lang/StringBuilder;]
-      [49] invokevirtual #264
+      [49] invokevirtual #267
         + Methodref [java/lang/StringBuilder.append (Ljava/lang/CharSequence;)Ljava/lang/StringBuilder;]
       [52] pop
       [53] iconst_0
@@ -8835,203 +8897,203 @@ Methods (count = 27):
       [64] iconst_1
       [65] iadd
       [66] istore v5
-      [68] new #131
+      [68] new #133
         + Class [java/lang/StringBuilder]
       [71] dup
-      [72] invokespecial #262
+      [72] invokespecial #265
         + Methodref [java/lang/StringBuilder.<init> ()V]
-      [75] invokestatic #184
+      [75] invokestatic #186
         + Methodref [android/os/Environment.getExternalStorageDirectory ()Ljava/io/File;]
-      [78] invokevirtual #265
+      [78] invokevirtual #268
         + Methodref [java/lang/StringBuilder.append (Ljava/lang/Object;)Ljava/lang/StringBuilder;]
-      [81] ldc #21
+      [81] ldc #22
         + String [/MANUAL/workflow/]
-      [83] invokevirtual #266
+      [83] invokevirtual #269
         + Methodref [java/lang/StringBuilder.append (Ljava/lang/String;)Ljava/lang/StringBuilder;]
       [86] aload_3 v3
       [87] iload v4
       [89] aaload
-      [90] invokevirtual #266
+      [90] invokevirtual #269
         + Methodref [java/lang/StringBuilder.append (Ljava/lang/String;)Ljava/lang/StringBuilder;]
-      [93] invokevirtual #267
+      [93] invokevirtual #270
         + Methodref [java/lang/StringBuilder.toString ()Ljava/lang/String;]
       [96] astore v6
-      [98] new #93
+      [98] new #95
         + Class [android/graphics/BitmapFactory$Options]
       [101] dup
-      [102] invokespecial #179
+      [102] invokespecial #181
         + Methodref [android/graphics/BitmapFactory$Options.<init> ()V]
       [105] astore v7
       [107] aload v7
       [109] bipush 6
-      [111] putfield #137
+      [111] putfield #139
         + Fieldref [android/graphics/BitmapFactory$Options.inSampleSize I]
       [114] aload v6
       [116] aload v7
-      [118] invokestatic #178
+      [118] invokestatic #180
         + Methodref [android/graphics/BitmapFactory.decodeFile (Ljava/lang/String;Landroid/graphics/BitmapFactory$Options;)Landroid/graphics/Bitmap;]
       [121] astore v8
       [123] aload_1 v1
-      [124] new #131
+      [124] new #133
         + Class [java/lang/StringBuilder]
       [127] dup
-      [128] invokespecial #262
+      [128] invokespecial #265
         + Methodref [java/lang/StringBuilder.<init> ()V]
-      [131] ldc #28
+      [131] ldc #29
         + String [<p>Step ]
-      [133] invokevirtual #266
+      [133] invokevirtual #269
         + Methodref [java/lang/StringBuilder.append (Ljava/lang/String;)Ljava/lang/StringBuilder;]
       [136] iload v5
-      [138] invokevirtual #263
+      [138] invokevirtual #266
         + Methodref [java/lang/StringBuilder.append (I)Ljava/lang/StringBuilder;]
-      [141] ldc #25
+      [141] ldc #26
         + String [</p>]
-      [143] invokevirtual #266
+      [143] invokevirtual #269
         + Methodref [java/lang/StringBuilder.append (Ljava/lang/String;)Ljava/lang/StringBuilder;]
       [146] ldc #10
         + String [
 ]
-      [148] invokevirtual #266
+      [148] invokevirtual #269
         + Methodref [java/lang/StringBuilder.append (Ljava/lang/String;)Ljava/lang/StringBuilder;]
-      [151] invokevirtual #267
+      [151] invokevirtual #270
         + Methodref [java/lang/StringBuilder.toString ()Ljava/lang/String;]
-      [154] invokevirtual #266
+      [154] invokevirtual #269
         + Methodref [java/lang/StringBuilder.append (Ljava/lang/String;)Ljava/lang/StringBuilder;]
       [157] pop
       [158] aload_1 v1
-      [159] new #131
+      [159] new #133
         + Class [java/lang/StringBuilder]
       [162] dup
-      [163] invokespecial #262
+      [163] invokespecial #265
         + Methodref [java/lang/StringBuilder.<init> ()V]
-      [166] ldc #27
+      [166] ldc #28
         + String [<p>Description: ]
-      [168] invokevirtual #266
+      [168] invokevirtual #269
         + Methodref [java/lang/StringBuilder.append (Ljava/lang/String;)Ljava/lang/StringBuilder;]
       [171] aload_0 v0
-      [172] getfield #140
+      [172] getfield #142
         + Fieldref [com/mycompany/overtest/ListEditor.a Lcom/mycompany/overtest/a;]
-      [175] new #131
+      [175] new #133
         + Class [java/lang/StringBuilder]
       [178] dup
-      [179] invokespecial #262
+      [179] invokespecial #265
         + Methodref [java/lang/StringBuilder.<init> ()V]
-      [182] invokestatic #184
+      [182] invokestatic #186
         + Methodref [android/os/Environment.getExternalStorageDirectory ()Ljava/io/File;]
-      [185] invokevirtual #265
+      [185] invokevirtual #268
         + Methodref [java/lang/StringBuilder.append (Ljava/lang/Object;)Ljava/lang/StringBuilder;]
-      [188] ldc #17
+      [188] ldc #18
         + String [/MANUAL/settings/]
-      [190] invokevirtual #266
+      [190] invokevirtual #269
         + Methodref [java/lang/StringBuilder.append (Ljava/lang/String;)Ljava/lang/StringBuilder;]
       [193] aload_3 v3
       [194] iload v4
       [196] aaload
-      [197] invokevirtual #266
+      [197] invokevirtual #269
         + Methodref [java/lang/StringBuilder.append (Ljava/lang/String;)Ljava/lang/StringBuilder;]
-      [200] ldc #16
+      [200] ldc #17
         + String [.txt]
-      [202] invokevirtual #266
+      [202] invokevirtual #269
         + Methodref [java/lang/StringBuilder.append (Ljava/lang/String;)Ljava/lang/StringBuilder;]
-      [205] invokevirtual #267
+      [205] invokevirtual #270
         + Methodref [java/lang/StringBuilder.toString ()Ljava/lang/String;]
-      [208] invokevirtual #224
+      [208] invokevirtual #226
         + Methodref [com/mycompany/overtest/a.a (Ljava/lang/String;)Ljava/lang/StringBuilder;]
-      [211] invokevirtual #265
+      [211] invokevirtual #268
         + Methodref [java/lang/StringBuilder.append (Ljava/lang/Object;)Ljava/lang/StringBuilder;]
-      [214] ldc #25
+      [214] ldc #26
         + String [</p>]
-      [216] invokevirtual #266
+      [216] invokevirtual #269
         + Methodref [java/lang/StringBuilder.append (Ljava/lang/String;)Ljava/lang/StringBuilder;]
       [219] ldc #10
         + String [
 ]
-      [221] invokevirtual #266
+      [221] invokevirtual #269
         + Methodref [java/lang/StringBuilder.append (Ljava/lang/String;)Ljava/lang/StringBuilder;]
-      [224] invokevirtual #267
+      [224] invokevirtual #270
         + Methodref [java/lang/StringBuilder.toString ()Ljava/lang/String;]
-      [227] invokevirtual #266
+      [227] invokevirtual #269
         + Methodref [java/lang/StringBuilder.append (Ljava/lang/String;)Ljava/lang/StringBuilder;]
       [230] pop
       [231] aload v8
-      [233] invokevirtual #176
+      [233] invokevirtual #178
         + Methodref [android/graphics/Bitmap.getWidth ()I]
       [236] aload v8
-      [238] invokevirtual #175
+      [238] invokevirtual #177
         + Methodref [android/graphics/Bitmap.getHeight ()I]
       [241] ificmple +43 (target=284)
       [244] aload_1 v1
-      [245] new #131
+      [245] new #133
         + Class [java/lang/StringBuilder]
       [248] dup
-      [249] invokespecial #262
+      [249] invokespecial #265
         + Methodref [java/lang/StringBuilder.<init> ()V]
-      [252] ldc #26
+      [252] ldc #27
         + String [<img src=']
-      [254] invokevirtual #266
+      [254] invokevirtual #269
         + Methodref [java/lang/StringBuilder.append (Ljava/lang/String;)Ljava/lang/StringBuilder;]
       [257] aload_3 v3
       [258] iload v4
       [260] aaload
-      [261] invokevirtual #266
+      [261] invokevirtual #269
         + Methodref [java/lang/StringBuilder.append (Ljava/lang/String;)Ljava/lang/StringBuilder;]
       [264] ldc #14
         + String [' width='340px' height='200px' />]
-      [266] invokevirtual #266
+      [266] invokevirtual #269
         + Methodref [java/lang/StringBuilder.append (Ljava/lang/String;)Ljava/lang/StringBuilder;]
       [269] ldc #10
         + String [
 ]
-      [271] invokevirtual #266
+      [271] invokevirtual #269
         + Methodref [java/lang/StringBuilder.append (Ljava/lang/String;)Ljava/lang/StringBuilder;]
-      [274] invokevirtual #267
+      [274] invokevirtual #270
         + Methodref [java/lang/StringBuilder.toString ()Ljava/lang/String;]
-      [277] invokevirtual #266
+      [277] invokevirtual #269
         + Methodref [java/lang/StringBuilder.append (Ljava/lang/String;)Ljava/lang/StringBuilder;]
       [280] pop
       [281] goto +40 (target=321)
       [284] aload_1 v1
-      [285] new #131
+      [285] new #133
         + Class [java/lang/StringBuilder]
       [288] dup
-      [289] invokespecial #262
+      [289] invokespecial #265
         + Methodref [java/lang/StringBuilder.<init> ()V]
-      [292] ldc #26
+      [292] ldc #27
         + String [<img src=']
-      [294] invokevirtual #266
+      [294] invokevirtual #269
         + Methodref [java/lang/StringBuilder.append (Ljava/lang/String;)Ljava/lang/StringBuilder;]
       [297] aload_3 v3
       [298] iload v4
       [300] aaload
-      [301] invokevirtual #266
+      [301] invokevirtual #269
         + Methodref [java/lang/StringBuilder.append (Ljava/lang/String;)Ljava/lang/StringBuilder;]
       [304] ldc #13
         + String [' width='200px' height='340px' />]
-      [306] invokevirtual #266
+      [306] invokevirtual #269
         + Methodref [java/lang/StringBuilder.append (Ljava/lang/String;)Ljava/lang/StringBuilder;]
       [309] ldc #10
         + String [
 ]
-      [311] invokevirtual #266
+      [311] invokevirtual #269
         + Methodref [java/lang/StringBuilder.append (Ljava/lang/String;)Ljava/lang/StringBuilder;]
-      [314] invokevirtual #267
+      [314] invokevirtual #270
         + Methodref [java/lang/StringBuilder.toString ()Ljava/lang/String;]
-      [317] invokevirtual #266
+      [317] invokevirtual #269
         + Methodref [java/lang/StringBuilder.append (Ljava/lang/String;)Ljava/lang/StringBuilder;]
       [320] pop
       [321] iinc v4, 1
       [324] goto -268 (target=56)
       [327] aload_1 v1
       [328] aload_0 v0
-      [329] getfield #140
+      [329] getfield #142
         + Fieldref [com/mycompany/overtest/ListEditor.a Lcom/mycompany/overtest/a;]
-      [332] invokevirtual #226
+      [332] invokevirtual #228
         + Methodref [com/mycompany/overtest/a.b ()Ljava/lang/StringBuilder;]
-      [335] invokevirtual #264
+      [335] invokevirtual #267
         + Methodref [java/lang/StringBuilder.append (Ljava/lang/CharSequence;)Ljava/lang/StringBuilder;]
       [338] pop
       [339] aload_1 v1
-      [340] invokevirtual #267
+      [340] invokevirtual #270
         + Methodref [java/lang/StringBuilder.toString ()Ljava/lang/String;]
       [343] areturn
       Code attribute exceptions (count = 0):
@@ -9048,7 +9110,7 @@ Methods (count = 27):
     + Code attribute instructions (code length = 6, locals = 0, stack = 1):
       [0] ldc #9
         + String []
-      [2] putstatic #142
+      [2] putstatic #144
         + Fieldref [com/mycompany/overtest/ListEditor.c Ljava/lang/String;]
       [5] return
       Code attribute exceptions (count = 0):
