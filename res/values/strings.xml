@@ -1,20 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="app_name">bug.net</string>
+    <string name="app_name">Bugnet</string>
     <string name="help">\tThis is a simple app, that helps manual testers
         to create visual bug reports.
         To create you first bug report:\n\n
         \t1) Take some screenshots with your device. For example, if your device
         manufacturer is "Samsung", you should press "Power" and "home" button
         in the same time, to take screenshots.\n\n
-        \t2) Open app and pres "Edit bug report" button. You should see an empty page.\n\n
+        \t2) Open app and press "Edit captured screenshots" button. You should see an empty page.\n\n
         \t3) Press menu button.\n\n
         \t4) Press add screenshots button. You will see a pop up, where you can select
         your gallery app.\n\n
-        \t5)Choose your screenshot with gallery. You can choose other images, but
+        \t5) Choose your screenshot with gallery. You can choose other images, but
         please keep in mind that this an alpha version.\n\n
-        \t6)Add all screenshots, that needed.\n\n
+        \t6) Add all screenshots, that needed.\n\n
         \t7) Press on the image to draw on them. You can save your drawings by pressing
         back button.\n\n
         \t8) Press on the "Step" text to change the description. You can choose one of
@@ -40,5 +40,7 @@
         appear again if you will press again on the hidden overlay.\n\n
         Happy testing:)\n</string>
     <string name="main_menu_start">Start touch detection</string>
+	<string name="main_menu_stop">Stop touch detection</string>
+	
 
 </resources>

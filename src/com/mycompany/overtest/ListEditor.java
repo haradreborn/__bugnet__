@@ -119,7 +119,7 @@ public class ListEditor extends Activity {
                 if (getPath(selectedImageUri) == null){
                     Toast.makeText(this, "Unfortunately your gallery or image file is not supported" +
                             ", try to use another app to choose your screenshots. Remember that this app" +
-                            "can work wrong with non screenshot images.", Toast.LENGTH_LONG).show();
+                            " can work wrong with non screenshot images.", Toast.LENGTH_LONG).show();
                 }
                 else {
                     selectedImagePath = getPath(selectedImageUri);
@@ -130,12 +130,18 @@ public class ListEditor extends Activity {
 
                     File from = new File(selectedImagePath);
                     File to = new File(sdcard, path);
-                    try {
+                    if (from.getName().contains(".png") || from.getName().contains(".jpg")){
+						
+						try {
 
-                        copy(from, to);
-                        compress(pathCom);
+                        	copy(from, to);
+                        	compress(pathCom);
 
-                    } catch (IOException io){}
+                    	} catch (IOException io){}
+					}
+					else {
+						Toast.makeText(this, "Only *.PNG and *.JPG formats are supported.", Toast.LENGTH_SHORT).show();
+					}
 
                     //from.renameTo(to);
                 }
@@ -166,12 +172,19 @@ public class ListEditor extends Activity {
 
                     File from = new File(selectedImagePath);
                     File to = new File(sdcard, path);
-                    try {
+					
+					if (from.getName().contains(".png") || from.getName().contains(".jpg")){
+						
+                    	try {
 
-                        copy(from, to);
-                        compress(pathCom);
+                        	copy(from, to);
+                        	compress(pathCom);
 
-                    } catch (IOException io){}
+                    	} catch (IOException io){}
+					}
+					else {
+						Toast.makeText(this, "Only *.PNG and *.JPG formats are supported.", Toast.LENGTH_SHORT).show();
+					}
                 }
 
 			}
@@ -181,38 +194,44 @@ public class ListEditor extends Activity {
 
 	public void compress(String comp) {
         try {
-
+			
             String path = Environment.getExternalStorageDirectory() + comp;
+			//File f = new File(path);
+			//if (f.getName().contains(".png") || f.getName().contains(".jpg")){
+				BitmapFactory.Options buffer = new BitmapFactory.Options();
+				buffer.inSampleSize = 2;
+				Bitmap bmp = BitmapFactory.decodeFile(path, buffer);
+				try {
+					if (bmp.getWidth() > width || bmp.getHeight() > height){
+						if (bmp.getWidth() > bmp.getHeight()){
+							Bitmap resized = Bitmap.createScaledBitmap(bmp, height, width, true); //(int)(bmp.getHeight()*0.5)
+							bmp.recycle();
 
-            BitmapFactory.Options buffer = new BitmapFactory.Options();
-            buffer.inSampleSize = 2;
-            Bitmap bmp = BitmapFactory.decodeFile(path, buffer);
-			try {
-            	if (bmp.getWidth() > width || bmp.getHeight() > height){
-					if (bmp.getWidth() > bmp.getHeight()){
-						Bitmap resized = Bitmap.createScaledBitmap(bmp, height, width, true); //(int)(bmp.getHeight()*0.5)
-						bmp.recycle();
-						
-						FileOutputStream out = new FileOutputStream(path);
-						resized.compress(Bitmap.CompressFormat.PNG, 70, out);
-						resized.recycle();		
-						out.flush();
-						out.close();
+							FileOutputStream out = new FileOutputStream(path);
+							resized.compress(Bitmap.CompressFormat.PNG, 70, out);
+							resized.recycle();		
+							out.flush();
+							out.close();
+						}
+						else {
+							Bitmap resized = Bitmap.createScaledBitmap(bmp, width, height, true); //(int)(bmp.getHeight()*0.5)
+							bmp.recycle();
+
+							FileOutputStream out = new FileOutputStream(path);
+							resized.compress(Bitmap.CompressFormat.PNG, 70, out);
+							resized.recycle();		
+							out.flush();
+							out.close();
+						}
 					}
-					else {
-						Bitmap resized = Bitmap.createScaledBitmap(bmp, width, height, true); //(int)(bmp.getHeight()*0.5)
-						bmp.recycle();
 
-						FileOutputStream out = new FileOutputStream(path);
-						resized.compress(Bitmap.CompressFormat.PNG, 70, out);
-						resized.recycle();		
-						out.flush();
-						out.close();
-					}
-				}
-				
-			} catch (OutOfMemoryError oum) {}
-
+				} catch (OutOfMemoryError oum) {}
+			//}
+			//else {
+			//	Toast.makeText(this, "Only *.PNG and *.JPG formats are supported.", Toast.LENGTH_SHORT).show();
+			//}
+			
+            
         } catch (Exception e) {
             e.printStackTrace();
             Log.e("saveBitmap", e.getMessage());
